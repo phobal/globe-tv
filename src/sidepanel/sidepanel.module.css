@@ -42,7 +42,7 @@
 }
 .search:focus { border-color: var(--accent); outline: none; }
 
-.list { flex: 1; overflow: auto; padding: 8px 12px 18px; }
+.list { flex: 1 1 0; min-height: 0; overflow: auto; padding: 8px 12px 18px; }
 
 .region { padding: 12px 0 6px; }
 .regionLabel {

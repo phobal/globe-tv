@@ -3,6 +3,7 @@ import GlobeGL from 'react-globe.gl';
 import { MeshPhongMaterial } from 'three';
 import type { CountrySummary } from '../data/types';
 import { countryCenter, loadBoundaries, type CountryFeature } from './countries';
+import { LABEL_CHANNEL_THRESHOLD } from './labelDedup';
 
 interface Props {
   countries: CountrySummary[];
@@ -19,7 +20,13 @@ export function Globe({ countries, selectedCode, onSelect, onFailure }: Props) {
   const wrapper = useRef<HTMLDivElement>(null);
   const globe = useRef<any>(null);
   const byCode = useMemo(() => new Map(countries.map(item => [item.code, item])), [countries]);
-  const oceanMaterial = useMemo(() => new MeshPhongMaterial({ color: '#071e31', shininess: 16, specular: '#123e59' }), []);
+  const oceanMaterial = useMemo(() => new MeshPhongMaterial({
+    color: '#4ba3d0',
+    shininess: 22,
+    specular: '#2c7fb3',
+    emissive: '#1c4a73',
+    emissiveIntensity: 0.18,
+  }), []);
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   useEffect(() => { loadBoundaries().then(setFeatures).catch(onFailure); }, [onFailure]);
@@ -45,18 +52,38 @@ export function Globe({ countries, selectedCode, onSelect, onFailure }: Props) {
   }, [selectedCode, features, reduced]);
 
   return <div className="globe" ref={wrapper} aria-label="交互式地球。键盘操作请使用国家列表。">
-    <GlobeGL ref={globe} width={size.width} height={size.height} backgroundColor="rgba(0,0,0,0)" globeMaterial={oceanMaterial}
-      showAtmosphere atmosphereColor="#5d9bc1" atmosphereAltitude={0.18}
-      polygonsData={features} polygonAltitude={feature => (feature as CountryFeature).properties.code === selectedCode ? 0.025 : 0.008}
+    <GlobeGL
+      ref={globe}
+      width={size.width}
+      height={size.height}
+      backgroundColor="rgba(0,0,0,0)"
+      globeMaterial={oceanMaterial}
+      showAtmosphere
+      atmosphereColor="#9bd4f0"
+      atmosphereAltitude={0.28}
+      polygonsData={features}
+      polygonAltitude={feature => (feature as CountryFeature).properties.code === selectedCode ? 0.022 : 0.006}
       polygonCapColor={feature => {
         const code = (feature as CountryFeature).properties.code;
-        return code === selectedCode ? '#e6b771' : code === hovered ? '#5baec5' : byCode.get(code)?.channelCount ? '#37718c' : '#263e54';
+        if (code === selectedCode) return '#d7e7c8';
+        if (code === hovered) return '#c8e2c1';
+        const item = byCode.get(code);
+        if (!item) return '#7a9a78';
+        return item.channelCount >= LABEL_CHANNEL_THRESHOLD
+          ? '#cae0c4'
+          : item.channelCount > 0 ? '#b8d9b5' : '#7a9a78';
       }}
-      polygonSideColor={() => '#0e2435'} polygonStrokeColor={() => '#7295a6'}
+      polygonSideColor={() => '#7fa8c2'}
+      polygonStrokeColor={() => '#ff5b6e'}
       polygonLabel={feature => {
         const item = byCode.get((feature as CountryFeature).properties.code);
-        return item ? `<div class="globe-tip">${item.nameZh} · ${item.channelCount} 个频道</div>` : '';
+        if (!item) return '';
+        const sub = item.channelCount >= LABEL_CHANNEL_THRESHOLD
+          ? `<br><small>${item.channelCount} 个频道</small>`
+          : `<br><small>${item.channelCount} 个频道</small>`;
+        return `<div class="globe-tip"><strong>${item.nameZh}</strong>${sub}</div>`;
       }}
+      polygonsTransitionDuration={300}
       onPolygonHover={feature => setHovered((feature as CountryFeature | null)?.properties.code)}
       onPolygonClick={feature => { setInteracted(true); onSelect((feature as CountryFeature).properties.code); }}
       onGlobeReady={() => {

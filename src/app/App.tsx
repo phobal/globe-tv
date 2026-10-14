@@ -3,6 +3,7 @@ import { loadCountry, loadIndex } from '../data/catalog';
 import type { CatalogIndex, Channel } from '../data/types';
 import { parseDeepLink, linkTo } from '../routing/deepLinks';
 import { readPreferences, savePreferences, markRecentlyPlayed } from '../preferences/storage';
+import { guessUserCountry } from '../data/geo';
 import { Globe } from '../globe/Globe';
 import { SidePanel } from '../sidepanel/SidePanel';
 import { PlayerModal } from '../player/PlayerModal';
@@ -35,12 +36,25 @@ export function App() {
   useEffect(() => {
     if (!index) return;
     const deep = parseDeepLink(location.search);
-    if (deep.invalid || (deep.country && !index.countries.some(item => item.code === deep.country))) {
+    if (deep.invalid) {
       setMessage('链接参数无效，已返回首页。'); return;
     }
+    let chosen: string | undefined;
     if (deep.country) {
+      if (index.countries.some(item => item.code === deep.country)) chosen = deep.country;
+      else setMessage('链接参数无效，已返回首页。');
+    } else if (!countryCode) {
+      const fromHistory = readPreferences().countryCode;
+      if (fromHistory && index.countries.some(item => item.code === fromHistory)) {
+        chosen = fromHistory;
+      } else {
+        const guess = guessUserCountry();
+        if (guess && index.countries.some(item => item.code === guess)) chosen = guess;
+      }
+    }
+    if (chosen) {
       setSideOpen(true);
-      setCountryCode(deep.country);
+      setCountryCode(chosen);
       if (deep.channel) { setMissingId(deep.channel); setFeaturedId(deep.channel); }
     }
   }, [index]);
@@ -66,6 +80,7 @@ export function App() {
     setCountryCode(code);
     setMissingId(undefined);
     setFeaturedId(undefined);
+    if (code) setPreferences(current => ({ ...current, countryCode: code }));
     history.replaceState({}, '', linkTo(code));
   };
 
@@ -79,13 +94,6 @@ export function App() {
 
   const closePlayer = () => {
     setPlayerOpen(false);
-  };
-
-  const switchChannel = (channel: Channel) => {
-    if (channel.countryCode !== countryCode) setCountryCode(channel.countryCode);
-    setPlaying(channel);
-    setFeaturedId(channel.id);
-    setMissingId(undefined);
   };
 
   const selectChannel = async (code: string, id: string) => {
@@ -197,10 +205,8 @@ export function App() {
           open={playerOpen}
           channel={playing}
           country={playingCountry}
-          options={channels}
           onPlaying={onPlaying}
           onClose={closePlayer}
-          onSwitch={switchChannel}
         />
       )}
 

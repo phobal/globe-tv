@@ -9,13 +9,11 @@ interface Props {
   open: boolean;
   channel: Channel;
   country?: CountrySummary;
-  options: Channel[];
   onPlaying: (id: string) => void;
   onClose: () => void;
-  onSwitch: (channel: Channel) => void;
 }
 
-export function PlayerModal({ open, channel, country, options, onPlaying, onClose, onSwitch }: Props) {
+export function PlayerModal({ open, channel, country, onPlaying, onClose }: Props) {
   const video = useRef<HTMLVideoElement>(null);
   const [state, setState] = useState<SourceState>(initial);
   const [needsGesture, setNeedsGesture] = useState(false);
@@ -98,7 +96,6 @@ export function PlayerModal({ open, channel, country, options, onPlaying, onClos
   if (!open) return null;
 
   const sourceCount = channel.sources.length;
-  const otherChannels = options.filter(item => item.id !== channel.id);
 
   return (
     <div className="modal-scrim" onClick={onClose}>
@@ -170,21 +167,6 @@ export function PlayerModal({ open, channel, country, options, onPlaying, onClos
             </div>
           )}
           {channel.geoBlocked && <p className="notice">此频道可能受地区限制</p>}
-          {otherChannels.length > 0 && (
-            <section className="quick-switch">
-              <h3>本台其他频道</h3>
-              <ul>
-                {otherChannels.map(item => (
-                  <li key={item.id}>
-                    <button type="button" onClick={() => onSwitch(item)}>
-                      <span className="qs-init">{item.name.slice(0, 1)}</span>
-                      <span><strong>{item.name}</strong><small>{item.sources.length} 个来源</small></span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
         </div>
       </div>
     </div>

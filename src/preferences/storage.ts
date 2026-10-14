@@ -1,5 +1,13 @@
 const KEY = 'globe-tv:preferences:v1';
-export interface Preferences { favorites: string[]; recent: string[] }
+export interface Preferences {
+  favorites: string[];
+  recent: string[];
+  countryCode?: string;
+}
+
+function isStringArray(value: unknown): value is string[] {
+  return Array.isArray(value) && value.every(item => typeof item === 'string');
+}
 
 export function readPreferences(): Preferences {
   try {
@@ -8,10 +16,15 @@ export function readPreferences(): Preferences {
     const data: unknown = JSON.parse(raw);
     if (!data || typeof data !== 'object') throw new Error('bad preferences');
     const value = data as Record<string, unknown>;
-    if (!Array.isArray(value.favorites) || !Array.isArray(value.recent) ||
-      !value.favorites.every(item => typeof item === 'string') ||
-      !value.recent.every(item => typeof item === 'string')) throw new Error('bad preferences');
-    return { favorites: value.favorites, recent: value.recent.slice(0, 30) };
+    if (!isStringArray(value.favorites) || !isStringArray(value.recent)) {
+      throw new Error('bad preferences');
+    }
+    const countryCode = typeof value.countryCode === 'string' ? value.countryCode : undefined;
+    return {
+      favorites: value.favorites,
+      recent: value.recent.slice(0, 30),
+      countryCode,
+    };
   } catch {
     localStorage.removeItem(KEY);
     return { favorites: [], recent: [] };

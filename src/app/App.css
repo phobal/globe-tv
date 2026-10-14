@@ -544,3 +544,20 @@ footer {
     transition-duration: .01ms !important;
   }
 }
+
+/* Dark themed scrollbars that match the cool palette */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c4661 transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: #2c4661;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: #3a5a7d; background-clip: padding-box; border: 2px solid transparent; }
+*::-webkit-scrollbar-thumb:active { background: #4a7298; background-clip: padding-box; border: 2px solid transparent; }
+*::-webkit-scrollbar-corner { background: transparent; }

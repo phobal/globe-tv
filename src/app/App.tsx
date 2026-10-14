@@ -4,10 +4,9 @@ import type { CatalogIndex, Channel } from '../data/types';
 import { parseDeepLink, linkTo } from '../routing/deepLinks';
 import { readPreferences, savePreferences, markRecentlyPlayed } from '../preferences/storage';
 import { Globe } from '../globe/Globe';
-import { Drawer } from '../drawer/Drawer';
-import { BrowsePanel } from '../drawer/BrowsePanel';
-import { Player } from '../player/Player';
-import { Toolbar } from '../toolbar/Toolbar';
+import { SidePanel } from '../sidepanel/SidePanel';
+import { PlayerModal } from '../player/PlayerModal';
+import { Header } from '../header/Header';
 
 export function App() {
   const [index, setIndex] = useState<CatalogIndex>();
@@ -18,13 +17,12 @@ export function App() {
   const [countryRetry, setCountryRetry] = useState(0);
   const [loadingCountry, setLoadingCountry] = useState(false);
   const [playing, setPlaying] = useState<Channel>();
+  const [playerOpen, setPlayerOpen] = useState(false);
   const [missingId, setMissingId] = useState<string>();
   const [featuredId, setFeaturedId] = useState<string>();
   const [message, setMessage] = useState('');
   const [globeFailed, setGlobeFailed] = useState(false);
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [drawerView, setDrawerView] = useState<'countries' | 'channels'>('countries');
-  const [variant, setVariant] = useState<'side' | 'bottom'>('side');
+  const [sideOpen, setSideOpen] = useState(true);
   const [preferences, setPreferences] = useState(readPreferences);
   const country = index?.countries.find(item => item.code === countryCode);
   const playingCountry = index?.countries.find(item => item.code === playing?.countryCode);
@@ -35,24 +33,14 @@ export function App() {
   useEffect(refreshIndex, [refreshIndex]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const query = window.matchMedia('(max-width: 760px)');
-    const update = () => setVariant(query.matches ? 'bottom' : 'side');
-    update();
-    query.addEventListener('change', update);
-    return () => query.removeEventListener('change', update);
-  }, []);
-
-  useEffect(() => {
     if (!index) return;
     const deep = parseDeepLink(location.search);
     if (deep.invalid || (deep.country && !index.countries.some(item => item.code === deep.country))) {
       setMessage('链接参数无效，已返回首页。'); return;
     }
     if (deep.country) {
+      setSideOpen(true);
       setCountryCode(deep.country);
-      setDrawerView('channels');
-      setDrawerOpen(true);
       if (deep.channel) { setMissingId(deep.channel); setFeaturedId(deep.channel); }
     }
   }, [index]);
@@ -78,16 +66,28 @@ export function App() {
     setCountryCode(code);
     setMissingId(undefined);
     setFeaturedId(undefined);
-    setDrawerView('channels');
-    setDrawerOpen(true);
     history.replaceState({}, '', linkTo(code));
   };
+
   const play = (channel: Channel) => {
     setPlaying(channel);
     setMissingId(undefined);
     setFeaturedId(undefined);
+    setPlayerOpen(true);
     history.replaceState({}, '', linkTo(channel.countryCode, channel.id));
   };
+
+  const closePlayer = () => {
+    setPlayerOpen(false);
+  };
+
+  const switchChannel = (channel: Channel) => {
+    if (channel.countryCode !== countryCode) setCountryCode(channel.countryCode);
+    setPlaying(channel);
+    setFeaturedId(channel.id);
+    setMissingId(undefined);
+  };
+
   const selectChannel = async (code: string, id: string) => {
     selectCountry(code);
     try {
@@ -98,6 +98,7 @@ export function App() {
       setMessage('频道加载失败，请重试。');
     }
   };
+
   const toggleFavorite = (id: string) => setPreferences(current => ({
     ...current,
     favorites: current.favorites.includes(id)
@@ -111,38 +112,22 @@ export function App() {
   const onPlaying = (id: string) => setPreferences(current => markRecentlyPlayed(current, id));
   const canGlobe = !globeFailed && typeof WebGLRenderingContext !== 'undefined';
 
-  const closeDrawer = () => {
-    setDrawerOpen(false);
-    setFeaturedId(undefined);
-  };
-
   return (
-    <div className={`app ${playing ? 'is-playing' : ''}`}>
-      <header className="app-header">
-        <div className="brand">
-          <span className="brand-mark">◉</span>
-          <div>
-            <strong>地球电视</strong>
-            <small>GLOBE TV · LIVE</small>
-          </div>
-        </div>
-        {index && (
-          <Toolbar
-            index={index}
-            playing={playing}
-            drawerOpen={drawerOpen}
-            drawerView={drawerView}
-            favoritesCount={preferences.favorites.length}
-            recentCount={preferences.recent.length}
-            favorites={preferences.favorites}
-            recent={preferences.recent}
-            onOpenDrawer={(view) => { setDrawerView(view); setDrawerOpen(true); }}
-            onSelectChannel={selectChannel}
-            onRemoveSaved={removeSaved}
-          />
-        )}
-        <a className="data-link" href="https://github.com/famelack/famelack-data" target="_blank" rel="noreferrer">数据来源 ↗</a>
-      </header>
+    <div className={`app ${playerOpen ? 'is-playing' : ''}`}>
+      {index && (
+        <Header
+          sideOpen={sideOpen}
+          onToggleSide={() => setSideOpen(value => !value)}
+          playing={playing}
+          onOpenPlayer={() => setPlayerOpen(true)}
+          onClosePlayer={closePlayer}
+          index={index}
+          preferences={preferences}
+          onPickCountry={selectCountry}
+          onSelectChannel={selectChannel}
+          onRemoveSaved={removeSaved}
+        />
+      )}
 
       {message && (
         <div className="app-message" role="status">
@@ -160,7 +145,7 @@ export function App() {
       ) : !index ? (
         <main className="fatal" role="status">正在加载地球电视…</main>
       ) : (
-        <main className="workspace">
+        <main className={`workspace ${sideOpen ? 'with-side' : 'no-side'}`}>
           <section className="explore">
             <div className="explore-heading">
               <div>
@@ -172,12 +157,12 @@ export function App() {
               <Globe
                 countries={index.countries}
                 selectedCode={countryCode}
-                onSelect={selectCountry}
+                onSelect={(code) => { selectCountry(code); setSideOpen(true); }}
                 onFailure={() => setGlobeFailed(true)}
               />
             ) : (
               <div className="globe-fallback">
-                <p>此设备无法显示 3D 地球，可使用顶部"浏览"按钮从列表继续选台。</p>
+                <p>此设备无法显示 3D 地球，可使用右侧面板继续选台。</p>
               </div>
             )}
             <div className="explore-foot">
@@ -185,43 +170,39 @@ export function App() {
               <span>{index.countries.length} 个国家和地区 · {index.channels.length} 个频道</span>
             </div>
           </section>
-          <section className="watch">
-            <Player
-              key={playing?.id ?? 'empty'}
-              channel={playing}
-              country={playingCountry}
-              onPlaying={onPlaying}
-              onClose={() => setPlaying(undefined)}
-            />
-          </section>
+          {sideOpen && (
+            <aside className="sidepanel" aria-label="国家与频道列表">
+              <SidePanel
+                index={index}
+                countries={index.countries}
+                countryCode={countryCode}
+                channels={channels}
+                loading={loadingCountry}
+                error={countryError}
+                favorites={preferences.favorites}
+                featuredId={featuredId}
+                missingId={missingId}
+                onPickCountry={selectCountry}
+                onPlay={play}
+                onToggleFavorite={toggleFavorite}
+                onRetry={() => setCountryRetry(value => value + 1)}
+              />
+            </aside>
+          )}
         </main>
       )}
 
-      <Drawer
-        open={drawerOpen && Boolean(index)}
-        onClose={closeDrawer}
-        title={drawerView === 'countries' ? '选择国家' : country?.nameZh ?? '频道'}
-        variant={variant}
-      >
-        {index && (
-          <BrowsePanel
-            open={drawerOpen}
-            index={index}
-            channels={channels}
-            countryCode={drawerView === 'channels' ? countryCode : undefined}
-            loading={loadingCountry}
-            error={countryError}
-            favorites={preferences.favorites}
-            featuredId={featuredId}
-            missingId={missingId}
-            onClose={() => setDrawerView('countries')}
-            onPickCountry={selectCountry}
-            onPlay={(channel) => { play(channel); setDrawerOpen(false); }}
-            onToggleFavorite={toggleFavorite}
-            onRetry={() => setCountryRetry(value => value + 1)}
-          />
-        )}
-      </Drawer>
+      {playing && (
+        <PlayerModal
+          open={playerOpen}
+          channel={playing}
+          country={playingCountry}
+          options={channels}
+          onPlaying={onPlaying}
+          onClose={closePlayer}
+          onSwitch={switchChannel}
+        />
+      )}
 
       <footer>
         <span>频道数据：Famelack · MIT 授权</span>

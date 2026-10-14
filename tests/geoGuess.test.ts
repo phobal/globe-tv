@@ -1,22 +1,28 @@
 import { describe, expect, it } from 'vitest';
 import { guessUserCountry } from '../src/data/geo';
 
-interface WindowLike { navigator: { language?: string; languages?: string[] } }
+interface WindowLike {
+  navigator: {
+    language?: string;
+    languages?: readonly string[];
+  };
+}
 
 function withWindow(value: WindowLike | undefined, setup: () => void): void {
-  const original = (globalThis as { window?: WindowLike }).window;
+  const g = globalThis as unknown as { window?: WindowLike };
+  const original = g.window;
   if (value === undefined) {
-    delete (globalThis as { window?: WindowLike }).window;
+    delete g.window;
   } else {
-    (globalThis as { window?: WindowLike }).window = value;
+    g.window = value;
   }
   try {
     setup();
   } finally {
     if (original === undefined) {
-      delete (globalThis as { window?: WindowLike }).window;
+      delete g.window;
     } else {
-      (globalThis as { window?: WindowLike }).window = original;
+      g.window = original;
     }
   }
 }

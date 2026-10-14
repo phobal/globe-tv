@@ -17,8 +17,8 @@
   --text: #0f1e2c;
   --text-soft: #4a5a6a;
   --text-invert: #f4f7fa;
-  --accent: #ffb45a;
-  --accent-deep: #d9923f;
+  --accent: #9bd4f0;
+  --accent-deep: #6db3d4;
   --shadow-lg: 0 30px 60px #00000052;
   --star-color: #ffffffcc;
 }
@@ -380,7 +380,7 @@ a { color: var(--ocean-deep); }
   border-radius: 7px; padding: 6px 10px; font-size: 12px; cursor: pointer;
 }
 .source-options button.active { border-color: var(--accent); color: var(--accent); }
-.notice { padding: 10px 12px; background: #4a3417; color: #f5d29c; border: 1px solid #6f4c20; border-radius: 6px; font-size: 12px; }
+.notice { padding: 10px 12px; background: #1a3a4a; color: #b6e0ee; border: 1px solid #2c5e75; border-radius: 6px; font-size: 12px; }
 
 .quick-switch h3 {
   font-size: 12px; letter-spacing: .15em; color: var(--accent);
@@ -486,19 +486,19 @@ a { color: var(--ocean-deep); }
 .player-placeholder .ph-mark { display: block; color: var(--accent); font-size: 64px; line-height: 1; }
 .player-placeholder h2 { color: var(--text-invert); font-size: 17px; margin: 8px 0 6px; }
 .player-placeholder p { font-size: 12px; line-height: 1.6; color: #a4bdca; }
-.notice { padding: 10px 12px; background: #4a3417; color: #f5d29c; border: 1px solid #6f4c20; border-radius: 6px; font-size: 12px; }
+.notice { padding: 10px 12px; background: #1a3a4a; color: #b6e0ee; border: 1px solid #2c5e75; border-radius: 6px; font-size: 12px; }
 
 .app-message {
   padding: 9px clamp(16px, 2.5vw, 40px);
-  background: #4a351e;
-  color: #ffdfad;
+  background: #1a3a4a;
+  color: #b6e0ee;
   display: flex;
   justify-content: space-between;
 }
 .app-message button {
-  color: #ffdfad;
+  color: #b6e0ee;
   background: transparent;
-  border: 1px solid #ffdfad;
+  border: 1px solid #6da3ba;
   border-radius: 5px;
   padding: 4px 10px;
 }

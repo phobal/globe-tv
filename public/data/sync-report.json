@@ -1,0 +1,15 @@
+{
+  "rejected": [
+    {
+      "country": "cn",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cn",
+      "row": 15,
+      "reason": "无效字段或无可用 HLS 来源"
+    }
+  ],
+  "accepted": 76
+}

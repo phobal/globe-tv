@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import Hls from 'hls.js';
+import { ListVideo, Play, RotateCcw, X } from 'lucide-react';
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
 import type { Channel, CountrySummary } from '../data/types';
-import { beginSession, cancelSource, chooseSource, nextSource, type SourceState } from './sourceMachine';
+import { beginSession, chooseSource, nextSource, type SourceState } from './sourceMachine';
 
 const initial: SourceState = { session: 0, phase: 'idle', sourceIndex: 0, sourceCount: 0, cancelled: false };
 
@@ -14,17 +16,44 @@ interface Props {
 }
 
 export function PlayerModal({ open, channel, country, onPlaying, onClose }: Props) {
-  const video = useRef<HTMLVideoElement>(null);
-  const [state, setState] = useState<SourceState>(initial);
-  const [needsGesture, setNeedsGesture] = useState(false);
-  const activeSession = useRef(0);
+  const host = useRef<HTMLDivElement>(null);
+  const player = useRef<ReturnType<typeof videojs> | null>(null);
   const onPlayingRef = useRef(onPlaying);
+  const [state, setState] = useState<SourceState>(initial);
+  const [sourceMenuOpen, setSourceMenuOpen] = useState(false);
   onPlayingRef.current = onPlaying;
 
   useEffect(() => {
-    setNeedsGesture(false);
+    if (!open || !host.current) return;
+    const element = document.createElement('video-js');
+    element.setAttribute('playsinline', '');
+    element.classList.add('text-sm!');
+    host.current.appendChild(element);
+    const instance = videojs(element, {
+      controls: true,
+      autoplay: false,
+      preload: 'auto',
+      liveui: true,
+      responsive: true,
+      fluid: false,
+      fill: true,
+      bigPlayButton: true,
+      controlBar: {
+        playToggle: true,
+        volumePanel: { inline: false },
+        pictureInPictureToggle: true,
+        fullscreenToggle: true,
+      },
+    });
+    instance.getChild('ControlBar')?.el().classList.add('h-[calc(3rem+env(safe-area-inset-bottom))]!', 'bg-[#07172aeb]!', 'pb-[env(safe-area-inset-bottom)]!');
+    player.current = instance;
     setState(previous => beginSession(previous, channel.sources.length));
-  }, [channel.id]);
+    setSourceMenuOpen(false);
+    return () => {
+      player.current = null;
+      instance.dispose();
+    };
+  }, [open, channel.id]);
 
   useEffect(() => {
     if (!open) return;
@@ -36,138 +65,119 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
   }, [open, onClose]);
 
   useEffect(() => {
-    const element = video.current;
+    const instance = player.current;
     const source = channel.sources[state.sourceIndex];
-    if (!element || !source || state.cancelled || state.phase === 'failed' || state.phase === 'idle') return;
+    if (!open || !instance || !source || state.cancelled || state.phase === 'failed' || state.phase === 'idle') return;
     const session = state.session;
-    activeSession.current = session;
-    let hls: Hls | undefined;
     let timer: ReturnType<typeof setTimeout> | undefined;
-    let closed = false;
+    let stopped = false;
     const fail = () => {
-      if (closed || activeSession.current !== session) return;
+      if (stopped) return;
       setState(current => nextSource(current, session));
     };
     const playing = () => {
-      if (closed || activeSession.current !== session) return;
+      if (stopped) return;
       if (timer) clearTimeout(timer);
-      setNeedsGesture(false);
       setState(current => current.session === session ? { ...current, phase: 'playing' } : current);
       onPlayingRef.current(channel.id);
     };
-    const play = () => {
-      element.play().catch(error => {
-        if (closed || activeSession.current !== session) return;
+    instance.on('error', fail);
+    instance.on('playing', playing);
+    instance.ready(() => {
+      if (stopped) return;
+      instance.error(null);
+      instance.src({ src: source.url, type: 'application/x-mpegURL' });
+      timer = setTimeout(fail, 15_000);
+      Promise.resolve(instance.play()).catch(error => {
+        if (stopped) return;
         if (error?.name === 'NotAllowedError') {
           if (timer) clearTimeout(timer);
-          setNeedsGesture(true);
           setState(current => current.session === session ? { ...current, phase: 'awaiting-gesture' } : current);
         } else fail();
       });
-    };
-    element.addEventListener('playing', playing);
-    element.addEventListener('error', fail);
-    element.pause();
-    element.removeAttribute('src');
-    element.load();
-    timer = setTimeout(fail, 15000);
-    if (element.canPlayType('application/vnd.apple.mpegurl')) {
-      element.src = source.url;
-      play();
-    } else if (Hls.isSupported()) {
-      hls = new Hls({ enableWorker: true });
-      hls.on(Hls.Events.ERROR, (_event, data) => { if (data.fatal) fail(); });
-      hls.on(Hls.Events.MANIFEST_PARSED, play);
-      hls.loadSource(source.url);
-      hls.attachMedia(element);
-    } else fail();
+    });
     return () => {
-      closed = true;
+      stopped = true;
       if (timer) clearTimeout(timer);
-      element.removeEventListener('playing', playing);
-      element.removeEventListener('error', fail);
-      hls?.destroy();
-      element.pause();
-      element.removeAttribute('src');
-      element.load();
+      instance.off('error', fail);
+      instance.off('playing', playing);
     };
   }, [open, channel.id, state.session, state.sourceIndex, state.phase === 'failed', state.cancelled]);
 
   if (!open) return null;
 
-  const sourceCount = channel.sources.length;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#03080fcc] sm:p-4" onClick={onClose}>
-      <div className="flex h-dvh w-full min-w-0 flex-col overflow-hidden bg-[#0c1e30] text-ink shadow-2xl sm:h-auto sm:max-h-[90dvh] sm:max-w-[960px] sm:rounded-2xl sm:border sm:border-line" role="dialog" aria-modal="true" aria-label="播放器" onClick={event => event.stopPropagation()}>
-        <header className="flex shrink-0 items-start justify-between gap-3 border-b border-[#1f3650] px-4 py-4 sm:px-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 sm:p-4" onClick={onClose}>
+      <div
+        className="relative h-dvh w-full overflow-hidden bg-black text-white shadow-2xl sm:aspect-video sm:h-auto sm:max-w-[960px] sm:rounded-2xl sm:border sm:border-line"
+        role="dialog"
+        aria-modal="true"
+        aria-label={`播放器：${channel.name}`}
+        onClick={event => event.stopPropagation()}
+      >
+        <div
+          className="absolute inset-0"
+          ref={host}
+        />
+
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 bg-gradient-to-b from-black/85 to-transparent px-4 pt-[max(16px,env(safe-area-inset-top))] pb-10 sm:px-5 sm:pt-4">
           <div className="min-w-0">
-            <small className="text-xs tracking-widest text-cyan">{country?.nameZh ?? channel.countryCode}</small>
-            <h2 className="mt-1 truncate text-lg font-semibold sm:text-xl">{channel.name}</h2>
+            <p className="text-[11px] tracking-wider text-cyan">{country?.nameZh ?? channel.countryCode}</p>
+            <h2 className="truncate text-base font-semibold sm:text-lg">{channel.name}</h2>
+            {channel.geoBlocked && <p className="text-xs text-white/70">可能受地区限制</p>}
           </div>
-          <button className="grid size-11 shrink-0 place-items-center rounded-lg border border-line bg-raised text-2xl" type="button" onClick={onClose} aria-label="关闭播放器">×</button>
-        </header>
-        <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4 sm:p-6">
-          <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl border border-[#1f3650] bg-black">
-            <video className="block h-full w-full object-contain" ref={video} playsInline controls={false} />
-            {state.phase !== 'playing' && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/65 p-3 text-center text-xs sm:gap-3 sm:p-5 sm:text-sm" role="status">
-                {state.phase === 'failed' ? (
-                  <>
-                    <strong className="text-sm sm:text-base">所有来源均无法播放</strong>
-                    <p>可能是源失效、跨域或地区限制。</p>
-                    <div className="flex gap-2">
-                      <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => setState(current => beginSession(current, sourceCount))}>重试</button>
-                      <button className="rounded-lg border border-line bg-raised px-4 py-2" onClick={onClose}>关闭</button>
-                    </div>
-                  </>
-                ) : state.phase === 'idle' ? (
-                  <>
-                    已取消尝试
-                    <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => setState(current => beginSession(current, sourceCount))}>重新尝试</button>
-                  </>
-                ) : needsGesture ? (
-                  <>
-                    浏览器要求手动开始播放
-                    <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => video.current?.play().catch(() => {})}>点击播放</button>
-                  </>
-                ) : (
-                  <>
-                    正在尝试来源 {state.sourceIndex + 1} / {sourceCount}…
-                    <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => setState(cancelSource)}>取消尝试</button>
-                  </>
-                )}
+          <button
+            type="button"
+            className="pointer-events-auto grid size-11 shrink-0 place-items-center rounded-full bg-black/55 text-white hover:bg-black/80"
+            onClick={onClose}
+            aria-label="关闭播放器"
+          ><X size={22} aria-hidden="true" /></button>
+        </div>
+
+        {state.phase === 'failed' && (
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 bg-black/85 px-6 text-center">
+            <p className="text-sm text-white/80">所有直播源均无法播放</p>
+            <button
+              type="button"
+              className="flex min-h-11 items-center gap-2 rounded-full bg-cyan px-5 font-semibold text-[#102334]"
+              onClick={() => setState(current => beginSession(current, channel.sources.length))}
+            ><RotateCcw size={18} aria-hidden="true" />重试</button>
+          </div>
+        )}
+
+        {state.phase === 'awaiting-gesture' && (
+          <button
+            type="button"
+            className="absolute top-1/2 left-1/2 z-10 grid size-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-cyan text-[#102334] shadow-xl"
+            onClick={() => player.current?.play()?.catch(() => {})}
+            aria-label="开始播放"
+          ><Play size={28} fill="currentColor" aria-hidden="true" /></button>
+        )}
+
+        {channel.sources.length > 1 && state.phase !== 'failed' && (
+          <div className="absolute right-3 bottom-[calc(4rem+env(safe-area-inset-bottom))] z-20 sm:right-4 sm:bottom-16">
+            {sourceMenuOpen && (
+              <div className="absolute right-0 bottom-12 max-h-56 w-40 overflow-y-auto rounded-xl border border-white/20 bg-[#10263a] p-1.5 shadow-2xl" role="group" aria-label="选择直播源">
+                {channel.sources.map((source, index) => (
+                  <button
+                    key={`${source.url}-${index}`}
+                    type="button"
+                    className={`flex min-h-10 w-full items-center justify-between rounded-lg px-3 text-left text-sm hover:bg-white/10 ${index === state.sourceIndex ? 'text-cyan' : 'text-white'}`}
+                    onClick={() => { setState(current => chooseSource(current, index)); setSourceMenuOpen(false); }}
+                    aria-current={index === state.sourceIndex ? 'true' : undefined}
+                  >来源 {index + 1}{index === state.sourceIndex && <span aria-hidden="true">✓</span>}</button>
+                ))}
               </div>
             )}
+            <button
+              type="button"
+              className="grid size-10 place-items-center rounded-full bg-[#07172aeb] text-white shadow-lg hover:bg-[#173353]"
+              onClick={() => setSourceMenuOpen(value => !value)}
+              aria-label={`切换直播源，当前来源 ${state.sourceIndex + 1}`}
+              aria-expanded={sourceMenuOpen}
+            ><ListVideo size={20} aria-hidden="true" /></button>
           </div>
-          <div className="flex flex-wrap gap-2 [&_button]:min-h-11 [&_button]:rounded-lg [&_button]:border [&_button]:border-line [&_button]:bg-raised [&_button]:px-3 [&_button]:py-2 [&_button]:text-sm hover:[&_button]:bg-[#173353]">
-            <button onClick={() => {
-              const element = video.current;
-              if (!element) return;
-              if (element.paused) element.play().catch(() => setNeedsGesture(true));
-              else element.pause();
-            }}>播放 / 暂停</button>
-            <button onClick={() => { const el = video.current; if (el) el.muted = !el.muted; }}>静音切换</button>
-            <button onClick={() => video.current?.requestFullscreen?.()}>全屏</button>
-            {'pictureInPictureEnabled' in document && document.pictureInPictureEnabled && (
-              <button onClick={() => video.current?.requestPictureInPicture?.()}>画中画</button>
-            )}
-          </div>
-          {sourceCount > 1 && (
-            <div className="flex flex-wrap items-center gap-2 text-xs text-muted [&_button]:min-h-10 [&_button]:rounded-lg [&_button]:border [&_button]:border-line [&_button]:bg-raised [&_button]:px-3 [&_button]:py-2">
-              <span>备用源</span>
-              {channel.sources.map((source, index) => (
-                <button
-                  key={`${source.url}-${index}`}
-                  type="button"
-                  className={index === state.sourceIndex ? 'border-cyan! text-cyan!' : ''}
-                  onClick={() => setState(current => chooseSource(current, index))}
-                >来源 {index + 1}</button>
-              ))}
-            </div>
-          )}
-          {channel.geoBlocked && <p className="rounded-lg border border-[#2c5e75] bg-[#1a3a4a] px-3 py-2 text-sm text-[#b6e0ee]">此频道可能受地区限制</p>}
-        </div>
+        )}
       </div>
     </div>
   );

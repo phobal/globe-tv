@@ -50,7 +50,7 @@ export function Header({
       </a>
       <span className="hidden items-center gap-1.5 rounded-full border border-line bg-raised/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-muted sm:inline-flex" aria-hidden="true">
         <span className="size-1.5 rounded-full bg-cyan/80" />
-        famelack
+        Globe TV
       </span>
 
       <div className="ml-auto flex items-center gap-1 sm:gap-2">

@@ -1,4 +1,4 @@
-name: Sync and deploy Globe TV
+name: Sync upstream data
 
 on:
   push:
@@ -8,19 +8,20 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: sync
   cancel-in-progress: false
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -33,23 +34,20 @@ jobs:
           echo "UPSTREAM_SHA=$(git -C .upstream rev-parse HEAD)" >> "$GITHUB_ENV"
       - name: Validate and generate catalog
         run: npm run sync -- .upstream
-      - run: npm run typecheck
-      - run: npm test
-      - name: Build site
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/
-          VITE_MAPBOX_TOKEN: ${{ vars.MAPBOX_PUBLIC_TOKEN }}
-        run: npm run build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Check for changes
+        id: diff
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+      - name: Commit and push synced data
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/index.json
+          git commit -m "data: 同步 Famelack 上游完整目录 (${UPSTREAM_SHA:0:7})"
+          git push

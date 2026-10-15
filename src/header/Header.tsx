@@ -4,8 +4,6 @@ import type { CatalogIndex, Channel } from '../data/types';
 import type { Preferences } from '../preferences/storage';
 
 interface Props {
-  sideOpen: boolean;
-  onToggleSide: () => void;
   playing?: Channel;
   onOpenPlayer: () => void;
   onClosePlayer: () => void;
@@ -17,7 +15,7 @@ interface Props {
 }
 
 export function Header({
-  sideOpen, onToggleSide, playing, onOpenPlayer,
+  playing, onOpenPlayer,
   index, preferences, onPickCountry, onSelectChannel, onRemoveSaved,
 }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -75,9 +73,6 @@ export function Header({
 
       {menuOpen && (
         <div className="absolute top-full left-3 z-50 mt-2 max-h-[70dvh] w-[min(360px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[#0a1626f5] p-3 shadow-2xl [&>button]:m-1 [&>button]:flex [&>button]:min-h-11 [&>button]:items-center [&>button]:justify-center [&>button]:gap-2 [&>button]:rounded-lg [&>button]:border [&>button]:border-line [&>button]:bg-raised [&>button]:px-3 [&>button]:py-2 [&>button]:text-sm sm:left-5" role="dialog" aria-label="主菜单">
-          <button onClick={onToggleSide} type="button">
-            {sideOpen ? '隐藏频道列表' : '显示频道列表'}
-          </button>
           <button onClick={() => setTab('favorites')} className={tab === 'favorites' ? 'border-cyan! text-cyan!' : ''} type="button">
             收藏 ({preferences.favorites.length})
           </button>

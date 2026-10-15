@@ -80,9 +80,8 @@ export function SidePanel({
   const shownChannels = useMemo(() => channels
     .filter(channel => normalizeQuery(channel.name).includes(normalizeQuery(channelQuery)))
     .sort((a, b) => Number(b.id === featuredId) - Number(a.id === featuredId)
-      || Number(favorites.includes(b.id)) - Number(favorites.includes(a.id))
       || a.name.localeCompare(b.name))
-  , [channels, channelQuery, favorites, featuredId]);
+  , [channels, channelQuery, featuredId]);
 
   const clock = now.toLocaleTimeString('zh-CN', { hour: 'numeric', minute: '2-digit', hour12: true });
 
@@ -136,8 +135,7 @@ export function SidePanel({
                     onClick={() => onPickCountry(item.code)}
                   >
                     <span className="grid size-7 shrink-0 place-items-center rounded bg-[#1c3650] text-xs font-semibold text-cyan">{item.nameZh.slice(0, 1)}</span>
-                    <span className="min-w-0 flex-1">{item.nameZh}</span>
-                    <span className="text-xs text-muted">{item.channelCount}</span>
+                    <span className="min-w-0 flex-1">{item.nameZh} ({item.channelCount})</span>
                   </button>
                 ))}
               </section>
@@ -197,7 +195,7 @@ export function SidePanel({
                       <span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#1c3650] text-sm text-cyan">{channel.name.slice(0, 1)}</span>
                       <span className="min-w-0 flex-1">
                         <strong className="block truncate text-sm font-medium">{channel.name}</strong>
-                        <small className="mt-0.5 block text-xs text-muted">{channel.geoBlocked && '可能受地区限制 · '}{channel.sources.length} 个来源</small>
+                        {channel.geoBlocked && <small className="mt-0.5 block text-xs text-muted">可能受地区限制</small>}
                       </span>
                     </button>
                     <button

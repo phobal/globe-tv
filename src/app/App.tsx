@@ -23,7 +23,6 @@ export function App() {
   const [featuredId, setFeaturedId] = useState<string>();
   const [message, setMessage] = useState('');
   const [globeFailed, setGlobeFailed] = useState(false);
-  const [sideOpen, setSideOpen] = useState(true);
   const [preferences, setPreferences] = useState(readPreferences);
   const country = index?.countries.find(item => item.code === countryCode);
   const playingCountry = index?.countries.find(item => item.code === playing?.countryCode);
@@ -53,7 +52,6 @@ export function App() {
       }
     }
     if (chosen) {
-      setSideOpen(true);
       setCountryCode(chosen);
       if (deep.channel) { setMissingId(deep.channel); setFeaturedId(deep.channel); }
     }
@@ -125,8 +123,6 @@ export function App() {
     <div className="flex min-h-dvh flex-col bg-[radial-gradient(circle_at_25%_25%,#142a44_0%,#08111f_58%,#03080f_100%)] font-sans text-ink lg:h-dvh lg:overflow-hidden">
       {index && (
         <Header
-          sideOpen={sideOpen}
-          onToggleSide={() => setSideOpen(value => !value)}
           playing={playing}
           onOpenPlayer={() => setPlayerOpen(true)}
           onClosePlayer={closePlayer}
@@ -154,7 +150,7 @@ export function App() {
       ) : !index ? (
         <main className="grid flex-1 place-content-center" role="status">正在加载地球电视…</main>
       ) : (
-        <main className={`grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 ${sideOpen ? 'grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)]' : 'grid-cols-1'}`}>
+        <main className="grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)]">
           <section className="relative flex h-[min(48dvh,440px)] min-h-[350px] min-w-0 flex-col overflow-hidden rounded-2xl border border-[#1f3650] bg-[radial-gradient(circle_at_50%_35%,#163757_0%,#0c2138_55%,#07172a_100%)] lg:h-full lg:min-h-0">
             <div className="flex items-start justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
               <div>
@@ -167,7 +163,7 @@ export function App() {
                 token={mapboxToken!}
                 countries={index.countries}
                 selectedCode={countryCode}
-                onSelect={(code) => { selectCountry(code); setSideOpen(true); }}
+                onSelect={selectCountry}
                 onFailure={() => setGlobeFailed(true)}
               />
             ) : (
@@ -175,12 +171,10 @@ export function App() {
                 <p>地图暂不可用，可使用频道列表继续选台。</p>
               </div>
             )}
-            <div className="flex flex-wrap justify-between gap-x-3 gap-y-1 px-4 pb-4 text-[11px] text-[#8fa3b6] sm:px-6">
-              <span>拖动旋转地球 · 点击国家查看频道</span>
+            <div className="flex flex-wrap justify-end gap-x-3 gap-y-1 px-4 pb-4 text-[11px] text-[#8fa3b6] sm:px-6">
               <span>{index.countries.length} 个国家和地区 · {index.channels.length} 个频道</span>
             </div>
           </section>
-          {sideOpen && (
             <aside className="flex h-[65dvh] min-h-[400px] min-w-0 flex-col overflow-hidden rounded-2xl border border-[#1f3650] bg-[#0d1b2ae8] lg:h-full lg:min-h-0" aria-label="国家与频道列表">
               <SidePanel
                 index={index}
@@ -198,7 +192,6 @@ export function App() {
                 onRetry={() => setCountryRetry(value => value + 1)}
               />
             </aside>
-          )}
         </main>
       )}
 

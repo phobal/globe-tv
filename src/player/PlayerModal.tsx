@@ -4,6 +4,7 @@ import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import type { Channel, CountrySummary } from '../data/types';
 import { beginSession, chooseSource, nextSource, type SourceState } from './sourceMachine';
+import { getSwipeDirection, type Direction } from './channelNavigation';
 
 const initial: SourceState = { session: 0, phase: 'idle', sourceIndex: 0, sourceCount: 0, cancelled: false };
 
@@ -11,17 +12,33 @@ interface Props {
   open: boolean;
   channel: Channel;
   country?: CountrySummary;
+  channelPosition?: { current: number; total: number };
+  onNavigate: (direction: Direction) => void;
   onPlaying: (id: string) => void;
   onClose: () => void;
 }
 
-export function PlayerModal({ open, channel, country, onPlaying, onClose }: Props) {
+const interactiveSelector = 'button, a, input, select, textarea, [role="button"], .vjs-control-bar, .vjs-menu, .vjs-big-play-button, .vjs-modal-dialog';
+
+function isInteractiveTarget(target: EventTarget | null): boolean {
+  return target instanceof Element && Boolean(target.closest(interactiveSelector));
+}
+
+export function PlayerModal({ open, channel, country, channelPosition, onNavigate, onPlaying, onClose }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const player = useRef<ReturnType<typeof videojs> | null>(null);
+  const touchStart = useRef<{ x: number; y: number; time: number } | null>(null);
   const onPlayingRef = useRef(onPlaying);
   const [state, setState] = useState<SourceState>(initial);
   const [sourceMenuOpen, setSourceMenuOpen] = useState(false);
   onPlayingRef.current = onPlaying;
+
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [open]);
 
   useEffect(() => {
     if (!open || !host.current) return;
@@ -104,6 +121,24 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
     };
   }, [open, channel.id, state.session, state.sourceIndex, state.phase === 'failed', state.cancelled]);
 
+  const onTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchStart.current = null;
+    if (!channelPosition || channelPosition.total < 2
+      || !window.matchMedia('(max-width: 639px) and (pointer: coarse)').matches
+      || event.touches.length !== 1 || isInteractiveTarget(event.target)) return;
+    const touch = event.touches[0];
+    touchStart.current = { x: touch.clientX, y: touch.clientY, time: Date.now() };
+  };
+
+  const onTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    if (!start || event.changedTouches.length !== 1 || isInteractiveTarget(event.target)) return;
+    const touch = event.changedTouches[0];
+    const direction = getSwipeDirection(start, { x: touch.clientX, y: touch.clientY, time: Date.now() });
+    if (direction) onNavigate(direction);
+  };
+
   if (!open) return null;
 
   return (
@@ -114,6 +149,10 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
         aria-modal="true"
         aria-label={`播放器：${channel.name}`}
         onClick={event => event.stopPropagation()}
+        onTouchStartCapture={onTouchStart}
+        onTouchMoveCapture={event => { if (event.touches.length !== 1) touchStart.current = null; }}
+        onTouchEndCapture={onTouchEnd}
+        onTouchCancelCapture={() => { touchStart.current = null; }}
       >
         <div
           className="absolute inset-0"
@@ -152,6 +191,13 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
             onClick={() => player.current?.play()?.catch(() => {})}
             aria-label="开始播放"
           ><Play size={28} fill="currentColor" aria-hidden="true" /></button>
+        )}
+
+        {channelPosition && channelPosition.total > 1 && (
+          <div className="pointer-events-none absolute bottom-[calc(4rem+env(safe-area-inset-bottom))] left-3 z-20 rounded-xl bg-[#07172acc] px-3 py-2 text-xs text-white/80 sm:hidden" role="status">
+            <span className="font-medium text-white">{channelPosition.current} / {channelPosition.total}</span>
+            <span className="ml-2">上下滑动切换频道</span>
+          </div>
         )}
 
         {channel.sources.length > 1 && state.phase !== 'failed' && (

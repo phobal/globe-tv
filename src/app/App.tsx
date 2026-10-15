@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { loadCountry, loadIndex } from '../data/catalog';
 import type { CatalogIndex, Channel } from '../data/types';
 import { parseDeepLink, linkTo } from '../routing/deepLinks';
@@ -7,6 +7,7 @@ import { guessUserCountry } from '../data/geo';
 import { Globe } from '../globe/Globe';
 import { SidePanel } from '../sidepanel/SidePanel';
 import { PlayerModal } from '../player/PlayerModal';
+import { adjacentChannel, orderedChannels, type Direction } from '../player/channelNavigation';
 import { Header } from '../header/Header';
 
 export function App() {
@@ -26,6 +27,11 @@ export function App() {
   const [preferences, setPreferences] = useState(readPreferences);
   const country = index?.countries.find(item => item.code === countryCode);
   const playingCountry = index?.countries.find(item => item.code === playing?.countryCode);
+  const playerChannels = useMemo(
+    () => playing?.countryCode === countryCode ? orderedChannels(channels) : [],
+    [channels, countryCode, playing?.countryCode],
+  );
+  const playerChannelIndex = playerChannels.findIndex(item => item.id === playing?.id);
 
   const refreshIndex = useCallback(() => {
     loadIndex().then(setIndex).catch(error => setIndexError(String(error)));
@@ -92,6 +98,12 @@ export function App() {
 
   const closePlayer = () => {
     setPlayerOpen(false);
+  };
+
+  const navigatePlayer = (direction: Direction) => {
+    if (!playing) return;
+    const next = adjacentChannel(playerChannels, playing.id, direction);
+    if (next) play(next);
   };
 
   const selectChannel = async (code: string, id: string) => {
@@ -197,9 +209,12 @@ export function App() {
 
       {playing && (
         <PlayerModal
+          key={playing.id}
           open={playerOpen}
           channel={playing}
           country={playingCountry}
+          channelPosition={playerChannelIndex < 0 ? undefined : { current: playerChannelIndex + 1, total: playerChannels.length }}
+          onNavigate={navigatePlayer}
           onPlaying={onPlaying}
           onClose={closePlayer}
         />

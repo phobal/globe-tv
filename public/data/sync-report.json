@@ -1,6 +1,506 @@
 {
   "rejected": [
     {
+      "country": "ad",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ae",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ae",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ae",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ae",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ae",
+      "row": 13,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "al",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 41,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 51,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 70,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 72,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 76,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 78,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 79,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 80,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 81,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 82,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 83,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 88,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 94,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 98,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 106,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 110,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 112,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 123,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 124,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 127,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 129,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ar",
+      "row": 140,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "at",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "at",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "at",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "at",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "at",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "at",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "au",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "az",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "az",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "bd",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 27,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 52,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 54,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 67,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 70,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 71,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 72,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 75,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 76,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 85,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 88,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 90,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 95,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 105,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 111,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 112,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 123,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "br",
+      "row": 125,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "by",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 15,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 16,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 37,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 66,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 139,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 140,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 145,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 146,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 147,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 148,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 152,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ca",
+      "row": 156,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cl",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cl",
+      "row": 37,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cl",
+      "row": 41,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cl",
+      "row": 88,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cl",
+      "row": 146,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cl",
+      "row": 154,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
       "country": "cn",
       "row": 8,
       "reason": "无效字段或无可用 HLS 来源"
@@ -9,7 +509,2562 @@
       "country": "cn",
       "row": 15,
       "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "co",
+      "row": 22,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "co",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "co",
+      "row": 46,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cr",
+      "row": 27,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "cz",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 15,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 37,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 41,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 42,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 51,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 92,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 97,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 98,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "de",
+      "row": 124,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "dj",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "dk",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "dz",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "eg",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "eg",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "eg",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "es",
+      "row": 48,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "es",
+      "row": 102,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "es",
+      "row": 112,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fi",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 32,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 39,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 40,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 76,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 77,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 79,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 90,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 91,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 100,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 104,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 109,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 110,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 111,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 112,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "fr",
+      "row": 148,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gh",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gh",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gh",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gl",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gl",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gr",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "gr",
+      "row": 17,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "hk",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 23,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 30,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 31,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 37,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 67,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 72,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "id",
+      "row": 106,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "il",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 13,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 29,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 37,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 57,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 86,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 91,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 109,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 170,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 203,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 214,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 215,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 221,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 229,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 249,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 251,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 253,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 261,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 269,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 272,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 284,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 317,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 340,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 344,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 363,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 365,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 383,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 385,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 421,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 437,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 445,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 451,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 479,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 501,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 511,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 519,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 520,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 526,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 537,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 555,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 563,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "in",
+      "row": 574,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "it",
+      "row": 86,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jm",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jo",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 13,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 16,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 17,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 21,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 23,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 25,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 27,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 28,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 29,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 30,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "jp",
+      "row": 31,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ke",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ke",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ke",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ke",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ke",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 35,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 38,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 42,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 47,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 49,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 50,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 54,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 55,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 56,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 58,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 59,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 60,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 61,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 62,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 63,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 64,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 65,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 66,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 67,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 68,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 69,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 70,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 71,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kr",
+      "row": 72,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "kz",
+      "row": 27,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "lk",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 25,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 34,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 44,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 46,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 48,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 65,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 68,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 69,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 70,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 71,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 72,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 73,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 74,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 75,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 76,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 77,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 78,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 79,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 80,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 81,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 82,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 83,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "mx",
+      "row": 84,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "my",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "my",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "my",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "my",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ng",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ng",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ng",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ng",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ng",
+      "row": 29,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ng",
+      "row": 30,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "nl",
+      "row": 23,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "nl",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "nl",
+      "row": 25,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "nl",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pa",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pe",
+      "row": 80,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pe",
+      "row": 93,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ph",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ph",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 11,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 15,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 16,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 17,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 21,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 23,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 38,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 44,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 47,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 49,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 62,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 63,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 64,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pk",
+      "row": 67,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 19,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 40,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 41,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 45,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 48,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 49,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 50,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 51,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 52,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "pl",
+      "row": 63,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ro",
+      "row": 44,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ro",
+      "row": 76,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ro",
+      "row": 77,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ro",
+      "row": 91,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ru",
+      "row": 87,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ru",
+      "row": 272,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ru",
+      "row": 274,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ru",
+      "row": 279,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ru",
+      "row": 280,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sa",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sa",
+      "row": 16,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sa",
+      "row": 17,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sa",
+      "row": 23,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sa",
+      "row": 29,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sa",
+      "row": 30,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sg",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sg",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sg",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "si",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sk",
+      "row": 15,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sn",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "sy",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "th",
+      "row": 37,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tn",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tn",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 13,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 16,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 19,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 27,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 28,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 29,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 35,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 36,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 45,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 47,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 56,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 61,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 62,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 63,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 68,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 70,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 92,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 96,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 98,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 109,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 129,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 131,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 133,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 154,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 160,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 163,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tr",
+      "row": 165,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 0,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 3,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 8,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 9,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 13,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 15,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 17,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 19,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 21,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 22,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 25,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 27,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 28,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 29,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 30,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 31,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 32,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 33,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 34,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "tw",
+      "row": 35,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 2,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 16,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 22,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 58,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 59,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 60,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 61,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 62,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 63,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 64,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 65,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "ua",
+      "row": 66,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 6,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 12,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 14,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 22,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 23,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 24,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 25,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 26,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 31,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 32,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 35,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 42,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 43,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 45,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 81,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 85,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 96,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 119,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 123,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 151,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 158,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 166,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 167,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 171,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 178,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 191,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 193,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 220,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uk",
+      "row": 221,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 18,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 20,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 21,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 28,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 34,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 102,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 122,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 124,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 145,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 149,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 189,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 190,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 192,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 195,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 198,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 199,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 200,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 201,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 210,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 236,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 237,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 238,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 239,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 268,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 274,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 307,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 313,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 322,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 325,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 353,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 355,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 389,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 390,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 391,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 392,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 393,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 395,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 396,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 397,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 398,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 399,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 400,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 401,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 402,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 403,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 404,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 417,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 423,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 480,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 483,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 496,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 509,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 538,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 539,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 550,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 577,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 578,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 609,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 636,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 649,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 656,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 657,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 662,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 698,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 701,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 711,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 713,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 714,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 767,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 770,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 771,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 776,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 777,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 783,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 814,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 823,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 834,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 855,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 879,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 880,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 896,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 897,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 898,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 930,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 931,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 934,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 935,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 936,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 945,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 961,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 980,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1000,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1012,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1025,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1026,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1027,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1028,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1029,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1046,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1052,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1069,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1070,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1079,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1147,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1150,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1153,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1159,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1169,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1170,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1171,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1178,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1232,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1235,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1240,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1265,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1266,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1299,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1329,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1330,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1354,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1356,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1358,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "us",
+      "row": 1376,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "uz",
+      "row": 31,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "vn",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "vn",
+      "row": 17,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "za",
+      "row": 1,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "za",
+      "row": 4,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "za",
+      "row": 5,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "za",
+      "row": 7,
+      "reason": "无效字段或无可用 HLS 来源"
+    },
+    {
+      "country": "za",
+      "row": 10,
+      "reason": "无效字段或无可用 HLS 来源"
     }
   ],
-  "accepted": 76
+  "accepted": 6283
 }

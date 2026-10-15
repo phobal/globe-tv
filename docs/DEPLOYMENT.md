@@ -9,6 +9,8 @@ npm test
 npm run dev
 ```
 
+地图使用 Mapbox GL JS。先在项目根目录创建 `.env.local`，填写 `VITE_MAPBOX_TOKEN=pk...`（只使用 Mapbox public token），再启动开发服务器。缺少 token 或地图加载失败时，频道列表仍可选台。public token 会包含在浏览器构建产物中，建议在 Mapbox 控制台限制允许的站点 URL；不要在代码或聊天中填写 secret token。
+
 仓库中的 `public/data` 是开发样例，只含中国真实频道文件及德国、美国两个空国家。它用于检查交互，不代表正式全量目录。`fixtures/famelack` 保存生成它的输入。生产构建会从 Famelack 仓库拉取完整上游数据并重新生成目录。
 
 ## 生成完整目录
@@ -26,9 +28,10 @@ npm run build
 
 1. 将仓库推送到 GitHub，默认分支设为 `main`。
 2. 在仓库 **Settings → Pages → Build and deployment** 中，将 Source 设为 **GitHub Actions**。
-3. 在 **Actions** 手动运行 **Sync and deploy Globe TV**，或推送到 `main`。之后工作流每日运行一次。
-4. 构建先完成上游同步、类型检查和测试，全部成功后才将 `dist` 部署到 Pages。上游失败不会触发部署，旧站点继续保留。
-5. 访问 `https://<账号>.github.io/<仓库名>/`。查询参数直达链接支持静态托管，无需服务器路由回退。
+3. 在仓库 **Settings → Secrets and variables → Actions → Variables** 中添加 `MAPBOX_PUBLIC_TOKEN`，值为 Mapbox public token。若设置了 URL 限制，需允许最终 Pages 域名。
+4. 在 **Actions** 手动运行 **Sync and deploy Globe TV**，或推送到 `main`。之后工作流每日运行一次。
+5. 构建先完成上游同步、类型检查和测试，全部成功后才将 `dist` 部署到 Pages。上游失败不会触发部署，旧站点继续保留。
+6. 访问 `https://<账号>.github.io/<仓库名>/`。查询参数直达链接支持静态托管，无需服务器路由回退。
 
 工作流使用 GitHub 官方 Pages Actions，无需额外凭据。尚未在作者中国大陆直连网络验证 Pages、地球资源和直播源；部署完成后按 `docs/validation/spike-results.md` 记录实际结果，再决定是否评估 Workers。
 

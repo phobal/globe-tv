@@ -1,94 +1,213 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import GlobeGL from 'react-globe.gl';
-import { MeshPhongMaterial } from 'three';
+import { useEffect, useRef, useState } from 'react';
+import mapboxgl, { type Map as MapboxMap } from 'mapbox-gl';
+import type { FeatureCollection } from 'geojson';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import type { CountrySummary } from '../data/types';
 import { countryCenter, loadBoundaries, type CountryFeature } from './countries';
-import { LABEL_CHANNEL_THRESHOLD } from './labelDedup';
 
 interface Props {
+  token: string;
   countries: CountrySummary[];
   selectedCode?: string;
   onSelect: (code: string) => void;
   onFailure: () => void;
 }
 
-export function Globe({ countries, selectedCode, onSelect, onFailure }: Props) {
-  const [features, setFeatures] = useState<CountryFeature[]>([]);
-  const [hovered, setHovered] = useState<string>();
-  const [size, setSize] = useState({ width: 600, height: 600 });
-  const [interacted, setInteracted] = useState(false);
-  const wrapper = useRef<HTMLDivElement>(null);
-  const globe = useRef<any>(null);
-  const byCode = useMemo(() => new Map(countries.map(item => [item.code, item])), [countries]);
-  const oceanMaterial = useMemo(() => new MeshPhongMaterial({
-    color: '#4ba3d0',
-    shininess: 22,
-    specular: '#2c7fb3',
-    emissive: '#1c4a73',
-    emissiveIntensity: 0.18,
-  }), []);
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const SOURCE = 'channel-countries';
+const LABEL_SOURCE = 'country-label-points';
+const LABELS = 'country-labels-small-globe';
+const HIT = 'country-hit';
+const HOVER = 'country-hover';
+const SELECTED = 'country-selected';
+const SELECTED_LINE = 'country-selected-line';
+const codeFilter = (code?: string): mapboxgl.FilterSpecification => ['==', ['get', 'code'], code ?? ''];
+const globeZoom = (height: number) => Math.max(0.2, Math.min(1.75, 1.75 + Math.log2(Math.max(height, 1) / 570)));
 
-  useEffect(() => { loadBoundaries().then(setFeatures).catch(onFailure); }, [onFailure]);
-  useEffect(() => {
-    if (!wrapper.current) return;
-    const observer = new ResizeObserver(([entry]) => setSize({ width: Math.max(1, entry.contentRect.width), height: Math.max(1, entry.contentRect.height) }));
-    observer.observe(wrapper.current);
-    return () => observer.disconnect();
-  }, []);
-  useEffect(() => {
-    const controls = globe.current?.controls();
-    if (!controls) return;
-    controls.autoRotate = !interacted && !reduced && !selectedCode;
-    controls.autoRotateSpeed = 0.35;
-    const stop = () => setInteracted(true);
-    controls.addEventListener('start', stop);
-    return () => controls.removeEventListener('start', stop);
-  }, [interacted, reduced, features, selectedCode]);
-  useEffect(() => {
-    const selected = features.find(item => item.properties.code === selectedCode);
-    if (!selected || !globe.current) return;
-    globe.current.pointOfView({ ...countryCenter(selected), altitude: 1.9 }, reduced ? 0 : 900);
-  }, [selectedCode, features, reduced]);
+export function Globe({ token, countries, selectedCode, onSelect, onFailure }: Props) {
+  const container = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<MapboxMap | null>(null);
+  const featuresRef = useRef<CountryFeature[]>([]);
+  const selectedRef = useRef(selectedCode);
+  const onSelectRef = useRef(onSelect);
+  const onFailureRef = useRef(onFailure);
+  const [hoveredCode, setHoveredCode] = useState<string>();
+  selectedRef.current = selectedCode;
+  onSelectRef.current = onSelect;
+  onFailureRef.current = onFailure;
 
-  return <div className="relative min-h-0 flex-1 cursor-grab active:cursor-grabbing [&_canvas]:block" ref={wrapper} aria-label="交互式地球。键盘操作请使用国家列表。">
-    <GlobeGL
-      ref={globe}
-      width={size.width}
-      height={size.height}
-      backgroundColor="rgba(0,0,0,0)"
-      globeMaterial={oceanMaterial}
-      showAtmosphere
-      atmosphereColor="#9bd4f0"
-      atmosphereAltitude={0.28}
-      polygonsData={features}
-      polygonAltitude={feature => (feature as CountryFeature).properties.code === selectedCode ? 0.022 : 0.006}
-      polygonCapColor={feature => {
-        const code = (feature as CountryFeature).properties.code;
-        if (code === selectedCode) return '#d7e7c8';
-        if (code === hovered) return '#c8e2c1';
-        const item = byCode.get(code);
-        if (!item) return '#7a9a78';
-        return item.channelCount >= LABEL_CHANNEL_THRESHOLD
-          ? '#cae0c4'
-          : item.channelCount > 0 ? '#b8d9b5' : '#7a9a78';
-      }}
-      polygonSideColor={() => '#7fa8c2'}
-      polygonStrokeColor={() => '#ff5b6e'}
-      polygonLabel={feature => {
-        const item = byCode.get((feature as CountryFeature).properties.code);
-        if (!item) return '';
-        const sub = item.channelCount >= LABEL_CHANNEL_THRESHOLD
-          ? `<br><small>${item.channelCount} 个频道</small>`
-          : `<br><small>${item.channelCount} 个频道</small>`;
-        return `<div class="rounded-md border border-[#4b6a82] bg-[#0d1b2ae6] px-2 py-1 text-xs text-white [&_small]:text-cyan"><strong>${item.nameZh}</strong>${sub}</div>`;
-      }}
-      polygonsTransitionDuration={300}
-      onPolygonHover={feature => setHovered((feature as CountryFeature | null)?.properties.code)}
-      onPolygonClick={feature => { setInteracted(true); onSelect((feature as CountryFeature).properties.code); }}
-      onGlobeReady={() => {
-        try { globe.current?.renderer(); } catch { onFailure(); }
-      }}
-    />
-  </div>;
+  useEffect(() => {
+    if (!container.current || !mapboxgl.supported()) {
+      onFailureRef.current();
+      return;
+    }
+    let disposed = false;
+    let styleReady = false;
+    let map: MapboxMap;
+    try {
+      map = new mapboxgl.Map({
+        container: container.current,
+        accessToken: token,
+        style: 'mapbox://styles/mapbox/outdoors-v12',
+        projection: 'globe',
+        center: [15, 20],
+        zoom: globeZoom(container.current.clientHeight),
+        pitch: 0,
+        bearing: 0,
+        antialias: true,
+        scrollZoom: false,
+        dragRotate: false,
+      });
+    } catch {
+      onFailureRef.current();
+      return;
+    }
+    mapRef.current = map;
+    const resizeObserver = new ResizeObserver(() => map.resize());
+    resizeObserver.observe(container.current);
+    map.on('error', () => {
+      if (!styleReady && !disposed) onFailureRef.current();
+    });
+    map.on('style.load', async () => {
+      if (disposed) return;
+      styleReady = true;
+      map.setFog({
+        color: '#c7e5ff',
+        'high-color': '#315c87',
+        'horizon-blend': 0.025,
+        'space-color': '#07182c',
+        'star-intensity': 0.5,
+      });
+      try {
+        const features = await loadBoundaries();
+        if (disposed) return;
+        featuresRef.current = features;
+        map.addSource(SOURCE, {
+          type: 'geojson',
+          data: { type: 'FeatureCollection', features } as unknown as FeatureCollection,
+        });
+        map.addSource(LABEL_SOURCE, {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: features.map(feature => {
+              const { lng, lat } = countryCenter(feature);
+              return {
+                type: 'Feature' as const,
+                properties: { name: feature.properties.name },
+                geometry: { type: 'Point' as const, coordinates: [lng, lat] },
+              };
+            }),
+          },
+        });
+        map.addLayer({
+          id: HIT,
+          type: 'fill',
+          source: SOURCE,
+          paint: { 'fill-color': '#60a5fa', 'fill-opacity': 0.01 },
+        });
+        map.addLayer({
+          id: 'country-borders',
+          type: 'line',
+          source: SOURCE,
+          paint: { 'line-color': '#e9a4af', 'line-opacity': 0.65, 'line-width': 0.8 },
+        });
+        map.addLayer({
+          id: HOVER,
+          type: 'fill',
+          source: SOURCE,
+          filter: codeFilter(),
+          paint: { 'fill-color': '#f5b969', 'fill-opacity': 0.22 },
+        });
+        map.addLayer({
+          id: SELECTED,
+          type: 'fill',
+          source: SOURCE,
+          filter: codeFilter(selectedRef.current),
+          paint: { 'fill-color': '#f5b969', 'fill-opacity': 0.26 },
+        });
+        map.addLayer({
+          id: SELECTED_LINE,
+          type: 'line',
+          source: SOURCE,
+          filter: codeFilter(selectedRef.current),
+          paint: { 'line-color': '#e97856', 'line-opacity': 0.95, 'line-width': 2 },
+        });
+        map.addLayer({
+          id: LABELS,
+          type: 'symbol',
+          source: LABEL_SOURCE,
+          maxzoom: 1.2,
+          layout: {
+            'text-field': ['get', 'name'],
+            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Regular'],
+            'text-size': 11,
+          },
+          paint: {
+            'text-color': '#213548',
+            'text-halo-color': '#f9fff3',
+            'text-halo-width': 1.4,
+          },
+        });
+        const selected = features.find(item => item.properties.code === selectedRef.current);
+        if (selected) {
+          const { lat, lng } = countryCenter(selected);
+          map.jumpTo({ center: [lng, lat], zoom: globeZoom(map.getContainer().clientHeight) });
+        }
+        map.on('mousemove', HIT, event => {
+          const code = event.features?.[0]?.properties?.code as string | undefined;
+          map.getCanvas().style.cursor = code ? 'pointer' : '';
+          map.setFilter(HOVER, codeFilter(code));
+          setHoveredCode(code);
+        });
+        map.on('mouseleave', HIT, () => {
+          map.getCanvas().style.cursor = '';
+          map.setFilter(HOVER, codeFilter());
+          setHoveredCode(undefined);
+        });
+        map.on('click', HIT, event => {
+          const code = event.features?.[0]?.properties?.code as string | undefined;
+          if (code) onSelectRef.current(code);
+        });
+      } catch {
+        if (!disposed) onFailureRef.current();
+      }
+    });
+    return () => {
+      disposed = true;
+      resizeObserver.disconnect();
+      mapRef.current = null;
+      map.remove();
+    };
+  }, [token]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map?.getLayer(SELECTED)) return;
+    map.setFilter(SELECTED, codeFilter(selectedCode));
+    map.setFilter(SELECTED_LINE, codeFilter(selectedCode));
+    const selected = featuresRef.current.find(item => item.properties.code === selectedCode);
+    if (!selected) return;
+    const { lat, lng } = countryCenter(selected);
+    map.easeTo({
+      center: [lng, lat],
+      zoom: globeZoom(map.getContainer().clientHeight),
+      duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 850,
+      essential: false,
+    });
+  }, [selectedCode]);
+
+  const hovered = countries.find(item => item.code === hoveredCode);
+  return (
+    <div className="relative min-h-0 flex-1 overflow-hidden" aria-label="交互式地球。键盘操作请使用国家列表。">
+      <div className="absolute inset-0">
+        <div ref={container} className="h-full w-full" />
+      </div>
+      {hovered && (
+        <div className="pointer-events-none absolute bottom-8 left-4 rounded-lg border border-white/20 bg-[#0d1b2ae8] px-3 py-2 text-xs text-white shadow-lg">
+          <strong className="block text-sm">{hovered.nameZh}</strong>
+          <span className="text-cyan">{hovered.channelCount} 个频道</span>
+        </div>
+      )}
+    </div>
+  );
 }

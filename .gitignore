@@ -6,3 +6,5 @@ test-results/
 .DS_Store
 .cache/
 .upstream/
+.env.local
+.env.*.local

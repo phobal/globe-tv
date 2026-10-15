@@ -118,7 +118,8 @@ export function App() {
     recent: current.recent.filter(item => item !== id),
   }));
   const onPlaying = (id: string) => setPreferences(current => markRecentlyPlayed(current, id));
-  const canGlobe = !globeFailed && typeof WebGLRenderingContext !== 'undefined';
+  const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN?.trim();
+  const canGlobe = Boolean(mapboxToken) && !globeFailed;
 
   return (
     <div className="flex min-h-dvh flex-col bg-[radial-gradient(circle_at_25%_25%,#142a44_0%,#08111f_58%,#03080f_100%)] font-sans text-ink lg:h-dvh lg:overflow-hidden">
@@ -154,7 +155,7 @@ export function App() {
         <main className="grid flex-1 place-content-center" role="status">正在加载地球电视…</main>
       ) : (
         <main className={`grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 ${sideOpen ? 'grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)]' : 'grid-cols-1'}`}>
-          <section className="relative flex h-[min(36dvh,360px)] min-h-[260px] min-w-0 flex-col overflow-hidden rounded-2xl border border-[#1f3650] bg-[radial-gradient(circle_at_50%_35%,#163757_0%,#0c2138_55%,#07172a_100%)] lg:h-full lg:min-h-0">
+          <section className="relative flex h-[min(48dvh,440px)] min-h-[350px] min-w-0 flex-col overflow-hidden rounded-2xl border border-[#1f3650] bg-[radial-gradient(circle_at_50%_35%,#163757_0%,#0c2138_55%,#07172a_100%)] lg:h-full lg:min-h-0">
             <div className="flex items-start justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
               <div>
                 <small className="text-[11px] tracking-[0.18em] text-cyan">探索世界 · 实时直播</small>
@@ -163,6 +164,7 @@ export function App() {
             </div>
             {canGlobe ? (
               <Globe
+                token={mapboxToken!}
                 countries={index.countries}
                 selectedCode={countryCode}
                 onSelect={(code) => { selectCountry(code); setSideOpen(true); }}
@@ -170,7 +172,7 @@ export function App() {
               />
             ) : (
               <div className="grid flex-1 place-content-center p-5 text-center text-muted">
-                <p>此设备无法显示 3D 地球，可使用右侧面板继续选台。</p>
+                <p>地图暂不可用，可使用频道列表继续选台。</p>
               </div>
             )}
             <div className="flex flex-wrap justify-between gap-x-3 gap-y-1 px-4 pb-4 text-[11px] text-[#8fa3b6] sm:px-6">

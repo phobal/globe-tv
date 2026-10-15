@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", "Noto Sans SC", system-ui, sans-serif;
+  --color-ink: #f4f7fa;
+  --color-muted: #9eb4c1;
+  --color-cyan: #9bd4f0;
+  --color-line: #2c4661;
+  --color-panel: #0d1b2a;
+  --color-raised: #11273d;
+}
+
+html { color-scheme: dark; }
+body { margin: 0; min-width: 320px; background: #08111f; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid #9bd4f0; outline-offset: 3px; }

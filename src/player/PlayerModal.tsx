@@ -98,49 +98,49 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
   const sourceCount = channel.sources.length;
 
   return (
-    <div className="modal-scrim" onClick={onClose}>
-      <div className="modal-panel" role="dialog" aria-modal="true" aria-label="播放器" onClick={event => event.stopPropagation()}>
-        <header className="modal-head">
-          <div>
-            <small>{country?.nameZh ?? channel.countryCode}</small>
-            <h2>{channel.name}</h2>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#03080fcc] sm:p-4" onClick={onClose}>
+      <div className="flex h-dvh w-full min-w-0 flex-col overflow-hidden bg-[#0c1e30] text-ink shadow-2xl sm:h-auto sm:max-h-[90dvh] sm:max-w-[960px] sm:rounded-2xl sm:border sm:border-line" role="dialog" aria-modal="true" aria-label="播放器" onClick={event => event.stopPropagation()}>
+        <header className="flex shrink-0 items-start justify-between gap-3 border-b border-[#1f3650] px-4 py-4 sm:px-6">
+          <div className="min-w-0">
+            <small className="text-xs tracking-widest text-cyan">{country?.nameZh ?? channel.countryCode}</small>
+            <h2 className="mt-1 truncate text-lg font-semibold sm:text-xl">{channel.name}</h2>
           </div>
-          <button type="button" onClick={onClose} aria-label="关闭播放器">×</button>
+          <button className="grid size-11 shrink-0 place-items-center rounded-lg border border-line bg-raised text-2xl" type="button" onClick={onClose} aria-label="关闭播放器">×</button>
         </header>
-        <div className="modal-body">
-          <div className="video-box">
-            <video ref={video} playsInline controls={false} />
+        <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4 sm:p-6">
+          <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl border border-[#1f3650] bg-black">
+            <video className="block h-full w-full object-contain" ref={video} playsInline controls={false} />
             {state.phase !== 'playing' && (
-              <div className="video-overlay" role="status">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/65 p-3 text-center text-xs sm:gap-3 sm:p-5 sm:text-sm" role="status">
                 {state.phase === 'failed' ? (
                   <>
-                    <strong>所有来源均无法播放</strong>
+                    <strong className="text-sm sm:text-base">所有来源均无法播放</strong>
                     <p>可能是源失效、跨域或地区限制。</p>
-                    <div className="video-actions">
-                      <button onClick={() => setState(current => beginSession(current, sourceCount))}>重试</button>
-                      <button onClick={onClose}>关闭</button>
+                    <div className="flex gap-2">
+                      <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => setState(current => beginSession(current, sourceCount))}>重试</button>
+                      <button className="rounded-lg border border-line bg-raised px-4 py-2" onClick={onClose}>关闭</button>
                     </div>
                   </>
                 ) : state.phase === 'idle' ? (
                   <>
                     已取消尝试
-                    <button onClick={() => setState(current => beginSession(current, sourceCount))}>重新尝试</button>
+                    <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => setState(current => beginSession(current, sourceCount))}>重新尝试</button>
                   </>
                 ) : needsGesture ? (
                   <>
                     浏览器要求手动开始播放
-                    <button onClick={() => video.current?.play().catch(() => {})}>点击播放</button>
+                    <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => video.current?.play().catch(() => {})}>点击播放</button>
                   </>
                 ) : (
                   <>
                     正在尝试来源 {state.sourceIndex + 1} / {sourceCount}…
-                    <button onClick={() => setState(cancelSource)}>取消尝试</button>
+                    <button className="rounded-lg bg-cyan px-4 py-2 font-semibold text-[#102334]" onClick={() => setState(cancelSource)}>取消尝试</button>
                   </>
                 )}
               </div>
             )}
           </div>
-          <div className="player-controls">
+          <div className="flex flex-wrap gap-2 [&_button]:min-h-11 [&_button]:rounded-lg [&_button]:border [&_button]:border-line [&_button]:bg-raised [&_button]:px-3 [&_button]:py-2 [&_button]:text-sm hover:[&_button]:bg-[#173353]">
             <button onClick={() => {
               const element = video.current;
               if (!element) return;
@@ -154,19 +154,19 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
             )}
           </div>
           {sourceCount > 1 && (
-            <div className="source-options">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted [&_button]:min-h-10 [&_button]:rounded-lg [&_button]:border [&_button]:border-line [&_button]:bg-raised [&_button]:px-3 [&_button]:py-2">
               <span>备用源</span>
               {channel.sources.map((source, index) => (
                 <button
                   key={`${source.url}-${index}`}
                   type="button"
-                  className={index === state.sourceIndex ? 'active' : ''}
+                  className={index === state.sourceIndex ? 'border-cyan! text-cyan!' : ''}
                   onClick={() => setState(current => chooseSource(current, index))}
                 >来源 {index + 1}</button>
               ))}
             </div>
           )}
-          {channel.geoBlocked && <p className="notice">此频道可能受地区限制</p>}
+          {channel.geoBlocked && <p className="rounded-lg border border-[#2c5e75] bg-[#1a3a4a] px-3 py-2 text-sm text-[#b6e0ee]">此频道可能受地区限制</p>}
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { CatalogIndex, Channel, CountrySummary } from '../data/types';
 import { normalizeQuery } from '../data/catalog';
-import styles from './sidepanel.module.css';
 
 interface Props {
   index: CatalogIndex;
@@ -87,25 +86,25 @@ export function SidePanel({
   const clock = now.toLocaleTimeString('zh-CN', { hour: 'numeric', minute: '2-digit', hour12: true });
 
   return (
-    <div className={styles.panel}>
-      <header className={styles.head}>
+    <div className="flex h-full min-h-0 flex-col text-ink">
+      <header className="shrink-0 border-b border-[#1f3650] px-4 py-4 sm:px-5">
         {!country ? (
-          <div className={styles.headTitle}>
-            <small>选择国家</small>
-            <h2>选择国家</h2>
-            <span className={styles.clock}>{clock}</span>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <small className="text-[11px] tracking-[0.15em] text-cyan">选择国家</small>
+            <h2 className="text-lg font-semibold">选择国家</h2>
+            <span className="text-xs text-muted">{clock}</span>
           </div>
         ) : (
-          <div className={styles.headTitle}>
+          <div className="flex items-center gap-3">
             <button
-              className={styles.backBtn}
+              className="min-h-11 shrink-0 rounded-lg px-2 text-sm text-cyan hover:bg-raised"
               type="button"
               onClick={() => onPickCountry('')}
               aria-label="返回国家列表"
             >← 返回</button>
             <div>
-              <small>{country.nameEn}</small>
-              <h2>{country.nameZh}</h2>
+              <small className="block text-[11px] tracking-wider text-cyan">{country.nameEn}</small>
+              <h2 className="text-lg font-semibold">{country.nameZh}</h2>
             </div>
           </div>
         )}
@@ -113,9 +112,9 @@ export function SidePanel({
 
       {!country ? (
         <>
-          <div style={{ padding: '10px 18px 8px' }}>
+          <div className="shrink-0 px-4 pt-3 pb-2 sm:px-5">
             <input
-              className={styles.search}
+              className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
               type="search"
               placeholder="搜索国家"
               value={countryQuery}
@@ -123,21 +122,21 @@ export function SidePanel({
               aria-label="搜索国家"
             />
           </div>
-          <div className={styles.list}>
-            {grouped.length === 0 && <p className={styles.empty}>没有匹配的国家</p>}
+          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]">
+            {grouped.length === 0 && <p className="px-3 py-6 text-center text-muted">没有匹配的国家</p>}
             {grouped.map(group => (
-              <section key={group.region} className={styles.region}>
-                <div className={styles.regionLabel}>{group.region}</div>
+              <section key={group.region} className="py-2">
+                <div className="px-2 py-2 text-[11px] tracking-[0.18em] text-cyan">{group.region}</div>
                 {group.countries.map(item => (
                   <button
                     key={item.code}
                     type="button"
-                    className={item.code === countryCode ? `${styles.row} ${styles.active}` : styles.row}
+                    className={`flex min-h-11 w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm hover:bg-raised ${item.code === countryCode ? 'bg-[#173353] text-cyan' : 'text-ink'}`}
                     onClick={() => onPickCountry(item.code)}
                   >
-                    <span className={styles.flag}>{item.nameZh.slice(0, 1)}</span>
-                    <span className={styles.name}>{item.nameZh}</span>
-                    <span className={styles.count}>{item.channelCount}</span>
+                    <span className="grid size-7 shrink-0 place-items-center rounded bg-[#1c3650] text-xs font-semibold text-cyan">{item.nameZh.slice(0, 1)}</span>
+                    <span className="min-w-0 flex-1">{item.nameZh}</span>
+                    <span className="text-xs text-muted">{item.channelCount}</span>
                   </button>
                 ))}
               </section>
@@ -146,9 +145,9 @@ export function SidePanel({
         </>
       ) : (
         <>
-          <div style={{ padding: '10px 18px 8px' }}>
+          <div className="shrink-0 px-4 pt-3 pb-2 sm:px-5">
             <input
-              className={styles.search}
+              className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
               type="search"
               placeholder="搜索当前国家频道"
               value={channelQuery}
@@ -156,19 +155,19 @@ export function SidePanel({
               aria-label="搜索当前国家频道"
             />
           </div>
-          <div className={styles.list}>
-            {missingId && <div className={styles.deepLinkBanner}>该频道已下线。可以浏览本国的其他频道。</div>}
-            {loading && <p className={styles.empty}>正在加载频道…</p>}
+          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]" aria-label="播放列表">
+            {missingId && <div className="m-2 rounded-lg border border-[#2c5e75] bg-[#1a3a4a] px-3 py-2 text-sm text-[#b6e0ee]">该频道已下线。可以浏览本国的其他频道。</div>}
+            {loading && <p className="px-3 py-6 text-center text-muted">正在加载频道…</p>}
             {error && (
-              <div className={styles.noChannels}>
+              <div className="m-2 rounded-xl border border-dashed border-line bg-raised p-4 text-center text-sm">
                 <p>{error}</p>
-                <button onClick={onRetry} className={styles.suggestion}>重试</button>
+                <button onClick={onRetry} className="mt-3 rounded-lg border border-line bg-[#1c3650] px-4 py-2">重试</button>
               </div>
             )}
             {!loading && !error && channels.length === 0 && (
-              <div className={styles.noChannels}>
+              <div className="m-2 rounded-xl border border-dashed border-line bg-raised p-4 text-center text-sm">
                 <p>该国家暂无频道收录。</p>
-                <p className={styles.empty}>试试其他国家：</p>
+                <p className="py-3 text-muted">试试其他国家：</p>
                 {countries
                   .filter(item => item.code !== countryCode && item.channelCount > 0)
                   .slice(0, 6)
@@ -176,33 +175,33 @@ export function SidePanel({
                     <button
                       key={item.code}
                       type="button"
-                      className={styles.suggestion}
+                      className="m-1 inline-flex min-h-11 flex-col rounded-lg border border-line bg-[#1c3650] px-3 py-1 text-sm"
                       onClick={() => onPickCountry(item.code)}
                     >
                       <strong>{item.nameZh}</strong>
-                      <small>{item.channelCount} 个频道</small>
+                      <small className="text-cyan">{item.channelCount} 个频道</small>
                     </button>
                   ))}
               </div>
             )}
             {!loading && !error && channels.length > 0 && (
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul className="m-0 list-none p-0">
                 {shownChannels.map(channel => (
-                  <li key={channel.id} style={{ display: 'flex', alignItems: 'center' }}>
+                  <li key={channel.id} className="flex min-w-0 items-center border-b border-[#1f3650]">
                     <button
                       type="button"
-                      className={styles.channelRow}
+                      className="flex min-h-15 min-w-0 flex-1 items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-raised"
                       onClick={() => onPlay(channel)}
                     >
-                      <span className={styles.channelInitial}>{channel.name.slice(0, 1)}</span>
-                      <span className={styles.channelText}>
-                        <strong>{channel.name}</strong>
-                        <small>{channel.geoBlocked && '可能受地区限制 · '}{channel.sources.length} 个来源</small>
+                      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#1c3650] text-sm text-cyan">{channel.name.slice(0, 1)}</span>
+                      <span className="min-w-0 flex-1">
+                        <strong className="block truncate text-sm font-medium">{channel.name}</strong>
+                        <small className="mt-0.5 block text-xs text-muted">{channel.geoBlocked && '可能受地区限制 · '}{channel.sources.length} 个来源</small>
                       </span>
                     </button>
                     <button
                       type="button"
-                      className={styles.favBtn}
+                      className="grid size-11 shrink-0 place-items-center rounded-lg text-xl text-cyan hover:bg-raised"
                       onClick={() => onToggleFavorite(channel.id)}
                       aria-label={`${favorites.includes(channel.id) ? '取消收藏' : '收藏'} ${channel.name}`}
                       aria-pressed={favorites.includes(channel.id)}
@@ -212,7 +211,7 @@ export function SidePanel({
               </ul>
             )}
             {!loading && shownChannels.length === 0 && channels.length > 0 && (
-              <p className={styles.empty}>没有匹配的频道</p>
+              <p className="px-3 py-6 text-center text-muted">没有匹配的频道</p>
             )}
           </div>
         </>

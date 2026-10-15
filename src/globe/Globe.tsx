@@ -51,7 +51,7 @@ export function Globe({ countries, selectedCode, onSelect, onFailure }: Props) {
     globe.current.pointOfView({ ...countryCenter(selected), altitude: 1.9 }, reduced ? 0 : 900);
   }, [selectedCode, features, reduced]);
 
-  return <div className="globe" ref={wrapper} aria-label="交互式地球。键盘操作请使用国家列表。">
+  return <div className="relative min-h-0 flex-1 cursor-grab active:cursor-grabbing [&_canvas]:block" ref={wrapper} aria-label="交互式地球。键盘操作请使用国家列表。">
     <GlobeGL
       ref={globe}
       width={size.width}
@@ -81,7 +81,7 @@ export function Globe({ countries, selectedCode, onSelect, onFailure }: Props) {
         const sub = item.channelCount >= LABEL_CHANNEL_THRESHOLD
           ? `<br><small>${item.channelCount} 个频道</small>`
           : `<br><small>${item.channelCount} 个频道</small>`;
-        return `<div class="globe-tip"><strong>${item.nameZh}</strong>${sub}</div>`;
+        return `<div class="rounded-md border border-[#4b6a82] bg-[#0d1b2ae6] px-2 py-1 text-xs text-white [&_small]:text-cyan"><strong>${item.nameZh}</strong>${sub}</div>`;
       }}
       polygonsTransitionDuration={300}
       onPolygonHover={feature => setHovered((feature as CountryFeature | null)?.properties.code)}

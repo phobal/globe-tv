@@ -18,6 +18,7 @@ export interface CountrySummary {
   nameZh: string;
   nameEn: string;
   channelCount: number;
+  timeZone?: string;
 }
 
 export interface CatalogIndex {

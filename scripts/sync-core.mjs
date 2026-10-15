@@ -49,7 +49,7 @@ export function buildCatalog(metadata, countryFiles, zhNames = {}, upstreamCommi
     }
     valid.sort((a, b) => a.name.localeCompare(b.name));
     files.set(code, valid);
-    countries.push({ code, nameZh: zhNames[code] ?? info.country, nameEn: info.country, channelCount: valid.length });
+    countries.push({ code, nameZh: zhNames[code] ?? info.country, nameEn: info.country, channelCount: valid.length, timeZone: typeof info.timeZone === 'string' && info.timeZone.trim() ? info.timeZone : undefined });
   }
   countries.sort((a, b) => a.nameZh.localeCompare(b.nameZh, 'zh-CN'));
   if (!channels.length) throw new Error('过滤后频道索引为空');

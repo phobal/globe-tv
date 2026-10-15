@@ -84,6 +84,23 @@ export function SidePanel({
   , [channels, channelQuery, featuredId]);
 
   const clock = now.toLocaleTimeString('zh-CN', { hour: 'numeric', minute: '2-digit', hour12: true });
+  const localClock = useMemo(() => {
+    if (!country?.timeZone) return '';
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: country.timeZone,
+      month: 'numeric',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    }).formatToParts(now);
+    const get = (type: string) => parts.find(p => p.type === type)?.value ?? '';
+    const m = get('month');
+    const d = get('day');
+    const h = get('hour');
+    const min = get('minute');
+    return `${m}/${d} ${h}:${min}`;
+  }, [country?.timeZone, now]);
 
   return (
     <div className="flex h-full min-h-0 flex-col text-ink">
@@ -102,9 +119,12 @@ export function SidePanel({
               onClick={() => onPickCountry('')}
               aria-label="返回国家列表"
             ><ChevronLeft size={18} aria-hidden="true" />返回</button>
-            <div>
+            <div className="min-w-0">
               <small className="block text-[11px] tracking-wider text-cyan">{country.nameEn}</small>
-              <h2 className="text-lg font-semibold">{country.nameZh}</h2>
+              <h2 className="flex flex-wrap items-baseline gap-x-2 text-lg font-semibold">
+                <span>{country.nameZh} <span className="text-muted">({country.channelCount})</span></span>
+                {localClock && <span className="text-sm font-normal text-muted">{localClock}</span>}
+              </h2>
             </div>
           </div>
         )}
@@ -195,7 +215,7 @@ export function SidePanel({
                       <span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#1c3650] text-sm text-cyan">{channel.name.slice(0, 1)}</span>
                       <span className="min-w-0 flex-1">
                         <strong className="block truncate text-sm font-medium">{channel.name}</strong>
-                        {channel.geoBlocked && <small className="mt-0.5 block text-xs text-muted">可能受地区限制</small>}
+
                       </span>
                     </button>
                     <button

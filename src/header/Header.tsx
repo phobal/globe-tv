@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Menu, Search, Tv, X } from 'lucide-react';
 import type { CatalogIndex, Channel } from '../data/types';
 import type { Preferences } from '../preferences/storage';
 
@@ -24,42 +25,58 @@ export function Header({
   const [tab, setTab] = useState<'favorites' | 'recent'>('favorites');
   const [query, setQuery] = useState('');
 
+  useEffect(() => {
+    if (!menuOpen && !searchOpen) return;
+    const handler = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+        setSearchOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [menuOpen, searchOpen]);
+
   return (
-    <header className="relative z-30 flex min-h-14 items-center gap-2 border-b border-[#1a2f44] bg-[#08111fcc] px-3 py-2 text-ink backdrop-blur-md sm:gap-4 sm:px-5 lg:min-h-16 lg:px-8">
+    <header className="relative z-30 flex min-h-14 items-center gap-2 border-b border-[#1a2f44] bg-[#08111fcc] px-3 py-2 text-ink backdrop-blur-md sm:gap-3 sm:px-5 lg:min-h-16 lg:px-8">
       <button
         type="button"
-        className="grid size-11 place-items-center rounded-lg text-2xl hover:bg-raised"
+        className="grid size-11 shrink-0 place-items-center rounded-lg text-ink hover:bg-raised"
         onClick={() => setMenuOpen(value => !value)}
-        aria-label="菜单"
+        aria-label="主菜单"
         aria-expanded={menuOpen}
-      >≡</button>
-      <a className="whitespace-nowrap text-lg font-semibold tracking-wide text-ink hover:text-cyan sm:text-[22px]" href="https://github.com/famelack/famelack-data" target="_blank" rel="noreferrer">
+      ><Menu size={22} aria-hidden="true" /></button>
+
+      <a className="whitespace-nowrap text-lg font-semibold tracking-wide text-ink hover:text-cyan sm:text-[22px]" href="/">
         地球电视
       </a>
-      <span className="hidden text-xs tracking-[0.15em] text-[#8ea3b6] sm:inline">famelack</span>
+      <span className="hidden items-center gap-1.5 rounded-full border border-line bg-raised/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-muted sm:inline-flex" aria-hidden="true">
+        <span className="size-1.5 rounded-full bg-cyan/80" />
+        famelack
+      </span>
 
       <div className="ml-auto flex items-center gap-1 sm:gap-2">
         {playing && (
           <button
             type="button"
-            className="grid size-11 place-items-center rounded-lg border border-line bg-raised text-lg text-cyan hover:bg-[#173353]"
+            className="grid size-11 shrink-0 place-items-center rounded-lg text-cyan hover:bg-raised"
             onClick={onOpenPlayer}
             aria-label="打开播放器"
-          >📺</button>
+          ><Tv size={22} aria-hidden="true" /></button>
         )}
         <button
           type="button"
-          className="grid size-11 place-items-center rounded-lg text-xl hover:bg-raised"
+          className="grid size-11 shrink-0 place-items-center rounded-lg text-ink hover:bg-raised"
           onClick={() => setSearchOpen(value => !value)}
-          aria-label="搜索"
+          aria-label="搜索国家或频道"
           aria-expanded={searchOpen}
-        >🔍</button>
+        ><Search size={22} aria-hidden="true" /></button>
       </div>
 
       {menuOpen && (
-        <div className="absolute top-full left-3 z-50 mt-2 max-h-[70dvh] w-[min(360px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[#0a1626f5] p-3 shadow-2xl [&>button]:m-1 [&>button]:rounded-lg [&>button]:border [&>button]:border-line [&>button]:bg-raised [&>button]:px-3 [&>button]:py-2 [&>button]:text-sm sm:left-5" role="dialog" aria-label="主菜单">
+        <div className="absolute top-full left-3 z-50 mt-2 max-h-[70dvh] w-[min(360px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[#0a1626f5] p-3 shadow-2xl [&>button]:m-1 [&>button]:flex [&>button]:min-h-11 [&>button]:items-center [&>button]:justify-center [&>button]:gap-2 [&>button]:rounded-lg [&>button]:border [&>button]:border-line [&>button]:bg-raised [&>button]:px-3 [&>button]:py-2 [&>button]:text-sm sm:left-5" role="dialog" aria-label="主菜单">
           <button onClick={onToggleSide} type="button">
-            {sideOpen ? '隐藏' : '显示'}频道列表
+            {sideOpen ? '隐藏频道列表' : '显示频道列表'}
           </button>
           <button onClick={() => setTab('favorites')} className={tab === 'favorites' ? 'border-cyan! text-cyan!' : ''} type="button">
             收藏 ({preferences.favorites.length})
@@ -78,7 +95,7 @@ export function Header({
                   <button className="min-w-0 flex-1 truncate px-1 py-2 text-left disabled:text-[#7a8a99]" disabled={!channel} type="button" onClick={() => channel && onSelectChannel(channel.countryCode, id)}>
                     {channel?.name ?? '该频道已下线'}
                   </button>
-                  <button className="grid size-10 place-items-center text-xl text-cyan" onClick={() => onRemoveSaved(id)} aria-label={`移除 ${channel?.name ?? id}`}>×</button>
+                  <button className="grid size-10 place-items-center text-cyan hover:text-white" onClick={() => onRemoveSaved(id)} aria-label={`移除 ${channel?.name ?? id}`}><X size={16} aria-hidden="true" /></button>
                 </div>
               );
             })}

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { ChevronLeft, Star } from 'lucide-react';
 import type { CatalogIndex, Channel, CountrySummary } from '../data/types';
 import { normalizeQuery } from '../data/catalog';
 
@@ -101,7 +102,7 @@ export function SidePanel({
               type="button"
               onClick={() => onPickCountry('')}
               aria-label="返回国家列表"
-            >← 返回</button>
+            ><ChevronLeft size={18} aria-hidden="true" />返回</button>
             <div>
               <small className="block text-[11px] tracking-wider text-cyan">{country.nameEn}</small>
               <h2 className="text-lg font-semibold">{country.nameZh}</h2>
@@ -201,11 +202,11 @@ export function SidePanel({
                     </button>
                     <button
                       type="button"
-                      className="grid size-11 shrink-0 place-items-center rounded-lg text-xl text-cyan hover:bg-raised"
+                      className={`grid size-11 shrink-0 place-items-center rounded-lg hover:bg-raised ${favorites.includes(channel.id) ? 'text-cyan' : 'text-muted hover:text-ink'}`}
                       onClick={() => onToggleFavorite(channel.id)}
                       aria-label={`${favorites.includes(channel.id) ? '取消收藏' : '收藏'} ${channel.name}`}
                       aria-pressed={favorites.includes(channel.id)}
-                    >{favorites.includes(channel.id) ? '★' : '☆'}</button>
+                    ><Star size={20} fill={favorites.includes(channel.id) ? 'currentColor' : 'none'} aria-hidden="true" /></button>
                   </li>
                 ))}
               </ul>

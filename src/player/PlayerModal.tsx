@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ListVideo, Play, RotateCcw, X } from 'lucide-react';
+import { Check, ListVideo, Play, RotateCcw, X } from 'lucide-react';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import type { Channel, CountrySummary } from '../data/types';
@@ -165,7 +165,7 @@ export function PlayerModal({ open, channel, country, onPlaying, onClose }: Prop
                     className={`flex min-h-10 w-full items-center justify-between rounded-lg px-3 text-left text-sm hover:bg-white/10 ${index === state.sourceIndex ? 'text-cyan' : 'text-white'}`}
                     onClick={() => { setState(current => chooseSource(current, index)); setSourceMenuOpen(false); }}
                     aria-current={index === state.sourceIndex ? 'true' : undefined}
-                  >来源 {index + 1}{index === state.sourceIndex && <span aria-hidden="true">✓</span>}</button>
+                  >来源 {index + 1}{index === state.sourceIndex && <Check size={14} aria-hidden="true" />}</button>
                 ))}
               </div>
             )}

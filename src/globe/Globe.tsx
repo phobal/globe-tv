@@ -54,8 +54,8 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure }: P
         pitch: 0,
         bearing: 0,
         antialias: true,
-        scrollZoom: false,
-        dragRotate: false,
+        scrollZoom: true,
+        dragRotate: true,
       });
     } catch {
       onFailureRef.current();

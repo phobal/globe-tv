@@ -80,7 +80,11 @@ const results = await mapConcurrent(urls, 16, async (url, index) => {
 const probes = new Map(urls.map((url, index) => [url, results[index]]));
 const checkedAt = new Date().toISOString();
 const upstreamCommit = (await readFile(path.join(inputDir, '.git', 'refs', 'heads', 'master'), 'utf8').catch(() => process.env.UPSTREAM_SHA ?? 'unknown')).trim();
-const built = buildPopularCatalog(entries, selections, probes, { expectedCount: 50, checkedAt, upstreamCommit });
+const built = buildPopularCatalog(entries, selections, probes, { expectedCount: selections.length, requireFull: false, checkedAt, upstreamCommit });
+const missing = selections.filter(item => !built.channels.some(channel => channel.tvgId === item.id));
 await writeFile(path.join(outputDir, 'popular.json'), `${JSON.stringify(built.catalog, null, 2)}\n`);
 await writeFile(path.join(outputDir, 'popular-report.json'), `${JSON.stringify({ ...built.report, probes: Object.fromEntries(probes) }, null, 2)}\n`);
 console.log(`热门频道同步完成：${built.channels.length} 个频道`);
+if (missing.length) {
+  console.warn(`注意：以下 ${missing.length} 个频道未找到可用直播源，上游更新 https 源后将自动收录：${missing.map(item => item.name).join(', ')}`);
+}

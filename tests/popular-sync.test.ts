@@ -4,6 +4,19 @@ import { describe, expect, it } from 'vitest';
 import { buildPopularCatalog, parseM3u } from '../scripts/popular-core.mjs';
 
 describe('热门频道同步', () => {
+  it('同时接受 http 与 https 源，与 sync-core.mjs 行为一致', () => {
+    const entries = parseM3u('#EXTM3U\n#EXTINF:-1 tvg-id="PhoenixChineseChannel.hk@SD",凤凰中文 (720p)\nhttp://example.com/live.m3u8\n');
+    expect(entries).toEqual([{
+      tvgId: 'PhoenixChineseChannel.hk@SD',
+      channelId: 'PhoenixChineseChannel.hk',
+      name: '凤凰中文',
+      countryCode: 'hk',
+      url: 'http://example.com/live.m3u8',
+      geoBlocked: false,
+      quality: 720,
+    }]);
+  });
+
   it('解析 M3U 条目并从 tvg-id 推导国家代码', () => {
     const entries = parseM3u(`#EXTM3U\n#EXTINF:-1 tvg-id="BBCNews.uk@Europe",BBC News Europe (720p)\nhttps://example.com/live.m3u8\n`);
     expect(entries).toEqual([{
@@ -78,5 +91,23 @@ describe('热门频道同步', () => {
     expect(() => buildPopularCatalog(entries, [{ id: 'France24English.fr', name: 'France 24 English', category: '新闻' }], new Map(), {
       expectedCount: 1, checkedAt: 'now', upstreamCommit: 'abc',
     })).toThrow('热门频道数量不足');
+  });
+
+  it('requireFull=false 时跳过缺失的频道并保留剩余结果', () => {
+    const entries = parseM3u(`#EXTM3U
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp@SD",NHK World-Japan (720p)
+https://fast.test/live.m3u8
+#EXTINF:-1 tvg-id="CCTV1.cn@SD",CCTV-1
+http://blocked.test/live.m3u8
+`);
+    const probes = new Map([
+      ['https://fast.test/live.m3u8', { successes: 2, attempts: 2, latencyMs: 200 }],
+    ]);
+    const result = buildPopularCatalog(entries, [
+      { id: 'NHKWorldJapan.jp', name: 'NHK World-Japan', category: '新闻' },
+      { id: 'CCTV1.cn', name: 'CCTV-1 综合频道', category: '综合' },
+    ], probes, { expectedCount: 2, requireFull: false, checkedAt: 'now', upstreamCommit: 'abc' });
+    expect(result.channels.map((ch: { tvgId: string }) => ch.tvgId)).toEqual(['NHKWorldJapan.jp']);
+    expect(result.report.channels.find((r: { id: string }) => r.id === 'CCTV1.cn')?.accepted).toBe(0);
   });
 });

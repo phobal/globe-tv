@@ -118,7 +118,7 @@ export function SidePanel({
             ><ChevronLeft size={20} aria-hidden="true" /></button>
             <div className="min-w-0 flex-1">
               <h2 className="truncate text-base font-semibold sm:text-lg">全球热门频道</h2>
-              <small className="block text-[11px] tracking-wider text-cyan">POPULAR · TOP 50</small>
+              <small className="block text-[11px] tracking-wider text-cyan">POPULAR</small>
             </div>
           </div>
         ) : country ? (
@@ -161,7 +161,7 @@ export function SidePanel({
             <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-popular-icon text-popular-icon-text"><Flame size={20} aria-hidden="true" /></span>
             <span className="min-w-0 flex-1">
               <strong className="block truncate text-sm font-semibold text-ink">全球热门频道</strong>
-              <small className="block text-[11px] tracking-[0.15em] text-cyan">TOP 50</small>
+              <small className="block text-[11px] tracking-[0.15em] text-cyan">POPULAR</small>
             </span>
           </button>
         )}

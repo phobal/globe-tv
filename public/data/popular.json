@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-16T07:24:38.373Z",
+  "version": "2026-10-16T09:44:34.300Z",
   "upstreamCommit": "bd99d735bf841c99c268938ce58bb7c4ce2c8870",
   "channels": [
     {
@@ -21,12 +21,12 @@
         },
         {
           "kind": "hls",
-          "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/mobile_wifi_main_sd_abr_v2.m3u8",
+          "url": "http://23.237.104.106:8080/USA_BBC_NEWS/index.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://stream8.cinerama.uz/1251/tracks-v1a1/mono.m3u8",
+          "url": "http://stream.mcquack.net/85/index.m3u8",
           "order": 2
         }
       ]
@@ -45,13 +45,18 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8",
+          "url": "https://d2sybdl23b9psq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-bocx3i7bjz0dg/CNNFAST_GB.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://d2sybdl23b9psq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-bocx3i7bjz0dg/CNNFAST_GB.m3u8",
+          "url": "https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8",
           "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "http://88.212.15.17/live/test_cnn_1200_atk/playlist.m3u8",
+          "order": 2
         }
       ]
     },
@@ -69,7 +74,7 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://live-hls-web-aje-fa.thehlive.com/AJE/index.m3u8",
+          "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
           "order": 0
         },
         {
@@ -79,7 +84,7 @@
         },
         {
           "kind": "hls",
-          "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+          "url": "https://live-hls-web-aje-fa.thehlive.com/AJE/index.m3u8",
           "order": 2
         }
       ]
@@ -98,17 +103,17 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_2300.m3u8",
+          "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_2300.m3u8",
+          "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8",
+          "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_2300.m3u8",
           "order": 2
         }
       ]
@@ -127,17 +132,17 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://stream8.cinerama.uz/1418/tracks-v1a1/mono.m3u8",
+          "url": "https://freem3u.xyz/api/live/play.m3u8?vid=109",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://mumt05.tangotv.in/87NeALx2DWTV/index.m3u8",
+          "url": "https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/playlist.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/playlist.m3u8",
+          "url": "http://170.83.16.50/DW/index.m3u8",
           "order": 2
         }
       ]
@@ -161,12 +166,12 @@
         },
         {
           "kind": "hls",
-          "url": "https://dash4.antik.sk/live/test_euronews/playlist.m3u8",
+          "url": "https://aegis-cloudfront-1.tubi.video/b1c4d439-03a5-4c40-ae9d-90a183e010c9/euronews-en.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://aegis-cloudfront-1.tubi.video/b1c4d439-03a5-4c40-ae9d-90a183e010c9/euronews-en.m3u8",
+          "url": "https://streams.sofast.tv/euronewsen/live/eds/euronews-en/25017/euronews-en.m3u8",
           "order": 2
         }
       ]
@@ -214,13 +219,18 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://tvsen6.aynaott.com/bloombergtv/index.m3u8",
+          "url": "http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
           "url": "https://mumbai-edge.smartplaytv.in/Bloomberg/index.m3u8",
           "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://tvsen6.aynaott.com/bloombergtv/index.m3u8",
+          "order": 2
         }
       ]
     },
@@ -257,12 +267,12 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8",
+          "url": "https://cbsn-us-vtt.cbsnstream.cbsnews.com/out/v1/ef868690d34144509eda696884bf1619/master.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://cbsn-us-vtt.cbsnstream.cbsnews.com/out/v1/ef868690d34144509eda696884bf1619/master.m3u8",
+          "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8",
           "order": 1
         }
       ]
@@ -382,7 +392,7 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8",
+          "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8",
           "order": 0
         },
         {
@@ -392,7 +402,7 @@
         },
         {
           "kind": "hls",
-          "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8",
+          "url": "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8",
           "order": 2
         }
       ]
@@ -421,7 +431,7 @@
         },
         {
           "kind": "hls",
-          "url": "https://0472.org/hls/cgtn.m3u8",
+          "url": "https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8",
           "order": 2
         }
       ]
@@ -450,7 +460,7 @@
         },
         {
           "kind": "hls",
-          "url": "https://dash3.antik.sk/live/test_cgtn_doc/playlist.m3u8",
+          "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
           "order": 2
         }
       ]
@@ -489,17 +499,17 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://dash3.antik.sk/live/test_arirang/playlist.m3u8",
+          "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://amdlive-ch03-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+          "url": "http://amdlive-ch02.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+          "url": "http://amdlive-ch03.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
           "order": 2
         }
       ]
@@ -537,17 +547,17 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_4.m3u8",
+          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_3.m3u8",
+          "url": "https://raw.githubusercontent.com/Alstruit/adaptive-streams/alstruit-10_23_in/streams/in/WION.in.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_5.m3u8",
+          "url": "http://vg-zeefta.akamaized.net/ptnr-yupptv/title-wion/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/20c3c0d9-0256-43fe-bca6-70fdd490b957/main.m3u8",
           "order": 2
         }
       ]
@@ -586,13 +596,18 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://streams.tangotv.in/DDNEWS/ORIGIN/index.m3u8",
+          "url": "https://mumbai-edge.smartplaytv.in/DDNews/index.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
           "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/0811cd8c37ca4c409d5385a6cd2fa18b/index.m3u8",
           "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://streams.tangotv.in/DDNEWS/ORIGIN/index.m3u8",
+          "order": 2
         }
       ]
     },
@@ -634,12 +649,12 @@
         },
         {
           "kind": "hls",
-          "url": "https://dash2.antik.sk/live/test_trt_world_atktv/playlist.m3u8",
+          "url": "https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8",
+          "url": "https://dash2.antik.sk/live/test_trt_world_atktv/playlist.m3u8",
           "order": 2
         }
       ]
@@ -658,17 +673,17 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/alarabiapublish/alarabiya_1080p/chunks.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/alarabiapublish/alarabiya_1080p/chunks.m3u8",
+          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-alarabiya/7f90de73d777d04f3dada92f90d35c44/index.m3u8",
+          "url": "http://185.9.2.18/chid_146/index.m3u8",
           "order": 2
         }
       ]
@@ -687,7 +702,7 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+          "url": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8",
           "order": 0
         },
         {
@@ -697,7 +712,7 @@
         },
         {
           "kind": "hls",
-          "url": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8",
+          "url": "https://stream.skynewsarabia.com/hls/sna.m3u8",
           "order": 2
         }
       ]
@@ -759,12 +774,12 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://hlspackager.akamaized.net/live/DB/i24_ENGLISH/HLS/i24_ENGLISH.m3u8",
+          "url": "https://i24newsenglish-cdn.encoders.immergo.tv/master.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://i24newsenglish-cdn.encoders.immergo.tv/master.m3u8",
+          "url": "https://hlspackager.akamaized.net/live/DB/i24_ENGLISH/HLS/i24_ENGLISH.m3u8",
           "order": 1
         }
       ]
@@ -821,17 +836,17 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_576.m3u8",
+          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_dvr_1080.m3u8",
           "order": 1
         },
         {
           "kind": "hls",
-          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_dvr_1080.m3u8",
+          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_576.m3u8",
           "order": 2
         }
       ]
@@ -999,8 +1014,18 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://rnw-rn.otteravision.com/rnw/rn/rnw_rn.m3u8",
+          "url": "http://45.162.64.114/RECORD_NEWS/index.m3u8",
           "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://45.177.114.115/RECORD_NEWS/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://rnw-rn.otteravision.com/rnw/rn/rnw_rn.m3u8",
+          "order": 2
         }
       ]
     },
@@ -1037,8 +1062,13 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8",
+          "url": "http://167.249.23.102:8000/play/a0a3/index.m3u8",
           "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8",
+          "order": 1
         }
       ]
     },
@@ -1075,12 +1105,12 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8",
+          "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+          "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8",
           "order": 1
         },
         {
@@ -1124,13 +1154,18 @@
       "sources": [
         {
           "kind": "hls",
-          "url": "https://mumt03.tangotv.in/Dsly5z3HTV5MONDEASIA/index.m3u8",
+          "url": "https://freem3u.xyz/api/live/play.m3u8?vid=9852",
           "order": 0
         },
         {
           "kind": "hls",
-          "url": "https://freem3u.xyz/api/live/play.m3u8?vid=9852",
+          "url": "http://27.131.164.187:8080/TV5_Monde/index.m3u8",
           "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://mumt03.tangotv.in/Dsly5z3HTV5MONDEASIA/index.m3u8",
+          "order": 2
         }
       ]
     },
@@ -1188,6 +1223,275 @@
         {
           "kind": "hls",
           "url": "https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-PhoenixChineseChannel-hk",
+      "tvgId": "PhoenixChineseChannel.hk",
+      "name": "凤凰卫视中文台",
+      "countryCode": "hk",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 51,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://223.110.245.139/PLTV/3/224/3221226922/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-PhoenixInfoNewsChannel-hk",
+      "tvgId": "PhoenixInfoNewsChannel.hk",
+      "name": "凤凰卫视资讯台",
+      "countryCode": "hk",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 52,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://php.17186.eu.org/phtv/fhzx.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "http://125.210.152.18:9090/live/FHZX_1200.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-DragonTVInternational-cn",
+      "tvgId": "DragonTVInternational.cn",
+      "name": "东方卫视",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 53,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://restream.pdtvhd.com/memfs/0b1b95c9-3543-4af9-9fdb-cf45f1602f17.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-HunanTV-cn",
+      "tvgId": "HunanTV.cn",
+      "name": "湖南卫视",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 54,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-ZhejiangSatelliteTV-cn",
+      "tvgId": "ZhejiangSatelliteTV.cn",
+      "name": "浙江卫视",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 55,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225744/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "http://112.25.48.68/live/program/live/zjwshd/4000000/mnf.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-JiangsuSatelliteTV-cn",
+      "tvgId": "JiangsuSatelliteTV.cn",
+      "name": "江苏卫视",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 56,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226200/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225702/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225743/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-BeijingSatelliteTV-cn",
+      "tvgId": "BeijingSatelliteTV.cn",
+      "name": "北京卫视",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 57,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://ivi.bupt.edu.cn/hls/btv1.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-ShenzhenSatelliteTV-cn",
+      "tvgId": "ShenzhenSatelliteTV.cn",
+      "name": "深圳卫视",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 58,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226205/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://39.134.39.39/PLTV/88888888/224/3221226199/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225700/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-CCTV1-cn",
+      "tvgId": "CCTV1.cn",
+      "name": "CCTV-1 综合频道",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 59,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-CCTV6-cn",
+      "tvgId": "CCTV6.cn",
+      "name": "CCTV-6 电影频道",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "影视",
+      "rank": 60,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://69.30.245.50/live/cctv6.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "http://198.204.240.250:82/live/cctv6.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-CCTV13-cn",
+      "tvgId": "CCTV13.cn",
+      "name": "CCTV-13 新闻频道",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 61,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
           "order": 0
         }
       ]

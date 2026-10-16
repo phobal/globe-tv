@@ -16,6 +16,7 @@ interface Props {
   missingId?: string;
   onPickCountry: (code: string) => void;
   onPickPopular: () => void;
+  onBack: () => void;
   onPlay: (channel: Channel) => void;
   onToggleFavorite: (id: string) => void;
   onRetry: () => void;
@@ -60,7 +61,7 @@ function groupCountries(countries: CountrySummary[]) {
 export function SidePanel({
   index, countries, countryCode, channels, popular, loading, error,
   favorites, featuredId, missingId,
-  onPickCountry, onPickPopular, onPlay, onToggleFavorite, onRetry,
+  onPickCountry, onPickPopular, onBack, onPlay, onToggleFavorite, onRetry,
 }: Props) {
   const [countryQuery, setCountryQuery] = useState('');
   const [channelQuery, setChannelQuery] = useState('');
@@ -106,152 +107,119 @@ export function SidePanel({
 
   return (
     <div className="flex h-full min-h-0 flex-col text-ink">
-      <header className="shrink-0 border-b border-[#1f3650] px-4 py-4 sm:px-5">
+      <header className="shrink-0 border-b border-globe-divider px-4 py-4 sm:px-5">
         {popular ? (
           <div className="flex items-center gap-3">
             <button
-              className="min-h-11 shrink-0 rounded-lg px-2 text-sm text-cyan hover:bg-raised"
               type="button"
-              onClick={() => onPickCountry('')}
+              className="grid size-11 shrink-0 place-items-center rounded-lg border border-line bg-raised text-ink hover:bg-raised-strong"
+              onClick={onBack}
               aria-label="返回国家列表"
-            ><ChevronLeft size={18} aria-hidden="true" />返回</button>
-            <div className="min-w-0">
+            ><ChevronLeft size={20} aria-hidden="true" /></button>
+            <div className="min-w-0 flex-1">
+              <h2 className="truncate text-base font-semibold sm:text-lg">全球热门频道</h2>
               <small className="block text-[11px] tracking-wider text-cyan">POPULAR · TOP 50</small>
-              <h2 className="text-lg font-semibold">全球热门频道</h2>
             </div>
           </div>
-        ) : !country ? (
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <small className="text-[11px] tracking-[0.15em] text-cyan">选择国家</small>
-            <h2 className="text-lg font-semibold">选择国家</h2>
-            <span className="text-xs text-muted">{clock}</span>
+        ) : country ? (
+          <div className="flex items-start justify-between gap-3">
+            <button
+              type="button"
+              className="grid size-11 shrink-0 place-items-center rounded-lg border border-line bg-raised text-ink hover:bg-raised-strong"
+              onClick={onBack}
+              aria-label="返回国家列表"
+            ><ChevronLeft size={20} aria-hidden="true" /></button>
+            <div className="min-w-0 flex-1">
+              <small className="block text-[11px] tracking-[0.15em] text-cyan">已选择</small>
+              <div className="mt-1 flex items-baseline gap-2">
+                <h2 className="truncate text-base font-semibold sm:text-lg">{country.nameZh}</h2>
+                {localClock && (
+                  <span className="shrink-0 text-xs font-normal text-muted">{localClock}</span>
+                )}
+              </div>
+              <small className="block text-[11px] tracking-wider text-cyan">{country.nameEn}</small>
+            </div>
+            <div className="text-right text-xs text-muted">
+              <p className="font-semibold text-ink">本地时间</p>
+              <p>{clock}</p>
+            </div>
           </div>
         ) : (
-          <div className="flex items-center gap-3">
-            <button
-              className="min-h-11 shrink-0 rounded-lg px-2 text-sm text-cyan hover:bg-raised"
-              type="button"
-              onClick={() => onPickCountry('')}
-              aria-label="返回国家列表"
-            ><ChevronLeft size={18} aria-hidden="true" />返回</button>
-            <div className="min-w-0">
-              <small className="block text-[11px] tracking-wider text-cyan">{country.nameEn}</small>
-              <h2 className="flex flex-wrap items-baseline gap-x-2 text-lg font-semibold">
-                <span>{country.nameZh} <span className="text-muted">({country.channelCount})</span></span>
-                {localClock && <span className="text-sm font-normal text-muted">{localClock}</span>}
-              </h2>
-            </div>
+          <div>
+            <small className="block text-[11px] tracking-[0.15em] text-cyan">选择国家</small>
+            <h2 className="mt-1 truncate text-base font-semibold sm:text-lg">浏览频道</h2>
+            <p className="mt-2 text-xs text-muted">先选一个国家或地区，再挑选想看的频道。</p>
+          </div>
+        )}
+
+        {!country && !popular && (
+          <button
+            type="button"
+            onClick={onPickPopular}
+            className="my-2 flex min-h-16 w-full items-center gap-3 rounded-xl border border-popular-border bg-[linear-gradient(135deg,var(--app-popular-from),var(--app-popular-to))] px-3 py-2 text-left hover:bg-[var(--app-popular-hover)]"
+          >
+            <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-popular-icon text-popular-icon-text"><Flame size={20} aria-hidden="true" /></span>
+            <span className="min-w-0 flex-1">
+              <strong className="block truncate text-sm font-semibold text-ink">全球热门频道</strong>
+              <small className="block text-[11px] tracking-[0.15em] text-cyan">TOP 50</small>
+            </span>
+          </button>
+        )}
+
+        {!country && !popular && (
+          <div className="mt-3">
+            <input
+              className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
+              type="search"
+              placeholder="搜索国家或地区"
+              value={countryQuery}
+              onChange={event => setCountryQuery(event.target.value)}
+              aria-label="搜索国家或地区"
+            />
           </div>
         )}
       </header>
 
-      {!popular && !country ? (
+      {popular ? (
         <>
           <div className="shrink-0 px-4 pt-3 pb-2 sm:px-5">
             <input
               className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
               type="search"
-              placeholder="搜索国家"
-              value={countryQuery}
-              onChange={event => setCountryQuery(event.target.value)}
-              aria-label="搜索国家"
-            />
-          </div>
-          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]">
-            {!countryQuery.trim() && (
-              <button
-                type="button"
-                className="my-2 flex min-h-16 w-full items-center gap-3 rounded-xl border border-[#2b5870] bg-[linear-gradient(135deg,#173353,#12283f)] px-3 py-2 text-left hover:border-cyan hover:bg-[#193b5b]"
-                onClick={onPickPopular}
-                aria-label="打开全球热门频道，共 50 个频道"
-              >
-                <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-[#214a65] text-cyan"><Flame size={20} aria-hidden="true" /></span>
-                <span className="min-w-0 flex-1">
-                  <strong className="block text-sm font-semibold">全球热门频道</strong>
-                  <small className="text-muted">精选 50 个稳定直播源</small>
-                </span>
-                <span className="text-xs font-semibold text-cyan">TOP 50</span>
-              </button>
-            )}
-            {grouped.length === 0 && <p className="px-3 py-6 text-center text-muted">没有匹配的国家</p>}
-            {grouped.map(group => (
-              <section key={group.region} className="py-2">
-                <div className="px-2 py-2 text-[11px] tracking-[0.18em] text-cyan">{group.region}</div>
-                {group.countries.map(item => (
-                  <button
-                    key={item.code}
-                    type="button"
-                    className={`flex min-h-11 w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm hover:bg-raised ${item.code === countryCode ? 'bg-[#173353] text-cyan' : 'text-ink'}`}
-                    onClick={() => onPickCountry(item.code)}
-                  >
-                    <span className="grid size-7 shrink-0 place-items-center rounded bg-[#1c3650] text-xs font-semibold text-cyan">{item.nameZh.slice(0, 1)}</span>
-                    <span className="min-w-0 flex-1">{item.nameZh} ({item.channelCount})</span>
-                  </button>
-                ))}
-              </section>
-            ))}
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="shrink-0 px-4 pt-3 pb-2 sm:px-5">
-            <input
-              className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
-              type="search"
-              placeholder={popular ? '搜索热门频道' : '搜索当前国家频道'}
+              placeholder="搜索热门频道"
               value={channelQuery}
               onChange={event => setChannelQuery(event.target.value)}
-              aria-label={popular ? '搜索热门频道' : '搜索当前国家频道'}
+              aria-label="搜索热门频道"
             />
           </div>
-          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]" aria-label="播放列表">
-            {missingId && <div className="m-2 rounded-lg border border-[#2c5e75] bg-[#1a3a4a] px-3 py-2 text-sm text-[#b6e0ee]">该频道已下线。可以浏览本国的其他频道。</div>}
+          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]" aria-label="热门播放列表">
             {loading && <p className="px-3 py-6 text-center text-muted">正在加载频道…</p>}
             {error && (
               <div className="m-2 rounded-xl border border-dashed border-line bg-raised p-4 text-center text-sm">
                 <p>{error}</p>
-                <button onClick={onRetry} className="mt-3 rounded-lg border border-line bg-[#1c3650] px-4 py-2">重试</button>
+                <button onClick={onRetry} className="mt-3 rounded-lg border border-line bg-chip-bg px-4 py-2">重试</button>
               </div>
             )}
             {!loading && !error && channels.length === 0 && (
-              <div className="m-2 rounded-xl border border-dashed border-line bg-raised p-4 text-center text-sm">
-                <p>该国家暂无频道收录。</p>
-                <p className="py-3 text-muted">试试其他国家：</p>
-                {countries
-                  .filter(item => item.code !== countryCode && item.channelCount > 0)
-                  .slice(0, 6)
-                  .map(item => (
-                    <button
-                      key={item.code}
-                      type="button"
-                      className="m-1 inline-flex min-h-11 flex-col rounded-lg border border-line bg-[#1c3650] px-3 py-1 text-sm"
-                      onClick={() => onPickCountry(item.code)}
-                    >
-                      <strong>{item.nameZh}</strong>
-                      <small className="text-cyan">{item.channelCount} 个频道</small>
-                    </button>
-                  ))}
-              </div>
+              <p className="px-3 py-6 text-center text-muted">暂无热门频道</p>
             )}
             {!loading && !error && channels.length > 0 && (
               <ul className="m-0 list-none p-0">
                 {shownChannels.map(channel => (
-                  <li key={channel.id} className="flex min-w-0 items-center border-b border-[#1f3650]">
+                  <li key={channel.id} className="flex min-w-0 items-center border-b border-globe-divider">
                     <button
                       type="button"
                       className="flex min-h-15 min-w-0 flex-1 items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-raised"
                       onClick={() => onPlay(channel)}
                     >
-                      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#1c3650] text-sm text-cyan">
-                        {popular ? String((channel as PopularChannel).rank).padStart(2, '0') : channel.name.slice(0, 1)}
+                      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-chip-bg text-sm text-cyan">
+                        {String((channel as PopularChannel).rank).padStart(2, '0')}
                       </span>
                       <span className="min-w-0 flex-1">
                         <strong className="block truncate text-sm font-medium">{channel.name}</strong>
-                        {popular && (
-                          <small className="block truncate text-xs text-muted">
-                            {(channel as PopularChannel).category} · {index.countries.find(item => item.code === channel.countryCode)?.nameZh ?? channel.countryCode.toUpperCase()}
-                          </small>
-                        )}
+                        <small className="block truncate text-xs text-muted">
+                          {(channel as PopularChannel).category} · {index.countries.find(item => item.code === channel.countryCode)?.nameZh ?? channel.countryCode.toUpperCase()}
+                        </small>
                       </span>
                     </button>
                     <button
@@ -268,6 +236,105 @@ export function SidePanel({
             {!loading && shownChannels.length === 0 && channels.length > 0 && (
               <p className="px-3 py-6 text-center text-muted">没有匹配的频道</p>
             )}
+          </div>
+        </>
+      ) : country ? (
+        <>
+          <div className="shrink-0 px-4 pt-3 pb-2 sm:px-5">
+            <input
+              className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
+              type="search"
+              placeholder="搜索当前国家频道"
+              value={channelQuery}
+              onChange={event => setChannelQuery(event.target.value)}
+              aria-label="搜索当前国家频道"
+            />
+          </div>
+          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]" aria-label="播放列表">
+            {missingId && <div className="m-2 rounded-lg border border-info-border bg-info-bg px-3 py-2 text-sm text-info-text">该频道已下线。可以浏览本国的其他频道。</div>}
+            {loading && <p className="px-3 py-6 text-center text-muted">正在加载频道…</p>}
+            {error && (
+              <div className="m-2 rounded-xl border border-dashed border-line bg-raised p-4 text-center text-sm">
+                <p>{error}</p>
+                <button onClick={onRetry} className="mt-3 rounded-lg border border-line bg-chip-bg px-4 py-2">重试</button>
+              </div>
+            )}
+            {!loading && !error && channels.length === 0 && (
+              <div className="m-2 rounded-xl border border-dashed border-line bg-raised p-4 text-center text-sm">
+                <p>该国家暂无频道收录。</p>
+                <p className="py-3 text-muted">试试其他国家：</p>
+                {countries
+                  .filter(item => item.code !== countryCode && item.channelCount > 0)
+                  .slice(0, 6)
+                  .map(item => (
+                    <button
+                      key={item.code}
+                      type="button"
+                      className="m-1 inline-flex min-h-11 flex-col rounded-lg border border-line bg-chip-bg px-3 py-1 text-sm"
+                      onClick={() => onPickCountry(item.code)}
+                    >
+                      <strong>{item.nameZh}</strong>
+                      <small className="text-cyan">{item.channelCount} 个频道</small>
+                    </button>
+                  ))}
+              </div>
+            )}
+            {!loading && !error && channels.length > 0 && (
+              <ul className="m-0 list-none p-0">
+                {shownChannels.map(channel => (
+                  <li key={channel.id} className="flex min-w-0 items-center border-b border-globe-divider">
+                    <button
+                      type="button"
+                      className="flex min-h-15 min-w-0 flex-1 items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-raised"
+                      onClick={() => onPlay(channel)}
+                    >
+                      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-chip-bg text-sm text-cyan">
+                        {channel.name.slice(0, 1)}
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <strong className="block truncate text-sm font-medium">{channel.name}</strong>
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      className={`grid size-11 shrink-0 place-items-center rounded-lg hover:bg-raised ${favorites.includes(channel.id) ? 'text-cyan' : 'text-muted hover:text-ink'}`}
+                      onClick={() => onToggleFavorite(channel.id)}
+                      aria-label={`${favorites.includes(channel.id) ? '取消收藏' : '收藏'} ${channel.name}`}
+                      aria-pressed={favorites.includes(channel.id)}
+                    ><Star size={20} fill={favorites.includes(channel.id) ? 'currentColor' : 'none'} aria-hidden="true" /></button>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {!loading && shownChannels.length === 0 && channels.length > 0 && (
+              <p className="px-3 py-6 text-center text-muted">没有匹配的频道</p>
+            )}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]" aria-label="国家列表">
+            {grouped.length === 0 && (
+              <p className="px-3 py-6 text-center text-muted">没有匹配的国家</p>
+            )}
+            {grouped.map(group => (
+              <section key={group.region} className="mb-3">
+                <div className="px-2 py-2 text-[11px] tracking-[0.18em] text-cyan">{group.region}</div>
+                <div className="flex flex-col gap-1">
+                  {group.countries.map(item => (
+                    <button
+                      key={item.code}
+                      type="button"
+                      className={`flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-left text-sm hover:bg-raised ${item.code === countryCode ? 'bg-selected-row text-cyan' : 'text-ink'}`}
+                      onClick={() => onPickCountry(item.code)}
+                    >
+                      <span className="grid size-7 shrink-0 place-items-center rounded bg-chip-bg text-xs font-semibold text-cyan">{item.nameZh.slice(0, 1)}</span>
+                      <span className="min-w-0 flex-1">{item.nameZh} ({item.channelCount})</span>
+                    </button>
+                  ))}
+                </div>
+              </section>
+            ))}
           </div>
         </>
       )}

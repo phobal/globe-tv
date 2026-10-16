@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Menu, Search, Tv, X } from 'lucide-react';
+import { Menu, Monitor, Moon, Search, Sun, Tv, X } from 'lucide-react';
 import type { CatalogIndex, Channel, PopularChannel } from '../data/types';
-import type { Preferences } from '../preferences/storage';
+import type { Preferences, ThemePreference } from '../preferences/storage';
 
 interface Props {
   playing?: Channel;
@@ -14,31 +14,43 @@ interface Props {
   onSelectChannel: (code: string, id: string) => void;
   onSelectPopularChannel: (id: string) => void;
   onRemoveSaved: (id: string) => void;
+  onThemeChange: (theme: ThemePreference) => void;
 }
+
+const THEME_OPTIONS: Array<{ value: ThemePreference; label: string; description: string; icon: typeof Sun }> = [
+  { value: 'auto', label: '跟随系统', description: '随浏览器或系统的明亮/暗黑设置自动切换。', icon: Monitor },
+  { value: 'light', label: '明亮主题', description: '使用浅色背景与深色文字。', icon: Sun },
+  { value: 'dark', label: '暗黑主题', description: '使用深色背景与浅色文字（默认）。', icon: Moon },
+];
 
 export function Header({
   playing, onOpenPlayer,
   index, preferences, popularChannels, onPickCountry, onSelectChannel, onSelectPopularChannel, onRemoveSaved,
+  onThemeChange,
 }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [themeOpen, setThemeOpen] = useState(false);
   const [tab, setTab] = useState<'favorites' | 'recent'>('favorites');
   const [query, setQuery] = useState('');
+  const currentTheme = THEME_OPTIONS.find(option => option.value === preferences.theme) ?? THEME_OPTIONS[0];
+  const ThemeIcon = currentTheme.icon;
 
   useEffect(() => {
-    if (!menuOpen && !searchOpen) return;
+    if (!menuOpen && !searchOpen && !themeOpen) return;
     const handler = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setMenuOpen(false);
         setSearchOpen(false);
+        setThemeOpen(false);
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [menuOpen, searchOpen]);
+  }, [menuOpen, searchOpen, themeOpen]);
 
   return (
-    <header className="relative z-30 flex min-h-14 items-center gap-2 border-b border-[#1a2f44] bg-[#08111fcc] px-3 py-2 text-ink backdrop-blur-md sm:gap-3 sm:px-5 lg:min-h-16 lg:px-8">
+    <header className="relative z-30 flex min-h-14 items-center gap-2 border-b border-globe-divider bg-[var(--app-header-bg)] px-3 py-2 text-ink backdrop-blur-md sm:gap-3 sm:px-5 lg:min-h-16 lg:px-8">
       <button
         type="button"
         className="grid size-11 shrink-0 place-items-center rounded-lg text-ink hover:bg-raised"
@@ -67,6 +79,15 @@ export function Header({
         <button
           type="button"
           className="grid size-11 shrink-0 place-items-center rounded-lg text-ink hover:bg-raised"
+          onClick={() => setThemeOpen(value => !value)}
+          aria-label={`主题：${currentTheme.label}。点击切换主题`}
+          aria-expanded={themeOpen}
+          aria-haspopup="dialog"
+          title={`主题：${currentTheme.label}`}
+        ><ThemeIcon size={22} aria-hidden="true" /></button>
+        <button
+          type="button"
+          className="grid size-11 shrink-0 place-items-center rounded-lg text-ink hover:bg-raised"
           onClick={() => setSearchOpen(value => !value)}
           aria-label="搜索国家或频道"
           aria-expanded={searchOpen}
@@ -74,7 +95,7 @@ export function Header({
       </div>
 
       {menuOpen && (
-        <div className="absolute top-full left-3 z-50 mt-2 max-h-[70dvh] w-[min(360px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[#0a1626f5] p-3 shadow-2xl [&>button]:m-1 [&>button]:flex [&>button]:min-h-11 [&>button]:items-center [&>button]:justify-center [&>button]:gap-2 [&>button]:rounded-lg [&>button]:border [&>button]:border-line [&>button]:bg-raised [&>button]:px-3 [&>button]:py-2 [&>button]:text-sm sm:left-5" role="dialog" aria-label="主菜单">
+        <div className="absolute top-full left-3 z-50 mt-2 max-h-[70dvh] w-[min(360px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[var(--app-overlay-bg)] p-3 shadow-2xl backdrop-blur-md [&>button]:m-1 [&>button]:flex [&>button]:min-h-11 [&>button]:items-center [&>button]:justify-center [&>button]:gap-2 [&>button]:rounded-lg [&>button]:border [&>button]:border-line [&>button]:bg-raised [&>button]:px-3 [&>button]:py-2 [&>button]:text-sm sm:left-5" role="dialog" aria-label="主菜单">
           <button onClick={() => setTab('favorites')} className={tab === 'favorites' ? 'border-cyan! text-cyan!' : ''} type="button">
             收藏 ({preferences.favorites.length})
           </button>
@@ -88,11 +109,11 @@ export function Header({
             {(tab === 'favorites' ? preferences.favorites : preferences.recent).map(id => {
               const channel = index.channels.find(item => item.id === id) ?? popularChannels.find(item => item.id === id);
               return (
-                <div className="flex items-center border-b border-[#1f364d]" key={id}>
-                  <button className="min-w-0 flex-1 truncate px-1 py-2 text-left disabled:text-[#7a8a99]" disabled={!channel} type="button" onClick={() => channel && (channel.id.startsWith('popular-') ? onSelectPopularChannel(channel.id) : onSelectChannel(channel.countryCode, id))}>
+                <div className="flex items-center border-b border-line" key={id}>
+                  <button className="min-w-0 flex-1 truncate px-1 py-2 text-left disabled:text-disabled" disabled={!channel} type="button" onClick={() => channel && (channel.id.startsWith('popular-') ? onSelectPopularChannel(channel.id) : onSelectChannel(channel.countryCode, id))}>
                     {channel?.name ?? '该频道已下线'}
                   </button>
-                  <button className="grid size-10 place-items-center text-cyan hover:text-white" onClick={() => onRemoveSaved(id)} aria-label={`移除 ${channel?.name ?? id}`}><X size={16} aria-hidden="true" /></button>
+                  <button className="grid size-10 place-items-center text-cyan hover:text-ink" onClick={() => onRemoveSaved(id)} aria-label={`移除 ${channel?.name ?? id}`}><X size={16} aria-hidden="true" /></button>
                 </div>
               );
             })}
@@ -101,8 +122,34 @@ export function Header({
         </div>
       )}
 
+      {themeOpen && (
+        <div className="absolute top-full right-3 z-50 mt-2 w-[min(320px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[var(--app-overlay-bg)] p-3 shadow-2xl backdrop-blur-md sm:right-5" role="dialog" aria-label="选择主题">
+          <p className="px-1 pb-2 text-[11px] tracking-[0.18em] text-cyan">主题</p>
+          {THEME_OPTIONS.map(option => {
+            const Icon = option.icon;
+            const active = option.value === preferences.theme;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                className={`flex w-full min-h-11 items-start gap-3 rounded-lg border px-3 py-2 text-left ${active ? 'border-cyan bg-raised text-cyan' : 'border-line bg-raised text-ink hover:bg-raised-strong'}`}
+                aria-pressed={active}
+                onClick={() => { onThemeChange(option.value); setThemeOpen(false); }}
+              >
+                <Icon size={18} aria-hidden="true" className="mt-0.5 shrink-0" />
+                <span className="min-w-0 flex-1">
+                  <strong className="block text-sm font-semibold">{option.label}</strong>
+                  <small className="mt-0.5 block text-xs text-muted">{option.description}</small>
+                </span>
+                {active && <span className="shrink-0 self-center text-[11px] text-cyan">当前</span>}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       {searchOpen && (
-        <div className="absolute top-full right-3 z-50 mt-2 max-h-[70dvh] w-[min(420px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[#0a1626f5] p-3 shadow-2xl sm:right-5" role="dialog" aria-label="搜索">
+        <div className="absolute top-full right-3 z-50 mt-2 max-h-[70dvh] w-[min(420px,calc(100vw-24px))] overflow-y-auto rounded-xl border border-line bg-[var(--app-overlay-bg)] p-3 shadow-2xl backdrop-blur-md sm:right-5" role="dialog" aria-label="搜索">
           <input
             type="search"
             className="mb-3 h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"

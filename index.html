@@ -3,8 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0d1b2a" />
+    <meta name="theme-color" content="#08111f" />
     <title>地球电视</title>
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('globe-tv:preferences:v1');
+          var pref = 'auto';
+          if (raw) {
+            var data = JSON.parse(raw);
+            if (data && (data.theme === 'light' || data.theme === 'dark' || data.theme === 'auto')) {
+              pref = data.theme;
+            }
+          }
+          var mode = pref === 'light' || pref === 'dark'
+            ? pref
+            : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', mode);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', mode === 'dark' ? '#08111f' : '#f6f8fb');
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -3,6 +3,7 @@ import mapboxgl, { type Map as MapboxMap } from 'mapbox-gl';
 import type { FeatureCollection } from 'geojson';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import type { CountrySummary } from '../data/types';
+import type { ThemeMode } from '../preferences/theme';
 import { countryCenter, loadBoundaries, type CountryFeature } from './countries';
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
   selectedCode?: string;
   onSelect: (code: string) => void;
   onFailure: () => void;
+  themeMode: ThemeMode;
 }
 
 const SOURCE = 'channel-countries';
@@ -23,17 +25,39 @@ const SELECTED_LINE = 'country-selected-line';
 const codeFilter = (code?: string): mapboxgl.FilterSpecification => ['==', ['get', 'code'], code ?? ''];
 const globeZoom = (height: number) => Math.max(0.2, Math.min(1.75, 1.75 + Math.log2(Math.max(height, 1) / 570)));
 
-export function Globe({ token, countries, selectedCode, onSelect, onFailure }: Props) {
+function fogFor(themeMode: ThemeMode): mapboxgl.FogSpecification {
+  if (themeMode === 'dark') {
+    return {
+      color: '#c7e5ff',
+      'high-color': '#315c87',
+      'horizon-blend': 0.025,
+      'space-color': '#07182c',
+      'star-intensity': 0.5,
+    };
+  }
+  return {
+    color: '#e6f0f8',
+    'high-color': '#a8c5dc',
+    'horizon-blend': 0.02,
+    'space-color': '#d4e6f5',
+    'star-intensity': 0,
+  };
+}
+
+export function Globe({ token, countries, selectedCode, onSelect, onFailure, themeMode }: Props) {
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapboxMap | null>(null);
   const featuresRef = useRef<CountryFeature[]>([]);
   const selectedRef = useRef(selectedCode);
   const onSelectRef = useRef(onSelect);
   const onFailureRef = useRef(onFailure);
+  const themeRef = useRef(themeMode);
+  const styleReadyRef = useRef(false);
   const [hoveredCode, setHoveredCode] = useState<string>();
   selectedRef.current = selectedCode;
   onSelectRef.current = onSelect;
   onFailureRef.current = onFailure;
+  themeRef.current = themeMode;
 
   useEffect(() => {
     if (!container.current || !mapboxgl.supported()) {
@@ -70,13 +94,8 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure }: P
     map.on('style.load', async () => {
       if (disposed) return;
       styleReady = true;
-      map.setFog({
-        color: '#c7e5ff',
-        'high-color': '#315c87',
-        'horizon-blend': 0.025,
-        'space-color': '#07182c',
-        'star-intensity': 0.5,
-      });
+      styleReadyRef.current = true;
+      map.setFog(fogFor(themeRef.current));
       try {
         const features = await loadBoundaries();
         if (disposed) return;
@@ -196,6 +215,12 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure }: P
     });
   }, [selectedCode]);
 
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !styleReadyRef.current) return;
+    map.setFog(fogFor(themeMode));
+  }, [themeMode]);
+
   const hovered = countries.find(item => item.code === hoveredCode);
   return (
     <div className="relative min-h-0 flex-1 overflow-hidden" aria-label="交互式地球。键盘操作请使用国家列表。">
@@ -203,8 +228,8 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure }: P
         <div ref={container} className="h-full w-full" />
       </div>
       {hovered && (
-        <div className="pointer-events-none absolute bottom-8 left-4 rounded-lg border border-white/20 bg-[#0d1b2ae8] px-3 py-2 text-xs text-white shadow-lg">
-          <strong className="block text-sm">{hovered.nameZh}</strong>
+        <div className="pointer-events-none absolute bottom-8 left-4 rounded-lg border border-globe-divider bg-[var(--app-overlay-bg)] px-3 py-2 text-xs text-ink shadow-lg backdrop-blur-md">
+          <strong className="block text-sm font-semibold">{hovered.nameZh}</strong>
           <span className="text-cyan">{hovered.channelCount} 个频道</span>
         </div>
       )}

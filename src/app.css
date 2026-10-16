@@ -1,16 +1,116 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "DM Sans", "Noto Sans SC", system-ui, sans-serif;
-  --color-ink: #f4f7fa;
-  --color-muted: #9eb4c1;
-  --color-cyan: #9bd4f0;
-  --color-line: #2c4661;
-  --color-panel: #0d1b2a;
-  --color-raised: #11273d;
+:root {
+  --app-ink: #0e1a2c;
+  --app-muted: #5e7286;
+  --app-cyan: #0c66d6;
+  --app-cyan-strong: #084ba6;
+  --app-cyan-on: #ffffff;
+  --app-line: #d6e0ea;
+  --app-line-strong: #b3c2d1;
+  --app-panel: #ffffff;
+  --app-raised: #f1f5f9;
+  --app-raised-strong: #e6edf4;
+  --app-page-bg: #f6f8fb;
+  --app-page-gradient: radial-gradient(circle at 25% 25%, #e3ecf5 0%, #eef2f7 55%, #f6f8fb 100%);
+  --app-globe-section-bg: radial-gradient(circle at 50% 30%, #cce0f0 0%, #dde9f4 50%, #eef3f9 100%);
+  --app-globe-divider: #c8d5e2;
+  --app-header-bg: rgba(246, 248, 251, 0.82);
+  --app-overlay-bg: rgba(255, 255, 255, 0.96);
+  --app-info-bg: #d8e8f6;
+  --app-info-text: #0e3b5c;
+  --app-info-border: #6ba5c8;
+  --app-disabled: #95a4b5;
+  --app-footer-text: #5b6b7d;
+  --app-chip-bg: #e6edf4;
+  --app-selected-row: #d8e6f3;
+  --app-popular-from: #dce9f5;
+  --app-popular-to: #9fc1de;
+  --app-popular-border: #6f97b9;
+  --app-popular-icon-bg: #4d7da6;
+  --app-popular-icon-text: #ffffff;
+  --app-popular-hover: #b9d3e7;
+  --app-on-video-bg: rgba(8, 17, 31, 0.85);
+  --app-on-video-text: #ffffff;
+  color-scheme: light;
 }
 
-html { color-scheme: dark; }
-body { margin: 0; min-width: 320px; background: #08111f; }
+[data-theme="dark"] {
+  --app-ink: #f4f7fa;
+  --app-muted: #9eb4c1;
+  --app-cyan: #9bd4f0;
+  --app-cyan-strong: #b9e2f3;
+  --app-cyan-on: #102334;
+  --app-line: #1f3650;
+  --app-line-strong: #2c4661;
+  --app-panel: #0d1b2a;
+  --app-raised: #11273d;
+  --app-raised-strong: #16324c;
+  --app-page-bg: #08111f;
+  --app-page-gradient: radial-gradient(circle at 25% 25%, #142a44 0%, #08111f 58%, #03080f 100%);
+  --app-globe-section-bg: radial-gradient(circle at 50% 35%, #163757 0%, #0c2138 55%, #07172a 100%);
+  --app-globe-divider: #1f3650;
+  --app-header-bg: rgba(8, 17, 31, 0.8);
+  --app-overlay-bg: rgba(10, 22, 38, 0.96);
+  --app-info-bg: #1a3a4a;
+  --app-info-text: #b6e0ee;
+  --app-info-border: #6da3ba;
+  --app-disabled: #7a8a99;
+  --app-footer-text: #8ea3b6;
+  --app-chip-bg: #1c3650;
+  --app-selected-row: #173353;
+  --app-popular-from: #173353;
+  --app-popular-to: #12283f;
+  --app-popular-border: #2b5870;
+  --app-popular-icon-bg: #214a65;
+  --app-popular-icon-text: #9bd4f0;
+  --app-popular-hover: #193b5b;
+  --app-on-video-bg: rgba(8, 17, 31, 0.85);
+  --app-on-video-text: #ffffff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "DM Sans", "Noto Sans SC", system-ui, sans-serif;
+  --color-ink: var(--app-ink);
+  --color-muted: var(--app-muted);
+  --color-cyan: var(--app-cyan);
+  --color-cyan-strong: var(--app-cyan-strong);
+  --color-cyan-on: var(--app-cyan-on);
+  --color-line: var(--app-line);
+  --color-line-strong: var(--app-line-strong);
+  --color-panel: var(--app-panel);
+  --color-raised: var(--app-raised);
+  --color-raised-strong: var(--app-raised-strong);
+  --color-info-bg: var(--app-info-bg);
+  --color-info-text: var(--app-info-text);
+  --color-info-border: var(--app-info-border);
+  --color-disabled: var(--app-disabled);
+  --color-footer-text: var(--app-footer-text);
+  --color-chip-bg: var(--app-chip-bg);
+  --color-selected-row: var(--app-selected-row);
+  --color-globe-divider: var(--app-globe-divider);
+  --color-popular-from: var(--app-popular-from);
+  --color-popular-to: var(--app-popular-to);
+  --color-popular-border: var(--app-popular-border);
+  --color-popular-icon: var(--app-popular-icon-bg);
+  --color-popular-icon-text: var(--app-popular-icon-text);
+  --color-popular-hover: var(--app-popular-hover);
+  --color-on-video: var(--app-on-video-bg);
+  --color-on-video-text: var(--app-on-video-text);
+}
+
+html { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--app-page-bg);
+}
+
 button { cursor: pointer; }
-button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid #9bd4f0; outline-offset: 3px; }
+button:focus-visible, input:focus-visible, a:focus-visible {
+  outline: 2px solid var(--app-cyan);
+  outline-offset: 3px;
+}

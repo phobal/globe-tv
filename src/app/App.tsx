@@ -2,7 +2,8 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { loadCountry, loadIndex, loadPopular } from '../data/catalog';
 import type { CatalogIndex, Channel, PopularChannel } from '../data/types';
 import { parseDeepLink, linkTo, linkToCollection } from '../routing/deepLinks';
-import { readPreferences, savePreferences, markRecentlyPlayed } from '../preferences/storage';
+import { readPreferences, savePreferences, markRecentlyPlayed, type ThemePreference } from '../preferences/storage';
+import { useThemeEffect } from '../preferences/useTheme';
 import { guessUserCountry } from '../data/geo';
 import { Globe } from '../globe/Globe';
 import { SidePanel } from '../sidepanel/SidePanel';
@@ -28,6 +29,7 @@ export function App() {
   const [message, setMessage] = useState('');
   const [globeFailed, setGlobeFailed] = useState(false);
   const [preferences, setPreferences] = useState(readPreferences);
+  const theme = useThemeEffect(preferences.theme);
   const country = index?.countries.find(item => item.code === countryCode);
   const playingCountry = index?.countries.find(item => item.code === playing?.countryCode);
   const playerChannels = useMemo(() => playingPopular
@@ -109,6 +111,14 @@ export function App() {
     history.replaceState({}, '', code ? linkTo(code) : location.pathname);
   };
 
+  const backToCountries = () => {
+    setCountryCode(undefined);
+    setPopularMode(false);
+    setMissingId(undefined);
+    setFeaturedId(undefined);
+    history.replaceState({}, '', location.pathname);
+  };
+
   const selectPopular = () => {
     setCountryCode(undefined);
     setPopularMode(true);
@@ -174,15 +184,20 @@ export function App() {
       : [...current.favorites, id],
   }));
   const removeSaved = (id: string) => setPreferences(current => ({
+    ...current,
     favorites: current.favorites.filter(item => item !== id),
     recent: current.recent.filter(item => item !== id),
   }));
   const onPlaying = (id: string) => setPreferences(current => markRecentlyPlayed(current, id));
+  const setThemePreference = (next: ThemePreference) => setPreferences(current => ({ ...current, theme: next }));
   const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN?.trim();
   const canGlobe = Boolean(mapboxToken) && !globeFailed;
 
   return (
-    <div className="flex min-h-dvh flex-col bg-[radial-gradient(circle_at_25%_25%,#142a44_0%,#08111f_58%,#03080f_100%)] font-sans text-ink lg:h-dvh lg:overflow-hidden">
+    <div
+      className="flex min-h-dvh flex-col font-sans text-ink lg:h-dvh lg:overflow-hidden"
+      style={{ background: 'var(--app-page-gradient)' }}
+    >
       {index && (
         <Header
           playing={playing}
@@ -195,13 +210,14 @@ export function App() {
           onSelectChannel={selectChannel}
           onSelectPopularChannel={selectPopularChannel}
           onRemoveSaved={removeSaved}
+          onThemeChange={setThemePreference}
         />
       )}
 
       {message && (
-        <div className="flex items-center justify-between gap-3 bg-[#1a3a4a] px-4 py-2 text-sm text-[#b6e0ee] lg:px-8" role="status">
+        <div className="flex items-center justify-between gap-3 border-b border-info-border bg-info-bg px-4 py-2 text-sm text-info-text lg:px-8" role="status">
           {message}
-          <button className="rounded-md border border-[#6da3ba] px-3 py-1" onClick={() => setMessage('')}>关闭</button>
+          <button className="rounded-md border border-info-border bg-[var(--app-panel)] px-3 py-1" onClick={() => setMessage('')}>关闭</button>
         </div>
       )}
 
@@ -215,11 +231,18 @@ export function App() {
         <main className="grid flex-1 place-content-center" role="status">正在加载地球电视…</main>
       ) : (
         <main className="grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)]">
-          <section className="relative flex h-[min(48dvh,440px)] min-h-[350px] min-w-0 flex-col overflow-hidden rounded-2xl border border-[#1f3650] bg-[radial-gradient(circle_at_50%_35%,#163757_0%,#0c2138_55%,#07172a_100%)] lg:h-full lg:min-h-0">
-            <div className="flex items-start justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
-              <div>
+          <section
+            className="relative flex h-[min(48dvh,440px)] min-h-[350px] min-w-0 flex-col overflow-hidden rounded-2xl border border-globe-divider lg:h-full lg:min-h-0"
+            style={{ background: 'var(--app-globe-section-bg)' }}
+          >
+            <div className="flex items-center justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
+              <div className="min-w-0">
                 <small className="text-[11px] tracking-[0.18em] text-cyan">探索世界 · 实时直播</small>
-                <h1 className="mt-2 text-[clamp(20px,3vw,32px)] leading-tight font-semibold">{country ? country.nameZh : '从世界的某个角落开始'}</h1>
+                <h1 className="mt-2 truncate text-[clamp(20px,3vw,32px)] leading-tight font-semibold">{country ? country.nameZh : '从世界的某个角落开始'}</h1>
+              </div>
+              <div className="shrink-0 text-right text-[11px] text-footer-text">
+                <p>{index.countries.length} 个国家和地区</p>
+                <p className="text-cyan">{index.channels.length} 个频道</p>
               </div>
             </div>
             {canGlobe ? (
@@ -229,17 +252,18 @@ export function App() {
                 selectedCode={countryCode}
                 onSelect={selectCountry}
                 onFailure={() => setGlobeFailed(true)}
+                themeMode={theme.mode}
               />
             ) : (
               <div className="grid flex-1 place-content-center p-5 text-center text-muted">
                 <p>地图暂不可用，可使用频道列表继续选台。</p>
               </div>
             )}
-            <div className="flex flex-wrap justify-end gap-x-3 gap-y-1 px-4 pb-4 text-[11px] text-[#8fa3b6] sm:px-6">
-              <span>{index.countries.length} 个国家和地区 · {index.channels.length} 个频道</span>
-            </div>
           </section>
-            <aside className="flex h-[65dvh] min-h-[400px] min-w-0 flex-col overflow-hidden rounded-2xl border border-[#1f3650] bg-[#0d1b2ae8] lg:h-full lg:min-h-0" aria-label="国家与频道列表">
+            <aside
+              className="flex h-[65dvh] min-h-[400px] min-w-0 flex-col overflow-hidden rounded-2xl border border-globe-divider bg-panel/90 backdrop-blur-sm lg:h-full lg:min-h-0"
+              aria-label="国家与频道列表"
+            >
               <SidePanel
                 index={index}
                 countries={index.countries}
@@ -253,6 +277,7 @@ export function App() {
                 missingId={missingId}
                 onPickCountry={selectCountry}
                 onPickPopular={selectPopular}
+                onBack={backToCountries}
                 onPlay={play}
                 onToggleFavorite={toggleFavorite}
                 onRetry={() => setCountryRetry(value => value + 1)}
@@ -273,9 +298,9 @@ export function App() {
         />
       )}
 
-      <footer className="flex flex-wrap justify-between gap-x-4 gap-y-1 border-t border-[#1a2f44] px-4 py-3 text-[10px] text-[#8ea3b6] sm:px-5 lg:px-8">
+      <footer className="flex flex-wrap justify-between gap-x-4 gap-y-1 border-t border-globe-divider px-4 py-3 text-[10px] text-footer-text sm:px-5 lg:px-8">
         <span>频道数据：Famelack · MIT；热门频道：iptv-org · Unlicense</span>
-        <span>播放取决于直播源及当前网络</span>
+        <span>播放取决于直播源及当前网络 · 主题 {theme.mode === 'dark' ? '暗' : '亮'}</span>
       </footer>
     </div>
   );

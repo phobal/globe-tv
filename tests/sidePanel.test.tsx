@@ -19,7 +19,7 @@ afterEach(cleanup);
 function props(overrides = {}) {
   return {
     index, countries: index.countries, channels: [], loading: false, favorites: [], popular: false,
-    onPickCountry: vi.fn(), onPickPopular: vi.fn(), onPlay: vi.fn(), onToggleFavorite: vi.fn(), onRetry: vi.fn(),
+    onPickCountry: vi.fn(), onPickPopular: vi.fn(), onBack: vi.fn(), onPlay: vi.fn(), onToggleFavorite: vi.fn(), onRetry: vi.fn(),
     ...overrides,
   };
 }
@@ -47,5 +47,21 @@ describe('热门频道侧栏', () => {
       expect.stringContaining('01BBC News'),
       expect.stringContaining('02ABC News'),
     ]);
+  });
+});
+
+describe('国家与频道导航', () => {
+  it('选择国家后点击返回按钮回到国家列表', async () => {
+    const onBack = vi.fn();
+    render(<SidePanel {...props({ countryCode: 'uk', channels: [channel], onBack })} />);
+    await userEvent.click(screen.getByRole('button', { name: '返回国家列表' }));
+    expect(onBack).toHaveBeenCalledOnce();
+  });
+
+  it('热门频道视图的返回按钮回到国家列表', async () => {
+    const onBack = vi.fn();
+    render(<SidePanel {...props({ popular: true, channels: [channel], onBack })} />);
+    await userEvent.click(screen.getByRole('button', { name: '返回国家列表' }));
+    expect(onBack).toHaveBeenCalledOnce();
   });
 });

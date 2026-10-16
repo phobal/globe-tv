@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, Search, Tv, X } from 'lucide-react';
-import type { CatalogIndex, Channel } from '../data/types';
+import type { CatalogIndex, Channel, PopularChannel } from '../data/types';
 import type { Preferences } from '../preferences/storage';
 
 interface Props {
@@ -9,14 +9,16 @@ interface Props {
   onClosePlayer: () => void;
   index: CatalogIndex;
   preferences: Preferences;
+  popularChannels: PopularChannel[];
   onPickCountry: (code: string) => void;
   onSelectChannel: (code: string, id: string) => void;
+  onSelectPopularChannel: (id: string) => void;
   onRemoveSaved: (id: string) => void;
 }
 
 export function Header({
   playing, onOpenPlayer,
-  index, preferences, onPickCountry, onSelectChannel, onRemoveSaved,
+  index, preferences, popularChannels, onPickCountry, onSelectChannel, onSelectPopularChannel, onRemoveSaved,
 }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -84,10 +86,10 @@ export function Header({
               <p>{tab === 'favorites' ? '还没有收藏频道' : '尚无成功播放记录'}</p>
             )}
             {(tab === 'favorites' ? preferences.favorites : preferences.recent).map(id => {
-              const channel = index.channels.find(item => item.id === id);
+              const channel = index.channels.find(item => item.id === id) ?? popularChannels.find(item => item.id === id);
               return (
                 <div className="flex items-center border-b border-[#1f364d]" key={id}>
-                  <button className="min-w-0 flex-1 truncate px-1 py-2 text-left disabled:text-[#7a8a99]" disabled={!channel} type="button" onClick={() => channel && onSelectChannel(channel.countryCode, id)}>
+                  <button className="min-w-0 flex-1 truncate px-1 py-2 text-left disabled:text-[#7a8a99]" disabled={!channel} type="button" onClick={() => channel && (channel.id.startsWith('popular-') ? onSelectPopularChannel(channel.id) : onSelectChannel(channel.countryCode, id))}>
                     {channel?.name ?? '该频道已下线'}
                   </button>
                   <button className="grid size-10 place-items-center text-cyan hover:text-white" onClick={() => onRemoveSaved(id)} aria-label={`移除 ${channel?.name ?? id}`}><X size={16} aria-hidden="true" /></button>
@@ -130,6 +132,15 @@ export function Header({
                   <button key={channel.id} type="button" onClick={() => { onSelectChannel(channel.countryCode, channel.id); setQuery(''); setSearchOpen(false); }}>
                     <span>{channel.name}</span>
                     <small>{index.countries.find(country => country.code === channel.countryCode)?.nameZh}</small>
+                  </button>
+                ))}
+              {popularChannels
+                .filter(item => item.name.toLowerCase().includes(query.trim().toLowerCase()))
+                .slice(0, 8)
+                .map(channel => (
+                  <button key={channel.id} type="button" onClick={() => { onSelectPopularChannel(channel.id); setQuery(''); setSearchOpen(false); }}>
+                    <span>{channel.name}</span>
+                    <small>热门频道</small>
                   </button>
                 ))}
             </div>

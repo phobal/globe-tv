@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "sync": "node scripts/sync-tv.mjs",
+    "sync:popular": "node scripts/sync-popular.mjs",
     "geo": "node scripts/make-geo.mjs"
   },
   "dependencies": {

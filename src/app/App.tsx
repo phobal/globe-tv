@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { loadCountry, loadIndex } from '../data/catalog';
-import type { CatalogIndex, Channel } from '../data/types';
-import { parseDeepLink, linkTo } from '../routing/deepLinks';
+import { loadCountry, loadIndex, loadPopular } from '../data/catalog';
+import type { CatalogIndex, Channel, PopularChannel } from '../data/types';
+import { parseDeepLink, linkTo, linkToCollection } from '../routing/deepLinks';
 import { readPreferences, savePreferences, markRecentlyPlayed } from '../preferences/storage';
 import { guessUserCountry } from '../data/geo';
 import { Globe } from '../globe/Globe';
@@ -15,6 +15,9 @@ export function App() {
   const [indexError, setIndexError] = useState('');
   const [countryCode, setCountryCode] = useState<string>();
   const [channels, setChannels] = useState<Channel[]>([]);
+  const [popularChannels, setPopularChannels] = useState<PopularChannel[]>([]);
+  const [popularMode, setPopularMode] = useState(false);
+  const [playingPopular, setPlayingPopular] = useState(false);
   const [countryError, setCountryError] = useState('');
   const [countryRetry, setCountryRetry] = useState(0);
   const [loadingCountry, setLoadingCountry] = useState(false);
@@ -27,22 +30,31 @@ export function App() {
   const [preferences, setPreferences] = useState(readPreferences);
   const country = index?.countries.find(item => item.code === countryCode);
   const playingCountry = index?.countries.find(item => item.code === playing?.countryCode);
-  const playerChannels = useMemo(
-    () => playing?.countryCode === countryCode ? orderedChannels(channels) : [],
-    [channels, countryCode, playing?.countryCode],
-  );
+  const playerChannels = useMemo(() => playingPopular
+    ? orderedChannels(popularChannels)
+    : playing?.countryCode === countryCode ? orderedChannels(channels) : [],
+  [channels, countryCode, playing?.countryCode, playingPopular, popularChannels]);
   const playerChannelIndex = playerChannels.findIndex(item => item.id === playing?.id);
 
   const refreshIndex = useCallback(() => {
     loadIndex().then(setIndex).catch(error => setIndexError(String(error)));
   }, []);
   useEffect(refreshIndex, [refreshIndex]);
+  useEffect(() => {
+    loadPopular().then(data => setPopularChannels(data.channels)).catch(() => {});
+  }, []);
 
   useEffect(() => {
     if (!index) return;
     const deep = parseDeepLink(location.search);
     if (deep.invalid) {
       setMessage('链接参数无效，已返回首页。'); return;
+    }
+    if (deep.collection === 'popular') {
+      setPopularMode(true);
+      setCountryCode(undefined);
+      if (deep.channel) { setMissingId(deep.channel); setFeaturedId(deep.channel); }
+      return;
     }
     let chosen: string | undefined;
     if (deep.country) {
@@ -64,6 +76,14 @@ export function App() {
   }, [index]);
 
   useEffect(() => {
+    if (popularMode) {
+      let live = true;
+      setLoadingCountry(true); setCountryError(''); setChannels([]);
+      loadPopular()
+        .then(data => { if (live) { setPopularChannels(data.channels); setChannels(data.channels); setLoadingCountry(false); } })
+        .catch(error => { if (live) { setCountryError(String(error)); setLoadingCountry(false); } });
+      return () => { live = false; };
+    }
     if (!countryCode) { setChannels([]); return; }
     let live = true;
     setLoadingCountry(true); setCountryError(''); setChannels([]);
@@ -71,7 +91,7 @@ export function App() {
       .then(data => { if (live) { setChannels(data); setLoadingCountry(false); } })
       .catch(error => { if (live) { setCountryError(String(error)); setLoadingCountry(false); } });
     return () => { live = false; };
-  }, [countryCode, countryRetry]);
+  }, [countryCode, countryRetry, popularMode]);
 
   useEffect(() => {
     if (missingId && channels.some(item => item.id === missingId)) setMissingId(undefined);
@@ -82,18 +102,28 @@ export function App() {
   const selectCountry = (code: string) => {
     if (code && !index?.countries.some(item => item.code === code)) return;
     setCountryCode(code);
+    setPopularMode(false);
     setMissingId(undefined);
     setFeaturedId(undefined);
     if (code) setPreferences(current => ({ ...current, countryCode: code }));
     history.replaceState({}, '', code ? linkTo(code) : location.pathname);
   };
 
+  const selectPopular = () => {
+    setCountryCode(undefined);
+    setPopularMode(true);
+    setMissingId(undefined);
+    setFeaturedId(undefined);
+    history.replaceState({}, '', linkToCollection('popular'));
+  };
+
   const play = (channel: Channel) => {
     setPlaying(channel);
+    setPlayingPopular(popularMode);
     setMissingId(undefined);
     setFeaturedId(undefined);
     setPlayerOpen(true);
-    history.replaceState({}, '', linkTo(channel.countryCode, channel.id));
+    history.replaceState({}, '', popularMode ? linkToCollection('popular', channel.id) : linkTo(channel.countryCode, channel.id));
   };
 
   const closePlayer = () => {
@@ -114,6 +144,26 @@ export function App() {
       if (channel) play(channel); else setMissingId(id);
     } catch {
       setMessage('频道加载失败，请重试。');
+    }
+  };
+
+  const selectPopularChannel = async (id: string) => {
+    setCountryCode(undefined);
+    setPopularMode(true);
+    try {
+      const data = await loadPopular();
+      setPopularChannels(data.channels);
+      const channel = data.channels.find(item => item.id === id);
+      if (channel) {
+        setPlaying(channel);
+        setPlayingPopular(true);
+        setMissingId(undefined);
+        setFeaturedId(undefined);
+        setPlayerOpen(true);
+        history.replaceState({}, '', linkToCollection('popular', channel.id));
+      } else setMissingId(id);
+    } catch {
+      setMessage('热门频道加载失败，请重试。');
     }
   };
 
@@ -140,8 +190,10 @@ export function App() {
           onClosePlayer={closePlayer}
           index={index}
           preferences={preferences}
+          popularChannels={popularChannels}
           onPickCountry={selectCountry}
           onSelectChannel={selectChannel}
+          onSelectPopularChannel={selectPopularChannel}
           onRemoveSaved={removeSaved}
         />
       )}
@@ -193,12 +245,14 @@ export function App() {
                 countries={index.countries}
                 countryCode={countryCode}
                 channels={channels}
+                popular={popularMode}
                 loading={loadingCountry}
                 error={countryError}
                 favorites={preferences.favorites}
                 featuredId={featuredId}
                 missingId={missingId}
                 onPickCountry={selectCountry}
+                onPickPopular={selectPopular}
                 onPlay={play}
                 onToggleFavorite={toggleFavorite}
                 onRetry={() => setCountryRetry(value => value + 1)}
@@ -220,7 +274,7 @@ export function App() {
       )}
 
       <footer className="flex flex-wrap justify-between gap-x-4 gap-y-1 border-t border-[#1a2f44] px-4 py-3 text-[10px] text-[#8ea3b6] sm:px-5 lg:px-8">
-        <span>频道数据：Famelack · MIT 授权</span>
+        <span>频道数据：Famelack · MIT；热门频道：iptv-org · Unlicense</span>
         <span>播放取决于直播源及当前网络</span>
       </footer>
     </div>

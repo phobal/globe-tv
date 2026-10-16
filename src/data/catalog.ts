@@ -1,7 +1,8 @@
-import type { CatalogIndex, Channel } from './types';
+import type { CatalogIndex, Channel, PopularCatalog } from './types';
 
 const base = import.meta.env.BASE_URL;
 let indexPromise: Promise<CatalogIndex> | undefined;
+let popularPromise: Promise<PopularCatalog> | undefined;
 const countryPromises = new Map<string, Promise<Channel[]>>();
 
 async function fetchJson<T>(path: string): Promise<T> {
@@ -27,6 +28,14 @@ export function loadCountry(code: string): Promise<Channel[]> {
     }));
   }
   return countryPromises.get(code)!;
+}
+
+export function loadPopular(): Promise<PopularCatalog> {
+  popularPromise ??= fetchJson<PopularCatalog>('data/popular.json').catch(error => {
+    popularPromise = undefined;
+    throw error;
+  });
+  return popularPromise;
 }
 
 export function normalizeQuery(value: string): string {

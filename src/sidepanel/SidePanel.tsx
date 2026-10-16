@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, Star } from 'lucide-react';
-import type { CatalogIndex, Channel, CountrySummary } from '../data/types';
+import { ChevronLeft, Flame, Star } from 'lucide-react';
+import type { CatalogIndex, Channel, CountrySummary, PopularChannel } from '../data/types';
 import { normalizeQuery } from '../data/catalog';
 
 interface Props {
@@ -8,12 +8,14 @@ interface Props {
   countries: CountrySummary[];
   countryCode?: string;
   channels: Channel[];
+  popular: boolean;
   loading: boolean;
   error?: string;
   favorites: string[];
   featuredId?: string;
   missingId?: string;
   onPickCountry: (code: string) => void;
+  onPickPopular: () => void;
   onPlay: (channel: Channel) => void;
   onToggleFavorite: (id: string) => void;
   onRetry: () => void;
@@ -56,9 +58,9 @@ function groupCountries(countries: CountrySummary[]) {
 }
 
 export function SidePanel({
-  countries, countryCode, channels, loading, error,
+  index, countries, countryCode, channels, popular, loading, error,
   favorites, featuredId, missingId,
-  onPickCountry, onPlay, onToggleFavorite, onRetry,
+  onPickCountry, onPickPopular, onPlay, onToggleFavorite, onRetry,
 }: Props) {
   const [countryQuery, setCountryQuery] = useState('');
   const [channelQuery, setChannelQuery] = useState('');
@@ -80,8 +82,8 @@ export function SidePanel({
   const shownChannels = useMemo(() => channels
     .filter(channel => normalizeQuery(channel.name).includes(normalizeQuery(channelQuery)))
     .sort((a, b) => Number(b.id === featuredId) - Number(a.id === featuredId)
-      || a.name.localeCompare(b.name))
-  , [channels, channelQuery, featuredId]);
+      || (popular ? (a as PopularChannel).rank - (b as PopularChannel).rank : a.name.localeCompare(b.name)))
+  , [channels, channelQuery, featuredId, popular]);
 
   const clock = now.toLocaleTimeString('zh-CN', { hour: 'numeric', minute: '2-digit', hour12: true });
   const localClock = useMemo(() => {
@@ -105,7 +107,20 @@ export function SidePanel({
   return (
     <div className="flex h-full min-h-0 flex-col text-ink">
       <header className="shrink-0 border-b border-[#1f3650] px-4 py-4 sm:px-5">
-        {!country ? (
+        {popular ? (
+          <div className="flex items-center gap-3">
+            <button
+              className="min-h-11 shrink-0 rounded-lg px-2 text-sm text-cyan hover:bg-raised"
+              type="button"
+              onClick={() => onPickCountry('')}
+              aria-label="返回国家列表"
+            ><ChevronLeft size={18} aria-hidden="true" />返回</button>
+            <div className="min-w-0">
+              <small className="block text-[11px] tracking-wider text-cyan">POPULAR · TOP 50</small>
+              <h2 className="text-lg font-semibold">全球热门频道</h2>
+            </div>
+          </div>
+        ) : !country ? (
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <small className="text-[11px] tracking-[0.15em] text-cyan">选择国家</small>
             <h2 className="text-lg font-semibold">选择国家</h2>
@@ -130,7 +145,7 @@ export function SidePanel({
         )}
       </header>
 
-      {!country ? (
+      {!popular && !country ? (
         <>
           <div className="shrink-0 px-4 pt-3 pb-2 sm:px-5">
             <input
@@ -143,6 +158,21 @@ export function SidePanel({
             />
           </div>
           <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]">
+            {!countryQuery.trim() && (
+              <button
+                type="button"
+                className="my-2 flex min-h-16 w-full items-center gap-3 rounded-xl border border-[#2b5870] bg-[linear-gradient(135deg,#173353,#12283f)] px-3 py-2 text-left hover:border-cyan hover:bg-[#193b5b]"
+                onClick={onPickPopular}
+                aria-label="打开全球热门频道，共 50 个频道"
+              >
+                <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-[#214a65] text-cyan"><Flame size={20} aria-hidden="true" /></span>
+                <span className="min-w-0 flex-1">
+                  <strong className="block text-sm font-semibold">全球热门频道</strong>
+                  <small className="text-muted">精选 50 个稳定直播源</small>
+                </span>
+                <span className="text-xs font-semibold text-cyan">TOP 50</span>
+              </button>
+            )}
             {grouped.length === 0 && <p className="px-3 py-6 text-center text-muted">没有匹配的国家</p>}
             {grouped.map(group => (
               <section key={group.region} className="py-2">
@@ -168,10 +198,10 @@ export function SidePanel({
             <input
               className="h-11 w-full rounded-lg border border-line bg-raised px-3 text-base text-ink placeholder:text-muted"
               type="search"
-              placeholder="搜索当前国家频道"
+              placeholder={popular ? '搜索热门频道' : '搜索当前国家频道'}
               value={channelQuery}
               onChange={event => setChannelQuery(event.target.value)}
-              aria-label="搜索当前国家频道"
+              aria-label={popular ? '搜索热门频道' : '搜索当前国家频道'}
             />
           </div>
           <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 pb-5 [-webkit-overflow-scrolling:touch]" aria-label="播放列表">
@@ -212,10 +242,16 @@ export function SidePanel({
                       className="flex min-h-15 min-w-0 flex-1 items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-raised"
                       onClick={() => onPlay(channel)}
                     >
-                      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#1c3650] text-sm text-cyan">{channel.name.slice(0, 1)}</span>
+                      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#1c3650] text-sm text-cyan">
+                        {popular ? String((channel as PopularChannel).rank).padStart(2, '0') : channel.name.slice(0, 1)}
+                      </span>
                       <span className="min-w-0 flex-1">
                         <strong className="block truncate text-sm font-medium">{channel.name}</strong>
-
+                        {popular && (
+                          <small className="block truncate text-xs text-muted">
+                            {(channel as PopularChannel).category} · {index.countries.find(item => item.code === channel.countryCode)?.nameZh ?? channel.countryCode.toUpperCase()}
+                          </small>
+                        )}
                       </span>
                     </button>
                     <button

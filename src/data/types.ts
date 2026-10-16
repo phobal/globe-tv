@@ -13,6 +13,18 @@ export interface Channel {
   sources: StreamSource[];
 }
 
+export interface PopularChannel extends Channel {
+  tvgId: string;
+  category: string;
+  rank: number;
+}
+
+export interface PopularCatalog {
+  version: string;
+  upstreamCommit: string;
+  channels: PopularChannel[];
+}
+
 export interface CountrySummary {
   code: string;
   nameZh: string;

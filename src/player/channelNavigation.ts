@@ -17,7 +17,12 @@ export function getSwipeDirection(start: TouchPoint, end: TouchPoint): Direction
 }
 
 export function orderedChannels(channels: Channel[]): Channel[] {
-  return [...channels].sort((a, b) => a.name.localeCompare(b.name));
+  return [...channels].sort((a, b) => {
+    const aRank = 'rank' in a && typeof a.rank === 'number' ? a.rank : undefined;
+    const bRank = 'rank' in b && typeof b.rank === 'number' ? b.rank : undefined;
+    if (aRank !== undefined && bRank !== undefined) return aRank - bRank;
+    return a.name.localeCompare(b.name);
+  });
 }
 
 export function adjacentChannel(channels: Channel[], id: string, direction: Direction): Channel | undefined {

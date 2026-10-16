@@ -1,0 +1,1196 @@
+{
+  "version": "2026-10-16T07:24:38.373Z",
+  "upstreamCommit": "bd99d735bf841c99c268938ce58bb7c4ce2c8870",
+  "channels": [
+    {
+      "id": "popular-BBCNews-uk",
+      "tvgId": "BBCNews.uk",
+      "name": "BBC News",
+      "countryCode": "uk",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 1,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/mobile_wifi_main_hd_abr_v2.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/mobile_wifi_main_sd_abr_v2.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://stream8.cinerama.uz/1251/tracks-v1a1/mono.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-CNNInternational-us",
+      "tvgId": "CNNInternational.us",
+      "name": "CNN International",
+      "countryCode": "us",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 2,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://d2sybdl23b9psq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-bocx3i7bjz0dg/CNNFAST_GB.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-AlJazeera-qa",
+      "tvgId": "AlJazeera.qa",
+      "name": "Al Jazeera English",
+      "countryCode": "qa",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 3,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://live-hls-web-aje-fa.thehlive.com/AJE/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://live-hls-apps-aje-v3-fa.getaj.net/AJE/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-France24-fr",
+      "tvgId": "France24.fr",
+      "name": "France 24 English",
+      "countryCode": "fr",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 4,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_2300.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_2300.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-DW-de",
+      "tvgId": "DW.de",
+      "name": "DW English",
+      "countryCode": "de",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 5,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://stream8.cinerama.uz/1418/tracks-v1a1/mono.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://mumt05.tangotv.in/87NeALx2DWTV/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/playlist.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-EuronewsEnglish-fr",
+      "tvgId": "EuronewsEnglish.fr",
+      "name": "Euronews English",
+      "countryCode": "fr",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 6,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://cdn-euronews.akamaized.net/live/eds/euronews-en/25002/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://dash4.antik.sk/live/test_euronews/playlist.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://aegis-cloudfront-1.tubi.video/b1c4d439-03a5-4c40-ae9d-90a183e010c9/euronews-en.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-AfricanewsEnglish-fr",
+      "tvgId": "AfricanewsEnglish.fr",
+      "name": "Africanews English",
+      "countryCode": "fr",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 7,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://mumbai-edge.smartplaytv.in/AfricaNews/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://cdn-euronews.akamaized.net/live/eds/africanews-en/25049/index.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://c3c275b999764df8a2dd55ffe2996818.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6576/bitok/eyJzdGlkIjoiOTU0NDAyODQtOTU0My00Yzc2LThmZjQtNDRhY2YwYmQxYTYwIiwibWt0IjoicGwiLCJjaCI6NjYwNiwicHRmIjo1fQ==/26036/africanews-en.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-BloombergTV-us",
+      "tvgId": "BloombergTV.us",
+      "name": "Bloomberg TV",
+      "countryCode": "us",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "财经",
+      "rank": 8,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://tvsen6.aynaott.com/bloombergtv/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://mumbai-edge.smartplaytv.in/Bloomberg/index.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-ABCNewsLive-us",
+      "tvgId": "ABCNewsLive.us",
+      "name": "ABC News Live",
+      "countryCode": "us",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 9,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://aegis-cloudfront-1.tubi.video/d6cbb0de-68e4-4f3b-82f9-bf5d526e0bde/index.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-CBSNews247-us",
+      "tvgId": "CBSNews247.us",
+      "name": "CBS News 24/7",
+      "countryCode": "us",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 10,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://cbsn-us-vtt.cbsnstream.cbsnews.com/out/v1/ef868690d34144509eda696884bf1619/master.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-NBCNewsNOW-us",
+      "tvgId": "NBCNewsNOW.us",
+      "name": "NBC News NOW",
+      "countryCode": "us",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 11,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://xumo-drct-nbcnn-ir8ze.fast.nbcuni.com/live/master.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://aegis-cloudfront-1.tubi.video/605fb6ea-f89c-451a-873c-030cb726b493/master.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/us/NBC_REDIS.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-FoxWeather-us",
+      "tvgId": "FoxWeather.us",
+      "name": "FOX Weather",
+      "countryCode": "us",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "天气",
+      "rank": 12,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://247wlive.foxweather.com/stream/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://aegis-cloudfront-1.tubi.video/d4d03a5e-dd3e-4b9a-8b11-b86c88d717fe/index.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-CBCNewsNetwork-ca",
+      "tvgId": "CBCNewsNetwork.ca",
+      "name": "CBC News Network",
+      "countryCode": "ca",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 13,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://aegis-cloudfront-1.tubi.video/c71ce9b6-cddb-4cec-b0db-2f09289f8782/master.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-ABCNews-au",
+      "tvgId": "ABCNews.au",
+      "name": "ABC News Australia",
+      "countryCode": "au",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 14,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://c.mjh.nz/abc-news.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-NHKWorldJapan-jp",
+      "tvgId": "NHKWorldJapan.jp",
+      "name": "NHK World-Japan",
+      "countryCode": "jp",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 15,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://media-osa.hls.nhkworld.jp/hls/w/live/master.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-CGTN-cn",
+      "tvgId": "CGTN.cn",
+      "name": "CGTN",
+      "countryCode": "cn",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 16,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://english-livebkali.cgtn.com/live/encgtn.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://0472.org/hls/cgtn.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-CGTNDocumentary-cn",
+      "tvgId": "CGTNDocumentary.cn",
+      "name": "CGTN Documentary",
+      "countryCode": "cn",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "纪实",
+      "rank": 17,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://english-livebkali.cgtn.com/live/doccgtn.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://dash3.antik.sk/live/test_cgtn_doc/playlist.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-CCTV4Europe-cn",
+      "tvgId": "CCTV4Europe.cn",
+      "name": "CCTV-4 Europe",
+      "countryCode": "cn",
+      "languages": [
+        "zho"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 18,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-ArirangTV-kr",
+      "tvgId": "ArirangTV.kr",
+      "name": "Arirang TV",
+      "countryCode": "kr",
+      "languages": [
+        "eng",
+        "kor"
+      ],
+      "geoBlocked": false,
+      "category": "文化",
+      "rank": 19,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://dash3.antik.sk/live/test_arirang/playlist.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://amdlive-ch03-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-CNAInternational-sg",
+      "tvgId": "CNAInternational.sg",
+      "name": "CNA International",
+      "countryCode": "sg",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 20,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://mumt05.tangotv.in/87NeALx2CNA/index.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-WION-in",
+      "tvgId": "WION.in",
+      "name": "WION",
+      "countryCode": "in",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 21,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_4.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_3.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_5.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-NDTV24x7-in",
+      "tvgId": "NDTV24x7.in",
+      "name": "NDTV 24x7",
+      "countryCode": "in",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 22,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-DDNews-in",
+      "tvgId": "DDNews.in",
+      "name": "DD News",
+      "countryCode": "in",
+      "languages": [
+        "hin",
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 23,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://streams.tangotv.in/DDNEWS/ORIGIN/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/0811cd8c37ca4c409d5385a6cd2fa18b/index.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-CNNNews18-in",
+      "tvgId": "CNNNews18.in",
+      "name": "CNN-News18",
+      "countryCode": "in",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 24,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://n18syndication.akamaized.net/bpk-tv/CNN_News18_NW18_MOB/output01/master.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-TRTWorld-tr",
+      "tvgId": "TRTWorld.tr",
+      "name": "TRT World",
+      "countryCode": "tr",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 25,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://dash2.antik.sk/live/test_trt_world_atktv/playlist.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-Alarabiya-ae",
+      "tvgId": "Alarabiya.ae",
+      "name": "Al Arabiya",
+      "countryCode": "ae",
+      "languages": [
+        "ara"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 26,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/alarabiapublish/alarabiya_1080p/chunks.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-alarabiya/7f90de73d777d04f3dada92f90d35c44/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-SkyNewsArabia-ae",
+      "tvgId": "SkyNewsArabia.ae",
+      "name": "Sky News Arabia",
+      "countryCode": "ae",
+      "languages": [
+        "ara"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 27,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://stream.skynewsarabia.com/ott/ott.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-AsharqNews-sa",
+      "tvgId": "AsharqNews.sa",
+      "name": "Asharq News",
+      "countryCode": "sa",
+      "languages": [
+        "ara"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 28,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://svs.itworkscdn.net/bloomberarlive/bloomberg.smil/playlist_dvr.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-asharq/10ae30c64e21402c8116a7fb1e5aa789/index.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-AlArabiyaEnglish-sa",
+      "tvgId": "AlArabiyaEnglish.sa",
+      "name": "Al Arabiya English",
+      "countryCode": "sa",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 29,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://live.alarabiya.net/alarabiapublish/english/playlist_dvr.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-i24NEWSEnglishWorld-il",
+      "tvgId": "i24NEWSEnglishWorld.il",
+      "name": "i24NEWS English",
+      "countryCode": "il",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 30,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://hlspackager.akamaized.net/live/DB/i24_ENGLISH/HLS/i24_ENGLISH.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://i24newsenglish-cdn.encoders.immergo.tv/master.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-RaiNews24-it",
+      "tvgId": "RaiNews24.it",
+      "name": "Rai News 24",
+      "countryCode": "it",
+      "languages": [
+        "ita"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 31,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://d3k8wzt41aflvx.cloudfront.net/RAINEWS24/Live.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-24Horas-es",
+      "tvgId": "24Horas.es",
+      "name": "Canal 24 Horas",
+      "countryCode": "es",
+      "languages": [
+        "spa"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 32,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://ztnr.rtve.es/ztnr/1694255.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-TVEStar-es",
+      "tvgId": "TVEStar.es",
+      "name": "TVE Star",
+      "countryCode": "es",
+      "languages": [
+        "spa"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 33,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_576.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_dvr_1080.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-ERTNews-gr",
+      "tvgId": "ERTNews.gr",
+      "name": "ERT News",
+      "countryCode": "gr",
+      "languages": [
+        "ell"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 34,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTNews/default/index.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-YleTV1-fi",
+      "tvgId": "YleTV1.fi",
+      "name": "Yle TV1",
+      "countryCode": "fi",
+      "languages": [
+        "fin"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 35,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://yletvworld.akamaized.net/hls/live/622540/yletv1w/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://live-fi.tvkaista.net/yle-tv1/live.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-TVRIWorld-id",
+      "tvgId": "TVRIWorld.id",
+      "name": "TVRI World",
+      "countryCode": "id",
+      "languages": [
+        "ind",
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 36,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://ott-balancer.tvri.go.id/live/eds/TVRIWorld/hls/TVRIWorld.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-Antena3CNN-ro",
+      "tvgId": "Antena3CNN.ro",
+      "name": "Antena 3 CNN",
+      "countryCode": "ro",
+      "languages": [
+        "ron"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 37,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://live4dai.antenaplay.ro/live2_aws4_sdi11/live2_aws4_sdi11_600k.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-Euronews-pl",
+      "tvgId": "Euronews.pl",
+      "name": "Euronews Poland",
+      "countryCode": "pl",
+      "languages": [
+        "pol"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 38,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://cdn-euronews.akamaized.net/live/eds/euronews-pl/26382/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://7060743b4b224241b86325460b14d152.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6769/bitok/eyJzdGlkIjoiMTE3OTllNGEtYmU1OC00ZjQyLTkxOTYtY2VlYWQzZGU2MDJjIiwibWt0IjoicGwiLCJjaCI6Njc2OSwicHRmIjo1fQ==/26235/euronews-pl.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-RT-ru",
+      "tvgId": "RT.ru",
+      "name": "RT News",
+      "countryCode": "ru",
+      "languages": [
+        "rus"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 39,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://rt-glb.rttv.com/dvr/rtnews/playlist.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://wisewatchoott.wiseplayout.com/RT/master.m3u8",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-CNNBrasil-br",
+      "tvgId": "CNNBrasil.br",
+      "name": "CNN Brasil",
+      "countryCode": "br",
+      "languages": [
+        "por"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 40,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-RecordNews-br",
+      "tvgId": "RecordNews.br",
+      "name": "Record News",
+      "countryCode": "br",
+      "languages": [
+        "por"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 41,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://rnw-rn.otteravision.com/rnw/rn/rnw_rn.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-Canal26-ar",
+      "tvgId": "Canal26.ar",
+      "name": "Canal 26",
+      "countryCode": "ar",
+      "languages": [
+        "spa"
+      ],
+      "geoBlocked": false,
+      "category": "新闻",
+      "rank": 42,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-AztecaInternacional-mx",
+      "tvgId": "AztecaInternacional.mx",
+      "name": "Azteca Internacional",
+      "countryCode": "mx",
+      "languages": [
+        "spa"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 43,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-ThaiPBS-th",
+      "tvgId": "ThaiPBS.th",
+      "name": "Thai PBS",
+      "countryCode": "th",
+      "languages": [
+        "tha"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 44,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://live-us1.thaimomo.com/live-as/chThaipbshd-2/playlist.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-RedBullTV-at",
+      "tvgId": "RedBullTV.at",
+      "name": "Red Bull TV",
+      "countryCode": "at",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "体育",
+      "rank": 45,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+          "order": 1
+        },
+        {
+          "kind": "hls",
+          "url": "https://76b17ec8b2424026b8e1523836cc90e7.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-641-WORBEUENFAST-WHALETVPLUS/641/whaletvplus/hls/master/playlist.m3u8",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "popular-FashionTVParisLOriginal-fr",
+      "tvgId": "FashionTVParisLOriginal.fr",
+      "name": "FashionTV Paris L'Original",
+      "countryCode": "fr",
+      "languages": [
+        "eng",
+        "fra"
+      ],
+      "geoBlocked": false,
+      "category": "生活",
+      "rank": 46,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-TV5MondeAsia-fr",
+      "tvgId": "TV5MondeAsia.fr",
+      "name": "TV5Monde Asia",
+      "countryCode": "fr",
+      "languages": [
+        "fra"
+      ],
+      "geoBlocked": false,
+      "category": "文化",
+      "rank": 47,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://mumt03.tangotv.in/Dsly5z3HTV5MONDEASIA/index.m3u8",
+          "order": 0
+        },
+        {
+          "kind": "hls",
+          "url": "https://freem3u.xyz/api/live/play.m3u8?vid=9852",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "popular-arte-de",
+      "tvgId": "arte.de",
+      "name": "ARTE",
+      "countryCode": "de",
+      "languages": [
+        "deu",
+        "fra"
+      ],
+      "geoBlocked": false,
+      "category": "文化",
+      "rank": 48,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://dash4.antik.sk/live/test_arte_avc_25p/playlist.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-FIFAPlus-uk",
+      "tvgId": "FIFAPlus.uk",
+      "name": "FIFA+",
+      "countryCode": "uk",
+      "languages": [
+        "eng"
+      ],
+      "geoBlocked": false,
+      "category": "体育",
+      "rank": 49,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "popular-NHKWorldPremium-jp",
+      "tvgId": "NHKWorldPremium.jp",
+      "name": "NHK World Premium",
+      "countryCode": "jp",
+      "languages": [
+        "jpn"
+      ],
+      "geoBlocked": false,
+      "category": "综合",
+      "rank": 50,
+      "sources": [
+        {
+          "kind": "hls",
+          "url": "https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8",
+          "order": 0
+        }
+      ]
+    }
+  ]
+}

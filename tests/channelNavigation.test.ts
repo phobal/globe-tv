@@ -33,4 +33,13 @@ describe('当前国家频道顺序', () => {
     expect(adjacentChannel(channels, 'a', 'previous')).toBeUndefined();
     expect(adjacentChannel(channels, 'missing', 'next')).toBeUndefined();
   });
+
+  it('热门频道按榜单排名切换', () => {
+    const rankedInput: Array<Channel & { rank: number }> = [
+      { ...channel('second', 'ABC'), rank: 2 },
+      { ...channel('first', 'BBC'), rank: 1 },
+    ];
+    const ranked = orderedChannels(rankedInput);
+    expect(ranked.map(item => item.id)).toEqual(['first', 'second']);
+  });
 });

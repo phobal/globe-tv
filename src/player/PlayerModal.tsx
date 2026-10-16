@@ -35,6 +35,12 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   const host = useRef<HTMLDivElement>(null);
   const player = useRef<ReturnType<typeof videojs> | null>(null);
   const touchStart = useRef<{ x: number; y: number; time: number } | null>(null);
+  /**
+   * Tracks whether the most recent touch sequence already toggled the UI overlay.
+   * Used to skip the synthetic `click` that some browsers fire after `touchend`,
+   * which would otherwise double-toggle. Reset on every `touchstart`.
+   */
+  const tapHandledRef = useRef(false);
   const onPlayingRef = useRef(onPlaying);
   const captionSession = useRef<CaptionSession | null>(null);
   const subtitleTrack = useRef<ReturnType<typeof attachLiveSubtitleTrack> | null>(null);
@@ -223,6 +229,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
 
   const onTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     touchStart.current = null;
+    tapHandledRef.current = false;
     if (!channelPosition || channelPosition.total < 2
       || !window.matchMedia('(max-width: 639px) and (pointer: coarse)').matches
       || event.touches.length !== 1 || isInteractiveTarget(event.target)) return;
@@ -233,13 +240,25 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   const onTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
     const start = touchStart.current;
     touchStart.current = null;
-    if (!start || event.changedTouches.length !== 1 || isInteractiveTarget(event.target)) return;
-    const touch = event.changedTouches[0];
-    const direction = getSwipeDirection(start, { x: touch.clientX, y: touch.clientY, time: Date.now() });
-    if (direction) {
-      captionSession.current?.invalidate();
-      onNavigate(direction);
+    if (isInteractiveTarget(event.target)) {
+      tapHandledRef.current = false;
+      return;
     }
+    if (start && event.changedTouches.length === 1) {
+      const touch = event.changedTouches[0];
+      const direction = getSwipeDirection(start, { x: touch.clientX, y: touch.clientY, time: Date.now() });
+      if (direction) {
+        captionSession.current?.invalidate();
+        onNavigate(direction);
+        tapHandledRef.current = true; // a stray synthetic click after a swipe should not toggle UI
+        return;
+      }
+    }
+    // Tap (no swipe) — toggle UI here because many mobile browsers never fire a synthetic
+    // `click` after `touchend` on a `<video>` element, so relying on `onClick` alone
+    // leaves the hidden overlay unreachable on touch devices.
+    tapHandledRef.current = true;
+    toggleUi();
   };
 
   const toggleUi = useCallback(() => {
@@ -278,11 +297,11 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
         role="dialog"
         aria-modal="true"
         aria-label={`播放器：${channel.name}`}
-        onClick={event => { event.stopPropagation(); if (!isInteractiveTarget(event.target)) toggleUi(); }}
+        onClick={event => { event.stopPropagation(); const wasTouchHandled = tapHandledRef.current; tapHandledRef.current = false; if (wasTouchHandled) return; if (!isInteractiveTarget(event.target)) toggleUi(); }}
         onTouchStartCapture={onTouchStart}
         onTouchMoveCapture={event => { if (event.touches.length !== 1) touchStart.current = null; }}
         onTouchEndCapture={onTouchEnd}
-        onTouchCancelCapture={() => { touchStart.current = null; }}
+        onTouchCancelCapture={() => { touchStart.current = null; tapHandledRef.current = false; }}
       >
         <div
           className="absolute inset-0"

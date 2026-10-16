@@ -26,6 +26,13 @@ interface Props {
 
 const interactiveSelector = 'button, a, input, select, textarea, [role="button"], .vjs-control-bar, .vjs-menu, .vjs-big-play-button, .vjs-modal-dialog';
 const AUTO_HIDE_MS = 3500;
+/**
+ * How long to wait for an HLS source to reach the `playing` event before giving up
+ * and trying the next source. The timer is reset on every `progress` / `loadstart`
+ * event so a slow CDN never trips this while fragments are still flowing in — only
+ * a stream that has gone silent for the full window is considered dead.
+ */
+const SOURCE_LOAD_TIMEOUT_MS = 30_000;
 
 function isInteractiveTarget(target: EventTarget | null): boolean {
   return target instanceof Element && Boolean(target.closest(interactiveSelector));
@@ -177,13 +184,23 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
       onPlayingRef.current(channel.id);
       captionSession.current?.resume();
     };
+    // Re-arms the fail timer every time the stream is actively making progress so a
+    // slow CDN never trips the failure path mid-buffering — only a stream that has
+    // gone silent for SOURCE_LOAD_TIMEOUT_MS is considered dead.
+    const scheduleTimeout = () => {
+      if (stopped) return;
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(fail, SOURCE_LOAD_TIMEOUT_MS);
+    };
     instance.on('error', fail);
     instance.on('playing', playing);
+    instance.on('loadstart', scheduleTimeout);
+    instance.on('progress', scheduleTimeout);
     instance.ready(() => {
       if (stopped) return;
       instance.error(null);
       instance.src({ src: source.url, type: 'application/x-mpegURL' });
-      timer = setTimeout(fail, 15_000);
+      scheduleTimeout();
       Promise.resolve(instance.play()).catch(error => {
         if (stopped) return;
         if (error?.name === 'NotAllowedError') {
@@ -203,6 +220,8 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
       if (timer) clearTimeout(timer);
       instance.off('error', fail);
       instance.off('playing', playing);
+      instance.off('loadstart', scheduleTimeout);
+      instance.off('progress', scheduleTimeout);
     };
   }, [open, channel.id, state.session, state.sourceIndex, state.phase === 'failed', state.cancelled]);
 

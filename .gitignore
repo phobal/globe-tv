@@ -8,3 +8,4 @@ test-results/
 .upstream/
 .env.local
 .env.*.local
+.iptv-upstream

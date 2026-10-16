@@ -20,9 +20,14 @@ interface Props {
   onStop: () => void;
   hasSourceMenu?: boolean;
   sourceMenuOpen?: boolean;
+  /**
+   * Captions rely on browser-only APIs that don't work on touch devices.
+   * When `true` the control renders nothing instead of taking up screen real estate.
+   */
+  isMobile?: boolean;
 }
 
-export function CaptionControls({ snapshot, unsupported, onPrepare, onStart, onStop, hasSourceMenu = false, sourceMenuOpen = false }: Props) {
+export function CaptionControls({ snapshot, unsupported, onPrepare, onStart, onStop, hasSourceMenu = false, sourceMenuOpen = false, isMobile = false }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState<string>('en-US');
   const active = snapshot.phase === 'active' || snapshot.phase === 'paused' || snapshot.phase === 'capturing';
@@ -31,6 +36,8 @@ export function CaptionControls({ snapshot, unsupported, onPrepare, onStart, onS
   useEffect(() => {
     if (sourceMenuOpen) setExpanded(false);
   }, [sourceMenuOpen]);
+
+  if (isMobile) return null;
 
   return (
     <div className={`absolute bottom-[calc(4rem+env(safe-area-inset-bottom))] z-30 sm:bottom-16 ${hasSourceMenu ? 'right-16 sm:right-16' : 'right-3 sm:right-4'}`}>
@@ -48,7 +55,7 @@ export function CaptionControls({ snapshot, unsupported, onPrepare, onStart, onS
               <select id="caption-language" className="mb-3 min-h-10 w-full rounded-lg border border-white/25 bg-[#0a1a2a] px-3 text-white" value={selected} disabled={snapshot.phase !== 'idle' && snapshot.phase !== 'error'} onChange={event => setSelected(event.target.value)}>
                 {languages.map(language => <option key={language.speechTag} value={language.speechTag}>{language.label}</option>)}
               </select>
-              <p className="mb-3 text-xs leading-5 text-white/70">字幕在你的浏览器中生成。开始时请授权共享“此标签页”及音频；站点不保存音频或字幕。</p>
+              <p className="mb-3 text-xs leading-5 text-white/70">字幕在你的浏览器中生成。开始时请授权共享"此标签页"及音频；站点不保存音频或字幕。</p>
               {snapshot.message && <p className="mb-3 text-xs leading-5 text-cyan" role="status">{snapshot.message}</p>}
               {snapshot.phase === 'preparing' && <progress className="mb-3 w-full" max={1} value={snapshot.progress < 1 ? snapshot.progress : undefined} aria-label="模型准备进度" />}
               {(snapshot.phase === 'idle' || snapshot.phase === 'error') && (

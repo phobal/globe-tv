@@ -54,3 +54,10 @@ describe('CaptionControls', () => {
     expect(screen.queryByText('实时中文字幕')).toBeNull();
   });
 });
+
+describe('CaptionControls mobile behavior', () => {
+  it('renders nothing on mobile so the live caption control never shows up where it cannot work', () => {
+    render(<CaptionControls snapshot={idle} unsupported={null} onPrepare={vi.fn()} onStart={vi.fn()} onStop={vi.fn()} isMobile />);
+    expect(screen.queryByRole('button', { name: '中文字幕' })).toBeNull();
+  });
+});

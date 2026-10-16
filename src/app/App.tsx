@@ -209,7 +209,6 @@ export function App() {
 
       {playing && (
         <PlayerModal
-          key={playing.id}
           open={playerOpen}
           channel={playing}
           country={playingCountry}

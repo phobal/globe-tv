@@ -21,6 +21,9 @@ export class CaptionSession {
   private local = false;
   private queue: Promise<void> = Promise.resolve();
   private restartTimer: ReturnType<typeof setTimeout> | null = null;
+  private interimAt = 0;
+  private interimText = '';
+  private interimRevision = 0;
 
   constructor(private adapter: CaptionAdapter, private onChange: (snapshot: CaptionSnapshot) => void) {}
 
@@ -39,14 +42,14 @@ export class CaptionSession {
     this.language = language;
     this.update({ phase: 'preparing', text: '', message: '正在准备本地翻译模型…', progress: 0 });
     // Call immediately from the click handler; Translator.create requires user activation.
-    const pending = this.adapter.prepare(language.translationTag, progress => {
-      if (generation === this.generation) this.update({ progress, message: `正在下载翻译模型：${Math.round(progress * 100)}%` });
-    });
     try {
-      const translator = await pending;
+      const translator = await this.adapter.prepare(language.translationTag, progress => {
+        if (generation === this.generation) this.update({ progress, message: `正在下载翻译模型：${Math.round(progress * 100)}%` });
+      });
       if (generation !== this.generation) { translator.destroy(); return; }
       this.translator = translator;
-      this.local = await this.adapter.localRecognitionAvailable(language.speechTag);
+      this.update({ message: '正在准备本机语音识别语言包…', progress: 1 });
+      this.local = await this.adapter.prepareLocalRecognition(language.speechTag);
       if (generation !== this.generation) return;
       this.update({
         phase: this.local ? 'ready' : 'needs-consent',
@@ -89,8 +92,12 @@ export class CaptionSession {
     }
     const generation = this.generation;
     try {
+      this.interimAt = 0;
+      this.interimText = '';
+      this.interimRevision++;
       this.recognizer = this.adapter.recognize(this.capture.audioTrack, this.language.speechTag, this.local, {
         onFinal: text => this.translateFinal(text, generation),
+        onInterim: text => this.translateInterim(text, generation),
         onError: message => { if (generation === this.generation) this.fail(message); },
         onEnd: () => {
           if (generation !== this.generation || this.snapshot.phase !== 'active') return;
@@ -110,6 +117,9 @@ export class CaptionSession {
   private translateFinal(text: string, generation: number) {
     const translator = this.translator;
     if (!translator || generation !== this.generation) return;
+    this.interimAt = Date.now();
+    this.interimText = '';
+    this.interimRevision++;
     this.queue = this.queue.catch(() => {}).then(async () => {
       const translated = await translator.translate(text);
       if (generation === this.generation && this.snapshot.phase === 'active' && translated.trim()) {
@@ -120,10 +130,34 @@ export class CaptionSession {
     });
   }
 
+  private translateInterim(text: string, generation: number) {
+    const translator = this.translator;
+    const phrase = text.trim();
+    const now = Date.now();
+    if (!translator || generation !== this.generation || this.snapshot.phase !== 'active'
+      || (phrase.split(/\s+/).length < 4 && phrase.length < 12)
+      || phrase === this.interimText || now - this.interimAt < 4000) return;
+    this.interimAt = now;
+    this.interimText = phrase;
+    const revision = ++this.interimRevision;
+    this.queue = this.queue.catch(() => {}).then(async () => {
+      if (generation !== this.generation || revision !== this.interimRevision) return;
+      const translated = await translator.translate(phrase);
+      if (generation === this.generation && revision === this.interimRevision && this.snapshot.phase === 'active' && translated.trim()) {
+        this.update({ text: translated.trim(), message: '' });
+      }
+    }).catch(error => {
+      if (generation === this.generation) this.update({ message: error instanceof Error ? error.message : '临时字幕翻译失败。' });
+    });
+  }
+
   invalidate() {
     if (!this.capture) return;
     this.generation++;
     this.queue = Promise.resolve();
+    this.interimRevision++;
+    this.interimAt = 0;
+    this.interimText = '';
     this.stopRecognizer();
     this.update({ phase: 'paused', text: '', message: '等待新频道播放…' });
   }
@@ -164,6 +198,9 @@ export class CaptionSession {
     this.translator = null;
     this.language = null;
     this.queue = Promise.resolve();
+    this.interimRevision++;
+    this.interimAt = 0;
+    this.interimText = '';
     this.update({ ...initial });
   }
 }

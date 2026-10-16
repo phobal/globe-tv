@@ -5,8 +5,13 @@ import 'video.js/dist/video-js.css';
 import type { Channel, CountrySummary } from '../data/types';
 import { beginSession, chooseSource, nextSource, type SourceState } from './sourceMachine';
 import { getSwipeDirection, type Direction } from './channelNavigation';
+import { CaptionControls } from './CaptionControls';
+import { browserCaptionAdapter } from './captions/browser';
+import { CaptionSession, type CaptionSnapshot } from './captions/session';
+import { attachLiveSubtitleTrack, type SubtitlePlayer } from './captions/liveSubtitleTrack';
 
 const initial: SourceState = { session: 0, phase: 'idle', sourceIndex: 0, sourceCount: 0, cancelled: false };
+const initialCaptions: CaptionSnapshot = { phase: 'idle', text: '', message: '', progress: 0 };
 
 interface Props {
   open: boolean;
@@ -29,9 +34,34 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   const player = useRef<ReturnType<typeof videojs> | null>(null);
   const touchStart = useRef<{ x: number; y: number; time: number } | null>(null);
   const onPlayingRef = useRef(onPlaying);
+  const captionSession = useRef<CaptionSession | null>(null);
+  const subtitleTrack = useRef<ReturnType<typeof attachLiveSubtitleTrack> | null>(null);
+  const mounted = useRef(true);
   const [state, setState] = useState<SourceState>(initial);
   const [sourceMenuOpen, setSourceMenuOpen] = useState(false);
+  const [captions, setCaptions] = useState<CaptionSnapshot>(initialCaptions);
   onPlayingRef.current = onPlaying;
+  if (!captionSession.current) {
+    captionSession.current = new CaptionSession(browserCaptionAdapter, snapshot => {
+      if (mounted.current) setCaptions(snapshot);
+      if (snapshot.text) subtitleTrack.current?.show(snapshot.text);
+      else subtitleTrack.current?.clear();
+    });
+  }
+
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      captionSession.current?.stop();
+      subtitleTrack.current?.dispose();
+      subtitleTrack.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!open) captionSession.current?.stop();
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
@@ -63,10 +93,15 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
       },
     });
     instance.getChild('ControlBar')?.el().classList.add('h-[calc(3rem+env(safe-area-inset-bottom))]!', 'bg-[#07172aeb]!', 'pb-[env(safe-area-inset-bottom)]!');
+    const paused = () => captionSession.current?.pause();
+    instance.on('pause', paused);
     player.current = instance;
     setState(previous => beginSession(previous, channel.sources.length));
     setSourceMenuOpen(false);
     return () => {
+      instance.off('pause', paused);
+      subtitleTrack.current?.dispose();
+      subtitleTrack.current = null;
       player.current = null;
       instance.dispose();
     };
@@ -97,6 +132,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
       if (timer) clearTimeout(timer);
       setState(current => current.session === session ? { ...current, phase: 'playing' } : current);
       onPlayingRef.current(channel.id);
+      captionSession.current?.resume();
     };
     instance.on('error', fail);
     instance.on('playing', playing);
@@ -121,6 +157,27 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
     };
   }, [open, channel.id, state.session, state.sourceIndex, state.phase === 'failed', state.cancelled]);
 
+  useEffect(() => {
+    captionSession.current?.invalidate();
+  }, [channel.id, state.sourceIndex]);
+
+  useEffect(() => {
+    if (state.phase === 'failed') captionSession.current?.stop();
+  }, [state.phase]);
+
+  useEffect(() => {
+    const instance = player.current;
+    const enabled = captions.phase === 'ready' || captions.phase === 'needs-consent' || captions.phase === 'capturing' || captions.phase === 'active' || captions.phase === 'paused';
+    if (!instance || !enabled) {
+      subtitleTrack.current?.dispose();
+      subtitleTrack.current = null;
+      return;
+    }
+    if (!subtitleTrack.current) subtitleTrack.current = attachLiveSubtitleTrack(instance as unknown as SubtitlePlayer<VTTCue>);
+    if (captions.text) subtitleTrack.current.show(captions.text);
+    else subtitleTrack.current.clear();
+  }, [captions.phase, captions.text, channel.id]);
+
   const onTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     touchStart.current = null;
     if (!channelPosition || channelPosition.total < 2
@@ -136,7 +193,10 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
     if (!start || event.changedTouches.length !== 1 || isInteractiveTarget(event.target)) return;
     const touch = event.changedTouches[0];
     const direction = getSwipeDirection(start, { x: touch.clientX, y: touch.clientY, time: Date.now() });
-    if (direction) onNavigate(direction);
+    if (direction) {
+      captionSession.current?.invalidate();
+      onNavigate(direction);
+    }
   };
 
   if (!open) return null;
@@ -200,6 +260,16 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
           </div>
         )}
 
+        <CaptionControls
+          snapshot={captions}
+          unsupported={browserCaptionAdapter.supported()}
+          onPrepare={language => { void captionSession.current?.prepare(language); }}
+          onStart={allowOnline => { void captionSession.current?.start(allowOnline); }}
+          onStop={() => captionSession.current?.stop()}
+          hasSourceMenu={channel.sources.length > 1 && state.phase !== 'failed'}
+          sourceMenuOpen={sourceMenuOpen}
+        />
+
         {channel.sources.length > 1 && state.phase !== 'failed' && (
           <div className="absolute right-3 bottom-[calc(4rem+env(safe-area-inset-bottom))] z-20 sm:right-4 sm:bottom-16">
             {sourceMenuOpen && (
@@ -209,7 +279,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
                     key={`${source.url}-${index}`}
                     type="button"
                     className={`flex min-h-10 w-full items-center justify-between rounded-lg px-3 text-left text-sm hover:bg-white/10 ${index === state.sourceIndex ? 'text-cyan' : 'text-white'}`}
-                    onClick={() => { setState(current => chooseSource(current, index)); setSourceMenuOpen(false); }}
+                    onClick={() => { captionSession.current?.invalidate(); setState(current => chooseSource(current, index)); setSourceMenuOpen(false); }}
                     aria-current={index === state.sourceIndex ? 'true' : undefined}
                   >来源 {index + 1}{index === state.sourceIndex && <Check size={14} aria-hidden="true" />}</button>
                 ))}

@@ -9,6 +9,7 @@ function deferred<T>() {
 
 function fixture(local = true) {
   let onFinal: ((text: string) => void) | undefined;
+  let onInterim: ((text: string) => void) | undefined;
   let onEnded: (() => void) | undefined;
   let translate = vi.fn(async (text: string) => `中文：${text}`);
   const stopCapture = vi.fn();
@@ -18,15 +19,16 @@ function fixture(local = true) {
   const adapter = {
     supported: () => null,
     prepare: vi.fn(async () => ({ translate: (text: string) => translate(text), destroy: destroyTranslator })),
-    localRecognitionAvailable: vi.fn(async () => local),
+    prepareLocalRecognition: vi.fn(async () => local),
     capture: vi.fn(async () => ({ audioTrack: { readyState: 'live' } as MediaStreamTrack, stop: stopCapture, onEnded: (callback: () => void) => { onEnded = callback; } })),
-    recognize: vi.fn((_track: MediaStreamTrack, _language: string, _local: boolean, callbacks: { onFinal: (text: string) => void }) => {
+    recognize: vi.fn((_track: MediaStreamTrack, _language: string, _local: boolean, callbacks: { onFinal: (text: string) => void; onInterim: (text: string) => void }) => {
       onFinal = callbacks.onFinal;
+      onInterim = callbacks.onInterim;
       return { stop: stopRecognition };
     }),
   };
   const session = new CaptionSession(adapter, snapshot => snapshots.push({ phase: snapshot.phase, text: snapshot.text }));
-  return { session, adapter, snapshots, stopCapture, stopRecognition, destroyTranslator, emitFinal: (text: string) => onFinal?.(text), endCapture: () => onEnded?.(), setTranslate: (value: typeof translate) => { translate = value; } };
+  return { session, adapter, snapshots, stopCapture, stopRecognition, destroyTranslator, emitFinal: (text: string) => onFinal?.(text), emitInterim: (text: string) => onInterim?.(text), endCapture: () => onEnded?.(), setTranslate: (value: typeof translate) => { translate = value; }, translatedCalls: () => translate.mock.calls.length };
 }
 
 describe('CaptionSession', () => {
@@ -38,6 +40,19 @@ describe('CaptionSession', () => {
     f.emitFinal('world');
     await vi.waitFor(() => expect(f.snapshots.at(-1)?.text).toBe('中文：world'));
     expect(f.snapshots.map(value => value.text)).toContain('中文：hello');
+  });
+
+  it('shows a throttled interim caption before a long utterance is finalized', async () => {
+    const f = fixture();
+    await f.session.prepare({ speechTag: 'en-US', translationTag: 'en' });
+    await f.session.start(false);
+    f.emitInterim('butcher supporters have come from all over');
+    await vi.waitFor(() => expect(f.session.current.text).toContain('中文：butcher supporters'));
+    f.emitInterim('butcher supporters have come from all over the country');
+    await Promise.resolve();
+    expect(f.translatedCalls()).toBe(1);
+    f.emitFinal('butcher supporters have come from all over the country');
+    await vi.waitFor(() => expect(f.session.current.text).toContain('the country'));
   });
 
   it('discards a translation that finishes after a source change', async () => {
@@ -91,5 +106,13 @@ describe('CaptionSession', () => {
     f.session.invalidate();
     f.endCapture();
     expect(f.snapshots.at(-1)?.phase).toBe('error');
+  });
+
+  it('shows synchronous translator setup errors instead of leaving preparation pending', async () => {
+    const f = fixture();
+    f.adapter.prepare.mockImplementationOnce(() => { throw new Error('语言对不可用'); });
+    await f.session.prepare({ speechTag: 'en-US', translationTag: 'en' });
+    expect(f.snapshots.at(-1)?.phase).toBe('error');
+    expect(f.session.current.message).toBe('语言对不可用');
   });
 });

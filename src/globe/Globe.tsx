@@ -25,6 +25,14 @@ const SELECTED_LINE = 'country-selected-line';
 const codeFilter = (code?: string): mapboxgl.FilterSpecification => ['==', ['get', 'code'], code ?? ''];
 const globeZoom = (height: number) => Math.max(0.2, Math.min(1.75, 1.75 + Math.log2(Math.max(height, 1) / 570)));
 
+function localizedCountryName(feature: CountryFeature, countries: CountrySummary[]): string {
+  const country = countries.find(item => item.code === feature.properties.code);
+  if (!country) return feature.properties.name;
+  const preferredLanguages = navigator.languages.length ? navigator.languages : [navigator.language];
+  const prefersChinese = preferredLanguages.some(language => language.toLowerCase().startsWith('zh'));
+  return (prefersChinese ? country.nameZh : country.nameEn) || feature.properties.name;
+}
+
 function fogFor(themeMode: ThemeMode): mapboxgl.FogSpecification {
   if (themeMode === 'dark') {
     return {
@@ -48,6 +56,7 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure, the
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapboxMap | null>(null);
   const featuresRef = useRef<CountryFeature[]>([]);
+  const countriesRef = useRef(countries);
   const selectedRef = useRef(selectedCode);
   const onSelectRef = useRef(onSelect);
   const onFailureRef = useRef(onFailure);
@@ -55,6 +64,7 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure, the
   const styleReadyRef = useRef(false);
   const [hoveredCode, setHoveredCode] = useState<string>();
   selectedRef.current = selectedCode;
+  countriesRef.current = countries;
   onSelectRef.current = onSelect;
   onFailureRef.current = onFailure;
   themeRef.current = themeMode;
@@ -73,6 +83,7 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure, the
         accessToken: token,
         style: 'mapbox://styles/mapbox/outdoors-v12',
         projection: 'globe',
+        language: 'zh-Hans',
         center: [15, 20],
         zoom: globeZoom(container.current.clientHeight),
         pitch: 0,
@@ -112,7 +123,7 @@ export function Globe({ token, countries, selectedCode, onSelect, onFailure, the
               const { lng, lat } = countryCenter(feature);
               return {
                 type: 'Feature' as const,
-                properties: { name: feature.properties.name },
+                properties: { name: localizedCountryName(feature, countriesRef.current) },
                 geometry: { type: 'Point' as const, coordinates: [lng, lat] },
               };
             }),

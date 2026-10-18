@@ -10,6 +10,14 @@ const languages = [
   { label: '法语', speechTag: 'fr-FR', translationTag: 'fr' },
   { label: '德语', speechTag: 'de-DE', translationTag: 'de' },
   { label: '西班牙语', speechTag: 'es-ES', translationTag: 'es' },
+  { label: '泰国语', speechTag: 'th-TH', translationTag: 'th' },
+  { label: '俄语', speechTag: 'ru-RU', translationTag: 'ru' },
+  { label: '意大利语', speechTag: 'it-IT', translationTag: 'it' },
+  { label: '葡萄牙语', speechTag: 'pt-PT', translationTag: 'pt' },
+  { label: '阿拉伯语', speechTag: 'ar-SA', translationTag: 'ar' },
+  { label: '印地语', speechTag: 'hi-IN', translationTag: 'hi' },
+  { label: '越南语', speechTag: 'vi-VN', translationTag: 'vi' },
+  { label: '印尼语', speechTag: 'id-ID', translationTag: 'id' },
 ] as const;
 
 interface Props {

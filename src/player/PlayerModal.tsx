@@ -65,6 +65,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   const [sourceMenuOpen, setSourceMenuOpen] = useState(false);
   const [captions, setCaptions] = useState<CaptionSnapshot>(initialCaptions);
   const [uiVisible, setUiVisible] = useState(true);
+  const [pointerInside, setPointerInside] = useState(false);
   const isMobile = useMediaQuery('(max-width: 639px) and (pointer: coarse)');
   onPlayingRef.current = onPlaying;
   if (!captionSession.current) {
@@ -90,13 +91,13 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   // Auto-hide the page-level UI when the video is actually playing.
   // Stays visible in loading/failed/awaiting-gesture so the user can still act.
   useEffect(() => {
-    if (!uiVisible || state.phase !== 'playing') {
+    if (!uiVisible || state.phase !== 'playing' || pointerInside) {
       clearHideTimer();
       return;
     }
     hideTimerRef.current = setTimeout(() => setUiVisible(false), AUTO_HIDE_MS);
     return clearHideTimer;
-  }, [uiVisible, state.phase, clearHideTimer]);
+  }, [uiVisible, state.phase, pointerInside, clearHideTimer]);
 
   useEffect(() => {
     mounted.current = true;
@@ -170,16 +171,22 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
     const source = channel.sources[state.sourceIndex];
     if (!open || !instance || !source || state.cancelled || state.phase === 'failed' || state.phase === 'idle') return;
     const session = state.session;
+    const sourceIndex = state.sourceIndex;
     let timer: ReturnType<typeof setTimeout> | undefined;
     let stopped = false;
+    let failureStarted = false;
+    let hasPlayed = false;
     const fail = () => {
-      if (stopped) return;
+      if (stopped || failureStarted) return;
+      failureStarted = true;
       setState(current => nextSource(current, session));
     };
     const playing = () => {
-      if (stopped) return;
+      if (stopped || failureStarted) return;
+      hasPlayed = true;
       if (timer) clearTimeout(timer);
-      setState(current => current.session === session ? { ...current, phase: 'playing' } : current);
+      timer = undefined;
+      setState(current => current.session === session && current.sourceIndex === sourceIndex ? { ...current, phase: 'playing' } : current);
       userActivatedRef.current = true;
       onPlayingRef.current(channel.id);
       captionSession.current?.resume();
@@ -187,15 +194,24 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
     // Re-arms the fail timer every time the stream is actively making progress so a
     // slow CDN never trips the failure path mid-buffering — only a stream that has
     // gone silent for SOURCE_LOAD_TIMEOUT_MS is considered dead.
-    const scheduleTimeout = () => {
-      if (stopped) return;
+    const scheduleTimeout = (afterPlaybackStall = false) => {
+      if (stopped || failureStarted || (hasPlayed && !afterPlaybackStall)) return;
       if (timer) clearTimeout(timer);
       timer = setTimeout(fail, SOURCE_LOAD_TIMEOUT_MS);
     };
-    instance.on('error', fail);
+    const error = () => {
+      // HLS may report a late error while buffered media is still advancing.
+      // Waiting/stalled events still start a timeout if playback actually stops.
+      if (hasPlayed && !instance.paused() && instance.readyState() >= 2) return;
+      fail();
+    };
+    const stalled = () => scheduleTimeout(true);
+    instance.on('error', error);
     instance.on('playing', playing);
     instance.on('loadstart', scheduleTimeout);
     instance.on('progress', scheduleTimeout);
+    instance.on('waiting', stalled);
+    instance.on('stalled', stalled);
     instance.ready(() => {
       if (stopped) return;
       instance.error(null);
@@ -218,10 +234,12 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
     return () => {
       stopped = true;
       if (timer) clearTimeout(timer);
-      instance.off('error', fail);
+      instance.off('error', error);
       instance.off('playing', playing);
       instance.off('loadstart', scheduleTimeout);
       instance.off('progress', scheduleTimeout);
+      instance.off('waiting', stalled);
+      instance.off('stalled', stalled);
     };
   }, [open, channel.id, state.session, state.sourceIndex, state.phase === 'failed', state.cancelled]);
 
@@ -317,6 +335,15 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
         aria-modal="true"
         aria-label={`播放器：${channel.name}`}
         onClick={event => { event.stopPropagation(); const wasTouchHandled = tapHandledRef.current; tapHandledRef.current = false; if (wasTouchHandled) return; if (!isInteractiveTarget(event.target)) toggleUi(); }}
+        onMouseEnter={() => {
+          if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+          setPointerInside(true);
+          setUiVisible(true);
+        }}
+        onMouseLeave={() => {
+          if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+          setPointerInside(false);
+        }}
         onTouchStartCapture={onTouchStart}
         onTouchMoveCapture={event => { if (event.touches.length !== 1) touchStart.current = null; }}
         onTouchEndCapture={onTouchEnd}

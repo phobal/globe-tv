@@ -230,7 +230,7 @@ export function App() {
       ) : !index ? (
         <main className="grid flex-1 place-content-center" role="status">正在加载地球电视…</main>
       ) : (
-        <main className="grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)]">
+        <main className="grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(340px,0.65fr)]">
           <section
             className="relative flex h-[min(48dvh,440px)] min-h-[350px] min-w-0 flex-col overflow-hidden rounded-2xl border border-globe-divider lg:h-full lg:min-h-0"
             style={{ background: 'var(--app-globe-section-bg)' }}
@@ -238,7 +238,7 @@ export function App() {
             <div className="flex items-center justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
               <div className="min-w-0">
                 <small className="text-[11px] tracking-[0.18em] text-cyan">探索世界 · 实时直播</small>
-                <h1 className="mt-2 truncate text-[clamp(20px,3vw,32px)] leading-tight font-semibold">{country ? country.nameZh : '从世界的某个角落开始'}</h1>
+                <h1 className="mt-2 truncate text-[clamp(20px,3vw,32px)] leading-tight font-semibold">{country ? country.nameZh : ''}</h1>
               </div>
               <div className="shrink-0 text-right text-[11px] text-footer-text">
                 <p>{index.countries.length} 个国家和地区</p>

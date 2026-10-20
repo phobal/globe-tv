@@ -5,6 +5,7 @@ playwright-report/
 test-results/
 .DS_Store
 .cache/
+.wrangler/
 .upstream/
 .env.local
 .env.*.local

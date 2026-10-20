@@ -38,8 +38,19 @@ export async function generateDiscovery(outputDir = 'public/data', reportPath = 
   }
   const { catalog, diagnostics } = buildDiscoveryCatalog(groups);
   diagnostics.push(...parseDiagnostics);
+  const proxyOrigins = [...new Set(groups.flatMap(group => (Array.isArray(group.channels) ? group.channels : [])
+    .flatMap(channel => Array.isArray(channel?.sources) ? channel.sources : [])
+    .flatMap(source => {
+      try {
+        const url = new URL(source?.url);
+        return url.protocol === 'http:' || url.protocol === 'https:' ? [url.origin.toLowerCase()] : [];
+      } catch {
+        return [];
+      }
+    })))].sort();
   const report = { generatedAt: new Date().toISOString(), categoryCount: groups.length, channelCount: catalog.channels.length, sourceCount: groups.reduce((sum,g) => sum + (Array.isArray(g.channels) ? g.channels.reduce((s,c) => s + (c?.sources?.length || 0),0) : 0),0), categories: catalog.groups.map(g => ({ ...g, channelCount: catalog.channels.filter(c => c.groupSlug === g.slug).length })), diagnostics };
   await writeFile(path.join(outputDir, 'discovery.json'), JSON.stringify(catalog, null, 2) + '\n');
+  await writeFile(path.join(outputDir, 'proxy-origins.json'), JSON.stringify(proxyOrigins, null, 2) + '\n');
   await writeFile(reportPath, JSON.stringify(report, null, 2) + '\n');
   for (const diagnostic of diagnostics) console.warn('目录诊断:', JSON.stringify(diagnostic));
   return report;

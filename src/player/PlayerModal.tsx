@@ -11,6 +11,7 @@ import { CaptionSession, type CaptionSnapshot } from './captions/session';
 import { attachLiveSubtitleTrack, type SubtitlePlayer } from './captions/liveSubtitleTrack';
 import { useMediaQuery } from '../utils/useMediaQuery';
 import { usePlayerChrome } from './usePlayerChrome';
+import { resolvePlaybackUrl } from './playbackSource';
 
 const initial: SourceState = { session: 0, phase: 'idle', sourceIndex: 0, sourceCount: 0, cancelled: false };
 const initialCaptions: CaptionSnapshot = { phase: 'idle', text: '', message: '', progress: 0 };
@@ -258,7 +259,7 @@ export function PlayerModal({ open, expanded = true, channel, categoryName, onbo
     instance.ready(() => {
       if (stopped) return;
       instance.error(null);
-      instance.src({ src: source.url, type: 'application/x-mpegURL' });
+      instance.src({ src: resolvePlaybackUrl(source.url, { production: import.meta.env.PROD, proxy: import.meta.env.VITE_HLS_PROXY }), type: 'application/x-mpegURL' });
       scheduleTimeout();
       Promise.resolve(instance.play()).catch(error => {
         if (stopped) return;

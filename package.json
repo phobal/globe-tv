@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "dev:worker": "npm run build && npx wrangler dev",
+    "deploy:worker": "npm run build && npx wrangler deploy",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "sync": "node scripts/sync-tv.mjs",

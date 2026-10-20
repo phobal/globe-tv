@@ -70,6 +70,17 @@
 - [x] 先进行规格符合性审查，再代码质量审查；解决可复现问题后重新验证。
 - [x] 更新本文件逐项勾选，只勾选有验证证据的事项。提交分支内实现，不自动合并或推送。
 
+## Task 6：Cloudflare Workers HLS 代理
+
+**文件：** `src/worker/`、`wrangler.jsonc`、`scripts/build-discovery.mjs`、`src/player/PlayerModal.tsx`、`docs/DEPLOYMENT.md`、`tests/hlsProxy.test.ts`。
+
+- [x] 先复现根因：播放器直接请求来源 URL；`61.138.99.166:10089` 的 HLS 清单在浏览器中受源站 CORS 限制。
+- [x] 先写失败测试，再实现同域 HLS 代理：改写清单内分片/密钥 URI、透传媒体 Range 与 206、校验上游白名单和重定向、限制请求方法与跨域来源。
+- [x] 从频道目录生成上游协议/主机/端口来源清单；配置 Workers Static Assets 只对 `/proxy` 运行 Worker，页面静态资源仍由资产层提供。
+- [x] 本地 Wrangler 实测：站点返回 200；目标清单返回 200 且分片 URI 被改写；对实时分片发起 Range 请求返回 206 和预期 Content-Range。
+- [x] 增加本地预览、部署说明、每日 100,000 次额度及公开代理路由注意事项。
+- [ ] 未执行线上部署；需由用户在已登录的 Cloudflare 账号中运行 `npm run deploy:worker`。
+
 ## 验证记录
 
 - `npx vitest run tests/discovery.test.ts tests/sync-iptv-source.test.ts`：通过；分类索引共 906 个频道、56 个来源分组，构建诊断为 0；分类数为央视卫视 59、地方 64、体育 71、影视娱乐 12、少儿 45、海外 317、更多 338。索引不包含播放线路 URL。
@@ -78,4 +89,5 @@
 - `npm run build`：通过；PlayerModal 独立包约 729 KB，Vite 提示该懒加载包超过 500 KB 的建议阈值，初始应用包约 248 KB。
 - `git diff --check`：通过。
 - 浏览器：确认我的频道、发现分类入口、约 500px 宽视口的横向分类栏与双列卡片、电脑播放器 16:9 布局；旧收藏与最近记录仍可见。一条 HLS 请求被源站 CORS 策略拦截（缺少 `Access-Control-Allow-Origin`），因此未确认真实媒体播放，不能据此判断源本身失效。
+- Worker 本地代理验证：原 HLS 清单经本地 Wrangler 返回 200，媒体 URI 已统一改写到 `/proxy`；实时 TS 分片通过代理返回 206，`Content-Range: bytes 0-1023/5166992`。代理响应带同源 `Access-Control-Allow-Origin`。未部署线上。
 - 未执行 320px/390px 视口和触屏设备实测，手机滑动、首次引导及系统全屏仍需设备验收。

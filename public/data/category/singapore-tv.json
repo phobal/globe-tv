@@ -1,0 +1,128 @@
+[
+  {
+    "id": "lSuxUrTUtAi91HvReAQLv",
+    "name": "Asian Food Network Vietnam",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/Asian%20Food%20Network%20Vietnam.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ec03-pop1-hlc.tv360.vn/bpk-token/saxxwzm2irowl3zckyujel33mwic663f/bpk-tv/178/output/178-audio_198800_eng_iv_1=196800-video_iv_1=1884800.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "J2xWLA7vB6jBuEMMGQYkE",
+    "name": "Channel News Asia",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/Channel%20News%20Asia.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "CWPrJr8PWJITZCKc9JlP3",
+    "name": "CNA (Singapore)",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/CNA%20(Singapore).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "PFLjspYLHq5XD9hBNskqH",
+    "name": "CNA International",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/CNA%20International.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mumt05.tangotv.in/87NeALx2CNA/tracks-v1a1/mono.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Zx8BpqKksE55Pbb58nFXM",
+    "name": "CNA Originals",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/CNA%20Originals.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist480p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "oudY33Z6PsXPjgFsiye6B",
+    "name": "like Gecko",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/like%20Gecko.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network-avc1_3000000=12-mp4a_256000_eng=6.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "VhUjnm06lylwMOZe7Y4DF",
+    "name": "ZooMoo",
+    "countryCode": "sg",
+    "languages": [
+      "English"
+    ],
+    "group": "Singapore TV",
+    "logo": "https://epg.112114.xyz/logo/ZooMoo.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://zoomoo-samsungau.amagi.tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

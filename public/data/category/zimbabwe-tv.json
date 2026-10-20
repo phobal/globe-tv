@@ -1,0 +1,20 @@
+[
+  {
+    "id": "G1AHdyWaerXX7QYfE8F7e",
+    "name": "Yadah TV",
+    "countryCode": "zw",
+    "languages": [
+      "English"
+    ],
+    "group": "Zimbabwe TV",
+    "logo": "https://epg.112114.xyz/logo/Yadah%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_018/Stream/live18_2/medium/chunks.m3u8?nimblesessionid=1900459760",
+        "order": 0
+      }
+    ]
+  }
+]

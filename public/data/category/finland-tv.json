@@ -1,0 +1,21 @@
+[
+  {
+    "id": "-MhTEPGUnUbtg-urlLFF6",
+    "name": "Alfa Ⓢ",
+    "countryCode": "fi",
+    "languages": [
+      "Finnish",
+      "Swedish"
+    ],
+    "group": "Finland TV",
+    "logo": "https://epg.112114.xyz/logo/Alfa%20%E2%93%88.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://irrtv2.digitacdn.net/live/ott/irrtv/playlist.m3u8?organizationId=229401409&suiteItemId=230439940",
+        "order": 0
+      }
+    ]
+  }
+]

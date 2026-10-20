@@ -1,0 +1,752 @@
+[
+  {
+    "id": "cZxBMwvzt2AxPCQqyf4Nu",
+    "name": "[回放] 埃森勒 vs 安纳托利亚艾菲斯 73-70 [土篮超] 2026-10-20 00:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/aaf7d289e9c8bf71d7df7b89edcd2c03.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/a60c687a5001834824720539080/playlist_eof.m3u8?t=6ad75021&us=46da61e511&sign=0808bdbbfa8a31951f2be43437937cf6",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pqNBkp7RZZUqq_WQlVFT1",
+    "name": "[回放] 奥尔索马尔索 vs 波哥塔 0-1 [哥伦乙] 2026-10-20 06:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/7f194b2fd96278717d9bedfd872efeb7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/164f256c5001834824698853571/playlist_eof.m3u8?t=6ad752c4&us=21f75f73bf&sign=51a874a8fb60bfc23a462d4754ff99ac",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_7-MsgsMeU81cw2oJA6Y9",
+    "name": "[回放] 北控 vs 上海 92-105 [CBA] 2026-10-19 19:35",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/559cfc139ec9e214e54b4ddae5d1cba7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/0cd3d10a5001834824640696667/playlist_eof.m3u8?t=6ad7567c&us=d38c9dc4de&sign=82bf42eab2b7ed4a5234f1f5e1970ccf",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/5a7da1cb5001834824665184399/playlist_eof.m3u8?t=6ad7567c&us=d38c9dc4de&sign=3d4c83fc25d76b11463f361f258ad9e6",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "ACkF_hVLQVjPb8lgqMCVT",
+    "name": "[回放] 贝伦蝎子 vs 蓬塔雷纳斯 1-2 [哥斯甲] 2026-10-20 10:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/0604e2ebbd9f4650cea0491167ecbd32.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/aa5ce2205001834824595129540/playlist_eof.m3u8?t=6ad74c99&us=fa8e277b8c&sign=97517f5e7a4af5a858fb853aa696a27e",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "k-zL7THtKpy2npE9b6QNF",
+    "name": "[回放] 布拉加 vs 吉尔维森特 1-2 [葡超] 2026-10-20 03:15",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/1fe75f826dab40e6e89cbe961c7e9116.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/71f9aa805001834824767542117/playlist_eof.m3u8?t=6ad75522&us=47bcb27c16&sign=f968e9aa779a98328fa75b0356168fe6",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zvA21Iu22imyDol1kc9oS",
+    "name": "[回放] 岛根魔术 vs 川崎雷霆勇者 80-69 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/eeefbdedda12dba4c46c4ab4ecbcbc4b.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/74563bbc5001834824689700312/playlist_eof.m3u8?t=6ad75481&us=e8e7c68816&sign=f7d5d33a9041a5a402601bda6ddfbf79",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "1z4be9_XD-FPpHbz7an2-",
+    "name": "[回放] 德里城 vs 圣帕特里克竞技 1-0 [爱超] 2026-10-20 03:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/1fdb25b1b1cf8b92138ba7c5c9fff621.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/e3f2b8a45001834824629425484/playlist_eof.m3u8?t=6ad7548b&us=046ae3c8fc&sign=07bd8a7bd727ad4e3f1667b7178b1f0e",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Za1htgl9wXOttgBnnMURX",
+    "name": "[回放] 东京电击 vs 秋田北部喜悦 90-74 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/89b38d35baabff51bf0bee892f9df289.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/aa8654615001834824673091672/playlist_eof.m3u8?t=6ad7519f&us=1d287ae4de&sign=3cd39ecc668ad2d94d9a22eb9dd8747b",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Xi75_hmkhPHzE01Fwl-gE",
+    "name": "[回放] 恩尼加斯扎尼 vs 奥斯特罗 84-87 [波篮甲] 2026-10-20 01:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/658b633bcd22d5dc7e3df00eadcc02fb.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/5a1b3ac05001834824743075392/playlist_eof.m3u8?t=6ad74c2e&us=f1c404bd8d&sign=4e03437263a39e47feba2d321f9d08fd",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hclmiVzuQWxxvGRYNyrBn",
+    "name": "[回放] 弗拉姆 vs IA阿克拉内斯 2-4 [冰岛超] 2026-10-20 03:15",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/acb0d80017e970d0e7f20528091e5361.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/49b6fd575001834824563083240/playlist_eof.m3u8?t=6ad749ae&us=11f28692c8&sign=2484df6da648af7b982d36d9369e57b5",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "RNbROYaTC-wcRQJmb549x",
+    "name": "[回放] 弗兰萨 vs 圣荷塞 90-59 [巴西甲] 2026-10-20 06:30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/a65268effd9adde355c5816840d3ee14.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/60ad7bc85001834824699716505/playlist_eof.m3u8?t=6ad74aa2&us=4d6869e2ff&sign=b7970323bcad4c501679776d0e85280a",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5cb_v3qUGRCRrKK5I-c4P",
+    "name": "[回放] 戈亚斯 vs 累西腓航海 0-0 [巴西乙] 2026-10-20 06:30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/699dae3c00bf6c986e36c96f6ff22ad6.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/37da18e25001834824651065658/playlist_eof.m3u8?t=6ad74e9e&us=1b892c6c6d&sign=e421a80fb9b959423ce6b359fd07baf5",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "n0DtXEQ-lTJcPwdXZRvRK",
+    "name": "[回放] 广岛蜻蜓 vs 三远新凤凰 77-75 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/24080d2818e83e2d82c7a72f02db0ace.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/1de02bfb5001834824630542780/playlist_eof.m3u8?t=6ad755bc&us=dc16fa79d4&sign=6141e5684d17158befb2f31fc267c01d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eEnQKswakI1rvef1lIQHE",
+    "name": "[回放] 国际帕尔米拉 vs 马达莱纳联 0-1 [哥伦乙] 2026-10-20 05:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/e362b02676ca21aa27e93bfa85f6e925.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/1b86a2705001834824783781778/playlist_eof.m3u8?t=6ad754a3&us=606377b2ac&sign=f733f10e4fe4f3ae83793a6d473ef44c",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "T-H-eqvLTfIuo2x-0CG8W",
+    "name": "[回放] 赫塔菲 vs 巴列卡诺 1-1 [西甲] 2026-10-20 03:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/36bf5bf0c8fdf08c1270124808f060e1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/702c37c95001834824689573281/playlist_eof.m3u8?t=6ad74afb&us=fdd8bfab83&sign=37aabb9cc067148f2dd2b9296e8a668d",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/13c9b5975001834824701275126/playlist_eof.m3u8?t=6ad74afb&us=fdd8bfab83&sign=59021d91fc54214a5ced1e1893f601a8",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/d314c4e05001834824765306643/playlist_eof.m3u8?t=6ad74afb&us=fdd8bfab83&sign=d25970e8b1ea1d3a41b45e3a5e5e6284",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "vakO9YPNH8bZJGLGRBskJ",
+    "name": "[回放] 黑豹 vs 野狼 88-80 [墨联] 2026-10-20 10:30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/29ef62eeae45912c86e4641ea1dfd7b4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/400145715001834824797931885/playlist_eof.m3u8?t=6ad75056&us=138dea6458&sign=d1411e092c527bbeb4a6d9b08e33fb10",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "p5_9ve-3jZMZbT-CkS7n8",
+    "name": "[回放] 皇家桑坦德 vs 利昂内斯 1-0 [哥伦乙] 2026-10-20 03:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/224fc1a1876493fa1b072cf9eb4d5eb3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/a901a1c95001834824564836089/playlist_eof.m3u8?t=6ad75523&us=031ccf7e62&sign=172d6d08ad78b42893a9ea3343400622",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "IQMyurelcfXKx49kQQSHT",
+    "name": "[回放] 江苏 vs 深圳 81-89 [CBA] 2026-10-19 19:35",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/b25897e323bba837824c2d7fead03826.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/41d583175001834824637911004/playlist_eof.m3u8?t=6ad74814&us=713239df8b&sign=b74502586d20cbee2faab67890d84b6f",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/c489c1b85001834824697639978/playlist_eof.m3u8?t=6ad74814&us=713239df8b&sign=c76cf8c8582e1356a020501f10beb213",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "ebW4GUo5VylI8YDwOQpp3",
+    "name": "[回放] 竞技联队 vs 金斯敦水房 0-0 [牙买超] 2026-10-20 09:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/0cf0e53eca40eee5d07c8f85e1425963.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/dd7612e25001834824653561088/playlist_eof.m3u8?t=6ad75381&us=5452698417&sign=5ed7cb6e02e6d1162a6fea1da216fd82",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "L3uc0pA2G4zL6xFApYFcR",
+    "name": "[回放] 卡塔根纳 vs 帕特里奥坦斯 3-0 [哥伦乙] 2026-10-20 07:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/043a70a1b54a7fcc970fbe3053996fa0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/03d414375001834824704640460/playlist_eof.m3u8?t=6ad75449&us=161646cd19&sign=687c8e187242d1d76b2d526eaa1e0826",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "PZp2WjO48rI-OY63HMuIt",
+    "name": "[回放] 科林蒂安 vs 维多利亚 1-1 [巴西甲] 2026-10-20 07:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/aa4d61da1df31972e52e1e62f90ec558.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/5c6ca19f5001834824784225380/playlist_eof.m3u8?t=6ad7553b&us=63d38b1f9c&sign=fa6efbbeb984632109a67ba7ddf6f3aa",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "kFHJcrV81VcaUm8tEC4lI",
+    "name": "[回放] 莱昂女足 vs 亚特兰特女足 2-0 [墨女超] 2026-10-20 09:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/800183891d5c018ba4bff9e039b06eee.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/6908c58e5001834824791567757/playlist_eof.m3u8?t=6ad75339&us=64cfc305b6&sign=da5ebf4b37ee5f10e8f862b8638bd138",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "MblKTBECu6H4epUSX-BWg",
+    "name": "[回放] 利斯特雷 vs 圣塔菲联 1-1 [阿甲] 2026-10-20 08:15",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/b9eb3a2ccc44b65d7bd365ad417ddb04.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/f1dc6f575001834824589103014/playlist_eof.m3u8?t=6ad7566a&us=a509326b9e&sign=f683116dd26ad06c6c34398304d088aa",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cyqcwUA0BR3YXBKoKEcmY",
+    "name": "[回放] 琉球黄金帝王 vs 滋贺湖 99-67 [日篮B1] 2026-10-19 18:35",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/2f50bb1376a9bac9e8f23f0d0a0cfc6b.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/b385debe5001834824632394560/playlist_eof.m3u8?t=6ad74dc8&us=95c148f979&sign=c4ae95ad1f9dc50dd511a01027b68b42",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XlgjwvZwlmSKoP8-DN30M",
+    "name": "[回放] 穆苏克鲁纳 vs 奥伦斯CS 1-1 [厄瓜甲] 2026-10-20 04:30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/f84d3c03b83f445cb752a403995e0a11.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/776aa1895001834824696618094/playlist_eof.m3u8?t=6ad74c99&us=fa8e277b8c&sign=feac2c6bd4d391fef6c876b29747f408",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "2V2VavtBPL5kvMrrcwt3b",
+    "name": "[回放] 纽维尔老男孩 vs 科尔多瓦中央 2-1 [阿甲] 2026-10-20 06:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/845eed665066a19144dad9f96e550b50.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/1a7109455001834824701529984/playlist_eof.m3u8?t=6ad75522&us=47bcb27c16&sign=6a7d8e1dad7f76b5e84158e103790a7b",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tumZO58YqzD9YP7_2N0kD",
+    "name": "[回放] 女武神 vs 梦想 65-79 [WNBA] 2026-10-20 08:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/380d81d4050b81debf9a5500239e96d0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/4f26951e5001834824787740302/playlist_eof.m3u8?t=6ad74964&us=aae23117b1&sign=947f03b6779aaec39e7a941aa4bd3268",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/689989065001834824726087754/playlist_eof.m3u8?t=6ad74964&us=aae23117b1&sign=05c1c9b7a7f5e5bd3db40036f5ff8fe9",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "pb4FHd4nTnHS2u7P9tr4F",
+    "name": "[回放] 帕斯托 vs 阿利安萨 0-1 [哥伦甲] 2026-10-20 09:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/9fbd48de1577477753873c539c3ab106.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/3faefa995001834824800437344/playlist_eof.m3u8?t=6ad7535a&us=b840d38e6c&sign=ac4d9f97708b41a0194d6cf351dea1c2",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/cc05c6285001834824805907991/playlist_eof.m3u8?t=6ad7535a&us=b840d38e6c&sign=0708c068fc3ac5cdc9bc4b882fcfa28a",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "da20henV3TxnS9cj1e3QH",
+    "name": "[回放] 千叶喷射机 vs 东京太阳摇滚 64-107 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/78966bd85f23715c200e909acd4f2780.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/a07cae785001834824690250730/playlist_eof.m3u8?t=6ad751ee&us=55d2526f1d&sign=26f50eee6a2a523f30697887dd0e7af8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ih05wIz83M90w7Xx9hg33",
+    "name": "[回放] 萨米恩托 vs 巴拉卡斯中央 1-1 [阿甲] 2026-10-20 06:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/173f9983cdfd064d8bdd1a341e1bd8e4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/36cc324e5001834824780867873/playlist_eof.m3u8?t=6ad75429&us=e4abb2729b&sign=8dd0880cb59fe7e40b47d01ddb8b1152",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bX6wYg0_z1zTMhEI91aov",
+    "name": "[回放] 太空人 vs 矿工 86-83 [墨联] 2026-10-20 10:15",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/3570376dc486d7d2f5686a88c72ed25c.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/9824be045001834824754293563/playlist_eof.m3u8?t=6ad74c10&us=42cf69d839&sign=7a221620524822fe9ceb8d95d73f0345",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "kx7iKS3VZRdJBxA6scHgz",
+    "name": "[回放] 太阳 vs 蜜蜂 100-60 [墨联] 2026-10-20 11:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/903d0e8ac3089b5b845364e30ef5360e.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/4de1b9fe5001834824760156535/playlist_eof.m3u8?t=6ad75081&us=58729e4bb9&sign=16c4d63e71ccea3d829716abc3a62667",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "AyP2pLzDlkAdXAtHkid4W",
+    "name": "[回放] 托卢卡女足 vs 桑托斯拉古纳女足 0-0 [墨女超] 2026-10-20 08:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/680f427a2bc69ae676240a60d8aa2bdb.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/f7f486a65001834824721770769/playlist_eof.m3u8?t=6ad7546f&us=bc05279f87&sign=66c0a6e60bb5411db37c787a1d58a58e",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Hd8WlrMsvnHogOqpBe-hx",
+    "name": "[回放] 乌法兹萨 vs 皮涅鲁斯 81-65 [巴西甲] 2026-10-20 06:30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/8aa7d52c76dc585c597c5d0cf537a211.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/a61d749c5001834824720547353/playlist_eof.m3u8?t=6ad74dcb&us=e2f4795c6f&sign=97f2611b9f88bfbb542ad8cfbe27fde1",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Xt5ebC5EBXoLy50wMRgB4",
+    "name": "[回放] 乌拉圭民族 vs 马尔多纳多 3-2 [乌拉甲] 2026-10-20 07:00",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/football/team/aa97d18606e06696fd770ed04a5d040b.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/6fd158865001834824791836354/playlist_eof.m3u8?t=6ad7536c&us=bc8ee5ac9d&sign=e882181ede16dd67a4818cdf196441a2",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "c2UfJWViTu_eDnri66wgK",
+    "name": "[回放] 仙台89人 vs 神户鹳鸟 80-71 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/6018ba527c106ccc02c3d0cdb1e25fc2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/dfbd8e635001834824653659270/playlist_eof.m3u8?t=6ad750f4&us=e6f912812f&sign=65a4d46bee1e7a8ec89fbd5fce4716a0",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XIbaEPGMzn7mY7CTqr4Bv",
+    "name": "[回放] 信州勇士 vs 名古屋钻石海豚 77-92 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/d304b1c20b797f3a435ed2375ece319a.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/dfbd12825001834824653658630/playlist_eof.m3u8?t=6ad75322&us=a1b45e76af&sign=79b6cbff13b007c9bb79d9184bc7e573",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "oY9P76h_A3kYaYQHbZOoe",
+    "name": "[回放] 尤尼奥科林蒂安 vs 克鲁塞罗 83-74 [巴西甲] 2026-10-20 06:30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/0e569925c96627969d2575a42fb75e7b.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/70b108f95001834824781008207/playlist_eof.m3u8?t=6ad74a00&us=48cc937aa6&sign=27a2295885a096011810d2bc71337286",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5ggNGW3f6t46p9use0TES",
+    "name": "[回放] 宇都宫皇者 vs 群马雷鹤 83-80 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/50e2bae889b7c8357b00ad82be779021.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/071e31265001834824514642888/playlist_eof.m3u8?t=6ad753ed&us=00306d7f95&sign=aa8b33e45ec459a05494b3a980e42a54",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "oT1zMPyv5m9tA9IrDesh6",
+    "name": "[回放] 长崎维尔卡 vs 千叶阿尔提里 65-82 [日篮B1] 2026-10-19 18:05",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Event Replay",
+    "logo": "https://cdn.sportnanoapi.com/basketball/team/d8df78ff3d3b135144b73fa48dc888fe.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hello.ooo0ooo.top/replay/d5ff014avodsgp1302796787/ae34cfbe5001834824690813209/playlist_eof.m3u8?t=6ad75384&us=46a38c33c3&sign=7b83a66d6f56aead72197dbab9b7ea6f",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "_aAIzhpQ8b4fkPX1zvZSc",
+    "name": "DD Punjabi",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/DD%20Punjabi.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/da821c24a59d4e57960497aeaca8fb33/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "j0cQgvsRm_x8yu4s6AAKo",
+    "name": "DD Sports SD",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/DD%20Sports%20SD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "o91rBSG2Mx1VT8mEFhhMf",
+    "name": "Desi Plus",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/Desi%20Plus.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://cdn2.live247stream.com/desiplus/tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "98_V0iT3Ub34jDXGn9uLr",
+    "name": "Hyder TV",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/Hyder%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn.live247stream.com/hyder/tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WtswvI6-JHpOCUI1z_TOP",
+    "name": "Odisha TV",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/Odisha%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "jKG0kX-R4X_1zgFS0lTgg",
+    "name": "Sansad TV 1",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/Sansad%20TV%201.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/fff8f20221d5456e8922e689d71dedc3/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cSuv3QZew4PsLbcu34h6n",
+    "name": "Sansad TV 2",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/Sansad%20TV%202.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/e4182054dce340da9e0ff38b6b3658a4/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "NRVPvw_skTlOnCixaVbyz",
+    "name": "Sanskar TV",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/Sanskar%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d26idhjf0y1p2g.cloudfront.net/out/v1/cd66dd25b9774cb29943bab54bbf3e2f/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SbyBEPFyGwq1vVw7yFf5V",
+    "name": "ZB Cartoon",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/ZB%20Cartoon.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://server.zillarbarta.com/zbcatun/video.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "U4fmQfVOM9PsosGJt4GyJ",
+    "name": "ZB Cinema",
+    "countryCode": "in",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "group": "India TV",
+    "logo": "https://epg.112114.xyz/logo/ZB%20Cinema.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://server.zillarbarta.com/ZBCINEMA/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

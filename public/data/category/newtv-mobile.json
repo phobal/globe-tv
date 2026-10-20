@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "OBP0Xxx81Mhe8KWy19gJj",
+    "name": "黑莓电影",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E8%8E%93%E7%94%B5%E5%BD%B1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=8785669936177902664&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000019624&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/000000001000/8785669936177902664/1.m3u8?channel-id=ystenlive&Contentid=8785669936177902664&livemode=1&stbId=003901FF0001181003FC08A5C8C6C037&userToken=85a5a98cdcab4d800a8ec29a9d917e8d10vv&usergroup=g10045200000&version=1.0&owaccmark=8785669936177902664&owchid=ystenlive&owsid=7951969344461621383",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "GYM9wOCYG82IIks7ZNfgi",
+    "name": "NewTV爱情剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%88%B1%E6%83%85%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c59_fast_967_1080P_t10/c59_fast_967_1080P_t10.m3u8?d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ROYYwMyyk4uZOWjdpqDln",
+    "name": "NewTV爱情喜剧",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%88%B1%E6%83%85%E5%96%9C%E5%89%A7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=8393829412396288037&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pq9MEdjBJSbWycAN9uaTl",
+    "name": "NewTV宝宝动画",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%AE%9D%E5%AE%9D%E5%8A%A8%E7%94%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288002&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7JHjRbk1rldgLGCbHZomI",
+    "name": "NewTV超级电视剧",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E8%B6%85%E7%BA%A7%E7%94%B5%E8%A7%86%E5%89%A7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000001000008139&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000024993&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000268003&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "wCnh_hdz7Z3O3Y8BXsWfi",
+    "name": "NewTV超级电影",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E8%B6%85%E7%BA%A7%E7%94%B5%E5%BD%B1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000003000012426&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000002120&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000001000012884&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "jgJqPOUFMmE-TzonoZHoq",
+    "name": "NewTV超级体育",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E8%B6%85%E7%BA%A7%E4%BD%93%E8%82%B2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000001000009204&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000001000009601&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000007755&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "V6K-H7GzvFnSzORSNV1Cc",
+    "name": "NewTV超级综艺",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E8%B6%85%E7%BA%A7%E7%BB%BC%E8%89%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000001000025771&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000023658&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000268002&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 2
+      },
+      {
+        "kind": "hls",
+        "url": "http://111.29.9.34:6610/000000001000/1000000001000025771/index.m3u8?channel-id=ystenlive&Contentid=1000000001000025771&livemode=1&stbId=3",
+        "order": 3
+      },
+      {
+        "kind": "hls",
+        "url": "http://111.29.9.35:6610/000000001000/1000000004000023658/index.m3u8?channel-id=ystenlive&Contentid=1000000004000023658&livemode=1&stbId=3",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "id": "0Vfi7G0d_srJWX2sOxThb",
+    "name": "NewTV潮妈辣婆",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%BD%AE%E5%A6%88%E8%BE%A3%E5%A9%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6516734029835465177&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "J5y1UPy60nMY-WyKXyrMJ",
+    "name": "NewTV哒啵赛事",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%93%92%E5%95%B5%E8%B5%9B%E4%BA%8B.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5320946857686967621&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "B0eF8JnYjiJ3aTkNk8kOV",
+    "name": "NewTV大家剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%A4%A7%E5%AE%B6%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_975_1080P_t10/c58_fast_975_1080P_t10.m3u8?d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XWDv5duBpltmDfo_JX5XZ",
+    "name": "NewTV电竞天堂",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%94%B5%E7%AB%9E%E5%A4%A9%E5%A0%82.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288003&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QX4J0YcQoG766xPwQG9EA",
+    "name": "NewTV谍战剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E8%B0%8D%E6%88%98%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288004&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rNaMOlEcycepFmkfsgS_A",
+    "name": "NewTV东北热剧",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E4%B8%9C%E5%8C%97%E7%83%AD%E5%89%A7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000005000266013&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "0HipXcjLhdHBuy87awQAg",
+    "name": "NewTV动作电影",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%8A%A8%E4%BD%9C%E7%94%B5%E5%BD%B1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000018653&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=8103864434730665389&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "78RGAKnm7FvM8WCiUqnz-",
+    "name": "NewTV古装剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%8F%A4%E8%A3%85%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6859053933687922163&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_947_1080P_t10/c58_fast_947_1080P_t10.m3u8?d",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "UDIJIoWo0FZvj2sf-b4dE",
+    "name": "NewTV哈哈炫动",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000031123&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000005000031641&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "W9zy1ilK6kM0aG-6Q85ci",
+    "name": "NewTV黑莓动画",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E9%BB%91%E8%8E%93%E5%8A%A8%E7%94%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6497762188035533951&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000021734&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "0tOdq6vKMu-SzWZMCu39v",
+    "name": "NewTV华语影院",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%8D%8E%E8%AF%AD%E5%BD%B1%E9%99%A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288005&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "dSS8Qoa4esBMAjYWZEjFY",
+    "name": "NewTV欢乐剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%AC%A2%E4%B9%90%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000005000266012&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BsTsKwB79h-PyckTw5yMH",
+    "name": "NewTV家庭剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%AE%B6%E5%BA%AD%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6316377948248689070&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000008284&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c59_fast_999_1080P_t10/c59_fast_999_1080P_t10.m3u8?d",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "tC1QlPENl6iyklkFDUh5T",
+    "name": "NewTV家庭理财",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%AE%B6%E5%BA%AD%E7%90%86%E8%B4%A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/5000000011000265001/1.m3u8?channel-id=bestzb&Contentid=5000000011000031210&livemode=1&stbId=toShengfen&mode=1&$2M-bestzb",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bH1rCsky6XMcuqFbJ1p54",
+    "name": "NewTV嘉佳卡通",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%98%89%E4%BD%B3%E5%8D%A1%E9%80%9A.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000002000025964&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=4739906347743456369&livemode=1&stbId=yu&mode=1&$2M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "GYr6zIVdGRCbQZrzRq3ik",
+    "name": "NewTV健康养生",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%81%A5%E5%BA%B7%E5%85%BB%E7%94%9F.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288006&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "aSl6rk30I4GcaBpIrbfQ7",
+    "name": "NewTV金牌综艺",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E9%87%91%E7%89%8C%E7%BB%BC%E8%89%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000026167&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6399725674632152632&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://111.29.9.42:6610/000000001000/1000000004000026167/index.m3u8?channel-id=ystenlive&Contentid=1000000004000026167&livemode=1&stbId=3",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "GQQ3AFrELeGEZA2FdII9Q",
+    "name": "NewTV金鹰卡通",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000006000040024&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000002000016601&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "DY1KOLqjtPfKdeNREGHMJ",
+    "name": "NewTV惊悚悬疑",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%83%8A%E6%82%9A%E6%82%AC%E7%96%91.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000024282&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=7151256057701199617&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "_kuWB7XGANTQIKrlMnVkl",
+    "name": "NewTV睛彩广场舞",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9E.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000011523&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000011524&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000270003&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 2
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000270005&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "id": "9Z2ioeConalSHKAjRPhhL",
+    "name": "NewTV睛彩竞技",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%9D%9B%E5%BD%A9%E7%AB%9E%E6%8A%80.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000011528&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000270001&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "YWadFB0PukL_o6zCtr8a5",
+    "name": "NewTV睛彩篮球",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%9D%9B%E5%BD%A9%E7%AF%AE%E7%90%83.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000270002&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000006000270006&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "73zZgpgy2jYxnJaMj-Igj",
+    "name": "NewTV睛彩青少",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%9D%9B%E5%BD%A9%E9%9D%92%E5%B0%91.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000011525&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000031315&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "aXQXLj2J_vIEahO2ZAGTX",
+    "name": "NewTV精品大剧",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%B2%BE%E5%93%81%E5%A4%A7%E5%89%A7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000013968&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=7882297361445410858&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "gikggoR7QGnZig8Y7_Fd4",
+    "name": "NewTV精品记录",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%B2%BE%E5%93%81%E8%AE%B0%E5%BD%95.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6298506997017621594&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cP51u2V38SkYKTZQr40Hf",
+    "name": "NewTV精品体育",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%B2%BE%E5%93%81%E4%BD%93%E8%82%B2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6460382139625130259&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000014634&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "-xOCnRlXLC9Iy4htsev3E",
+    "name": "NewTV军旅剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%86%9B%E6%97%85%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=7485075951068666323&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/000000001000/7485075951068666323/1.m3u8?channel-id=ystenlive&Contentid=7485075951068666323&livemode=1&stbId=003901FF0001181003FC08A5C8C6C037&userToken=85a5a98cdcab4d800a8ec29a9d917e8d10vv&usergroup=g10045200000&version=1.0&owaccmark=7485075951068666323&owchid=ystenlive&owsid=7951969344461285239",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c54_fast_700_1080P_t10/c54_fast_700_1080P_t10.m3u8?d",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "2KUBwDOybywL-UkQQqXN6",
+    "name": "NewTV军事评论",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%86%9B%E4%BA%8B%E8%AF%84%E8%AE%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5822616274253344775&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "vfee23S5K3cqbcgeMX_tB",
+    "name": "NewTV卡酷少儿",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=7851974109718180595&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=7589856436881630561&livemode=1&stbId=yu&mode=1&$2M",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "ygSDxhx-A97v-NyH4lQEM",
+    "name": "NewTV看天下",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%9C%8B%E5%A4%A9%E4%B8%8B.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288007&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "h0R5tT-0yr0hi6sRQyVDo",
+    "name": "NewTV明星大片",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%98%8E%E6%98%9F%E5%A4%A7%E7%89%87.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000004000019008&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/000000001000/5595720619887440144/1.m3u8?channel-id=ystenlive&Contentid=5595720619887440144&livemode=1&stbId=003901FF0001181003FC08A5C8C6C037&userToken=85a5a98cdcab4d800a8ec29a9d917e8d10vv&usergroup=g10045200000&version=1.0&owaccmark=5595720619887440144&owchid=ystenlive&owsid=7951969344461437044",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "CFZ8LOC2Tu6QvswckkIiZ",
+    "name": "NewTV农业致富",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%86%9C%E4%B8%9A%E8%87%B4%E5%AF%8C.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=6193684637634073625&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SYFxGqiJDxo0D-o40z40K",
+    "name": "NewTV青春动漫",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E9%9D%92%E6%98%A5%E5%8A%A8%E6%BC%AB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288008&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5LFiDz0KOaiFrMZe40S_w",
+    "name": "NewTV全球大片",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E5%85%A8%E7%90%83%E5%A4%A7%E7%89%87.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288009&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XOAZL9MePknw-kOIPYLYr",
+    "name": "NewTV热门剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%83%AD%E9%97%A8%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288010&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "6h39Rksh7Xp_kD5W2oWx8",
+    "name": "NewTV泰语剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%B3%B0%E8%AF%AD%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_949_1080P_t10/c58_fast_949_1080P_t10.m3u8?d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "TAhIusDF5JPS5I64B7hVl",
+    "name": "NewTV武搏世界",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%AD%A6%E6%90%8F%E4%B8%96%E7%95%8C.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=bokesen&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "m9T3duREHQ6rAjucV6twE",
+    "name": "NewTV戏曲",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%88%8F%E6%9B%B2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288012&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Sw3n10m3d7gpZobMkar4z",
+    "name": "NewTV星光影院",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%98%9F%E5%85%89%E5%BD%B1%E9%99%A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000288013&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XX0B8_gTK_Wvn1rKSaRYa",
+    "name": "NewTV炫舞未来",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E7%82%AB%E8%88%9E%E6%9C%AA%E6%9D%A5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000001000000515&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "U3gweb7D4_3aTT_YgbVyv",
+    "name": "NewTV怡伴健康",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E6%80%A1%E4%BC%B4%E5%81%A5%E5%BA%B7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=7820874641606664941&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ak0kaSjb8ihD_vKDpv0pi",
+    "name": "NewTV优漫卡通",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=1000000002000010063&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5z1Zg9BZdb6hiCWunbLqr",
+    "name": "NewTV中国功夫",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E4%B8%AD%E5%9B%BD%E5%8A%9F%E5%A4%AB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5897056882324761054&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rhxowj2iyoqBGpa2VsGus",
+    "name": "NewTV中国天气",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "NewTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/NewTV%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000005000031974&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  }
+]

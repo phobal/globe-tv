@@ -1,0 +1,128 @@
+[
+  {
+    "id": "wunH5J07OUN3jrv5yy8mH",
+    "name": "Dao Lane Xang TV",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/Dao%20Lane%20Xang%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/khaomwungmai.sdp/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "I2naLzvAOaJ-SOJTAPkqA",
+    "name": "ISTV",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/ISTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/ichannel.sdp/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "l0TFWuluFTtFaMWke9fev",
+    "name": "Lao Net TV",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/Lao%20Net%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/laonet.sdp/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eAXdcH5S-yAZVHLI9K38F",
+    "name": "LOOK THOONG TV HD",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/LOOK%20THOONG%20TV%20HD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "FP74xtl8UNDjc_k_-5pJL",
+    "name": "LSTV",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/LSTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/laostv.sdp/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "M1OCQ5-zX6ydQxQWnJ4FG",
+    "name": "Ning TV",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/Ning%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/ningtv.sdp/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "a8uulcwsuUOvDI5cobfcv",
+    "name": "Oh Muang Lao TV",
+    "countryCode": "la",
+    "languages": [
+      "Lao"
+    ],
+    "group": "Laos TV",
+    "logo": "https://epg.112114.xyz/logo/Oh%20Muang%20Lao%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livefta.malimarcdn.com/ftaedge00/ohmuanglao.stream/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "rSLXJTl8NEmfU6CEk8Dg_",
+    "name": "风尚音乐",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%A3%8E%E5%B0%9A%E9%9F%B3%E4%B9%90.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hsfsyy.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "fwlvySkJdYBJwDocaLADn",
+    "name": "睛彩广场舞",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9E.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/jcgcw.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "soN-1hTAA_fy-Jxzp9YMO",
+    "name": "睛彩竞技",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%9D%9B%E5%BD%A9%E7%AB%9E%E6%8A%80.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/jcjj.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "xq5NA3RRF6y7K0JW59PL0",
+    "name": "睛彩篮球",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%9D%9B%E5%BD%A9%E7%AF%AE%E7%90%83.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/jclq.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "IivokEM65N0wfhz0YCsxR",
+    "name": "睛彩青少",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%9D%9B%E5%BD%A9%E9%9D%92%E5%B0%91.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/jcqs.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "893pzYafA9BTwaZ-kpLVq",
+    "name": "精彩影视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%B2%BE%E5%BD%A9%E5%BD%B1%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hsjcys.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Am-38eCLms2B2gW4VLulH",
+    "name": "精品剧场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%B2%BE%E5%93%81%E5%89%A7%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hsjpjc.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mgCck1JgUBx81KO7qQy0P",
+    "name": "欧美影院",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%AC%A7%E7%BE%8E%E5%BD%B1%E9%99%A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hsomyy.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cUycaa6icGCJYz0zvvUat",
+    "name": "求索动物",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B1%82%E7%B4%A2%E5%8A%A8%E7%89%A9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/qsdw.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "N15HHDFs2vGc6G3zBjqnj",
+    "name": "求索海淘",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B1%82%E7%B4%A2%E6%B5%B7%E6%B7%98.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/qskx.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QHORn5ttoEmmuRk5XnOws",
+    "name": "求索纪录",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B1%82%E7%B4%A2%E7%BA%AA%E5%BD%95.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/qsjl.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "i2tA0N218VNRJtTDBlsBF",
+    "name": "求索生活",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B1%82%E7%B4%A2%E7%94%9F%E6%B4%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/qssh.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-CgOCyjTVA8RO8vmvTekR",
+    "name": "少儿动漫",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%B0%91%E5%84%BF%E5%8A%A8%E6%BC%AB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hssedm.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "0kIgVS7kh8LV5OpHSnSyE",
+    "name": "探索纪录",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%8E%A2%E7%B4%A2%E7%BA%AA%E5%BD%95.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hstsjl.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "DRm2wihxfGAZ7rpAICuNE",
+    "name": "亚洲影院",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BA%9A%E6%B4%B2%E5%BD%B1%E9%99%A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/hsyzyy.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "e_t8OS4REPpI4ZoJqYUmZ",
+    "name": "IHOT爱院线",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Digital TV",
+    "logo": "https://epg.112114.xyz/logo/IHOT%E7%88%B1%E9%99%A2%E7%BA%BF.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://192.187.124.34:81/live/ihotayx.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

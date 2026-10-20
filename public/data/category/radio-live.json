@@ -1,0 +1,20 @@
+[
+  {
+    "id": "teJst4PEyUW34d_wi4I8U",
+    "name": "先锋898",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Radio Live",
+    "logo": "https://epg.112114.xyz/logo/%E5%85%88%E9%94%8B898.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livepull-tcyzb.sztv.com.cn/live/898video.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

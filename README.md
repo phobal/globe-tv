@@ -41,6 +41,14 @@ npm run sync -- .upstream
 
 `scripts/make-geo.mjs` (`npm run geo`) 用于生成或更新与地图相关的离线资源, 一般情况下无需手动运行.
 
+### 同步国内直播分类
+
+`scripts/sync-iptv-source.mjs` 从 [iptv.445569.xyz/live.m3u](https://iptv.445569.xyz/live.m3u) 拉取国内电视台/分类直拉的 m3u, 并按 `group-title` 归一化后输出到 `public/data/category/<slug>.json`, 字段结构与 `public/data/category/cctv.json` 保持一致 (同名频道的多个源会聚合到 `sources` 数组). 原始 m3u 同时落盘到 `public/data/index.m3u`, 上游站点失效时 `fetchOrLoadM3u` 会自动回落到这份本地缓存.
+
+```bash
+npm run sync:iptv   # 拉取/解析 m3u, 写出 public/data/category/* 与 category-report.json
+```
+
 ### 其它脚本
 
 ```bash

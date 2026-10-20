@@ -1,0 +1,439 @@
+[
+  {
+    "id": "YH4-kwmaut8I08S0gison",
+    "name": "Ananda TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Ananda%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8?e=1784102574&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ca7c19dec6024bf61b0aa2c509cf45df",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Zt0Hen2YcucW_GZYp5smP",
+    "name": "Asian TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Asian%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8?e=1784102565&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=e4293f68c5bc8aa8e6ac3e088ca754f4",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mbTf-FSQehQxqmXGvscJu",
+    "name": "ATN Bangla",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/ATN%20Bangla.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8?e=1784102561&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=a4c195d9bcdfa5daa8df1dfd6b28455b",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "IZhpceNGQ0ZBnlOl2mbh9",
+    "name": "Bangla TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Bangla%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8?e=1784102569&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=fb1f6e0c49c7406611ea2bbd605ed275",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "v4PeY-f0lxyzqpQHHZL3j",
+    "name": "Bangla Vision",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Bangla%20Vision.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8?e=1784102560&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ddcd867c4b5ff4b8041ee4e513423464",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "GzHmrPvxlRnfzkdP4eg-X",
+    "name": "Bijoy TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Bijoy%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8?e=1784102572&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=e11a2b199c36c7359982e55ec018196d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "9IKnIGc9cfv7W468TUTID",
+    "name": "Boishakhi TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Boishakhi%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=04a0e9e55654c1f01a51941732d5fe10",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ORTKfKQOH2DA0UYBdHstY",
+    "name": "BTV CTG",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/BTV%20CTG.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8?e=1784102576&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=901c0ca2f1ba54041a543dce43641c12",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "LiZw777itdyAGEya2gEXm",
+    "name": "Channel I",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Channel%20I.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8?e=1784102558&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=1b6ef0107d8addd36bcab3ca1175877a",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "i53IeATQDodxfjiUMXaTu",
+    "name": "Channel S",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Channel%20S.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4i4pBThGda1M3_UqBQC2P",
+    "name": "Deepto TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Deepto%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/tK2BNdfsdfsdf/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=89a6bfdee0a7ecb358080b2c44f18b41",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "_ldXd2_k6TOG-HMgdY9r3",
+    "name": "Desh TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Desh%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=78b23c868a34420397be9c985d04db9b",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "9yS94nVA8CM1_ebO85sBW",
+    "name": "DESHI TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/DESHI%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ntlYMjOWLISjuoMnqShVQ",
+    "name": "Drama 24",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Drama%2024.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vods2.aynaott.com/gseriesDrama/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5bxZwMgg9YL8GULrVkiMt",
+    "name": "Duronto TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Duronto%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.fmp4.m3u8?token=26849003e1fe1bed0b0c40f6d3be853eb9a2b4f7-6a6a5971089a426fc1829aad7d929e8a-1784095967-1784095067&remote=no_check_ip",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "PNyvgzf_SZFednYMqO9C3",
+    "name": "Ekushey TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Ekushey%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "M_SkvakhZuq6hrDSUoxTq",
+    "name": "ETV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/ETV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8?e=1784102562&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=7e70b215021d5b63d625a677bec65a1d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "LzVys43ez3IMa4ZdFkki1",
+    "name": "Green TV HD",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Green%20TV%20HD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/cLuA3hJR/index.m3u8?e=1784102578&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=57bcdefd396bd85d72461ff29cbde00d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BFju9o9N43A90WUdFPnlM",
+    "name": "Maasranga TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Maasranga%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/maasrangatv/index.m3u8?e=1784102562&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2044540ee613d44b1175f2885b2ab1ee",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-nBwFoIN8zrY3g4susbO5",
+    "name": "My TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/My%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8?e=1784102573&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ae3f9c12e1d065b5ae78d27fb2e192fc",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nlub0-apQIGi8fB_RBQQG",
+    "name": "NTV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/NTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=d26add1c49d848c9199b708427134979",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zfPAag_KpNFTWBGOO55BQ",
+    "name": "RTV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/RTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen5.aynaott.com/RtvHD/index.m3u8?e=1784102560&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=341d28b0504fc6b2cb3fd78fafa0a854",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zdfRniAH9obyN2TCQONE0",
+    "name": "SA TV",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/SA%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8?e=1784102564&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ed25297bf867135d78cb6ad3e1c2b495",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hy6gOi_2FEazubJqMwOTb",
+    "name": "Thikana",
+    "countryCode": "bd",
+    "languages": [
+      "Bengali"
+    ],
+    "group": "Bangladesh TV",
+    "logo": "https://epg.112114.xyz/logo/Thikana.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

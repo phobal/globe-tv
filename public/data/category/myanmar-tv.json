@@ -1,0 +1,164 @@
+[
+  {
+    "id": "ZHbwVrt60oKR8vKilFNIa",
+    "name": "DVB TV",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/DVB%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-stream.dvb.no/hls/stream_src/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4VAjy1IFgu64DWC74TL27",
+    "name": "Hluttaw S & D",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/Hluttaw%20S%20%26%20D.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/6238689c01ab711ae62865a071ff2003---/cache/MRTV-HLUTTAW/m3u8/cache_MRTV-HLUTTAW_m3u8_hls_m3u8_MRTV-HLUTTAW-TS-L.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Y5nkbPCfemzCGqdGLkXPY",
+    "name": "MRTV",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/MRTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/cache/MRTV-HD/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "KpvwKoO4-Pb7_u9Rz4PcW",
+    "name": "MRTV Entertainment",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/MRTV%20Entertainment.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/6238689c01ab711ae62865a071ff2003---/cache/MRTV-Ent-HD/m3u8/cache_MRTV-Ent-HD_m3u8_hls_m3u8_MRTV-Ent-HD-TS-M.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "kmexsf9FrMeoFruxqoHjL",
+    "name": "MRTV Farmer",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/MRTV%20Farmer.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/6238689c01ab711ae62865a071ff2003---/cache/MRTV-FARMER/m3u8/cache_MRTV-FARMER_m3u8_hls_m3u8_MRTV-FARMER-TS-L.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "UFqUtE4YNInbdVfod1N7t",
+    "name": "MRTV News",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/MRTV%20News.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/cache/MRTV-NEWS-HD/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BSjHrNEkJsYNRWpxk9q7s",
+    "name": "MRTV NRC",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/MRTV%20NRC.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/6238689c01ab711ae62865a071ff2003---/cache/MRTV-NRC-HD/m3u8/cache_MRTV-NRC-HD_m3u8_hls_m3u8_MRTV-NRC-HD-TS-L.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "xPProJiEV-EBTtqn5-kD9",
+    "name": "MRTV Sports",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/MRTV%20Sports.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/6238689c01ab711ae62865a071ff2003---/cache/MRTV-SPORT/m3u8/cache_MRTV-SPORT_m3u8_hls_m3u8_MRTV-SPORT-TS-H.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "oB95bnvxmjRk8GDPrh5ex",
+    "name": "Myanmar International TV",
+    "countryCode": "mm",
+    "languages": [
+      "Burmese"
+    ],
+    "group": "Myanmar TV",
+    "logo": "https://epg.112114.xyz/logo/Myanmar%20International%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mrtvott.com/6238689c01ab711ae62865a071ff2003---/cache/MITV/m3u8/cache_MITV_m3u8_hls_m3u8_MITV-TS-L.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

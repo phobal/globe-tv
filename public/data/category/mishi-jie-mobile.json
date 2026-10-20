@@ -1,0 +1,691 @@
+[
+  {
+    "id": "g4QgYix1B_qYhO_VPIVwr",
+    "name": "咪视界1",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000001000008176/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008176&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7SjeVRIZv-UIZkLFCGZqr",
+    "name": "咪视界10",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C10.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000004193/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000004193&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "VAyG7WdO9bBRVVJMw5eVv",
+    "name": "咪视界11",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C11.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000028638&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Py9nFrQoCzNKWFVJpN9b1",
+    "name": "咪视界12",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C12.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000005969&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "sCgwS_R0unH6Y9QSKU9Ta",
+    "name": "咪视界13",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C13.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000007218&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gm_lJwjTiP261o_aeH6Zx",
+    "name": "咪视界14",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C14.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000008001&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "1trzwef-GTBTZ8d0YXSgs",
+    "name": "咪视界15",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C15.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000010129&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "IWXgD81R7PbX4flf2ZrtS",
+    "name": "咪视界16",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C16.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000010948&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "sl5FlisqaJouK-4xNXmmb",
+    "name": "咪视界17",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C17.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000031494&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "1-qz6wOtvK_TRPgTiWkPl",
+    "name": "咪视界18",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C18.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000000097&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "G1Nqlp0ZWjYVSXBJydScw",
+    "name": "咪视界19",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C19.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000002019&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gTci2s00C1Q0cV42j1FW7",
+    "name": "咪视界2",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000027691/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000027691&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tfnXAwlkWF4wg6bJkZB4y",
+    "name": "咪视界20",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C20.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000003915&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "l9V9aPBsVLu0ZwxJrSNhe",
+    "name": "咪视界21",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C21.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000005837&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XDvO79sQ7nZ92N-nsHWij",
+    "name": "咪视界22",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C22.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000006658&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bcQK5AnkmCMdOGKkjIoMd",
+    "name": "咪视界23",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C23.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000011297&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "w3fyZBiLWN3nIvn_GV6KM",
+    "name": "咪视界24",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C24.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000012616&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rP2iPbQTTJ3hnebrDkRcU",
+    "name": "咪视界25",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C25.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000015470&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eJiQ5X_wT2sOUoK8CMmaL",
+    "name": "咪视界26",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C26.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000019839&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5Yu4GPjQfyer9gTlLgsh4",
+    "name": "咪视界27",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C27.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000025380&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "1Wnh1fyg3C_COwIJKfXkI",
+    "name": "咪视界28",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C28.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000027691&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "64BllS3vH1Sz0-D_RvwDJ",
+    "name": "咪视界29",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C29.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000031669&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XIAXMJ85NyOOLWI7pjXa0",
+    "name": "咪视界3",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000023434/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000023434&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "j5bdwzz46eEGUyW3nhERm",
+    "name": "咪视界30",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C30.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000020000011522&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QFWaLGMrhzcfH4onR_W3h",
+    "name": "咪视界31",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C31.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=ystenlive&Contentid=1000000006000270004&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Qjv9EX-Nl5bho9YeKZJe1",
+    "name": "咪视界32",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C32.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000005308&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "IMIMtxs-p0DoqPAGCI8UR",
+    "name": "咪视界33",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C33.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000001000008379&livemode=1&stbId=yu&mode=1&$8M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "JvSvPA2Jyh48ZL_1qFEzw",
+    "name": "咪视界34",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C34.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000002809&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_2-I1QHoRt5bWwNmSTI07",
+    "name": "咪视界35",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C35.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000015560&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ciPCR0LXPsnv6KIYhWlut",
+    "name": "咪视界36",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C36.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000023434&livemode=1&stbId=yu&mode=1&$5M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "0RxoLFFJs4SVkfvQ0BYh5",
+    "name": "咪视界4",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000021904/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000021904&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "M-nWI20bPTzloZQyj2KV4",
+    "name": "咪视界4K",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C4K.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000005180/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000005180&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "V0IdOFBcFYzvz0lia6TS4",
+    "name": "咪视界5",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000015560/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015560&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "L57Y29N2w05a107TQ8Mxj",
+    "name": "咪视界6",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C6.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000012558/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000012558&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nm8o8uCTa7xTWo-hIwVHT",
+    "name": "咪视界7",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000010833/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000010833&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "JlqddrxRAdmfcZSZvf5PS",
+    "name": "咪视界8",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C8.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000009788/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000009788&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "JSG_sSciNheN2E6HIokMv",
+    "name": "咪视界9",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E5%92%AA%E8%A7%86%E7%95%8C9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/3000000010000006077/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000006077&livemode=1&stbId=3$",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "2N9Q80OXbwV7XsibnLMwg",
+    "name": "至臻视界4K",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Mi Shi Jie (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E8%87%B3%E8%87%BB%E8%A7%86%E7%95%8C4K.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000015686&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/5000000011000265001/1.m3u8?channel-id=FifastbLive&Contentid=3000000010000015686&livemode=1&stbId=toShengfen&mode=1&$24M-FifastbLive",
+        "order": 1
+      }
+    ]
+  }
+]

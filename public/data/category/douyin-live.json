@@ -1,0 +1,542 @@
+[
+  {
+    "id": "iyXQs_6dzb_XjsGqTOtsW",
+    "name": "阿东斗地主 - 很高兴认识你",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_31691317455f073a88708dcf74b931c1.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t13.douyincdn.com/thirdgame/stream-120287478123594555.m3u8?expire=1793084157&sign=c89626b6672c8f8aae20d000d9983c7d&arch_hrchy=h1&exp_hrchy=h2&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-KSslP1",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "HRE5ryM-qy-W8Wsoqjb4X",
+    "name": "摆摆（国服李信） - 1w8绝活李信百段对抗/视觉盛宴把把金牌顶级/挑战一把不输",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813_oUFe6AqUoA6PBxiAEfmWB7tEGJQfIJSAB2SAED.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t11.douyincdn.com/thirdgame/stream-120290897251009339_hiquhd5.m3u8?expire=1793084158&sign=004b31d0515896674e45c4f0ffd6698c&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-ElSkQ2",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "6-DvTSl7l9mJgSFdgzBIX",
+    "name": "陈泽- - 陈泽来也",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_9c73e1cf20fe34a949a849a972063c94.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-f26.douyinliving.com/third/stream-120291016309736243_uhd5.m3u8?expire=6ae04afe&sign=ff102c324939542833200ed1d6b45eeb&exp_hrchy=s1&s_anchor=1&arch_hrchy=s1&major_anchor_level=svip&t_id=037-20261020145557D50EECE9C2702073BC50-ztXAS2",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "KVgVozld17kpeQL3_jHtW",
+    "name": "脆苏（1.9W国服大师） - 116段国服游走/1.9W国服鲁班大师猛攻流极致开团教学/期待真爱粉",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c001_ooqyeDGnQLA5gfEHsAIGAPBABchae7X8UqMAAt.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-q5.douyincdn.com/thirdgame/stream-408521037580600126/index.m3u8?expire=1793084158&sign=d73080e9f580bc7bf7f87fda9f1ec430&volcSecret=d73080e9f580bc7bf7f87fda9f1ec430&volcTime=1793084158&arch_hrchy=h1&exp_hrchy=h1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-vYF9vd",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "lMI0PyFxq3rV89AWM0hTy",
+    "name": "加热哥 - 点赞流量计划",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c001_oEE9DEgRIRqALMACQCvAcCFA7lafjAf87BASYS.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-l6.douyincdn.com/stage/stream-408520547553247263/index.m3u8?k=b387b6b49116dbcb&t=1793084157&arch_hrchy=c1&exp_hrchy=c1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-LRND2r",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "9B7f6Hn4MpWaotYDOSda6",
+    "name": "兰 - 不会步枪不会打狙，无能的兰子",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_8dbf30771d9ea252d604547c119414d4.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-696751496947827532_uiquhd5.m3u8?expire=1793084158&sign=c358cfbfb1107724bb72850a50516257&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-g4n2wJ",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ujAzl_ZaBsiiz71WFSx8O",
+    "name": "刘米奇 - 福袋里有钥匙直接来从头发到尾",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_af5c841c828af05588c83db29b449b15.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-f11.douyincdn.com/thirdgame/stream-408520679088456458.m3u8?expire=1793084158&sign=5ce5c5a60efb0a5345ab7abaf26027ba&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-dF1WTq",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zmOQ3itbny1d__AQTukne",
+    "name": "梦飞大大 - 王者万象棋，启动",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/mosaic-legacy_93d200292f09711a5246.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t13.douyincdn.com/thirdgame/stream-696751296825262907.m3u8?expire=1793084157&sign=119e6aa72905881e248e4c9b77bc8ba4&exp_hrchy=h1&major_anchor_level=common&arch_hrchy=h1&t_id=037-20261020145556B713B42B0C98A4AAC9AB-9Bpkqp",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XnAQ52VGb6LMRPiMFGCKe",
+    "name": "宁仔（王者万象棋） - 王者万象棋钻石狂潮捡钻石，把把吃麻",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_53cb40437e8eea4723f5e481ba7171f5.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-408520692435518284_uiquhd5.m3u8?expire=1793084157&sign=5b8275f9485b1b4a2bc3537bf2f6e18f&exp_hrchy=w1&arch_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-aADiNM",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Qz1lbGIEjY1ohQebTOYLg",
+    "name": "起手就Miss - 挑战PK一把不输上泰拉石",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c000-ce_oIfASEaDw6ACwzvFfAq9EAA1IrJ6NJQ7PcyBUo.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-q1.douyincdn.com/thirdgame/stream-696751632570647358_uiquhd5/playlist.m3u8?keeptime=00093a80&wsSecret=86c6b72f859543b23535f36a91fdecec&wsTime=6ad7107d&arch_hrchy=h1&exp_hrchy=h1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-LUKqcg",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XBZOxAQ5a_qmr_W0-WLw9",
+    "name": "强小强电竞考核 - 三角洲考核俱乐部，急缺强力打手、护子，欢迎老板咨询体验",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p26.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813_o88kADjABJ3iai1P4VIAiVE0OIBATLnQkbAFP.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-q1.douyincdn.com/thirdgame/stream-408521062077432638_hiquhd5/playlist.m3u8?keeptime=00093a80&wsSecret=9ebb80fec7eb13d1c7ef787dec9e1283&wsTime=6ad7107e&exp_hrchy=h1&arch_hrchy=h1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-kzfoeQ",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "aA_f8ws-9yUgXlp5WDIYs",
+    "name": "三帅(王者万象棋) - 挑战把把999",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p26.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813_o0wIiAEGVEq1irsLIAAVEAIeBBieePnAZ7QQET.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-q3.douyincdn.com/thirdgame/stream-696751782233899838_uiquhd5.m3u8?auth_key=1793082357-0-0-d39b39c47da0a9f4fb83ef3028ea9385&arch_hrchy=h1&exp_hrchy=h1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-hHxlKY",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pEUACvQJPDka6wZrZ2V1D",
+    "name": "天人电竞 - 在我的萝莉面前，你们只是个选手",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c000-ce_ooFo7AMWECr8DAPjJfmTQBhQAffXEBVrJIgAHb.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-q5.douyincdn.com/thirdgame/stream-696751894634431294_hiquhd5/index.m3u8?expire=1793084158&sign=109bea2eb7353af262267b24921d5fdf&volcSecret=109bea2eb7353af262267b24921d5fdf&volcTime=1793084158&arch_hrchy=h1&exp_hrchy=h1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-4zBUGu",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "StAhC9GdEy8SGXrpOnNDS",
+    "name": "夏海橘 - 给我再去相信的勇气",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c001_ogI97CoAGlwMrqAUDAEDdlFCVAACegfsEbAABu.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t13.douyincdn.com/thirdgame/stream-408521354262872891_hiquhd5.m3u8?expire=1793084158&sign=2820c44d01a04b01fc8f00a2d61a5fdb&exp_hrchy=w1&major_anchor_level=common&arch_hrchy=w1&t_id=037-20261020145557D50EECE9C2702073BC50-NAnGdw",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hLM6pGkpp4EyFYDjN1qTu",
+    "name": "小佛（梦幻手游） - 梦幻西游手游有问必答！！！",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c001_oYAA33EQIAgoWw5f1jFNOdHLyicJfAAjDC09A4.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-t3.douyincdn.com/thirdgame/stream-696751057716642619.m3u8?auth_key=1793082357-0-0-7b7ae2a4f44ffb46e7eb4806d8d3a00a&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-08xdJw",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Xo_4STTrBUW3VmE6k5Wwr",
+    "name": "小浩(国服妲己) - 上午档国服妲己宝宝式教学/蹲人站位提升意识/帮粉丝圆梦/期待喜欢",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c000-ce_oYR7flID3AcIjK8jBHRxQTgEGeACLJA9fEAVII.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-f11.douyincdn.com/thirdgame/stream-696751590093095690_hiquhd5.m3u8?expire=1793084157&sign=ea9e45cd59035ffd31e05535af23974d&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-LqYqxg",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "CzticsrjZ7bFAVocHCzBQ",
+    "name": "小美术术 - 每天都会为大家准备精彩的节目噢！！！",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p26.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_b29d19fb12e34eb825f1ae31806d4261.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t11.douyincdn.com/thirdgame/stream-696751868057486139_hiquhd5.m3u8?expire=1793084157&sign=7e1e09c33e5dcad46e1ffd8f6636bd63&arch_hrchy=h1&exp_hrchy=h2&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-dTbylt",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3fZtLGEPMVydmiwFeIywl",
+    "name": "筱扬(王者万象棋) - 白歌三分登场999教学！",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_a8b8133cd542f6ea2b03185aedd2ef21.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-q11.douyincdn.com/thirdgame/stream-696751661502169918_uiquhd5.m3u8?expire=1793084157&sign=e01b96c31f8e7d1fa1d471d62e188925&exp_hrchy=h1&major_anchor_level=common&arch_hrchy=h1&t_id=037-20261020145556B713B42B0C98A4AAC9AB-RR8032",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pawUetYpkko8hgtE0THdg",
+    "name": "亚瑟妹妹(37860场女亚瑟) - 1.8国服打野女亚瑟，纵享丝滑，连胜带粉上百星，亚瑟新改空A无目标穿墙",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_d7122c05bd8843a36b18291db70396a7.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-q11.douyincdn.com/thirdgame/stream-408521422319911742_hiquhd5.m3u8?expire=1793084157&sign=1ed9f3d57882a9a38ee65cd86bc878ce&arch_hrchy=h1&exp_hrchy=h2&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-Fq5KOQ",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "swEkLNL91rEf1ngU89VLS",
+    "name": "阎罗烟（三角洲测评） - 80发仙弹暴力炸金各大店/弹幕选店/",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_3377beeff608ec7698fddd87be201b1c.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-q13.douyincdn.com/thirdgame/stream-696751639826268990_hiquhd5.m3u8?expire=1793084157&sign=bb9e56175d2ff6ba1cabf62f9d865d4f&arch_hrchy=h1&exp_hrchy=h1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-5M0Qes",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "FxxzcAXJ33-bnguayALT5",
+    "name": "叶清清 - 刷到我提醒我喝水",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_30cd0252a9f7ca3c82333e8f65a3d5ad.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-l26.douyincdn.com/third/stream-696750833374855654_uhd5.m3u8?expire=6ae04afd&sign=8a84a49f474a64b9e46a134d9d37563c&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-LB4IXZ",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "2VlgLGgr5EApiBzK9Gmiv",
+    "name": "一茗（王者万象棋） - 在榜国一常小娥教你躺着吃鸡",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_d842ecdaf6d48d46d3e19607038e69de.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t11.douyincdn.com/thirdgame/stream-408520633386533691_uiquhd5.m3u8?expire=1793084157&sign=1a8a94441e546be7228bec7d0c69e5a5&major_anchor_level=common&arch_hrchy=h1&exp_hrchy=h1&t_id=037-20261020145556B713B42B0C98A4AAC9AB-sQvU6U",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4aKO8h_Odo7C0ObKVwSjq",
+    "name": "云屿（万象棋王牌对决） - 钻石狂潮王牌对决",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_2260f71937bf7258768b2553ad997668.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-f11.douyincdn.com/thirdgame/stream-408520910679573258_uiquhd5.m3u8?expire=1793084157&sign=4110ee82ee85be558c7dcbfbfc6a0bd0&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-Ceu84d",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uZQ-BSi6lLCc_cmSLhVkQ",
+    "name": "子龙(地铁逃生) - 我会战神跳你可信。",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c000-ce_oslFAhwRfAEBLqBnAD9qZoCfCEEoFAALKQAI06.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-f11.douyincdn.com/thirdgame/stream-408508100063789834_hiquhd5.m3u8?expire=1793084157&sign=46adddfe02e87a2392fbb8af40db0ad8&major_anchor_level=common&arch_hrchy=w1&exp_hrchy=w1&t_id=037-20261020145556B713B42B0C98A4AAC9AB-hDQ2Me",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "s25S-lARfPOktEYQE7Qk8",
+    "name": "CF70kg - 新赛季小胖勇闯东南西北~",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/mosaic-legacy_319c80007fc950cb0c4ba.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t11.douyincdn.com/thirdgame/stream-696751601769251643.m3u8?expire=1793084158&sign=19e48364f5bc18879e4e78caa31eb461&major_anchor_level=common&arch_hrchy=h1&exp_hrchy=h2&t_id=037-20261020145557D50EECE9C2702073BC50-lB4F9W",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Ouw8yl8KIBBayIbr3uY95",
+    "name": "CF苏墨凰 - 人老实话不多",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c000-ce_oMAVCw6TDIBuMPerAtFAnQ9udCfUpAEEEDwUAT.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-408521479488537420_uiquhd5.m3u8?expire=1793084157&sign=a584f917b23296a2792940985f3d4a2d&exp_hrchy=w1&arch_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-kmIWtg",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5dcmwWUZeGMCg2Z7ZU-tk",
+    "name": "CF正义（中午12点直播） - 新赛季第一天冲北部10",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/douyin-user-image-file_3c98d26cf21807d543ab606fd87e48d5.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-q13.douyincdn.com/thirdgame/stream-120290106637550398_uiquhd5.m3u8?expire=1793084158&sign=2923079f14c4dbb46dbeba9a43036c75&exp_hrchy=h1&arch_hrchy=h1&major_anchor_level=common&t_id=037-20261020145557D50EECE9C2702073BC50-TR3Tcr",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "UfOID8arhgZnhI4iXP7_l",
+    "name": "CF执念 - 负债118.6W.顶级双修.来单秒上猛猛干",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p26.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813c000-ce_owxA8FEf0XDA7Ag4tOAQF9HJf0OAHRQBelIPMY.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-t11.douyincdn.com/thirdgame/stream-120290718941184827_uiquhd5.m3u8?expire=1793084157&sign=36e86dc9ab23a87aa98ba29212a1c21b&arch_hrchy=w1&exp_hrchy=w1&major_anchor_level=common&t_id=037-20261020145556B713B42B0C98A4AAC9AB-Noafjx",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "MBWMBaiI-nM_nh-aSpHXP",
+    "name": "EDG.天荒 - 新赛季第一天五排",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p26.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_29dde8ee76c9afba0eb50c6c27d0e172.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-696751707869152076_uiquhd5.m3u8?expire=1793084157&sign=7b029965aebf33c619dc31f39e0422a1&major_anchor_level=common&arch_hrchy=w1&exp_hrchy=w1&t_id=037-20261020145556B713B42B0C98A4AAC9AB-70QBLZ",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "HoFhzZJUCuu0qcmdpGcW3",
+    "name": "imxiaoxin - 卧薪尝胆",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Douyin Live",
+    "logo": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_e56e3bc34abf364a00496127d929cf98.jpeg?from=3067671334",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pull-hls-f26.douyinliving.com/thirdgame/stream-120290545143382849_hiquhd5.m3u8?expire=6ae04afd&sign=87906fa3a8db8914dd9d6a98a31298c4&arch_hrchy=s2&exp_hrchy=s1&s_anchor=1&major_anchor_level=vip&t_id=037-20261020145556B713B42B0C98A4AAC9AB-dqtx4U",
+        "order": 0
+      }
+    ]
+  }
+]

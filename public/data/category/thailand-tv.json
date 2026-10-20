@@ -1,0 +1,398 @@
+[
+  {
+    "id": "TMykkM4Kv7nmCp9aGVZBM",
+    "name": "13 Siam Thai",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/13%20Siam%20Thai.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.x2.co.th/live/13livetv-th_240p/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WyKqSyLMHMSgXeoP0OPop",
+    "name": "3HD",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/3HD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-us1.thaimomo.com/live-as/ch3hd-3/chunklist_w2078881056.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "aiolLKYEOnCFVLoGQrpTS",
+    "name": "ASTV",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/ASTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://news1.live14.com/stream/news1_hi.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WE1LwMAkFdJw6ZHw-QpnN",
+    "name": "Baan Baan TV 73",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/Baan%20Baan%20TV%2073.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vdo.plathong.net/live8794/live8794/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eRWNzFf9u92Nik6UWjW21",
+    "name": "Boonniyom TV",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/Boonniyom%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.x2.co.th/live/bntv_720p/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Idox2-MQasXTwTBQobicF",
+    "name": "DLTV1",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin01-dltv-01-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "NqC-lX9oLA6J2GMe7xb9V",
+    "name": "DLTV10",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV10.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin02-dltv-10-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "b5RMQ1PhphBv85-qHJL8u",
+    "name": "DLTV11",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV11.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin03-dltv-11-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "jeKDp9hh2Dds0PIUf3zRQ",
+    "name": "DLTV12",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV12.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin03-dltv-12-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QUCxg3Rknexm5MBESx1zy",
+    "name": "DLTV13",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV13.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin03-dltv-13-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tUb_JqSoZ9QsGUY52ZDrX",
+    "name": "DLTV14",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV14.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin03-dltv-14-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ATdpsaJvpbDmgeShQax8s",
+    "name": "DLTV15",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV15.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin03-dltv-15-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "w_YyabCrZ7UjNvNjWyUal",
+    "name": "DLTV2",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin01-dltv-02-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "qjQWI67L4IO8kAeKSGGFA",
+    "name": "DLTV3",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin01-dltv-03-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "aQ7_ILkAKLYSazoTc4NOQ",
+    "name": "DLTV4",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin01-dltv-04-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gyWSuzjsLgSDwraR6EQ1b",
+    "name": "DLTV5",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin01-dltv-05-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "UV-YYx9_7SI9fUuToUfvb",
+    "name": "DLTV6",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV6.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin02-dltv-06-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WhFQn2AOpwvGc6h93vdvm",
+    "name": "DLTV7",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin02-dltv-07-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "MnUWDIg7baD9mvhJqkdkg",
+    "name": "DLTV8",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV8.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin02-dltv-08-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "sNNhmwOsd9AWHzwvrz_BA",
+    "name": "DLTV9",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/DLTV9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-live.dltv.ac.th/smil:origin02-dltv-09-adaptive.smil/chunklist_b3128000_slth.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "B0GsGcSBBvZoqgIJ6acDi",
+    "name": "HalalTV",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/HalalTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vdo.plathong.net/Halaltv/Halaltv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "1i8N8fS7mUF1WbH1iN0Yj",
+    "name": "Thai PBS",
+    "countryCode": "th",
+    "languages": [
+      "Thai"
+    ],
+    "group": "Thailand TV",
+    "logo": "https://epg.112114.xyz/logo/Thai%20PBS.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://thaipbs-live.cdn.byteark.com/live-en/playlist_720p/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

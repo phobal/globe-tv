@@ -1,0 +1,290 @@
+[
+  {
+    "id": "wSj74gcBrFksR6PWA07e8",
+    "name": "20 Minutes TV",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/20%20Minutes%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-20minutestv.digiteka.com/1961167769/tracks-v2a1/mono.ts.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "wLRVYm8sZpcLv2j0zk2f2",
+    "name": "4KURD",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/4KURD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://4kuhls.persiana.live/hls/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "n9Y4AgA46eqI8V2N7rnqh",
+    "name": "4Music",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/4Music.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://musichls.persiana.live/hls/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "1lV2bHlWbXZjAisqq6e90",
+    "name": "Africa 24 sport",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Africa%2024%20sport.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://edge11.vedge.infomaniak.com/livecast/ik:africa24sport/chunklist_w1029070158.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "iYPIFFQdmdM2HcjJRf917",
+    "name": "Africanews",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Africanews.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn-euronews.akamaized.net/live/eds/africanews-en/25049/africanews-en-avc1_360000=3-mp4a_143200_eng=2.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hf1YO3Um7D2qH6VF4m1zR",
+    "name": "BFM2",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/BFM2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d1ib1gsg71oarf.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-scp7wda722jph/6376bd95-b2f3-49d4-93e0-c5ebc7070995/2.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pPBBvUZ1o2dTNT1FkNNqo",
+    "name": "Brionnais TV",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Brionnais%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream2.mandarine.media/brionnaistv/brionnaistv/chunklist_w878872390.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4TCmB6q_do5ttA_zeHFu6",
+    "name": "Caillou",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Caillou.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://do7nccdsswstc.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-1aso0bc668saa/a5233c83-f772-4a81-959a-45ec7877ef61/5.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SR869xULt4jQ42oMe1oxr",
+    "name": "Cine Nanar",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Cine%20Nanar.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://zylo-cinenanar-rakuten.amagi.tv/playlist480p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "lH4_TYD8L0xyvlKfBXFy6",
+    "name": "Cine Western",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Cine%20Western.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg00711-zylofast-cinewestern-rakutenuk/28912167-c6f4-11f1-a738-1e5d993a1039/43/640x360_1020800/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "q8q9-rNBa7fKZbtCDAidD",
+    "name": "DBM TV",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/DBM%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://edge11.vedge.infomaniak.com/livecast/dbmtv/chunklist_w508553870.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "xCU2uaqdnSqUg9do9kWcD",
+    "name": "Emotion L",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Emotion%20L.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/ts-eu-w1-n2/playlist/rakutenAA-zylo-emotional-rakuten/cb543d1f7a6c678784c83d67cef345a1f9b153fc087a8d6933fb4b926bc10f41dcdca99cb31ee4782fff7ace386a350e0332db66bd6c00cfb17fb80d6d274264e7c9e16ba6fa0261abc87e6a6aef2f7904ac754c943a55228ca74b46d468f5312e3bdc24421a7281b402f8662590d351d46639edf89f22602204409e5543e0b023fcadb80110c76da4c41d4c9d3f26b6d4138b8d03bd80d0459f519271f0419991a383d30dd180c767b456b33258157b7cca8234c39f0de5dcc86c38cb277e142c448cccfb51cd32fc256072ba9ae8b76cf112bce64fe34104cbcb1cd2e64aee4ab900a69b23c8287dc3302613adc5567434a9a7d6e27efc2fcf04d38e93b15b7990fa1b7640c364d92c2c72f0af8f7c0ca464cbfa977f326c3a18b98cf548a427aaef90c727bd36c3c6bbab354340640c038f677ffb073c48f077b2c71f2d5d0211e3ca158c8fe9563f6c4addc07de4265bb0eb838cd10b7be5535b0bb05f8c1b0965c7312c51e42eb9b50f2cb16f4aa4252df75d028540d7b138baf18bb0486afb8f9202b744c78127feba42a564375c4294f72f544a053de6eb741e3976cd0ab58b84b437240feefec1fb8f026d2268430a4cb8e3e17189878f7f4d428f02540b1e731eb937a40d8e587655548d74b68d196489035348c7b72f515f16f0c1818988d8cf06d952dccdf4352a7b696bb23d002c0d82efd5b99c85b0a6cc3b861508a825a544ce4adb698cdb54b153/198/426x240_448800/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3zAe7CxixQmLtJ_qVN_I7",
+    "name": "Evandis Gospel TV",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/Evandis%20Gospel%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://evandis.streamakaci.tv/str_evandis_evandis/str_evandis_multi/str_evandis_evandis/str_evandis_evandis_720p/chunks.m3u8?nimblesessionid=14561817",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "k24sW_hkF4BBZoIgiGJ8K",
+    "name": "FashionTV Paris L'Original",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/FashionTV%20Paris%20L'Original.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/video_10801920_p_0.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "xEik-bjblVjGEZp890dLA",
+    "name": "FashionTV Secrets",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/FashionTV%20Secrets.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ssai.aniview.com/api/v1/hls/streams/sessions/328112ab75fe4c1e80a436be2e28aab6/media/manifest.m3u8/2.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SdOU71CY7zXtIxjEbEIEg",
+    "name": "France 24",
+    "countryCode": "fr",
+    "languages": [
+      "French"
+    ],
+    "group": "France TV",
+    "logo": "https://epg.112114.xyz/logo/France%2024.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "gsUcmzK6bF3kaRlUa3ENP",
+    "name": "6",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/6.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pxWSmXsBjoymo6nY0DbpZ",
+    "name": "爱上海",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%88%B1%E4%B8%8A%E6%B5%B7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://bp-resource-dfl.bestv.cn/152/3/video.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "s0mEfvkIsIf7YJPoEamV2",
+    "name": "重庆汽摩",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%87%8D%E5%BA%86%E6%B1%BD%E6%91%A9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://120.76.248.139/live/bfgd/4200000168.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_3ktU1yEuf5SrC69YmOES",
+    "name": "德化",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%BE%B7%E5%8C%96.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://play.cmptp.fjgdwl.com/live/63a563ec75764af588f3215b0afa2588.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QBbJfbMxz3SVZOP1uz5EW",
+    "name": "点掌财经",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%82%B9%E6%8E%8C%E8%B4%A2%E7%BB%8F.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://volcanopull.aniu.tv/live/aniu2/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "UvlCUv9Z3OBJYTBlJL7lG",
+    "name": "河北4K",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B2%B3%E5%8C%974K.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://event.pull.hebtv.com:443/live/live101.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cjpBRXafeD1XoK7eZ89lH",
+    "name": "黑龙江都市频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E9%83%BD%E5%B8%82%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://idclive.hljtv.com:4430/live/dushi_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "lL-2Ef_lR3MLyUfNecwzZ",
+    "name": "黑龙江农业科教频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%86%9C%E4%B8%9A%E7%A7%91%E6%95%99%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://idclive.hljtv.com:4430/live/hljgg_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7SO8Y-xngLG0jiql_rnPw",
+    "name": "黑龙江少儿频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%B0%91%E5%84%BF%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://idclive.hljtv.com:4430/live/hljse_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "vspVGZIpQAK0JoQUjHmP0",
+    "name": "黑龙江文体频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E6%96%87%E4%BD%93%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://idclive.hljtv.com:4430/live/hljwy_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QrHrasINcT0nrpF2isJ8z",
+    "name": "黑龙江新闻法治频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E6%96%B0%E9%97%BB%E6%B3%95%E6%B2%BB%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://idclive.hljtv.com:4430/live/hljxw_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rVS2E6-4848cVfmGOr00z",
+    "name": "黑龙江影视频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%BD%B1%E8%A7%86%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://idclive.hljtv.com:4430/live/hljys_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hsFS0HzpO4_8mSSz0Mdpd",
+    "name": "壶关电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%A3%B6%E5%85%B3%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8?zshanxd",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mdPhe_PvfSkn1dpcNUMCW",
+    "name": "湖南爱晚",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E7%88%B1%E6%99%9A.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNGGMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "W9mDnHYkdSK-eEfpBqOoH",
+    "name": "湖南电视剧",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E7%94%B5%E8%A7%86%E5%89%A7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNDSJMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Ll4GNeZnJMYbt1F7wtNCS",
+    "name": "湖南电影",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E7%94%B5%E5%BD%B1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNDYMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "r96nFgy8_PD9djpkinx82",
+    "name": "湖南都市",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E9%83%BD%E5%B8%82.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNDSMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eBmrm16saLotAXHnEOONE",
+    "name": "湖南国际",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E5%9B%BD%E9%99%85.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNGJMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pDsc3Cfz5nfC7le8jw7hg",
+    "name": "湖南经视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E7%BB%8F%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNJSMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "R1LOGCqhViog9vJZ_dUce",
+    "name": "湖南快乐购",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E5%BF%AB%E4%B9%90%E8%B4%AD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/KLGMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "RHofO7UPnoPnu8GT7b2aH",
+    "name": "湖南娱乐",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E5%A8%B1%E4%B9%90.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNYLMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "b1vuddlRFuvldx3-JXsE1",
+    "name": "黄河",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%84%E6%B2%B3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://113.26.251.182:8009/hls/24/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rzwFod19fbplDqzZg4wuU",
+    "name": "吉林纪录片轮播",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%90%89%E6%9E%97%E7%BA%AA%E5%BD%95%E7%89%87%E8%BD%AE%E6%92%AD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://lsfb.avap.jilintv.cn/zqvk7vpj/channel/da805d8d77a24db8aaa62328eb6d874e/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pzig_DrWbPNjNeQHykq3G",
+    "name": "金山电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%87%91%E5%B1%B1%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://pili-live-hls.wdit.com.cn/wditlive/8818dfe5f4df45ba9a3f32964d172fb2b6d3.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "w5R1v44SeIdO8rglD4W_7",
+    "name": "金鹰纪实",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/JYJSMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zbfxOahL8Qb35WUOV_GWk",
+    "name": "金鹰卡通",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/JYKTMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "2HgijLHayomli1N6sLYvS",
+    "name": "晋江电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%99%8B%E6%B1%9F%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.ijjnews.com/jjtv/sd/live.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nbowkLgjS2P6LhwsWnnpD",
+    "name": "看东方4K",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%9C%8B%E4%B8%9C%E6%96%B94K.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://bp-resource-dfl.bestv.cn/148/3/video.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "GobpYpQIdOQU-KLKRol1T",
+    "name": "快乐垂钓",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/KLCDMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tsam0r4ga9oTYKjwhoq9Z",
+    "name": "拉萨藏语综合频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%8B%89%E8%90%A8%E8%97%8F%E8%AF%AD%E7%BB%BC%E5%90%88%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvfile.lasatv.cn/nmip-media/channellive/channel104335/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "0wlD1akTfTzJnFd1LCgy_",
+    "name": "拉萨文化旅游频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%8B%89%E8%90%A8%E6%96%87%E5%8C%96%E6%97%85%E6%B8%B8%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvfile.lasatv.cn/nmip-media/channellive/channel103157/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "0pzSfYC3ei-kg8wn6T9ZL",
+    "name": "拉萨综合频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%8B%89%E8%90%A8%E7%BB%BC%E5%90%88%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvfile.lasatv.cn/nmip-media/channellive/channel101894/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "huIN06GesHY0bKzg5jBb9",
+    "name": "南国都市4K",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E5%9B%BD%E9%83%BD%E5%B8%824K.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=140110ae3d6c936a77f94c4f4d85b0d3&txTime=18d57929bd4",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "q073JCruCzEsOnj7AyhlM",
+    "name": "南京18生活",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E4%BA%AC18%E7%94%9F%E6%B4%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive.nbs.cn/hls/1173a815-bfdb-4c3c-9f73-89ec37ae7716/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ip7UK95iKJZiULCLb4uEI",
+    "name": "南京教育科技",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E4%BA%AC%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive.nbs.cn/hls/75b3c462-b831-4de7-a34b-5d3221db2069/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "yHfskI1rp3uP05f0ntNUA",
+    "name": "南京文旅记录",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E4%BA%AC%E6%96%87%E6%97%85%E8%AE%B0%E5%BD%95.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive.nbs.cn/hls/9b2005c4-046c-422f-ba45-e6adc4f4de07/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "97vwriRI08f1ZUmZ5lUEp",
+    "name": "南宁文旅",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E5%AE%81%E6%96%87%E6%97%85.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://hls.nntv.cn/nnlive/WLSH_24.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "u5-9Xc0RWAdRsKfryrjIi",
+    "name": "南宁影视娱乐",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E5%AE%81%E5%BD%B1%E8%A7%86%E5%A8%B1%E4%B9%90.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://hls.nntv.cn/nnlive/YSYL_244.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ghQJK7prUL3Dpk3oG1K8v",
+    "name": "宁夏公共频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%AE%81%E5%A4%8F%E5%85%AC%E5%85%B1%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hls.nxhhy.cn/live/nxgg1M.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "yNEhQ-bINoPJXtGWHwXtU",
+    "name": "宁夏文旅",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%AE%81%E5%A4%8F%E6%96%87%E6%97%85.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hls.nxhhy.cn/live/nxwl1M.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cmk0Gbfyl_zjg9NYe-dEG",
+    "name": "钱江",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%92%B1%E6%B1%9F.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QOnEkVQRXIpvngd8JLs_T",
+    "name": "青田电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%9D%92%E7%94%B0%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://l.cztvcloud.com/channels/lantian/SXqingtian1/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8fw_r4qjsKyLjaUa1lLOB",
+    "name": "三农",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%89%E5%86%9C.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://tv.pull.hebtv.com/jishi/nongminpindao.m3u8?t=1893427200&k=f07ae1d5be12d118d136be90e032bfce",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "suYKZTmTVk9aVxgV5O3UR",
+    "name": "上海教育电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%8A%E6%B5%B7%E6%95%99%E8%82%B2%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://tencent-live.setv.sh.cn/live/programme_setvweb.m3u8?txSecret=fd19aacaed289e44e3f6d8baa5485a41&txTime=82DF98A7",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "j43oVHIs5F1wu0j30-A1K",
+    "name": "上海新纪实",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%8A%E6%B5%B7%E6%96%B0%E7%BA%AA%E5%AE%9E.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://bp-resource-dfl.bestv.cn/155/3/video.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SDHGAfBvpJH1EECeISm0Z",
+    "name": "苏州4K",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E8%8B%8F%E5%B7%9E4K.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-auth.51kandianshi.com/szgd/csztv4k_hd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "TS1R-V_iRH8eKtdazLsf1",
+    "name": "苏州娱乐",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E8%8B%8F%E5%B7%9E%E5%A8%B1%E4%B9%90.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-auth.51kandianshi.com/szgd/csztv4.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8J5QEgmq23ROM4F3hhsyt",
+    "name": "天祝",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%A4%A9%E7%A5%9D.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://play.kankanlive.com/live/1656487214793905.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pfkIyEB2TEB2VAkM2kwuy",
+    "name": "文化旅游",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%96%87%E5%8C%96%E6%97%85%E6%B8%B8.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.0593tv.cn/live/d1znvar7tabf.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pxjoTovFXGGR_E96qv5lW",
+    "name": "文化影视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%96%87%E5%8C%96%E5%BD%B1%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8?zzhed",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uqOKosoI5V2bUjdRJEh1N",
+    "name": "萧山电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E8%90%A7%E5%B1%B1%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "RgFQscMuyRZ6F_UlJr6ik",
+    "name": "延津电视台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%BB%B6%E6%B4%A5%E7%94%B5%E8%A7%86%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://tvpull.dxhmt.cn:9081/tv/10726-1.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-xO6GIukbEclTF8r9vwpa",
+    "name": "云",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BA%91.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://l.cztvcloud.com/channels/lantian/SXyunhe1/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "myjrzZSG7n4F-wQFzeipL",
+    "name": "长沙新闻",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%95%BF%E6%B2%99%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/CSXWMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "APpqzNAUJNYrOufvZmss6",
+    "name": "长沙政法",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%95%BF%E6%B2%99%E6%94%BF%E6%B3%95.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/CSZFMPP360.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ntCVnVD5LNfKqKwbOuXD7",
+    "name": "之江记录",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B9%8B%E6%B1%9F%E8%AE%B0%E5%BD%95.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Lr6MBfWyuQqBx-sU6jxIR",
+    "name": "JC乡村频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/JC%E4%B9%A1%E6%9D%91%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://live.jinchuanrmt.com:90/live/jcxc.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8IEp5P89UJdjloq2Oswdp",
+    "name": "JCTV",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/JCTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://live.jinchuanrmt.com:90/live/zhxw.m3u8?zsicd",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WMJy_gvkjVIi-j6qIepMt",
+    "name": "LQTV",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/LQTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://l.cztvcloud.com/channels/lantian/SXlongquan1/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "EBywvgsHbXh-oxH3SEGFS",
+    "name": "SSTV",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/SSTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-new.chinashishi.net/SSTV/sd/live.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eHaOTKznZMuadrSPmVDKS",
+    "name": "SYTV",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/SYTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hCJVXM0OYMb84FYGaxsXo",
+    "name": "YBTV-1",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/YBTV-1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://srs.iybtv.cn/video/YBTV11/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "RfsZCLMxzmueb5MvPUuFg",
+    "name": "YBTV-2",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/YBTV-2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://srs.iybtv.cn/video/YBTV21/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "iFiwCtr7OOGmEr00E-HSJ",
+    "name": "Z农村频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Local TV",
+    "logo": "https://epg.112114.xyz/logo/Z%E5%86%9C%E6%9D%91%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://zbbf2.ahbztv.com/live/418.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

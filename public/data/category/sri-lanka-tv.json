@@ -1,0 +1,78 @@
+[
+  {
+    "id": "7wdXWjI9mexHvnikdNtgi",
+    "name": "HiruTV",
+    "countryCode": "lk",
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "group": "Sri Lanka TV",
+    "logo": "https://epg.112114.xyz/logo/HiruTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tv.hiruhost.com:1936/8012/8012/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "jndXfvJFX_TPzCwQHPKg8",
+    "name": "Mon Tamil TV",
+    "countryCode": "lk",
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "group": "Sri Lanka TV",
+    "logo": "https://epg.112114.xyz/logo/Mon%20Tamil%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://198.144.149.206:8080/MONTAMIL_CINEMA/index.m3u8?token=GTR",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-bPj-Khzc9RRhizDXpyRE",
+    "name": "Shakthi TV",
+    "countryCode": "lk",
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "group": "Sri Lanka TV",
+    "logo": "https://epg.112114.xyz/logo/Shakthi%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mumbai-edge.smartplaytv.in/ShakthiTV/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eKLleoZ2f-7pzu2zY4Q42",
+    "name": "Verbum TV",
+    "countryCode": "lk",
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "group": "Sri Lanka TV",
+    "logo": "https://epg.112114.xyz/logo/Verbum%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://video-eu1.streamerr.co/hls/scb80244b91/live.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

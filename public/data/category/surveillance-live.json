@@ -1,0 +1,362 @@
+[
+  {
+    "id": "FSzGLBacPC6_KqwsuUSYb",
+    "name": "北极阁",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E5%8C%97%E6%9E%81%E9%98%81.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/157b42cc-93a7-42aa-89e7-0a07452ad4c3/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "u38d3Cc6YZRFzFaXqNRtt",
+    "name": "北外滩",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E5%8C%97%E5%A4%96%E6%BB%A9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tftp6graunmttghanhctofa3uymmcpf5gkmmzqczgs45upiu1ha5xpw.100ycdn.com/live-ws.kksmg.com/live/webcam1/playlist.m3u8?wsSession=3ccfdb4284eaea73bb7cab60-177204275008725&wsIPSercert=832abf7ce82ccc02b32b56b105f24835&wsBindIP=2&wsserid=1168218612390266553",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nThGFSdrw9NeqNB7IEkZc",
+    "name": "第一现场_山海之美",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E7%AC%AC%E4%B8%80%E7%8E%B0%E5%9C%BA_%E5%B1%B1%E6%B5%B7%E4%B9%8B%E7%BE%8E.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livepull-tcyzb.sztv.com.cn/live/YSZ_SHZM.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7lJYb8F6YjudZR3xBC35h",
+    "name": "鼓楼广场",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E9%BC%93%E6%A5%BC%E5%B9%BF%E5%9C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/82df63bc-e231-4b84-a277-30f603dd44ca/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "deloCtbfEZ4DLM5X2Is4P",
+    "name": "陆家嘴",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E9%99%86%E5%AE%B6%E5%98%B4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tftp4ge3drmt1go5nhcju8yzdrptpptwzc3jpq731h45mqpssqmudp7so.100ycdn.com/live-ws.kksmg.com/live/sdi5/playlist.m3u8?wsSession=8a15d23fe661e20e47cce670-177203770982085&wsIPSercert=832abf7ce82ccc02b32b56b105f24835&wsBindIP=2&wsserid=1168187559701054860",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nb2nzmiGC7Id1BY1zulRZ",
+    "name": "魔都眼",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E9%AD%94%E9%83%BD%E7%9C%BC.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tftp0gaa1hcjagozdcmttgyan45djq311475uf3issh5pchzgg55p.100ycdn.com/live-ws.kksmg.com/live/sdi6/playlist.m3u8?wsSession=5b0157b25e26fa5fbe3ebedf-177204125960201&wsIPSercert=832abf7ce82ccc02b32b56b105f24835&wsBindIP=2&wsserid=1168218615997031039",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Vcb-S8sntGRVhgu0MvKDR",
+    "name": "南京南站",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E4%BA%AC%E5%8D%97%E7%AB%99.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/ed208474-9d66-48d1-adfe-55f0d783915c/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "NK8ieClY5YMHNuJKJGFB2",
+    "name": "南京眼",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%97%E4%BA%AC%E7%9C%BC.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/2496cb32-fa2a-469b-bfd7-2d1991d671d5/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "D8_iSQ0ywMiTfkamwaL-i",
+    "name": "澎湃景区",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E6%BE%8E%E6%B9%83%E6%99%AF%E5%8C%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://play-a2.quklive.com/live/1765245429980053.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "6MlSxsm7cPS5F-zLDbnlp",
+    "name": "三汊河",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%89%E6%B1%8A%E6%B2%B3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/e01482be-9a78-4c14-a76a-250f733fd993/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "yWV5rQv5hqt6EGOWnessg",
+    "name": "上海G1503东大道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%8A%E6%B5%B7G1503%E4%B8%9C%E5%A4%A7%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rvsh.jtw.sh.gov.cn/live/200120a4-3d7c-4a7d-82dc-71fdfef3e045_sub/index.m3u8?t=1902119605&k=2c3e3086e3191872",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3lbPUJ31PrJIWrKFWL9BK",
+    "name": "石臼湖",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E7%9F%B3%E8%87%BC%E6%B9%96.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive1.nbs.cn/hls/2a317dc5-f482-48ce-8bad-20a0b33926a3/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gsCNoKEiUWloumSNjc3FL",
+    "name": "石象路",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E7%9F%B3%E8%B1%A1%E8%B7%AF.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://yunlive.nbs.cn/live/mzb_sxl_1/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XWPs52mCSxq2ZwBInVYVP",
+    "name": "外滩观光平台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E5%A4%96%E6%BB%A9%E8%A7%82%E5%85%89%E5%B9%B3%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tftp1go3nhqbtfa3d1mtugessa4mscwszqh3qppizg5m8f3ts65e.100ycdn.com/live-ws.kksmg.com/live/sdi4/playlist.m3u8?wsSession=e18328672261b2e3fcadcc17-177204266364389&wsIPSercert=832abf7ce82ccc02b32b56b105f24835&wsBindIP=2&wsserid=1168276898037564649",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "TR1pJE0oG7ENvlonaLzTc",
+    "name": "五马渡",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E4%BA%94%E9%A9%AC%E6%B8%A1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive1.nbs.cn/hls/019fe26e-5595-4330-a3be-df72d5e01e6b/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "kFuSH9bGZoBwagZMA1yb9",
+    "name": "新庄立交",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E6%96%B0%E5%BA%84%E7%AB%8B%E4%BA%A4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/e75a4b63-c05f-49c1-9d53-9c24c09107de/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "glGLtLvLCBkUl3EYzWQ-G",
+    "name": "音乐台",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E9%9F%B3%E4%B9%90%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive1.nbs.cn/hls/3c38d3ba-ee74-4b93-933c-da8e1e5418fa/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-BTSjFhxQ3DKFk3Fs2TU8",
+    "name": "鱼嘴",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E9%B1%BC%E5%98%B4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/509207c4-e2b1-43f0-b8f0-f04d0f584ed8/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zYnjRTFAEZQsCfOIw5tt3",
+    "name": "长江大桥",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E9%95%BF%E6%B1%9F%E5%A4%A7%E6%A1%A5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/292e69b9-9ca1-4908-bba0-32438dd7c464/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "VDjEIfrj60UrCIEVsYr87",
+    "name": "紫金山",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Surveillance Live",
+    "logo": "https://epg.112114.xyz/logo/%E7%B4%AB%E9%87%91%E5%B1%B1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nklive2.nbs.cn/hls/aff6d607-073a-4b4b-ab42-2f65f2b9ac4c/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

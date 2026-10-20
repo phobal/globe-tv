@@ -1,0 +1,434 @@
+[
+  {
+    "id": "FvEQVPm6s9WTeB1D7yxok",
+    "name": "东森新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%9C%E6%A3%AE%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/EBCNews/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Lb69oytwoMaGk2G-UEvS8",
+    "name": "凤凰中文",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%87%A4%E5%87%B0%E4%B8%AD%E6%96%87.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://zmgd.zyrnet.com:8888/hls/110/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tlqdImfrJMKVv9ZmWSqKN",
+    "name": "凤凰资讯",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%87%A4%E5%87%B0%E8%B5%84%E8%AE%AF.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://zmgd.zyrnet.com:8888/hls/109/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Q1zwjHvZ8yr-FC6qqPOyD",
+    "name": "鳳凰香港臺",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%B3%B3%E5%87%B0%E9%A6%99%E6%B8%AF%E8%87%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://173.208.234.146/live/fhxg.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "z4V1miGhcnyy2EfDOpv7o",
+    "name": "鳳凰中文臺",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%B3%B3%E5%87%B0%E4%B8%AD%E6%96%87%E8%87%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://173.208.234.146/live/fhzw.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Z4zlZmwHsdpakQ0suoXTe",
+    "name": "鳳凰資訊臺",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%B3%B3%E5%87%B0%E8%B3%87%E8%A8%8A%E8%87%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://173.208.234.146/live/fhzx.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "s3E4WeY8gyFmKIT44O6fW",
+    "name": "好消息综合台",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%A5%BD%E6%B6%88%E6%81%AF%E7%BB%BC%E5%90%88%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dqhxk7sbp7xog.cloudfront.net/hls-live/goodtv/_definst_/liveevent/live-ch1-2.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uZifhthkzDYSxl7qJSJp-",
+    "name": "华视新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8D%8E%E8%A7%86%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/ctsnewsqt/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "NVCuNv2PrWLtJG8tb-B6C",
+    "name": "民视新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B0%91%E8%A7%86%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/ftvnewsqt/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rCgH9ICW1s_nBclAAKjI1",
+    "name": "人间卫视",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BA%BA%E9%97%B4%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "70Pi3ER0eqBCZsdL9EnDL",
+    "name": "三立新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%89%E7%AB%8B%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/iNEWS/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "VigN8NY0LkgKRk2sjG-WY",
+    "name": "唯心電視",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%94%AF%E5%BF%83%E9%9B%BB%E8%A6%96.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ujmQr7KQZg5Ks4KnEM-1C",
+    "name": "纬来体育",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%BA%AC%E6%9D%A5%E4%BD%93%E8%82%B2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hlsz.yjjcfw.com/live/vl.m3u8?expire=1786948372&sign=2e4a56b89fe644db147552011f972714",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bNIhGvOKq0su0cN6QX8KT",
+    "name": "耀才财经",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E8%80%80%E6%89%8D%E8%B4%A2%E7%BB%8F.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://v3.mediacast.hk/webcast/bshdlive-pc/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uhR2FBaGnCsVjQrpC5N_s",
+    "name": "中视新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%AD%E8%A7%86%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/ctvnewsqt/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Pbn551k3T7_Pxmlk-5gAa",
+    "name": "中天新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%AD%E5%A4%A9%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/CtiNEWS1/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "t6f5TK9wndtnCahtxIPKz",
+    "name": "CGN中文台",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/CGN%E4%B8%AD%E6%96%87%E5%8F%B0.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "EPcgHqB7bUm62GFL7k6F9",
+    "name": "Dali TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/Dali%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://www.dalitv.com.tw:4568/live/dali/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "2PYU0IEKwu1H75VF8g7yK",
+    "name": "LIVE三立",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/LIVE%E4%B8%89%E7%AB%8B.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/setnewsrtmp/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zEXTJIuOrb5grKFd3Tvt0",
+    "name": "Now新聞臺",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/Now%E6%96%B0%E8%81%9E%E8%87%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://173.208.234.146/live/nowxw.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zP2q6YCxWmB2lHCbmiauz",
+    "name": "Pet Club TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/Pet%20Club%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://petclub-samsungaus.amagi.tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "A4j0EmibHsCSlWthz5b8R",
+    "name": "TITV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/TITV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "2k-mWMnckouv02ibDhbXx",
+    "name": "TVBS Asia",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/TVBS%20Asia.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://38.64.72.148/hls/modn/list/4005/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BnkDlucObf-ft55-mRP4M",
+    "name": "TVBS新闻",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Hong Kong / Macau / Taiwan TV",
+    "logo": "https://epg.112114.xyz/logo/TVBS%E6%96%B0%E9%97%BB.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/tvbsnewsqt/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

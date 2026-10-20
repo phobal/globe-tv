@@ -1,0 +1,560 @@
+[
+  {
+    "id": "ZmbgQzQa6cjNMzkgAYc4M",
+    "name": "A sports",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/A%20sports.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8?e=1784102512&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=968935df4fd0678de5d7fe392c0610d9",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7RlL6Pzd80IZWDuOSewg6",
+    "name": "ACI Sport TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/ACI%20Sport%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "JiAtT2DgS0E5Fv9ReJL0j",
+    "name": "Africa 24 Sport",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Africa%2024%20Sport.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "O6Xf4WraxiCF825K1wwqT",
+    "name": "Arryadia",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Arryadia.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://149.100.11.252:8000/play/a065/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "f83bsN1VmACKQlyynSdmR",
+    "name": "Bahrain Sports 1",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Bahrain%20Sports%201.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "DSGAcRjDiJJPEst1b_loj",
+    "name": "Bein Sports Extra 2",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Bein%20Sports%20Extra%202.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hmJGlISy429yxAlWWmC_F",
+    "name": "BEK TV Sports West",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/BEK%20TV%20Sports%20West.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn3.wowza.com/5/ZWQ1K2NYTmpFbGsr/BEK-WOWZA-1/smil:BEKPRIMEW.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BNszxx23fTHdiRgGyb4N9",
+    "name": "Belarus-5",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Belarus-5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://178.124.179.122:8080/BT5/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uYGYoioujJkrAhwNp3mvj",
+    "name": "Cricket Gold",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Cricket%20Gold.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/M2W2UR49dmeKbZnmdRzN/index.m3u8?e=1784102529&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ae32567acc583949116a1ea5f4410044",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "f-PD_9d_q5SSuLLchQ3fY",
+    "name": "FIFA+",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/FIFA%2B.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Q_mqnnppz3x19NC5mdkyF",
+    "name": "Goal TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Goal%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "udpSd2lf5YHSTIBF1x5MN",
+    "name": "Horse & Country",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Horse%20%26%20Country.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "aW-laQgTEhhCQ0J9Jmokq",
+    "name": "KTV Sport Plus",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/KTV%20Sport%20Plus.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "vYkE4xiUWQMo9iJwvRqdY",
+    "name": "Marquee Sports Network",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Marquee%20Sports%20Network.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8?e=1784102523&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=93bce8c31c0b8ab66f85c4aa716baae0",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3Duyl3yZ67Pf1dkNkStEC",
+    "name": "More Then Sports TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/More%20Then%20Sports%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "TBQk4r8b12OCK5ALd0ToO",
+    "name": "MTRSPT",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/MTRSPT.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "OfyN-z4n8rtA06IIvKv_c",
+    "name": "NBC Sports",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/NBC%20Sports.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://xumo-xumoent-vc-122-sjv70.fast.nbcuni.com/live/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "04hxR2IF9sB0VaGitq7aG",
+    "name": "NHL FAST",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/NHL%20FAST.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nhl-firetv.amagi.tv/playlist1080p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "LDn0JNt1XVhVz0sxbrLen",
+    "name": "Oman Sports TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Oman%20Sports%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "vtm1Vug9VujVHhSl2_don",
+    "name": "Red Bull TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Red%20Bull%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Ss2pR8lOViGATGcILL7dq",
+    "name": "RMTV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/RMTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "6PMmz4M9fEPUnsNyho0qL",
+    "name": "Sony Sports 2 HD",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Sony%20Sports%202%20HD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/chunks.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "YkkBVwIvTBwJgrIQJLRF-",
+    "name": "Sports First TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Sports%20First%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d4ddgdmj1cvnm.cloudfront.net/scheduler/scheduleMaster/409.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "AA-dNo4tuAZzf4eQfDh0s",
+    "name": "Sports Fishing TV",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Sports%20Fishing%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "s5qYAqsw7VhJWf8XiePWm",
+    "name": "Sports Grid",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Sports%20Grid.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/SportsGrid/index.m3u8?e=1784102516&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=805223f37eb8e43994f002e68e736eea",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "qKVBgE7a3n8lUxDv8bpCU",
+    "name": "Star Sports 1 Hindi HD",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Star%20Sports%201%20Hindi%20HD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_oIqdq-_J_XK7kgYu4yzJ",
+    "name": "Talk Sport",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Talk%20Sport.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvsen6.aynaott.com/talkSPORT/index.m3u8?e=1784102522&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=a3506be66a1595e3d3572c6fc3547dc7",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "q_1H-6QzZsZ9uLr0nbA_F",
+    "name": "Trace Sport",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Trace%20Sport.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "dMG1qzKmhpE_qdAI3VXxu",
+    "name": "Turkmenistan Sport",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Turkmenistan%20Sport.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://217.174.225.146/hls/ch004_720/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ONS7Wx0TOEUbznfWYSBT_",
+    "name": "WOF 1",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/WOF%201.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "jhLVkxD9ehPq9JTGdxGDP",
+    "name": "Xtrem Sports",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Sports Live",
+    "logo": "https://epg.112114.xyz/logo/Xtrem%20Sports.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

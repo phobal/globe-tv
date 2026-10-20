@@ -1,0 +1,236 @@
+[
+  {
+    "id": "PW2Lu8p8mb2bIfjPotFFJ",
+    "name": "俄罗斯金砖TV",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AF%E9%87%91%E7%A0%96TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://chibrics.mediacdn.ru/cdn/brics/chinese/tracks-v1a1/mono.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "yG3lCTNhSkYYWC4EEZHD0",
+    "name": "俄罗斯Astrakhan 24 (Opt-2)",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFAstrakhan%2024%20(Opt-2).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://streaming.astrakhan.ru/astrakhan24/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "fpenoTeYwJz0k6kDckscU",
+    "name": "俄罗斯camapa",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFcamapa.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://live.guberniatv.cdnvideo.ru/guberniatv/guberniatv.sdp/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "qTg-lNWt4OZJ-rDKVtsbb",
+    "name": "俄罗斯GITV",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFGITV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://hls-igi.cdnvideo.ru/igi/igi_hq/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "i0P1PyIhxXPFoPS8S4cK4",
+    "name": "俄罗斯RBC (Opt-1)",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFRBC%20(Opt-1).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://92.50.128.180/utv/1358/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bpOWRgTSL9oSAF-mfJZjK",
+    "name": "俄罗斯RBC (Opt-2)",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFRBC%20(Opt-2).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://online.video.rbc.ru/online/rbctv_480p/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gHEY9sSTtxLhrMVpbia6D",
+    "name": "俄罗斯RBC (Opt-3)",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFRBC%20(Opt-3).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://online.video.rbc.ru/online/rbctv_576p/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-H4u3VkQAR0uegYD6tRA7",
+    "name": "俄罗斯RT",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFRT.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rt-glb.rttv.com/dvr/rtnews/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "CIPl6QNTDb5uE2u95av74",
+    "name": "俄罗斯Russia Today",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFRussia%20Today.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rt-glb.rttv.com/live/rtnews/playlist_4500Kb.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "PAjcHtXTTNMHiCk7MtiLH",
+    "name": "俄罗斯Shanson TV (Opt-1)",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFShanson%20TV%20(Opt-1).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://hls.shansontv.cdnvideo.ru/shansontv/smil:shansontv.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hpXx0bsmp0nme5Hj2CUd2",
+    "name": "俄罗斯Shanson TV (Opt-2)",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFShanson%20TV%20(Opt-2).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://chanson-video.hostingradio.ru:8080/hls/chansonabr/live.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "9TvzVtreJr_6C69I4NTaB",
+    "name": "俄罗斯TRO Soyuz",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BF%84%E7%BD%97%E6%96%AFTRO%20Soyuz.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://live2.mediacdn.ru/sr1/tro/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "xrQCVWcoqXpkifhXJwxog",
+    "name": "France 24",
+    "countryCode": "ru",
+    "languages": [
+      "Russian"
+    ],
+    "group": "Russia TV",
+    "logo": "https://epg.112114.xyz/logo/France%2024.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg00106-france24-france24-samsunguk-qvpp8.amagi.tv/playlist/amg00106-france24-france24-samsunguk/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

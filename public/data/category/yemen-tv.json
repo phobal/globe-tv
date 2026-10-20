@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fMhX8-N_sX9MsqTqHEWjG",
+    "name": "Al Masirah Mubacher",
+    "countryCode": "ye",
+    "languages": [
+      "Arabic"
+    ],
+    "group": "Yemen TV",
+    "logo": "https://epg.112114.xyz/logo/Al%20Masirah%20Mubacher.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live2.cdnbridge.tv/AlmasirahMubasher/Mubasher_All/MubasherLive/Mubasher_720p/chunks.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_10ywA3RRm-FA6rwwAvZL",
+    "name": "Al-Sahat TV",
+    "countryCode": "ye",
+    "languages": [
+      "Arabic"
+    ],
+    "group": "Yemen TV",
+    "logo": "https://epg.112114.xyz/logo/Al-Sahat%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://assahat.b-cdn.net/Assahat/assahatobs/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "C9weGGl76nuvWzZk84xLo",
+    "name": "cloudflare",
+    "countryCode": "",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Cloudflare Live",
+    "logo": "https://epg.112114.xyz/logo/cloudflare.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cloudflare.tv/hls/live.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

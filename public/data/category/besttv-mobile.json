@@ -1,0 +1,182 @@
+[
+  {
+    "id": "FcIy2LQ1T6D9Q1_CR9lTR",
+    "name": "百视通1",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000002898&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "A748DY6eYeSGrgt7u2dLG",
+    "name": "百视通10",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A10.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000017342&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Mpexh_uVi297C0qHQrWd0",
+    "name": "百视通2",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000004876&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mF7qcGcvD2z-CdfgqrBdc",
+    "name": "百视通3",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000006777&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SPTRS4pKRucMhTLLKFutd",
+    "name": "百视通4",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000018009&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "f3uZqbCHVjKSDyoRM5LAr",
+    "name": "百视通5",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000019233&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "PMe0NXGLXbfyQSj3DLyRc",
+    "name": "百视通6",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A6.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000022620&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "z65T64TjZVMaWUv4LkYs_",
+    "name": "百视通7",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000023256&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XYbEv2znzt26iKk24uree",
+    "name": "百视通8",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A8.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000026930&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WPOvpiKB181bUAQhvbtJ-",
+    "name": "百视通9",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "BestTV (Mobile)",
+    "logo": "https://epg.112114.xyz/logo/%E7%99%BE%E8%A7%86%E9%80%9A9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000001000001116&livemode=1&stbId=yu&mode=1&$4M",
+        "order": 0
+      }
+    ]
+  }
+]

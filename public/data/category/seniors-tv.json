@@ -1,0 +1,92 @@
+[
+  {
+    "id": "Tje91P_GjzGMLn4pQqNHG",
+    "name": "点掌财经",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Seniors TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%82%B9%E6%8E%8C%E8%B4%A2%E7%BB%8F.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://volcanopull.aniu.tv/live/aniu2/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "--elqMUju0ICrmzrDq5Uy",
+    "name": "河南曲艺",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Seniors TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B2%B3%E5%8D%97%E6%9B%B2%E8%89%BA.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dxtx.hntv.tv/live/jczy.m3u8?txSecret=e785008e49564e5e738439b4dd2ae68e&txTime=7C4C6207&wsSecret=6f6b8b9a1922615c71ca23ed49ac3b65&wsTime=1791193106",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_Fmzc_czw6FtCDlq5C7P3",
+    "name": "梨园频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Seniors TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%A2%A8%E5%9B%AD%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dxtx.hntv.tv/live/lypd.m3u8?txSecret=10c771842a0be59e8b575d765173ec96&txTime=7B923E0A&wsSecret=ebea42451370372b34e6343654e5d4d6&wsTime=1791193106",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zGOwjnpV2_NBHPnbrl4od",
+    "name": "文物宝库",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Seniors TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%96%87%E7%89%A9%E5%AE%9D%E5%BA%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dxtx.hntv.tv/live/wwbk.m3u8?txSecret=317b89626134fd6bea6e129455b5ff18&txTime=7C4C635C&wsSecret=6922e4aa61479359bf7dcda431f5cf5a&wsTime=1791193106",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bFos6k6IOo7fxKtNiiCh8",
+    "name": "戏剧影视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "Seniors TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%88%8F%E5%89%A7%E5%BD%B1%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://xatv-yt.xiancity.cn/live/4/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "_MPB-k9zOs2iTZR-EeIIU",
+    "name": "HT SPOR",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/HT%20SPOR.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/ht-spor/ht-spor_1080p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4kBWr9sO_hDTuY3guUSUQ",
+    "name": "MELTEM TV",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/MELTEM%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8Ig_fPIz-Kkf6svpo3b7Q",
+    "name": "Number One",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Number%20One.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hNODqtQw7nCyww4nE6lzk",
+    "name": "Number One Ask",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Number%20One%20Ask.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "t6u2HK9QrqB9QnQRybgVv",
+    "name": "Number One Damar",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Number%20One%20Damar.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pXJQzyfCRTsVwTKwTR32w",
+    "name": "Number One Turk",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Number%20One%20Turk.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Yq4A-Nv1IyYQ_HxA1C8MY",
+    "name": "Power",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Power.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "W1tjSUcIv1ReXcktjD10M",
+    "name": "Power Dance",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Power%20Dance.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "c9eybzvL-3Dmm7lHYPNaD",
+    "name": "Power Turk",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Power%20Turk.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlists.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Ly3ARvb3fw-dcF5MPdURT",
+    "name": "Power Turk Akustik",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Power%20Turk%20Akustik.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://listen.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Kcdf4sIxrl4Jn33bnGh6G",
+    "name": "Power Turk Slow",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Power%20Turk%20Slow.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "O-eHONcCCTBkEQTaJm4Ug",
+    "name": "Power Turk Taptaze",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/Power%20Turk%20Taptaze.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bEaCV3FfRorD1CagoSouR",
+    "name": "TRT Muzik",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/TRT%20Muzik.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "56lKd2MKB0XogjwWDCYyJ",
+    "name": "TRT World",
+    "countryCode": "tr",
+    "languages": [
+      "Turkish"
+    ],
+    "group": "Turkey TV",
+    "logo": "https://epg.112114.xyz/logo/TRT%20World.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -10,7 +10,8 @@
     "test": "vitest run",
     "sync": "node scripts/sync-tv.mjs",
     "sync:popular": "node scripts/sync-popular.mjs",
-    "geo": "node scripts/make-geo.mjs"
+    "geo": "node scripts/make-geo.mjs",
+    "sync:iptv": "node scripts/sync-iptv-source.mjs"
   },
   "dependencies": {
     "i18n-iso-countries": "7.14.0",

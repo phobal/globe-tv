@@ -1,0 +1,135 @@
+[
+  {
+    "id": "HNcOfNPRaAvnjqFoFEIKN",
+    "name": "Abante TV",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/Abante%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg19223-amg19223c12-amgplt0352.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg19223-amg19223c12-amgplt0352/cb7c3e1a7b7b6f86cbcf6a6cd1f541a2d10f37855d39d16067a05c9523c51550d0bfa2c9be1fbd3c7e282ea33e40340d0136d41cc07c11df871af00e6a291c64e9f8d76b80f94a56ec8d1f5549a37b163efb1e49897e0632f4e81948aa0ef5414c53c9197e5a37bab80bd62f16da860a8e612895acd8712106223be22141f5fc07f8aaf12a108b37fea80c2ec06d06bedd1cd6d514a585c426c111df2aa40b9c97858ad71892e5c035f815eb7b5f087633c8c23dc19a0be48b9e6b6bd1727e401b18b7f295af033dd0421111aead9bbc64aa11cc8f23d93505906af7272bb38411c82a89a32b83a5b2d1433356cea67a52576b613de8815112ae6ffad88997132eda9e1009130bb98fba2919b0843a99989c40988a03cfd9480e31c1de76939cbc84e7b184704144a02095b53258476f0803c908ecca2d9320ed70a7c0167a1c6e7498da5cf48ed650352260b5c00f8c2c4ef9d78288da4e16cb635b75db20e112454ddc246079d228fbb13578c6705ad07b6cb50960c00ad79018d88b97a50a32bedb8765fa6ce4ba4392c007bb7e35560cfca37411100c50dfec6f0135369210c1829eb9373a01eaf6dff78f05685377462067e181ee5fa8fca47845299429620a1131078608d31bba21591022cc64b5a5397c8a08246f8a8a305f53609388818988d8cf4ed727852f9cf9f3e3ef05c04b666b117e49f8fa21815b129f4943/86/854x480_1478400/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "CTJix7pM3-1qU6XscR03w",
+    "name": "Bilyonaryo News Channel",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/Bilyonaryo%20News%20Channel.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg19223-amg19223c11-amgplt0352.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg19223-amg19223c11-amgplt0352/cb7c3e1a7b7b6f86cbcf6a6cd1f541a2d10f37855d39d16067a05c9523c51550d0bfa2c9be1fbd3c7e282ea33e40340d0136d41cc07c11df871af00e6a291c64e9f8d76b80f94a56ec8d1f5549a37b163efb1e49897e0632f4e81948aa0ef5414c53c9197e5a37bab80bd62f16da860a8e612895acd8712106223be22141f5fc07f8aaf12a108b37fea80c2ec06d06bedd1cd6d514a585c426c111df2aa40b9c97858ad71892e5c035f815eb7b5f087633c8c23dc5cc5ee088983c3dd1727e401b18b7f295af033d80104511a9a993bc37ae47cadc72d26405906af7272bb38411c82a89a32b83a5b2d1433356cea67a52576b613de8815112ae6ffad88997132eda9e1009130bb98fba2919b0843a99989c40988a03cfd9480e31c1de76939cbc84e7b184704144a02095b53258476f0803c908ecca2d9320ed70a7c0167a1c6e7498da5cf48ed650352260b5c00f8c2c4ef9d78288da4e16cb635b75db20e112454ddc246079d228fbb13578c6705ad07b6cb50960c00ad79018d88b97a50a32bedb8765fa6ce4ba4392c007bb7e35560cfca37411100c50dfec6f0135369210c1829eb9373a01eaf6dff78f05685377462067e181ee5fa8fca47845299429620a1131078608d31bba21591022cc64b5a5397c8a08246f8a8a305f53609388818988d8cf4ed727872f9cc7f2e3ef05b182c0d717a3f8fd80f84322f6a27790/84/640x360_1442883/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gD1gPbRFUyXhahHUkL7La",
+    "name": "CLTV36",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/CLTV36.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.cltv36.tv:5443/LiveApp/streams/cltvlive.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "5-TR8NcReyXTKwWtq0cxH",
+    "name": "HopeTV",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/HopeTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://jstre.am/live/jsl:nX5eC7gQvZb.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "TOHNAhWNSmQfP0Hq_kT6t",
+    "name": "INC Radio",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/INC%20Radio.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream-243529.castr.net/6842a712b68c56f675d988f1/live_b60a96e056fc11f084c05f5d0649296b/tracks-v2a1/rewind-1800.ts.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "u4UG8CV75VT2eFc9sxKyN",
+    "name": "INCTV",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/INCTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream-243529.castr.net/6842a712b68c56f675d988f1/live_f5ac22b0566511f0805217b960326aaa/tracks-v2a1/rewind-1800.ts.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cw3KZeJmvNJoBu53BEL2x",
+    "name": "SMNI",
+    "countryCode": "ph",
+    "languages": [
+      "Filipino",
+      "English"
+    ],
+    "group": "Philippines TV",
+    "logo": "https://epg.112114.xyz/logo/SMNI.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.kdlc.click/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

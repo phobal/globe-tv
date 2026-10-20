@@ -1,0 +1,92 @@
+[
+  {
+    "id": "-XGCUBPtH1XncoqE48WbJ",
+    "name": "Kantipur TV",
+    "countryCode": "np",
+    "languages": [
+      "Nepali"
+    ],
+    "group": "Nepal TV",
+    "logo": "https://epg.112114.xyz/logo/Kantipur%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ktvhdsg.ekantipur.com:8443/high_quality_85840165/hd/kantipurtv/hd_1080/chunks.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Ui3j_yed6YMqL1SNTe1N2",
+    "name": "Kantipur TV SD",
+    "countryCode": "np",
+    "languages": [
+      "Nepali"
+    ],
+    "group": "Nepal TV",
+    "logo": "https://epg.112114.xyz/logo/Kantipur%20TV%20SD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ktvhdsg.ekantipur.com:8443/high_quality_85840165/hd/kantipurtv/hd_720/chunks.m3u8?nimblesessionid=12120355",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4ROKZvYe6UabpHG0pdMYj",
+    "name": "Ray TV HD",
+    "countryCode": "np",
+    "languages": [
+      "Nepali"
+    ],
+    "group": "Nepal TV",
+    "logo": "https://epg.112114.xyz/logo/Ray%20TV%20HD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://streaming.tvnepal.com:19360/raynewsdaily/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "AWbkE9bXIM9IC-WCEPMFs",
+    "name": "Ray TV HDSD",
+    "countryCode": "np",
+    "languages": [
+      "Nepali"
+    ],
+    "group": "Nepal TV",
+    "logo": "https://epg.112114.xyz/logo/Ray%20TV%20HDSD.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://streaming.tvnepal.com:19360/raynewsdaily/480p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "PX7KN1oPc2X1DspLruqvZ",
+    "name": "TV Today Janakpur",
+    "countryCode": "np",
+    "languages": [
+      "Nepali"
+    ],
+    "group": "Nepal TV",
+    "logo": "https://epg.112114.xyz/logo/TV%20Today%20Janakpur.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvtoday.rpmc.com.np/hls/bipashatech/1_2/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,300 @@
+[
+  {
+    "id": "IzEM8A9CXPaW-a5gWli9M",
+    "name": "ABN",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/ABN.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vod2.abn.co.kr/IPHONE/abn.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "a17FFTxC3tX95FpAd5hqq",
+    "name": "Arirang",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/Arirang.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amdlive-ch02-ctnd-com.akamaized.net/arirang_2ch/smil:arirang_2ch.smil/chunklist_b2256000_sleng.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Ncnb1EUfWoVVZOeT2ISxa",
+    "name": "BTN TV",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/BTN%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://btn.nowcdn.co.kr/btn/btnlive2m/chunklist_w292365197.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8A9MrBAhlaAgDiJ8B0Mx5",
+    "name": "EBS1",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/EBS1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://ebsonairios.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://ebsonairios.ebs.co.kr/ebsutablet500k/tablet500k/playlist.m3u8",
+        "order": 1
+      },
+      {
+        "kind": "hls",
+        "url": "http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/playlist.m3u8",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "id": "UzJzHHLzKl3AYEVn5CTmW",
+    "name": "EBS2",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/EBS2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://ebsonairios.ebs.co.kr/ebs2tablet500k/tablet500k/ebs2tablet500k.index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "6q4hIjiRFWAMu-4ie6e2S",
+    "name": "EBSe",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/EBSe.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://ebsonairios.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BiAtY8QbjapPqPky0bKOh",
+    "name": "FGTV",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/FGTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/chunklist_b1128000.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "DpjNsd7f_wuWYXjZT3tA1",
+    "name": "GCN24 Korean (720p)",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/GCN24%20Korean%20(720p).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://liveko24-manminglobal3.ktcdn.co.kr/liveko24/gcnko_1300k.stream/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "yTbF8DBD_VZuYEAdcWJhd",
+    "name": "Gugak TV",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/Gugak%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/chunklist_w574103366.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "I0Hz4rpPlK03E8eyRXx4o",
+    "name": "HLAJ-DTV",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/HLAJ-DTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://wowza.jejumbc.com/live/tv_jejumbc/chunklist_w989868988.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "4f82Rs3RhZh-JCUVl6LKH",
+    "name": "KBS World",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/KBS%20World.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream8.cinerama.uz/1448/tracks-v1a1/mono.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "SzkH_wQThQdH-tX9i1W1u",
+    "name": "KTV",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/KTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hlive.ktv.go.kr/live/klive_h.stream/chunklist_w287072402.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "E8ek0q4cszw6kd3I82nJO",
+    "name": "MBC Chuncheon (춘천 MBC) (480p) [Not 24/7]",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/MBC%20Chuncheon%20(%EC%B6%98%EC%B2%9C%20MBC)%20(480p)%20%5BNot%2024%2F7%5D.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "N5ZtvIVMST0U9hMmcBjdx",
+    "name": "MBC Yeosu (여수 MBC)[Not 24/7]",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/MBC%20Yeosu%20(%EC%97%AC%EC%88%98%20MBC)%5BNot%2024%2F7%5D.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5c3639aa99149.streamlock.net/live_TV/tv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uBcuJ2ZihdmTdkSnoW6me",
+    "name": "OUN",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/OUN.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.knou.ac.kr/knou1/live1/chunklist.m3u8?solsessionid=d4e904754b681f621f11bccc9eee43c5",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "DIb4ZTJGmlJWWMZ9YUbBC",
+    "name": "tvchosun2",
+    "countryCode": "kr",
+    "languages": [
+      "Korean"
+    ],
+    "group": "Korea TV",
+    "logo": "https://epg.112114.xyz/logo/tvchosun2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://onair2.cdn.tvchosun.com/origin2/_definst_/tvchosun_s3/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

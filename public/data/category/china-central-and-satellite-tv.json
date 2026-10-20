@@ -1,0 +1,1236 @@
+[
+  {
+    "id": "9zslO_D6VgyW6WXxrWmNh",
+    "name": "安徽卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/30/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/85/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "vW_zOmlVi0Uhei6Or_OBC",
+    "name": "北京卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/31/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/68/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "6wjVv2wePsgk9_LgYPFDe",
+    "name": "兵团卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/89/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "H2AnkEcrqgYJQ3-sfPrit",
+    "name": "重庆卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/43/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/87/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "Ogo5Gbq4Gam3tLMVLh0Py",
+    "name": "东方财经",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%9C%E6%96%B9%E8%B4%A2%E7%BB%8F.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/67/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "kwV2SimjxgPoJ6XA6nK_n",
+    "name": "东方卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/42/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/66/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "hnBn0rnTZQhYz19ulEGly",
+    "name": "东南卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/44/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/88/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "GC8vVQk9iGuNuTbancC68",
+    "name": "动作影院",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%8A%A8%E4%BD%9C%E5%BD%B1%E9%99%A2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/113/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "L0aiRubqI1CFJsva6IBcU",
+    "name": "甘肃卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/95/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "GdcinbP1dz-owiUvtyrX_",
+    "name": "光影频道",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%85%89%E5%BD%B1%E9%A2%91%E9%81%93.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/101/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nygDeRXL-62xpQ-66PkBE",
+    "name": "广东卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/45/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/79/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "HTaHfGc8wMHSQEi4Y-7c7",
+    "name": "广西卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/46/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/90/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "JpbDtG-MEpkzIXgmlibT2",
+    "name": "贵州卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/39/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/91/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "VNSwEhnfA4_UROIVLGCnT",
+    "name": "海南卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/99/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tdtJ0IpL3p96RVr1IXlYR",
+    "name": "河北卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/16/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/78/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "1hzX44cdWmGqLMeUxJkNn",
+    "name": "河南卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/36/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "nqZlQhE3Zs1tL9-FYx-BV",
+    "name": "黑龙江卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/70/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cDOpHEzZYxn5z5nLP4_Lo",
+    "name": "湖北卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/41/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/65/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "dj1mOPHW5jLUGjjFwX6MW",
+    "name": "湖南卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/27/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/60/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "n2y_w9vY2BD1kydzUCVoa",
+    "name": "吉林卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/47/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/71/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "I96hk27fpyFyhUHB76HJh",
+    "name": "江苏卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/29/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/61/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "j5CxheXBIoYIrZkx09p6S",
+    "name": "江西卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/38/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/82/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "0mfmPnb-JFjtGb9mxVmjS",
+    "name": "辽宁卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/33/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/72/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "EuPQ9acoSaSbNfp_kc9Ub",
+    "name": "内蒙古卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/49/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/31/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "3lEv6gXWSrGTrv04ONdqw",
+    "name": "宁夏卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/93/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "vDthnbQXXA50Kg3fhJ2to",
+    "name": "青海卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/50/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/96/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "XYOlEcOypBxLNbqDqAiPg",
+    "name": "山东卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/34/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/83/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "Z76lHjD58oB-y3oP8VJs0",
+    "name": "陕西卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/48/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "NHheUjiahkO3-tdzaau0d",
+    "name": "深圳卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/40/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/76/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "h3gj51-tYbodDqtbeAuGU",
+    "name": "四川卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/37/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/86/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "M9o9Z2_nnLrfCJ3eL3gAe",
+    "name": "天津卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/32/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/69/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "fiivdVnThAbJBoBWdDK1y",
+    "name": "云南卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/35/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/92/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "m7-FXMq2Y3DPzAkIsKvwx",
+    "name": "浙江卫视",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/28/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/63/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "Ri-7YlZreOm6yuX7M4fla",
+    "name": "CCTV1",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/1/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/1/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "tPlhEfC6fBeoC-r1gaczY",
+    "name": "CCTV10",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV10.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/10/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/10/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "xogMYuwQ5CbrT92bPcmz-",
+    "name": "CCTV11",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV11.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/11/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/11/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "g28aCeHoNLUzM23TPqhA_",
+    "name": "CCTV12",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV12.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/12/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/12/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "RpiBtOqokB3DSUh1mU230",
+    "name": "CCTV13",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV13.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/13/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/13/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "LU3YzBZbvZXv0yWFd5ftt",
+    "name": "CCTV14",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV14.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/14/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/14/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "OOGtT8WSQOh-GHIv5bq4L",
+    "name": "CCTV15",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV15.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/15/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/15/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "HgnY9Sd_Iq65HXqu_bSu2",
+    "name": "CCTV2",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/2/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/2/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "EfQ2ApBxwRgwqrCFsMHXY",
+    "name": "CCTV3",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV3.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/3/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/3/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "9JNgAUOhEEJkcIPsrteEg",
+    "name": "CCTV4",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/4/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/4/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "xMIkFQR-LbhsJBtjSgpsP",
+    "name": "CCTV5",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV5.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/5/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/5/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "7sVP96gRJB1-AAlsIardb",
+    "name": "CCTV5+",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV5%2B.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/16/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "-mYBY6q365PEuhAHqf4jI",
+    "name": "CCTV6",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV6.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/6/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/6/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "zpj6UGrBiFvYJkWa3rah-",
+    "name": "CCTV7",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV7.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/7/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/7/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "mCuxgPeNp6Mq0o_qqeM2_",
+    "name": "CCTV8",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV8.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/8/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/8/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "zXZr9XzgHzzKui42K1JOP",
+    "name": "CCTV9",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CCTV9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://222.223.41.27:8888/hls/9/index.m3u8",
+        "order": 0
+      },
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/9/index.m3u8",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "mBMlCp6mHkMcHeENUSLmx",
+    "name": "CETV1",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CETV1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/17/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "pIbjbSM5vYiF5-27MeZA7",
+    "name": "CETV2",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CETV2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/18/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "C1b78FeNnrYWKjURbETuE",
+    "name": "CETV4",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CETV4.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/19/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "0OtlKtKl6FOtRT-HE-e1T",
+    "name": "CGTN DOCUMENTARY",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN%20DOCUMENTARY.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/21/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "fxvgq6QOA3MuKhXGYJRf-",
+    "name": "CGTN English",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN%20English.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/20/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "QAbMcAOMEmU2nyZ8AvFf8",
+    "name": "CGTN Español",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN%20Espa%C3%B1ol.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/24/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "zpos0zE-FBAenrg9ZjZQu",
+    "name": "CGTN Français",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN%20Fran%C3%A7ais.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/23/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "LpprnZIBwFFzN923pL0BG",
+    "name": "CGTN PYCCKИЙ",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN%20PYCCK%D0%98%D0%99.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/22/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "z8whgeYEKdaq850ilW91e",
+    "name": "CGTN بالعربية",
+    "countryCode": "cn",
+    "languages": [
+      "Chinese"
+    ],
+    "group": "China Central & Satellite TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN%20%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://61.138.99.166:10089/hls/25/index.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

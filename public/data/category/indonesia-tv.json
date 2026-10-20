@@ -1,0 +1,992 @@
+[
+  {
+    "id": "ayAhsHCZjPftujRltS0oo",
+    "name": "Akativi",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Akativi.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://akativi.siar.us/live/akativi.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mXR01rrS8jWhDfP7y3s1U",
+    "name": "Al Wafa Tarim",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Al%20Wafa%20Tarim.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ammedia.siar.us/ammedia/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "jo6R6IZycTlQBENJ6jyRI",
+    "name": "Banjar TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Banjar%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://banjartv.siar.us/banjartv/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "HaMOnnQcfHFJDWcXFF-7J",
+    "name": "Banten TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Banten%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/bantentv/bantentv/chunklist_w1415429024.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "W8cavnrRYdFeBvgLGWhY2",
+    "name": "BMS TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/BMS%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/bmstv/bmstv/chunklist_w1452035610.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "uWwhw1h2HJC-VitC9r6CF",
+    "name": "BRTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/BRTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/brtv/brtv/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "VfwBevUdBOtQTr7mDlWY2",
+    "name": "Bungo TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Bungo%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/bungotv/bungotv/chunklist_w658559857.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7sqQUKJNGVi1rqbvJa0Lx",
+    "name": "Caruban TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Caruban%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.carubantv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "EcdolMgFgCg13KkXK9MRk",
+    "name": "DAAI TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/DAAI%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://pull.daaiplus.com/live-DAAIPLUS/live-DAAIPLUS_HD.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "84FjetyCjWCFcChGGrze2",
+    "name": "Dens Food Channel",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Dens%20Food%20Channel.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h221/02.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "yZ-_Xf_n_-X-AkjakVBei",
+    "name": "Dhamma TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Dhamma%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://b.webcache.maxindo.net.id/dhamma/dhamma.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bnGHVh63-rarrgX8qfdq-",
+    "name": "Dhoho TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Dhoho%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dhohotv.siar.us/dhohotv/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "a4bFEEJC6S3SIRD_IlA6I",
+    "name": "DMI TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/DMI%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvstreamcast.com/tawaftv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bIfm3lDWHT7P-OHAyaEVt",
+    "name": "DutaTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/DutaTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dutatv.siar.us/dutatv/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3qqr5dEZdOgIzXIKWe7rF",
+    "name": "E International Europe",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/E%20International%20Europe.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vodcdn.bamboo-cloud.com/livehls/68c62ff406304403a60cd7f3/index-f2-v1-a1.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "98AHTqEeNVsSjFne4-zJD",
+    "name": "Efarina TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Efarina%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.efarinatv.com/hls/bgtaufikganteng.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "l9WR2XAwmbCy7wkOIvBMi",
+    "name": "Garuda TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Garuda%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hgmtv.com:19360/garudatvlivestreaming/720p.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "hQkkjNs3iB4HWmHhMJmGt",
+    "name": "Groovia Kanal",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Groovia%20Kanal.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vodcdn.bamboo-cloud.com/livehls/69a12811e0f8978ef209ca85/index-f2-v1-a1.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3kz3WUfqRRyUPdLv9FpX",
+    "name": "Groovia Kids",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Groovia%20Kids.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://vodcdn.bamboo-cloud.com/livehls/69a128aeed5ab636f90580ea/index-f3-v1-a1.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "J-9SFXG4aL0bAIJGm1bPJ",
+    "name": "IndonesianaTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/IndonesianaTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://tvstreamcast.com/indonesiana.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mCTn8G-qtc8w2dz5XYPLt",
+    "name": "JambiTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/JambiTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://jambitv.globaldigitalcore.com/hls/sah5tu7Eiveepohyieyie3OoteL2anga.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "cABBtsp4Si8B9-Rw2SGQ4",
+    "name": "JogjaTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/JogjaTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rnI_T9H14WqJbmF3o768s",
+    "name": "MadaniTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/MadaniTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.asianastream.com/madani/madanitv.smil/chunklist_w661035964_b785000.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BdMKzVMcLWDCEhCtCboyt",
+    "name": "MaduTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/MaduTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://re1.siar.us/madutv/hd720/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "vbkmQKz1rvG6YBCd4IMOj",
+    "name": "Metro TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Metro%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://edge.medcom.id/live-edge/smil:metro.smil/chunklist_w991137960_b1492000_sleng.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "F9SbtXlTF7ovtJdxWFFvf",
+    "name": "MGSTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/MGSTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://mgstv.siar.us/live/mgstv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tvaW_ar5buphDzHiFaKOu",
+    "name": "MQTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/MQTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/mqtv/mqtv/chunklist_w1395649472.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "jpDZVKCV2g_YWaZ01QIVO",
+    "name": "Nusantara TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Nusantara%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "mck1_1ZRwXbzkhYGMubkv",
+    "name": "Puja TV Aceh",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Puja%20TV%20Aceh.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://pujatv.siar.us/live/pujatv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "HfwAOiSPI0Hd0_X5CxHdO",
+    "name": "Radar Lampung TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Radar%20Lampung%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://www.streaming.radartv.co.id/hls/test.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "It6rPAsqdEyqQH2-EwMcJ",
+    "name": "Radar Tasikmalaya TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Radar%20Tasikmalaya%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://v2.siar.us/radartasikmalaya/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "tN0rjYS4EfKl809Nks4RB",
+    "name": "RCTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/RCTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://v10.siar.us/rctv/live/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Lyx7MPiKaiRj4w0cZrna0",
+    "name": "Rinjani TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Rinjani%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rinjanitv.cloud/hls/tvkabel.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "WI5CDgrj6VoWLz8hN4WzS",
+    "name": "Rodja TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Rodja%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://rodjatv.com/rodjatv/live_480p1128kbs/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Dmhb4x_837Z5yDav3PtFW",
+    "name": "Salam TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Salam%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.salamtelevisi.com/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bIYYwxLBTj6143QldRcyI",
+    "name": "Salira TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Salira%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.salira.tv/p/3870/hybrid/play.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "rh_9dKlbJ1QDV-_dd1Ruu",
+    "name": "Sampit TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Sampit%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://sampit-tv.siar.us/live/sampit-tv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "JRFpQIo1vxqWiD3I09Knk",
+    "name": "Sangaji TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Sangaji%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cdn.adyadigitalteknologi.com:8090/vod/relay.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "7vtyQbwl6PyAPmMr2RYAv",
+    "name": "Selaparang TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Selaparang%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://selaparangtv.siar.us/live/selaparangtv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "lhIOjw45pgOsHKJXKsI-w",
+    "name": "SMTV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/SMTV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://e.siar.us/live/smtv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eEDDoW40kU-CXy13FFnB3",
+    "name": "Sriwijaya TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Sriwijaya%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://sriwijayatv.siar.us/live/sriwijayatv.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "C5N6_1QmhnW5f0hgBPlWz",
+    "name": "Stara TV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "YLsln_FSmKUAMqEcgWHKT",
+    "name": "Stara TV Bandung",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV%20Bandung.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://bandung.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eDeW9t1CJkEy0nlDN0x0r",
+    "name": "Stara TV Bojonegoro",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV%20Bojonegoro.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://bojonegoro.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "qDpV8X2ZlGH87TADuKzKn",
+    "name": "Stara TV Cianjur",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV%20Cianjur.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://cianjur.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "BVrJCeSoyETIsYlYuLPo8",
+    "name": "Stara TV Jakarta",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV%20Jakarta.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://jakarta.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "g1kqXK-lsgLOrp10ggzS3",
+    "name": "Stara TV Malang",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV%20Malang.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://malang.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "g912C3VHcCYASjVTgPvxK",
+    "name": "Stara TV Parahyangan",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/Stara%20TV%20Parahyangan.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://parahyangan.staratv.id/hls/0/stream.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "awXKtrK35qWb9dWFBOAwC",
+    "name": "TATV",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/TATV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://v2.siar.us/tatv/live.sdp/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "bihZP4tW_HbN-6m_kPHc9",
+    "name": "The Indonesia Channel",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/The%20Indonesia%20Channel.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://restreamer.indonusa.id:8443/d5f4ad43-1b5a-4b0f-8bef-5b37224ed221_output_0.m3u8?session=WRTZ7BaeacYbG9suJE3SY8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3wTWq05BsLlM1x9ly5bud",
+    "name": "TV 9 Nusantara",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/TV%209%20Nusantara.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/tv9/tv9/chunklist_w1178469274.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3Yf6oSknyI_P0AEGuONu6",
+    "name": "TV Tabalong",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/TV%20Tabalong.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://5bf7b725107e5.streamlock.net/tvtabalong/tvtabalong/chunklist_w492853137.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "XBZG6wqQ2ajGa4jMV77YT",
+    "name": "TVRI Aceh",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/TVRI%20Aceh.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ott-balancer.tvri.go.id/live/eds/Aceh/hls/Aceh.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "gHV6kqF5kb_B2zNUTr-xY",
+    "name": "TVRI Bali",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/TVRI%20Bali.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ott-balancer.tvri.go.id/live/eds/Bali/hls/Bali-avc1_500000=10002-mp4a_64000=20002.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "v_GAfCuWph06Pa_kBrVsL",
+    "name": "TVRI Bangka Belitung",
+    "countryCode": "id",
+    "languages": [
+      "Indonesian"
+    ],
+    "group": "Indonesia TV",
+    "logo": "https://epg.112114.xyz/logo/TVRI%20Bangka%20Belitung.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ott-balancer.tvri.go.id/live/eds/Babel/hls/Babel-avc1_500000=10003-mp4a_64000=20002.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "197DPb5d-EZn2wlvyli6U",
+    "name": "3sat",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/3sat.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dash4.antik.sk/live/test_drei_sat_tizen/playlist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "o9xqI4tBF4Rgv_jSc71Td",
+    "name": "DW Arabic",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/DW%20Arabic.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8f0XQCStnArxhPTe7v7N9",
+    "name": "DW English",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/DW%20English.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/cb7f3e1a7b7b6f86cbcf6a6cd1f541a2d10f37855d31853265a2059021cb1e0c85e8fb95e843e74aebae62812b53310d0c78ce07de6c199ebe22f70f61770707fafda222b9c14d57e7c870493ab2727154ee524c8b70435fd8ea5a27b67d8d304532f81962530588bf22f4324dc3800f957e378aa8cd7942053e22e3414db9f905f6ef9608168333b8a17a1dd76c1cb8dc5dc8dc02be90a904cc1ada23ee1598e7f18fdb00e1d7c732eb0ead62590c6c2cdbc42892cc5fe6db9b6a749f272e115304b7a5c2b3166ed5430e0aaaa69fe763fd119ddf26d7521cd16ff0e0073ef0098927e5846da8a4b5de302e53c6e56811ec2478c2f09f1420b46781c2a3bd213ff1f2652c851d3a40200a18e90c4608db961baa9669e8957a14398fa24d9a93b58beeb9b797fd4f2da6d997274b426f054dd313f2da25d219d577a6cb48617f7d71ed9365cc89d75b704d7cc6d106eb465bb5d280869f233ac9203469a858901b247cdc38694be02fd2932823df765fcb6473aa0d75c869d48c01d9eb9be90f30b09ee047fc64e0fc4ae4f310ba6433574de2aa620a056172d2e76a087f289660b58792a1440806ede5c4b196036c4968653966e8ebc843e9ea91712243bb174c055500079a01a40cfe10590c2bb378da9c017b8b036341cba83d545669d6f8b98e89d3c027e426832f9c8aebe3ef0591e77c8294d0d7c8915542ffda8d5997/190/1920x1080_5060000/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "KL_Q5Urtxyo5GBMsWP7dM",
+    "name": "DW Espanol",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/DW%20Espanol.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/stream01/streamPlaylist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "HeczVcb_mE-mxKjAx-pFo",
+    "name": "DW Russian",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/DW%20Russian.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dwamdstream110.akamaized.net/hls/live/2017971/dwstream110/master.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "8kgLs3X_VoN8Ct2tXdD4u",
+    "name": "EchtJetzt TV",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/EchtJetzt%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://bibeltv03.iptv-playoutcenter.de/bibeltv03/bibeltv03.stream_all/bibeltv03/bibeltv03.stream_1/chunks.m3u8?nimblesessionid=1419553286",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "GSuvuHdCSIDK_gUzBBpJA",
+    "name": "Franken Fernsehen",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/Franken%20Fernsehen.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://frankentv.iptv-playoutcenter.de/frankentv/frankentv.stream_1/chunks.m3u8?nimblesessionid=1419555727",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "TgsstrH3l-4vSjoPT7GQV",
+    "name": "hr-fernsehen",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/hr-fernsehen.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hrhls.akamaized.net/hls/live/2024525/hrhls/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "eH40uXpy9-eXB41w-MyT6",
+    "name": "HSE",
+    "countryCode": "de",
+    "languages": [
+      "German"
+    ],
+    "group": "Germany TV",
+    "logo": "https://epg.112114.xyz/logo/HSE.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://hse24.akamaized.net/hls/live/2006663/hse24/master_1080p25.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

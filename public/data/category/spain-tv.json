@@ -1,0 +1,20 @@
+[
+  {
+    "id": "IMAyOcbICsoJZ22wq-RBF",
+    "name": "DW Español Ⓢ",
+    "countryCode": "es",
+    "languages": [
+      "Spanish"
+    ],
+    "group": "Spain TV",
+    "logo": "https://epg.112114.xyz/logo/DW%20Espa%C3%B1ol%20%E2%93%88.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/stream04/streamPlaylist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

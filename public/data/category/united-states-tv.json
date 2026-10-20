@@ -1,0 +1,128 @@
+[
+  {
+    "id": "KMucVm30EEwUjoS8EbCDG",
+    "name": "3ABN",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/3ABN.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://3abn.bozztv.com/3abn2/3abn_live/smil:3abn_live.smil/chunklist_w1815159341_b1328000_slen.m3u8?nimblesessionid=863406817",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "N0zoX95pW2JLDETIFFQru",
+    "name": "A&E",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/A%26E.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://23.239.31.26:8989/aande/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Xuqek2s8XWfcgtpO2wJdK",
+    "name": "AXS TV",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/AXS%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "http://23.239.31.26:8989/axstv/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Pwh1bFr2sxqlNU-sUnx4H",
+    "name": "Bravo Vault",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/Bravo%20Vault.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d4whmvwm0rdvi.cloudfront.net/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-nbcu-linear/61a276d1-8291-4018-aba2-146304f96043/4.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "FQxHKnhU8_QCMSkdmb1P6",
+    "name": "CGTN",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://english-livebkali.cgtn.com/live/encgtn_1.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "Y4lnsmNACFeHov9Kgr8sP",
+    "name": "CGTN1",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/CGTN1.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live-stream.cgtn.com/event-live/CGTN_1_1PVvR6ZBAZ2/index.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "ux2cLpJ2XvsQ9jw4FkmGr",
+    "name": "VICE",
+    "countryCode": "us",
+    "languages": [
+      "English"
+    ],
+    "group": "United States TV",
+    "logo": "https://epg.112114.xyz/logo/VICE.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://d1ocru52bkg5e9.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-tqr9z4dqrkb9m/b07d20d9-38d3-44e4-a74d-386f99542384/3.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

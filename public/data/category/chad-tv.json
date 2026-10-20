@@ -1,0 +1,21 @@
+[
+  {
+    "id": "zEHXW_UTqqHMXx5W0yeGT",
+    "name": "Tele Tchad",
+    "countryCode": "td",
+    "languages": [
+      "French",
+      "Arabic"
+    ],
+    "group": "Chad TV",
+    "logo": "https://epg.112114.xyz/logo/Tele%20Tchad.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://strhlslb01.streamakaci.tv/str_tchad_tchad/str_tchad_multi/str_tchad_tchad/str_tchad_tchad_1080p/chunks.m3u8?nimblesessionid=14852917",
+        "order": 0
+      }
+    ]
+  }
+]

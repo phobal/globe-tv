@@ -1,0 +1,146 @@
+[
+  {
+    "id": "SjSFf9AN-lHy83DajrFyL",
+    "name": "ARDB TV",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/ARDB%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ardbtv.ardb.com.kh:8443/tv-live/tv-online.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "OumlTLfg65X7b0qrdzfSW",
+    "name": "EBC",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/EBC.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://iptv.ebc.edu.kh/iptv/channel/1.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "3sT4e1AjhuD11w64WXhez",
+    "name": "Sangkem TV",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/Sangkem%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.sangkemtv.com/memfs/sangkem.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "sWgCE4hVHdsOMnerOxduW",
+    "name": "SEA TV",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/SEA%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://seatv.netlinkbroadcaster.com/hls/test.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "p4sFFXbwwgFpNk0e7JveI",
+    "name": "Town TV",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/Town%20TV.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://stream.pdtvhd.com/LiveApp/streams/Townfullhd.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "_mMpOqqhM5fjHj7hzBdhH",
+    "name": "TV5 Cambodia",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/TV5%20Cambodia.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://ip.pdtvhd.com/Khmer/streams/CTV5.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "owxnlhcu2GzRa2teffm7C",
+    "name": "TVK (Cambodia)",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/TVK%20(Cambodia).png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.kh.malimarcdn.com/live/tvk.stream/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "id": "NgTPm8YZfNHh2Tj3EVD-6",
+    "name": "TVK2",
+    "countryCode": "kh",
+    "languages": [
+      "Khmer"
+    ],
+    "group": "Cambodia TV",
+    "logo": "https://epg.112114.xyz/logo/TVK2.png",
+    "geoBlocked": false,
+    "sources": [
+      {
+        "kind": "hls",
+        "url": "https://live.kh.malimarcdn.com/live/tvk2.stream/chunklist.m3u8",
+        "order": 0
+      }
+    ]
+  }
+]

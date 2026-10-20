@@ -67,6 +67,36 @@ describe('HLS proxy', () => {
     expect(response.headers.get('accept-ranges')).toBeNull();
   });
 
+  it('fetches IP-based HLS sources through a hostname while preserving the source URL in playlists', async () => {
+    const fetcher = vi.fn(async (_request: Request) => new Response('#EXTM3U\nseg.ts', {
+      headers: { 'Content-Type': 'application/vnd.apple.mpegurl' },
+    }));
+    const handler = createHlsProxyHandler({ allowedOrigins: ['http://61.138.99.166:10089'], fetcher });
+    const upstream = 'http://61.138.99.166:10089/hls/85/index.m3u8';
+
+    const response = await handler(new Request(`https://tv.example.test/proxy?url=${encodeURIComponent(upstream)}`));
+
+    const fetchedRequest = fetcher.mock.calls[0]![0];
+    expect(new URL(fetchedRequest.url).hostname).toBe('61-138-99-166.sslip.io');
+    expect(new URL(fetchedRequest.url).port).toBe('10089');
+    expect(await response.text()).toContain(proxyUrl('http://61.138.99.166:10089/hls/85/seg.ts'));
+  });
+
+  it('keeps IP-based redirects within the allowlist and resolves playlist paths from the original origin', async () => {
+    const fetcher = vi.fn(async (request: Request) => {
+      if (new URL(request.url).pathname.endsWith('/index.m3u8')) return new Response(null, { status: 302, headers: { Location: '/hls/85/redirected.m3u8' } });
+      return new Response('#EXTM3U\nseg.ts', { headers: { 'Content-Type': 'application/vnd.apple.mpegurl' } });
+    });
+    const handler = createHlsProxyHandler({ allowedOrigins: ['http://61.138.99.166:10089'], fetcher });
+    const upstream = 'http://61.138.99.166:10089/hls/85/index.m3u8';
+
+    const response = await handler(new Request(`https://tv.example.test/proxy?url=${encodeURIComponent(upstream)}`));
+
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    expect(fetcher.mock.calls[1]![0].url).toBe('http://61-138-99-166.sslip.io:10089/hls/85/redirected.m3u8');
+    expect(await response.text()).toContain(proxyUrl('http://61.138.99.166:10089/hls/85/seg.ts'));
+  });
+
   it('forwards byte ranges and preserves partial content responses', async () => {
     const fetcher = vi.fn(async (_request: Request) => new Response('bytes', {
       status: 206,

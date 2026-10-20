@@ -37,6 +37,14 @@ function isAllowedUrl(value: string, allowedOrigins: ReadonlySet<string>): URL |
   }
 }
 
+function workerFetchUrl(url: URL): URL {
+  const match = url.hostname.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
+  if (!match) return url;
+  const alias = new URL(url);
+  alias.hostname = `${match.slice(1).join('-')}.sslip.io`;
+  return alias;
+}
+
 function rewriteResource(uri: string, manifestUrl: string): string {
   if (!uri || /^(data|skd):/i.test(uri)) return uri;
   try {
@@ -101,15 +109,20 @@ export function createHlsProxyHandler({ allowedOrigins, fetcher = fetch }: HlsPr
 
     let upstream: Response;
     for (let redirects = 0; ; redirects++) {
+      const fetchTarget = workerFetchUrl(target);
       try {
-        upstream = await fetcher(new Request(target, { method: request.method, headers, redirect: 'manual' }));
+        upstream = await fetcher(new Request(fetchTarget, { method: request.method, headers, redirect: 'manual' }));
       } catch {
         return new Response('Upstream request failed', { status: 502 });
       }
       if (![301, 302, 303, 307, 308].includes(upstream.status)) break;
       const location = upstream.headers.get('location');
       if (!location || redirects >= MAX_REDIRECTS) return new Response('Upstream redirect limit exceeded', { status: 502 });
-      target = isAllowedUrl(new URL(location, target).toString(), originSet);
+      const redirectTarget = new URL(location, fetchTarget);
+      if (fetchTarget.hostname !== target.hostname && redirectTarget.hostname === fetchTarget.hostname) {
+        redirectTarget.hostname = target.hostname;
+      }
+      target = isAllowedUrl(redirectTarget.toString(), originSet);
       if (!target) return new Response('Redirect host not allowed', { status: 403 });
     }
 

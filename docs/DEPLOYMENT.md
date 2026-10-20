@@ -23,6 +23,8 @@ npm run sync:iptv
 
 项目使用 `wrangler.jsonc` 将 Vite 静态资源和 HLS 代理部署到同一个 Worker。静态文件由 Workers Static Assets 提供，只有 `/proxy` 会执行 Worker 脚本。构建时会从 `public/data/category/*.json` 生成 `public/data/proxy-origins.json`；代理只接受这些播放源中的协议、主机和端口组合，并会重新校验上游重定向。
 
+Cloudflare Workers 的子请求不支持直接 `fetch()` IP 字面量。代理会把白名单内的 IPv4 源站映射到对应的 `sslip.io` 主机名再回源，例如 `61.138.99.166` 会请求 `61-138-99-166.sslip.io`；客户端播放地址和重写后的分片地址仍使用原始源站 URL。该做法依赖公共 `sslip.io` DNS 服务，并会让源站看到这个别名作为 HTTP Host。若某个源站要求特定 Host，需要为它增加显式的自有 DNS 别名映射；此处已验证的频道 85 接受 `sslip.io` 别名。
+
 本地通过 Worker 预览完整站点和代理：
 
 ```sh

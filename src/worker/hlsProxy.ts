@@ -1,5 +1,5 @@
-import { proxyUrl } from '../proxy/url';
-export { proxyUrl } from '../proxy/url';
+import { proxyUrl } from '../proxy/url.ts';
+export { proxyUrl } from '../proxy/url.ts';
 
 export interface HlsProxyOptions {
   allowedOrigins: readonly string[];

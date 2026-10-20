@@ -13,6 +13,8 @@ npm ci
 npm run dev
 ```
 
+开发服务器内置 HLS 代理，播放功能与线上一致，无需额外启动 Worker。
+
 ## 数据维护
 
 修改 `scripts/discovery-mapping.json` 中的频道或来源分组映射后，运行：

@@ -259,7 +259,7 @@ export function PlayerModal({ open, expanded = true, channel, categoryName, onbo
     instance.ready(() => {
       if (stopped) return;
       instance.error(null);
-      instance.src({ src: resolvePlaybackUrl(source.url, { production: import.meta.env.PROD, proxy: import.meta.env.VITE_HLS_PROXY }), type: 'application/x-mpegURL' });
+      instance.src({ src: resolvePlaybackUrl(source.url, { proxy: import.meta.env.VITE_HLS_PROXY }), type: 'application/x-mpegURL' });
       scheduleTimeout();
       Promise.resolve(instance.play()).catch(error => {
         if (stopped) return;
@@ -361,10 +361,10 @@ export function PlayerModal({ open, expanded = true, channel, categoryName, onbo
 
   return (
     <div className={immersive ? "fixed inset-0 z-50 flex items-center justify-center bg-black/90 sm:p-4" : expanded ? "relative h-full w-full" : "player-engine"} onClick={immersive ? onClose : undefined}>
-      <div className={expanded ? immersive ? "absolute inset-0" : "absolute inset-x-0 top-0 aspect-video" : "player-engine-host"} ref={host} aria-hidden={!expanded} />
+      {!expanded && <div className="player-engine-host" ref={host} aria-hidden />}
       {expanded && <div
         ref={stage}
-        className={immersive ? "relative h-dvh w-full overflow-hidden bg-black text-white shadow-2xl" : "relative aspect-video w-full overflow-hidden rounded-xl border border-line bg-black text-white"}
+        className={immersive ? "relative h-dvh w-full overflow-hidden bg-black text-white shadow-2xl" : "relative aspect-video w-full overflow-hidden rounded-xl border border-line bg-transparent text-white"}
         role={immersive ? "dialog" : undefined}
         aria-modal={immersive || undefined}
         aria-label={`播放器：${channel.name}`}
@@ -376,6 +376,10 @@ export function PlayerModal({ open, expanded = true, channel, categoryName, onbo
         onTouchEndCapture={onTouchEnd}
         onTouchCancelCapture={() => { touchStart.current = null; tapHandledRef.current = false; }}
       >
+        {/* Video.js mounts here. Kept inside the stage so every chrome layer
+            positions against the same box instead of a separate sibling. */}
+        <div className="absolute inset-0" ref={host} aria-hidden />
+
         <div inert={!chrome.visible} className={`pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 bg-gradient-to-b from-black/85 to-transparent px-4 pt-[max(16px,env(safe-area-inset-top))] pb-10 sm:px-5 sm:pt-4 ${chromeClass}`}>
           <div className="min-w-0">
             <p className="text-[11px] tracking-wider text-cyan">{categoryName ?? (channel.countryCode || '频道播放')}</p>

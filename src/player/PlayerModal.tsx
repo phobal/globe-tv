@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Check, ListVideo, Maximize2, Play, RotateCcw, X } from 'lucide-react';
+import { Check, ListVideo, Maximize2, Play, RotateCcw, Star, X } from 'lucide-react';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
-import type { Channel, CountrySummary } from '../data/types';
+import type { Channel } from '../data/types';
 import { beginSession, chooseSource, nextSource, type SourceState } from './sourceMachine';
 import { getSwipeDirection, type Direction } from './channelNavigation';
 import { CaptionControls } from './CaptionControls';
@@ -10,22 +10,27 @@ import { browserCaptionAdapter } from './captions/browser';
 import { CaptionSession, type CaptionSnapshot } from './captions/session';
 import { attachLiveSubtitleTrack, type SubtitlePlayer } from './captions/liveSubtitleTrack';
 import { useMediaQuery } from '../utils/useMediaQuery';
+import { usePlayerChrome } from './usePlayerChrome';
 
 const initial: SourceState = { session: 0, phase: 'idle', sourceIndex: 0, sourceCount: 0, cancelled: false };
 const initialCaptions: CaptionSnapshot = { phase: 'idle', text: '', message: '', progress: 0 };
 
 interface Props {
   open: boolean;
+  expanded?: boolean;
   channel: Channel;
-  country?: CountrySummary;
-  channelPosition?: { current: number; total: number };
+  categoryName?: string;
+  onboardingRequired?: boolean;
+  favorite?: boolean;
+  onToggleFavorite?: () => void;
+  onOnboardingComplete?: () => void;
+  onBrowse?: () => void;
   onNavigate: (direction: Direction) => void;
   onPlaying: (id: string) => void;
   onClose: () => void;
 }
 
 const interactiveSelector = 'button, a, input, select, textarea, [role="button"], .vjs-control-bar, .vjs-menu, .vjs-big-play-button, .vjs-modal-dialog';
-const AUTO_HIDE_MS = 3500;
 /**
  * How long to wait for an HLS source to reach the `playing` event before giving up
  * and trying the next source. The timer is reset on every `progress` / `loadstart`
@@ -38,8 +43,11 @@ function isInteractiveTarget(target: EventTarget | null): boolean {
   return target instanceof Element && Boolean(target.closest(interactiveSelector));
 }
 
-export function PlayerModal({ open, channel, country, channelPosition, onNavigate, onPlaying, onClose }: Props) {
+export function PlayerModal({ open, expanded = true, channel, categoryName, onboardingRequired = false, favorite = false, onToggleFavorite, onOnboardingComplete, onBrowse, onNavigate, onPlaying, onClose }: Props) {
   const host = useRef<HTMLDivElement>(null);
+  const stage = useRef<HTMLDivElement>(null);
+  const onboarding = useRef<HTMLDivElement>(null);
+  const restoreFocus = useRef<HTMLElement | null>(null);
   const player = useRef<ReturnType<typeof videojs> | null>(null);
   const touchStart = useRef<{ x: number; y: number; time: number } | null>(null);
   /**
@@ -60,13 +68,19 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
    * on a play button after every switch.
    */
   const userActivatedRef = useRef(false);
-  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [onboardingVisible, setOnboardingVisible] = useState(false);
+  const onboardingHandled = useRef(false);
   const [state, setState] = useState<SourceState>(initial);
   const [sourceMenuOpen, setSourceMenuOpen] = useState(false);
-  const [captions, setCaptions] = useState<CaptionSnapshot>(initialCaptions);
-  const [uiVisible, setUiVisible] = useState(true);
-  const [pointerInside, setPointerInside] = useState(false);
+  const [playerPaused, setPlayerPaused] = useState(false);
   const isMobile = useMediaQuery('(max-width: 639px) and (pointer: coarse)');
+  const immersive = expanded && isMobile;
+  const chrome = usePlayerChrome({ playing: state.phase === 'playing' && !playerPaused, expanded, autoHide: isMobile, blocking: state.phase !== 'playing' || sourceMenuOpen || onboardingVisible, channelId: channel.id });
+  const chromeVisibleRef = useRef(chrome.visible);
+  const onboardingVisibleRef = useRef(onboardingVisible);
+  chromeVisibleRef.current = chrome.visible;
+  onboardingVisibleRef.current = onboardingVisible;
+  const [captions, setCaptions] = useState<CaptionSnapshot>(initialCaptions);
   onPlayingRef.current = onPlaying;
   if (!captionSession.current) {
     captionSession.current = new CaptionSession(browserCaptionAdapter, snapshot => {
@@ -76,28 +90,11 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
     });
   }
 
-  const clearHideTimer = useCallback(() => {
-    if (hideTimerRef.current) {
-      clearTimeout(hideTimerRef.current);
-      hideTimerRef.current = null;
-    }
-  }, []);
-
-  // Reset UI visibility when the channel or source changes so the new context is briefly visible.
   useEffect(() => {
-    setUiVisible(true);
-  }, [channel.id, state.sourceIndex]);
-
-  // Auto-hide the page-level UI when the video is actually playing.
-  // Stays visible in loading/failed/awaiting-gesture so the user can still act.
-  useEffect(() => {
-    if (!uiVisible || state.phase !== 'playing' || pointerInside) {
-      clearHideTimer();
-      return;
-    }
-    hideTimerRef.current = setTimeout(() => setUiVisible(false), AUTO_HIDE_MS);
-    return clearHideTimer;
-  }, [uiVisible, state.phase, pointerInside, clearHideTimer]);
+    if (!open || !immersive || !onboardingRequired || onboardingHandled.current) return;
+    onboardingHandled.current = true;
+    setOnboardingVisible(true);
+  }, [open, immersive, onboardingRequired]);
 
   useEffect(() => {
     mounted.current = true;
@@ -114,11 +111,52 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   }, [open]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open || !immersive) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = previousOverflow; };
-  }, [open]);
+  }, [open, immersive]);
+
+  useEffect(() => {
+    if (!open || !immersive) return;
+    restoreFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const backgrounds = [document.querySelector('.app-header'), document.querySelector('.app-footer'), document.querySelector('.watch-queue'), document.querySelector('.app-notice')].filter((node): node is HTMLElement => node instanceof HTMLElement);
+    const previousInert = backgrounds.map(node => node.inert);
+    backgrounds.forEach(node => { node.inert = true; });
+    const focusables = () => {
+      const root = onboardingVisibleRef.current ? onboarding.current : stage.current;
+      return [...(root?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), video-js [tabindex="0"]') ?? [])].filter(node => !node.closest('[inert]') && node.getAttribute('aria-hidden') !== 'true');
+    };
+    const focusInitial = () => {
+      const candidates = focusables();
+      (onboardingVisibleRef.current ? onboarding.current?.querySelector<HTMLElement>('button') : candidates[0])?.focus();
+      // Programmatic initial focus must not pin the controls open. A real focus
+      // move inside the player is tracked by the subsequent focus events.
+      chrome.blur();
+    };
+    const frame = requestAnimationFrame(focusInitial);
+    const trap = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') return;
+      const candidates = focusables();
+      if (!chromeVisibleRef.current) {
+        event.preventDefault();
+        chrome.reveal();
+        requestAnimationFrame(() => focusables()[0]?.focus());
+        return;
+      }
+      if (!candidates.length) return;
+      const first = candidates[0], last = candidates[candidates.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener('keydown', trap);
+    return () => {
+      cancelAnimationFrame(frame);
+      document.removeEventListener('keydown', trap);
+      backgrounds.forEach((node, index) => { node.inert = previousInert[index]; });
+      restoreFocus.current?.focus();
+    };
+  }, [open, immersive, channel.id, chrome.blur, chrome.reveal]);
 
   useEffect(() => {
     if (!open || !host.current) return;
@@ -143,13 +181,17 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
       },
     });
     instance.getChild('ControlBar')?.el().classList.add('h-[calc(3rem+env(safe-area-inset-bottom))]!', 'bg-[#07172aeb]!', 'pb-[env(safe-area-inset-bottom)]!');
-    const paused = () => captionSession.current?.pause();
+    const paused = () => { captionSession.current?.pause(); setPlayerPaused(true); };
+    const resumed = () => setPlayerPaused(false);
     instance.on('pause', paused);
+    instance.on('play', resumed);
     player.current = instance;
     setState(previous => beginSession(previous, channel.sources.length));
+    setPlayerPaused(false);
     setSourceMenuOpen(false);
     return () => {
       instance.off('pause', paused);
+      instance.off('play', resumed);
       subtitleTrack.current?.dispose();
       subtitleTrack.current = null;
       player.current = null;
@@ -158,13 +200,13 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   }, [open, channel.id]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open || !immersive) return;
     const handler = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [open, onClose]);
+  }, [open, immersive, onClose]);
 
   useEffect(() => {
     const instance = player.current;
@@ -180,6 +222,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
       if (stopped || failureStarted) return;
       failureStarted = true;
       setState(current => nextSource(current, session));
+      setPlayerPaused(false);
     };
     const playing = () => {
       if (stopped || failureStarted) return;
@@ -267,8 +310,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   const onTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     touchStart.current = null;
     tapHandledRef.current = false;
-    if (!channelPosition || channelPosition.total < 2
-      || !window.matchMedia('(max-width: 639px) and (pointer: coarse)').matches
+    if (onboardingVisible || !window.matchMedia('(max-width: 639px) and (pointer: coarse)').matches
       || event.touches.length !== 1 || isInteractiveTarget(event.target)) return;
     const touch = event.touches[0];
     touchStart.current = { x: touch.clientX, y: touch.clientY, time: Date.now() };
@@ -277,6 +319,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   const onTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
     const start = touchStart.current;
     touchStart.current = null;
+    if (onboardingVisible) { tapHandledRef.current = false; return; }
     if (isInteractiveTarget(event.target)) {
       tapHandledRef.current = false;
       return;
@@ -291,22 +334,10 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
         return;
       }
     }
-    // Tap (no swipe) — toggle UI here because many mobile browsers never fire a synthetic
-    // `click` after `touchend` on a `<video>` element, so relying on `onClick` alone
-    // leaves the hidden overlay unreachable on touch devices.
+    // Touch reveals and restarts the controls timer; it never pauses playback.
     tapHandledRef.current = true;
-    toggleUi();
+    chrome.reveal();
   };
-
-  const toggleUi = useCallback(() => {
-    if (uiVisible) {
-      setUiVisible(false);
-      clearHideTimer();
-    } else {
-      setUiVisible(true);
-      clearHideTimer();
-    }
-  }, [uiVisible, clearHideTimer]);
 
   const enterLandscapeFullscreen = useCallback(async () => {
     const instance = player.current;
@@ -325,48 +356,42 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
   if (!open) return null;
 
   const showSourceMenu = channel.sources.length > 1 && state.phase !== 'failed';
-  const chromeClass = `transition-opacity duration-300 ${uiVisible ? 'opacity-100' : 'pointer-events-none opacity-0'}`;
+  const chromeClass = `transition-opacity duration-300 ${chrome.visible ? 'opacity-100' : 'pointer-events-none opacity-0'}`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 sm:p-4" onClick={onClose}>
-      <div
-        className="relative h-dvh w-full overflow-hidden bg-black text-white shadow-2xl sm:aspect-video sm:h-auto sm:max-w-[960px] sm:rounded-2xl sm:border sm:border-line"
-        role="dialog"
-        aria-modal="true"
+    <div className={immersive ? "fixed inset-0 z-50 flex items-center justify-center bg-black/90 sm:p-4" : expanded ? "relative h-full w-full" : "player-engine"} onClick={immersive ? onClose : undefined}>
+      <div className={expanded ? immersive ? "absolute inset-0" : "absolute inset-x-0 top-0 aspect-video" : "player-engine-host"} ref={host} aria-hidden={!expanded} />
+      {expanded && <div
+        ref={stage}
+        className={immersive ? "relative h-dvh w-full overflow-hidden bg-black text-white shadow-2xl" : "relative aspect-video w-full overflow-hidden rounded-xl border border-line bg-black text-white"}
+        role={immersive ? "dialog" : undefined}
+        aria-modal={immersive || undefined}
         aria-label={`播放器：${channel.name}`}
-        onClick={event => { event.stopPropagation(); const wasTouchHandled = tapHandledRef.current; tapHandledRef.current = false; if (wasTouchHandled) return; if (!isInteractiveTarget(event.target)) toggleUi(); }}
-        onMouseEnter={() => {
-          if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-          setPointerInside(true);
-          setUiVisible(true);
-        }}
-        onMouseLeave={() => {
-          if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-          setPointerInside(false);
-        }}
+        onClick={event => { event.stopPropagation(); const wasTouchHandled = tapHandledRef.current; tapHandledRef.current = false; if (wasTouchHandled) return; if (!isInteractiveTarget(event.target)) chrome.reveal(); }}
+        onFocusCapture={chrome.focus}
+        onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) chrome.blur(); }}
         onTouchStartCapture={onTouchStart}
         onTouchMoveCapture={event => { if (event.touches.length !== 1) touchStart.current = null; }}
         onTouchEndCapture={onTouchEnd}
         onTouchCancelCapture={() => { touchStart.current = null; tapHandledRef.current = false; }}
       >
-        <div
-          className="absolute inset-0"
-          ref={host}
-        />
-
-        <div className={`pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 bg-gradient-to-b from-black/85 to-transparent px-4 pt-[max(16px,env(safe-area-inset-top))] pb-10 sm:px-5 sm:pt-4 ${chromeClass}`}>
+        <div inert={!chrome.visible} className={`pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 bg-gradient-to-b from-black/85 to-transparent px-4 pt-[max(16px,env(safe-area-inset-top))] pb-10 sm:px-5 sm:pt-4 ${chromeClass}`}>
           <div className="min-w-0">
-            <p className="text-[11px] tracking-wider text-cyan">{country?.nameZh ?? channel.countryCode}</p>
+            <p className="text-[11px] tracking-wider text-cyan">{categoryName ?? (channel.countryCode || '频道播放')}</p>
             <h2 className="truncate text-base font-semibold sm:text-lg">{channel.name}</h2>
             {channel.geoBlocked && <p className="text-xs text-white/70">可能受地区限制</p>}
           </div>
-          <button
-            type="button"
-            className={`grid size-11 shrink-0 place-items-center rounded-full bg-black/55 text-white hover:bg-black/80 ${uiVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
-            onClick={onClose}
-            aria-label="关闭播放器"
-          ><X size={22} aria-hidden="true" /></button>
+          <div className="pointer-events-auto flex shrink-0 gap-2">
+            {onBrowse && <button type="button" className="grid size-11 place-items-center rounded-full bg-black/55 text-white" onClick={onBrowse} aria-label="选台"><ListVideo size={20} aria-hidden="true" /></button>}
+            <button type="button" className="grid size-11 place-items-center rounded-full bg-black/55 text-white hover:bg-black/80" onClick={onClose} aria-label="返回"><X size={22} aria-hidden="true" /></button>
+          </div>
         </div>
+
+        {immersive && onboardingVisible && (
+          <div ref={onboarding} className="absolute inset-0 z-40 grid place-items-center bg-[#06121bea] px-8 text-center" role="dialog" aria-modal="true" aria-labelledby="swipe-guide-title">
+            <div><div className="text-4xl text-cyan" aria-hidden="true">↕</div><h2 id="swipe-guide-title" className="mt-5 text-xl font-semibold">上下滑动，切换频道</h2><p className="mt-2 text-sm text-white/75">只在{categoryName ?? '当前分类'}中切换</p><p className="mt-2 text-sm text-white/75">轻触画面，显示播放操作</p><button type="button" className="mt-7 min-h-11 rounded-full bg-cyan px-7 font-semibold text-[#102334]" onClick={() => { setOnboardingVisible(false); onOnboardingComplete?.(); chrome.reveal(); }}>开始观看</button></div>
+          </div>
+        )}
 
         {state.phase === 'failed' && (
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 bg-black/85 px-6 text-center">
@@ -388,14 +413,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
           ><Play size={28} fill="currentColor" aria-hidden="true" /></button>
         )}
 
-        <div className={chromeClass}>
-          {channelPosition && channelPosition.total > 1 && (
-            <div className="pointer-events-none absolute bottom-[calc(4rem+env(safe-area-inset-bottom))] left-3 z-20 rounded-xl bg-[#07172acc] px-3 py-2 text-xs text-white/80 sm:hidden" role="status">
-              <span className="font-medium text-white">{channelPosition.current} / {channelPosition.total}</span>
-              <span className="ml-2">上下滑动切换频道</span>
-            </div>
-          )}
-
+        <div className={`${chromeClass} ${expanded ? '' : 'hidden'}`} inert={!chrome.visible}>
           <CaptionControls
             snapshot={captions}
             unsupported={browserCaptionAdapter.supported()}
@@ -407,6 +425,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
             isMobile={isMobile}
           />
 
+          {onToggleFavorite && <button type="button" className="absolute top-20 right-4 z-20 grid size-10 place-items-center rounded-full bg-[#07172aeb] text-white" aria-label={favorite ? '取消收藏' : '收藏'} aria-pressed={favorite} onClick={onToggleFavorite}><Star size={18} fill={favorite ? 'currentColor' : 'none'} aria-hidden="true" /></button>}
           {isMobile && (
             <button
               type="button"
@@ -442,7 +461,7 @@ export function PlayerModal({ open, channel, country, channelPosition, onNavigat
             </div>
           )}
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

@@ -1,6 +1,6 @@
-# 本地运行与发布
+# 本地运行与数据同步
 
-## 本地原型
+## 本地开发
 
 ```sh
 npm ci
@@ -9,30 +9,20 @@ npm test
 npm run dev
 ```
 
-地图使用 Mapbox GL JS。先在项目根目录创建 `.env.local`，填写 `VITE_MAPBOX_TOKEN=pk...`（只使用 Mapbox public token），再启动开发服务器。缺少 token 或地图加载失败时，频道列表仍可选台。public token 会包含在浏览器构建产物中，建议在 Mapbox 控制台限制允许的站点 URL；不要在代码或聊天中填写 secret token。
+应用按类别和来源分组浏览频道。`public/data/category/*.json` 保存可播放目录；构建时 `npm run catalog` 会从中生成不含线路 URL 的 `public/data/discovery.json` 摘要索引与分类报告。播放器只在用户选择频道后加载对应分组文件。
 
-仓库中的 `public/data` 是开发样例，只含中国真实频道文件及德国、美国两个空国家。它用于检查交互，不代表正式全量目录。`fixtures/famelack` 保存生成它的输入。生产构建会从 Famelack 仓库拉取完整上游数据并重新生成目录。
-
-## 生成完整目录
+## 同步 IPTV 数据
 
 ```sh
-git clone --depth 1 --filter=blob:none --sparse https://github.com/famelack/famelack-data.git .upstream
-git -C .upstream sparse-checkout set tv/raw
-UPSTREAM_SHA="$(git -C .upstream rev-parse HEAD)" npm run sync -- .upstream
-npm run build
+npm run sync:iptv
 ```
 
-同步会校验国家文件与频道字段，过滤仅 YouTube 来源、重复地址及非 HLS 地址，重算国家收录数。输出 `public/data/sync-report.json` 记录跳过项目；索引包含上游提交 SHA。校验失败时脚本非零退出，保留上一次有效数据。不要把 `.upstream` 提交到本站仓库。
+同步会从配置的 IPTV 上游刷新分类频道，保留已有频道 ID、为新频道生成稳定 ID，并重建发现索引与分类报告。分类归属和来源分组映射维护在 `scripts/discovery-mapping.json`。也可直接运行 `npm run catalog` 重建索引。
 
-## GitHub Pages
+## GitHub Actions 与静态托管
 
-1. 将仓库推送到 GitHub，默认分支设为 `main`。
-2. 在仓库 **Settings → Pages → Build and deployment** 中，将 Source 设为 **GitHub Actions**。
-3. 在仓库 **Settings → Secrets and variables → Actions → Variables** 中添加 `MAPBOX_PUBLIC_TOKEN`，值为 Mapbox public token。若设置了 URL 限制，需允许最终 Pages 域名。
-4. 在 **Actions** 手动运行 **Sync and deploy Globe TV**，或推送到 `main`。之后工作流每日运行一次。
-5. 构建先完成上游同步、类型检查和测试，全部成功后才将 `dist` 部署到 Pages。上游失败不会触发部署，旧站点继续保留。
-6. 访问 `https://<账号>.github.io/<仓库名>/`。查询参数直达链接支持静态托管，无需服务器路由回退。
+仓库 Actions 工作流每天同步一次目录，也可手动运行。上游数据有变化时，工作流提交 `public/data/category/`、`discovery.json` 和报告；应用本身可部署到任意静态托管服务，构建命令为 `npm run build`，产物位于 `dist/`。部署平台需将站点根路径配置为该产物目录，并允许带查询参数的静态链接。
 
-工作流使用 GitHub 官方 Pages Actions，无需额外凭据。尚未在作者中国大陆直连网络验证 Pages、地球资源和直播源；部署完成后按 `docs/validation/spike-results.md` 记录实际结果，再决定是否评估 Workers。
+目前工作流负责数据同步，不会自动发布站点。部署步骤取决于所选静态托管平台。
 
-数据来源：[Famelack Data](https://github.com/famelack/famelack-data)。本项目在 `public/licenses/famelack-data-LICENSE.txt` 保留其 MIT 声明。直播流由浏览器直接访问，数据集许可证不说明具体直播源的播放权利或可用性。失效或投诉可通过删除对应频道源、重新同步及重新部署处理。
+直播流由浏览器直接访问；具体播放效果取决于来源可用性、跨域策略与网络环境。更新来源后重新生成目录并部署即可。

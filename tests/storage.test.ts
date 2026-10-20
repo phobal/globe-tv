@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { markRecentlyPlayed, readPreferences, savePreferences } from '../src/preferences/storage';
 
 beforeEach(() => localStorage.clear());
@@ -47,5 +47,18 @@ describe('浏览器个人数据', () => {
     expect(readPreferences().theme).toBe('dark');
     savePreferences({ favorites: [], recent: [], theme: 'auto' });
     expect(readPreferences().theme).toBe('auto');
+  });
+});
+
+describe('个人频道台偏好', () => {
+  it('保存引导状态和各频道上次分类', () => {
+    savePreferences({ favorites: ['one'], recent: ['one'], theme: 'dark', onboardingVersion: 1, lastCategories: { one: 'sports' } });
+    expect(readPreferences()).toMatchObject({ onboardingVersion: 1, lastCategories: { one: 'sports' } });
+  });
+  it('读取失败且无法清理存储时仍返回默认值', () => {
+    const get = vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => { throw new Error('blocked'); });
+    const remove = vi.spyOn(Storage.prototype, 'removeItem').mockImplementation(() => { throw new Error('blocked'); });
+    try { expect(readPreferences()).toEqual({ favorites: [], recent: [], theme: 'auto' }); }
+    finally { get.mockRestore(); remove.mockRestore(); }
   });
 });

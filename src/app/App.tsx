@@ -1,307 +1,124 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { loadCountry, loadIndex, loadPopular } from '../data/catalog';
-import type { CatalogIndex, Channel, PopularChannel } from '../data/types';
-import { parseDeepLink, linkTo, linkToCollection } from '../routing/deepLinks';
-import { readPreferences, savePreferences, markRecentlyPlayed, type ThemePreference } from '../preferences/storage';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { Heart, Home as HomeIcon, Search, Tv2 } from 'lucide-react';
+import { loadDiscovery, loadDiscoveryChannel } from '../data/discovery';
+import type { DiscoveryCatalog, ChannelSummary, Channel } from '../data/types';
+import { Discover } from '../library/Discover';
+import { Home } from '../library/Home';
+const PlayerModal = lazy(() => import('../player/PlayerModal').then(module => ({ default: module.PlayerModal })));
+import { resolvePlaybackContext } from '../player/playbackContext';
+import type { PlaybackContext } from '../player/playbackContext';
+import { linkToCategory, parseDeepLink } from '../routing/deepLinks';
+import { markRecentlyPlayed, readPreferences, savePreferences, type ThemePreference } from '../preferences/storage';
 import { useThemeEffect } from '../preferences/useTheme';
-import { guessUserCountry } from '../data/geo';
-import { Globe } from '../globe/Globe';
-import { SidePanel } from '../sidepanel/SidePanel';
-import { PlayerModal } from '../player/PlayerModal';
-import { adjacentChannel, orderedChannels, type Direction } from '../player/channelNavigation';
-import { Header } from '../header/Header';
 
+type Page = 'home' | 'discover' | 'watch';
 export function App() {
-  const [index, setIndex] = useState<CatalogIndex>();
-  const [indexError, setIndexError] = useState('');
-  const [countryCode, setCountryCode] = useState<string>();
-  const [channels, setChannels] = useState<Channel[]>([]);
-  const [popularChannels, setPopularChannels] = useState<PopularChannel[]>([]);
-  const [popularMode, setPopularMode] = useState(false);
-  const [playingPopular, setPlayingPopular] = useState(false);
-  const [countryError, setCountryError] = useState('');
-  const [countryRetry, setCountryRetry] = useState(0);
-  const [loadingCountry, setLoadingCountry] = useState(false);
-  const [playing, setPlaying] = useState<Channel>();
-  const [playerOpen, setPlayerOpen] = useState(false);
-  const [missingId, setMissingId] = useState<string>();
-  const [featuredId, setFeaturedId] = useState<string>();
-  const [message, setMessage] = useState('');
-  const [globeFailed, setGlobeFailed] = useState(false);
+  const [catalog, setCatalog] = useState<DiscoveryCatalog>();
+  const [error, setError] = useState('');
   const [preferences, setPreferences] = useState(readPreferences);
+  const [page, setPage] = useState<Page>('home');
+  const [returnPage, setReturnPage] = useState<Page>('home');
+  const [playing, setPlaying] = useState<Channel>();
+  const [playingSummary, setPlayingSummary] = useState<ChannelSummary>();
+  const [context, setContext] = useState<PlaybackContext>();
+  const [category, setCategory] = useState('central');
+  const [query, setQuery] = useState('');
+  const [group, setGroup] = useState('');
+  const [country, setCountry] = useState('');
+  const [language, setLanguage] = useState('');
+  const [message, setMessage] = useState('');
   const theme = useThemeEffect(preferences.theme);
-  const country = index?.countries.find(item => item.code === countryCode);
-  const playingCountry = index?.countries.find(item => item.code === playing?.countryCode);
-  const playerChannels = useMemo(() => playingPopular
-    ? orderedChannels(popularChannels)
-    : playing?.countryCode === countryCode ? orderedChannels(channels) : [],
-  [channels, countryCode, playing?.countryCode, playingPopular, popularChannels]);
-  const playerChannelIndex = playerChannels.findIndex(item => item.id === playing?.id);
 
-  const refreshIndex = useCallback(() => {
-    loadIndex().then(setIndex).catch(error => setIndexError(String(error)));
-  }, []);
-  useEffect(refreshIndex, [refreshIndex]);
-  useEffect(() => {
-    loadPopular().then(data => setPopularChannels(data.channels)).catch(() => {});
-  }, []);
+  const refresh = useCallback(() => { loadDiscovery().then(setCatalog).catch(err => setError(String(err))); }, []);
+  useEffect(refresh, [refresh]);
+  useEffect(() => { savePreferences(preferences); }, [preferences]);
+  const byId = useMemo(() => new Map(catalog?.channels.map(channel => [channel.id, channel]) ?? []), [catalog]);
+
+  const navigate = useCallback((next: Page) => {
+    if (next === 'watch' && page !== 'watch') setReturnPage(page);
+    setPage(next);
+    if (next === 'discover' && catalog) history.replaceState({}, '', linkToCategory(category));
+    else if (next === 'home') history.replaceState({}, '', location.pathname);
+  }, [page, catalog, category]);
+
+  const startChannel = useCallback(async (id: string, preferredCategory?: string) => {
+    if (!catalog) return;
+    const summary = byId.get(id);
+    if (!summary) { setMessage('这个频道已不在目录中。'); return; }
+    try {
+      const channel = await loadDiscoveryChannel(summary);
+      setPlaying(channel); setPlayingSummary(summary);
+      const savedCategory = preferredCategory ?? preferences.lastCategories?.[id];
+      const playback = resolvePlaybackContext(catalog.channels, id, savedCategory);
+      if (!playback) { setMessage('无法找到频道所属分类。'); return; }
+      setContext(playback); setCategory(playback.categoryId);
+      setReturnPage(current => page === 'watch' ? current : page);
+      setPreferences(value => ({ ...value, lastCategories: { ...value.lastCategories, [id]: playback.categoryId } }));
+      setPage('watch');
+      history.replaceState({}, '', linkToCategory(playback.categoryId, id));
+    } catch (err) { setMessage(`频道加载失败：${String(err)}`); }
+  }, [catalog, byId, page, preferences.lastCategories]);
 
   useEffect(() => {
-    if (!index) return;
+    if (!catalog || playing) return;
     const deep = parseDeepLink(location.search);
-    if (deep.invalid) {
-      setMessage('链接参数无效，已返回首页。'); return;
-    }
-    if (deep.collection === 'popular') {
-      setPopularMode(true);
-      setCountryCode(undefined);
-      if (deep.channel) { setMissingId(deep.channel); setFeaturedId(deep.channel); }
+    if (deep.invalid) { setMessage('链接无效，已打开频道首页。'); return; }
+    if (deep.country || deep.collection === 'popular') {
+      if (deep.channel && byId.has(deep.channel)) {
+        const summary = byId.get(deep.channel)!;
+        const preferred = deep.country && summary.categoryIds.includes('overseas') ? 'overseas' : summary.primaryCategory;
+        void startChannel(deep.channel, preferred);
+      } else if (deep.country) {
+        setCategory('overseas'); setCountry(deep.country); setPage('discover');
+        history.replaceState({}, '', linkToCategory('overseas'));
+      } else {
+        setPage('discover');
+        history.replaceState({}, '', linkToCategory(category));
+      }
       return;
     }
-    let chosen: string | undefined;
-    if (deep.country) {
-      if (index.countries.some(item => item.code === deep.country)) chosen = deep.country;
-      else setMessage('链接参数无效，已返回首页。');
-    } else if (!countryCode) {
-      const fromHistory = readPreferences().countryCode;
-      if (fromHistory && index.countries.some(item => item.code === fromHistory)) {
-        chosen = fromHistory;
-      } else {
-        const guess = guessUserCountry();
-        if (guess && index.countries.some(item => item.code === guess)) chosen = guess;
-      }
-    }
-    if (chosen) {
-      setCountryCode(chosen);
-      if (deep.channel) { setMissingId(deep.channel); setFeaturedId(deep.channel); }
-    }
-  }, [index]);
+    if (deep.category) { setCategory(deep.category); if (!deep.channel) setPage('discover'); }
+    if (deep.channel) void startChannel(deep.channel, deep.category);
+  }, [catalog, playing, startChannel, byId, category]);
 
-  useEffect(() => {
-    if (popularMode) {
-      let live = true;
-      setLoadingCountry(true); setCountryError(''); setChannels([]);
-      loadPopular()
-        .then(data => { if (live) { setPopularChannels(data.channels); setChannels(data.channels); setLoadingCountry(false); } })
-        .catch(error => { if (live) { setCountryError(String(error)); setLoadingCountry(false); } });
-      return () => { live = false; };
-    }
-    if (!countryCode) { setChannels([]); return; }
-    let live = true;
-    setLoadingCountry(true); setCountryError(''); setChannels([]);
-    loadCountry(countryCode)
-      .then(data => { if (live) { setChannels(data); setLoadingCountry(false); } })
-      .catch(error => { if (live) { setCountryError(String(error)); setLoadingCountry(false); } });
-    return () => { live = false; };
-  }, [countryCode, countryRetry, popularMode]);
-
-  useEffect(() => {
-    if (missingId && channels.some(item => item.id === missingId)) setMissingId(undefined);
-  }, [channels, missingId]);
-
-  useEffect(() => { savePreferences(preferences); }, [preferences]);
-
-  const selectCountry = (code: string) => {
-    if (code && !index?.countries.some(item => item.code === code)) return;
-    setCountryCode(code);
-    setPopularMode(false);
-    setMissingId(undefined);
-    setFeaturedId(undefined);
-    if (code) setPreferences(current => ({ ...current, countryCode: code }));
-    history.replaceState({}, '', code ? linkTo(code) : location.pathname);
-  };
-
-  const backToCountries = () => {
-    setCountryCode(undefined);
-    setPopularMode(false);
-    setMissingId(undefined);
-    setFeaturedId(undefined);
-    history.replaceState({}, '', location.pathname);
-  };
-
-  const selectPopular = () => {
-    setCountryCode(undefined);
-    setPopularMode(true);
-    setMissingId(undefined);
-    setFeaturedId(undefined);
-    history.replaceState({}, '', linkToCollection('popular'));
-  };
-
-  const play = (channel: Channel) => {
-    setPlaying(channel);
-    setPlayingPopular(popularMode);
-    setMissingId(undefined);
-    setFeaturedId(undefined);
-    setPlayerOpen(true);
-    history.replaceState({}, '', popularMode ? linkToCollection('popular', channel.id) : linkTo(channel.countryCode, channel.id));
-  };
-
-  const closePlayer = () => {
-    setPlayerOpen(false);
-  };
-
-  const navigatePlayer = (direction: Direction) => {
-    if (!playing) return;
-    const next = adjacentChannel(playerChannels, playing.id, direction);
-    if (next) play(next);
-  };
-
-  const selectChannel = async (code: string, id: string) => {
-    selectCountry(code);
-    try {
-      const data = await loadCountry(code);
-      const channel = data.find(item => item.id === id);
-      if (channel) play(channel); else setMissingId(id);
-    } catch {
-      setMessage('频道加载失败，请重试。');
-    }
-  };
-
-  const selectPopularChannel = async (id: string) => {
-    setCountryCode(undefined);
-    setPopularMode(true);
-    try {
-      const data = await loadPopular();
-      setPopularChannels(data.channels);
-      const channel = data.channels.find(item => item.id === id);
-      if (channel) {
-        setPlaying(channel);
-        setPlayingPopular(true);
-        setMissingId(undefined);
-        setFeaturedId(undefined);
-        setPlayerOpen(true);
-        history.replaceState({}, '', linkToCollection('popular', channel.id));
-      } else setMissingId(id);
-    } catch {
-      setMessage('热门频道加载失败，请重试。');
-    }
-  };
-
-  const toggleFavorite = (id: string) => setPreferences(current => ({
-    ...current,
-    favorites: current.favorites.includes(id)
-      ? current.favorites.filter(item => item !== id)
-      : [...current.favorites, id],
+  const toggleFavorite = (id: string) => setPreferences(value => ({ ...value,
+    favorites: value.favorites.includes(id) ? value.favorites.filter(item => item !== id) : [...value.favorites, id],
   }));
-  const removeSaved = (id: string) => setPreferences(current => ({
-    ...current,
-    favorites: current.favorites.filter(item => item !== id),
-    recent: current.recent.filter(item => item !== id),
-  }));
-  const onPlaying = (id: string) => setPreferences(current => markRecentlyPlayed(current, id));
-  const setThemePreference = (next: ThemePreference) => setPreferences(current => ({ ...current, theme: next }));
-  const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN?.trim();
-  const canGlobe = Boolean(mapboxToken) && !globeFailed;
+  const reorderFavorites = (ids: string[]) => setPreferences(value => ({ ...value, favorites: ids }));
+  const recordPlaying = (id: string) => setPreferences(value => markRecentlyPlayed(value, id));
+  const resetDiscovery = () => { setQuery(''); setGroup(''); setCountry(''); setLanguage(''); setCategory('central'); };
 
-  return (
-    <div
-      className="flex min-h-dvh flex-col font-sans text-ink lg:h-dvh lg:overflow-hidden"
-      style={{ background: 'var(--app-page-gradient)' }}
-    >
-      {index && (
-        <Header
-          playing={playing}
-          onOpenPlayer={() => setPlayerOpen(true)}
-          onClosePlayer={closePlayer}
-          index={index}
-          preferences={preferences}
-          popularChannels={popularChannels}
-          onPickCountry={selectCountry}
-          onSelectChannel={selectChannel}
-          onSelectPopularChannel={selectPopularChannel}
-          onRemoveSaved={removeSaved}
-          onThemeChange={setThemePreference}
-        />
-      )}
-
-      {message && (
-        <div className="flex items-center justify-between gap-3 border-b border-info-border bg-info-bg px-4 py-2 text-sm text-info-text lg:px-8" role="status">
-          {message}
-          <button className="rounded-md border border-info-border bg-[var(--app-panel)] px-3 py-1" onClick={() => setMessage('')}>关闭</button>
-        </div>
-      )}
-
-      {indexError ? (
-        <main className="grid flex-1 place-content-center gap-3 p-6 text-center" role="alert">
-          <h1>频道数据加载失败</h1>
-          <p className="text-muted">{indexError}</p>
-          <button className="justify-self-center rounded-lg border border-line bg-raised px-4 py-2" onClick={() => { setIndexError(''); refreshIndex(); }}>重试</button>
-        </main>
-      ) : !index ? (
-        <main className="grid flex-1 place-content-center" role="status">正在加载地球电视…</main>
-      ) : (
-        <main className="grid min-w-0 flex-1 gap-4 px-3 py-3 sm:px-5 lg:min-h-0 lg:px-8 lg:py-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(340px,0.65fr)]">
-          <section
-            className="relative flex h-[min(48dvh,440px)] min-h-[350px] min-w-0 flex-col overflow-hidden rounded-2xl border border-globe-divider lg:h-full lg:min-h-0"
-            style={{ background: 'var(--app-globe-section-bg)' }}
-          >
-            <div className="flex items-center justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
-              <div className="min-w-0">
-                <small className="text-[11px] tracking-[0.18em] text-cyan">探索世界 · 实时直播</small>
-                <h1 className="mt-2 truncate text-[clamp(20px,3vw,32px)] leading-tight font-semibold">{country ? country.nameZh : ''}</h1>
-              </div>
-              <div className="shrink-0 text-right text-[11px] text-footer-text">
-                <p>{index.countries.length} 个国家和地区</p>
-                <p className="text-cyan">{index.channels.length} 个频道</p>
-              </div>
-            </div>
-            {canGlobe ? (
-              <Globe
-                token={mapboxToken!}
-                countries={index.countries}
-                selectedCode={countryCode}
-                onSelect={selectCountry}
-                onFailure={() => setGlobeFailed(true)}
-                themeMode={theme.mode}
-              />
-            ) : (
-              <div className="grid flex-1 place-content-center p-5 text-center text-muted">
-                <p>地图暂不可用，可使用频道列表继续选台。</p>
-              </div>
-            )}
-          </section>
-            <aside
-              className="flex h-[65dvh] min-h-[400px] min-w-0 flex-col overflow-hidden rounded-2xl border border-globe-divider bg-panel/90 backdrop-blur-sm lg:h-full lg:min-h-0"
-              aria-label="国家与频道列表"
-            >
-              <SidePanel
-                index={index}
-                countries={index.countries}
-                countryCode={countryCode}
-                channels={channels}
-                popular={popularMode}
-                loading={loadingCountry}
-                error={countryError}
-                favorites={preferences.favorites}
-                featuredId={featuredId}
-                missingId={missingId}
-                onPickCountry={selectCountry}
-                onPickPopular={selectPopular}
-                onBack={backToCountries}
-                onPlay={play}
-                onToggleFavorite={toggleFavorite}
-                onRetry={() => setCountryRetry(value => value + 1)}
-              />
-            </aside>
-        </main>
-      )}
-
-      {playing && (
-        <PlayerModal
-          open={playerOpen}
-          channel={playing}
-          country={playingCountry}
-          channelPosition={playerChannelIndex < 0 ? undefined : { current: playerChannelIndex + 1, total: playerChannels.length }}
-          onNavigate={navigatePlayer}
-          onPlaying={onPlaying}
-          onClose={closePlayer}
-        />
-      )}
-
-      <footer className="flex flex-wrap justify-between gap-x-4 gap-y-1 border-t border-globe-divider px-4 py-3 text-[10px] text-footer-text sm:px-5 lg:px-8">
-        <span>频道数据：Famelack · MIT；热门频道：iptv-org · Unlicense</span>
-        <span>播放取决于直播源及当前网络 · 主题 {theme.mode === 'dark' ? '暗' : '亮'}</span>
-      </footer>
-    </div>
-  );
+  return <div className="tv-app" data-theme={theme.mode}>
+    <header className="app-header">
+      <a className="brand" href={location.pathname} onClick={e => { e.preventDefault(); navigate('home'); }}><span className="brand-mark"><Tv2 size={19} aria-hidden="true" /></span><span>频道<span className="brand-accent">台</span></span></a>
+      <nav className="primary-nav" aria-label="主导航">
+        <button aria-current={page === 'home' ? 'page' : undefined} onClick={() => navigate('home')}><HomeIcon size={16} aria-hidden="true" />我的频道</button>
+        <button aria-current={page === 'discover' ? 'page' : undefined} onClick={() => navigate('discover')}><Search size={16} aria-hidden="true" />发现频道</button>
+      </nav>
+      {playing && <button className="return-playing" onClick={() => navigate('watch')}><span className="live-dot" />正在播放：{playing.name}</button>}
+      <label className="theme-control"><span className="sr-only">主题</span><select value={preferences.theme} onChange={e => setPreferences(v => ({ ...v, theme: e.target.value as ThemePreference }))}><option value="auto">自动主题</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
+    </header>
+    {message && <div className="app-notice" role="status">{message}<button onClick={() => setMessage('')} aria-label="关闭提示">×</button></div>}
+    <main className={`app-main ${page === 'watch' ? 'watch-open' : ''}`}>
+      <section className="page-region" hidden={page === 'watch'}>
+        {error ? <div className="empty-favorites"><h2>频道数据加载失败</h2><p>{error}</p><button className="solid-button" onClick={refresh}>重新加载</button></div> : !catalog ? <p className="loading-state" role="status">正在整理频道…</p> : page === 'home'
+          ? <Home catalog={catalog} preferences={preferences} onPlay={id => void startChannel(id)} onDiscover={() => { resetDiscovery(); navigate('discover'); }} onToggleFavorite={toggleFavorite} onReorder={reorderFavorites} />
+          : <Discover catalog={catalog} favorites={preferences.favorites} category={category} onCategory={setCategory} query={query} onQuery={setQuery} group={group} onGroup={setGroup} country={country} onCountry={setCountry} language={language} onLanguage={setLanguage} onPlay={(id, cat) => void startChannel(id, cat)} onToggleFavorite={toggleFavorite} />}
+      </section>
+      {catalog && page === 'watch' && playing && playingSummary && context && <>
+        <aside className="watch-queue"><div className="watch-queue-head"><div><p className="eyebrow">当前分类</p><h2>{catalog.categories.find(c => c.id === context.categoryId)?.name}</h2></div><button className="text-button" onClick={() => navigate('discover')}>浏览分类</button></div>
+          {context.channelIds.map(id => { const item = byId.get(id); return item && <button className="watch-queue-row" key={id} aria-current={id === playing.id ? 'true' : undefined} onClick={() => void startChannel(id, context.categoryId)}><span className="queue-number">{String(context.channelIds.indexOf(id) + 1).padStart(2, '0')}</span><span>{item.name}</span><Heart size={15} fill={preferences.favorites.includes(id) ? 'currentColor' : 'none'} aria-label={preferences.favorites.includes(id) ? '已收藏' : '未收藏'} /></button>; })}
+        </aside>
+      </>}
+      {catalog && playing && playingSummary && context && <section className={`player-surface ${page === 'watch' ? 'player-expanded' : 'player-collapsed'}`} aria-label={page === 'watch' ? '频道播放' : '迷你播放器'}>
+        {page !== 'watch' && <button className="dock-screen" aria-label={`继续观看 ${playing.name}`} onClick={() => navigate('watch')}><span className="dock-video"><Tv2 size={22} aria-hidden="true" /><span><strong>{playing.name}</strong><small>{catalog.categories.find(c => c.id === context.categoryId)?.name ?? ''}</small></span></span></button>}
+        {page !== 'watch' && <button className="dock-close" aria-label="关闭播放器" onClick={() => { setPlaying(undefined); setPlayingSummary(undefined); setContext(undefined); }}>×</button>}
+        <Suspense fallback={null}><PlayerModal open channel={playing} expanded={page === 'watch'} categoryName={catalog.categories.find(c => c.id === context.categoryId)?.name} onboardingRequired={!preferences.onboardingVersion} favorite={preferences.favorites.includes(playing.id)} onToggleFavorite={() => toggleFavorite(playing.id)} onOnboardingComplete={() => setPreferences(v => ({ ...v, onboardingVersion: 1 }))} onBrowse={() => navigate('discover')} onNavigate={direction => {
+          const index = context.channelIds.indexOf(playing.id), nextIndex = index + (direction === 'next' ? 1 : -1), nextId = context.channelIds[nextIndex];
+          if (nextId) void startChannel(nextId, context.categoryId);
+        }} onPlaying={recordPlaying} onClose={() => navigate(returnPage)} /></Suspense>
+      </section>}
+    </main>
+    <footer className="app-footer"><span>收藏与观看记录仅保存在当前浏览器</span><span>频道数据 · 播放取决于直播源与网络</span></footer>
+  </div>;
 }

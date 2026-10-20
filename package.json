@@ -1,5 +1,5 @@
 {
-  "name": "globe-tv",
+  "name": "channel-tv",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -10,7 +10,6 @@
     "test": "vitest run",
     "sync": "node scripts/sync-tv.mjs",
     "sync:popular": "node scripts/sync-popular.mjs",
-    "geo": "node scripts/make-geo.mjs",
     "sync:iptv": "node scripts/sync-iptv-source.mjs",
     "catalog": "node scripts/build-discovery.mjs",
     "prebuild": "npm run catalog"
@@ -18,10 +17,8 @@
   "dependencies": {
     "i18n-iso-countries": "7.14.0",
     "lucide-react": "^1.57.0",
-    "mapbox-gl": "^3.33.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "topojson-client": "3.1.0",
     "video.js": "^8.24.2"
   },
   "devDependencies": {
@@ -32,13 +29,11 @@
     "@types/node": "26.6.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@types/topojson-client": "3.1.5",
     "@vitejs/plugin-react": "6.1.2",
     "jsdom": "30.1.2",
     "tailwindcss": "^4.3.3",
     "typescript": "7.0.2",
     "vite": "8.3.4",
-    "vitest": "5.0.4",
-    "world-atlas": "2.0.2"
+    "vitest": "5.0.4"
   }
 }

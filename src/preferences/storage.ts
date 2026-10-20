@@ -7,6 +7,8 @@ export interface Preferences {
   recent: string[];
   countryCode?: string;
   theme: ThemePreference;
+  onboardingVersion?: number;
+  lastCategories?: Record<string, string>;
 }
 
 function isStringArray(value: unknown): value is string[] {
@@ -38,15 +40,17 @@ export function readPreferences(): Preferences {
       recent: value.recent.slice(0, 30),
       countryCode,
       theme,
+      ...(typeof value.onboardingVersion === 'number' && Number.isInteger(value.onboardingVersion) && value.onboardingVersion >= 0 ? { onboardingVersion: value.onboardingVersion } : {}),
+      ...(value.lastCategories && typeof value.lastCategories === 'object' && !Array.isArray(value.lastCategories) ? { lastCategories: Object.fromEntries(Object.entries(value.lastCategories).filter(([id, category]) => /^[\w-]{1,64}$/.test(id) && typeof category === 'string' && ['central', 'local', 'sports', 'entertainment', 'kids', 'overseas', 'more'].includes(category))) } : {}),
     };
   } catch {
-    localStorage.removeItem(KEY);
+    try { localStorage.removeItem(KEY); } catch { /* Storage can be blocked. */ }
     return defaultPreferences();
   }
 }
 
-export function savePreferences(value: Preferences): void {
-  try { localStorage.setItem(KEY, JSON.stringify(value)); } catch { /* storage unavailable */ }
+export function savePreferences(value: Preferences): boolean {
+  try { localStorage.setItem(KEY, JSON.stringify(value)); return true; } catch { return false; }
 }
 
 export function markRecentlyPlayed(value: Preferences, id: string): Preferences {

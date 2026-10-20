@@ -1,339 +1,289 @@
 {
-  "generatedAt": "2026-10-20T06:56:00.447Z",
-  "upstreamUrl": "https://iptv.445569.xyz/live.m3u",
-  "categoryCount": 55,
-  "channelCount": 905,
-  "sourceCount": 1170,
+  "generatedAt": "2026-10-20T08:38:52.935Z",
+  "categoryCount": 56,
+  "channelCount": 906,
+  "sourceCount": 1171,
   "categories": [
     {
       "slug": "austria-tv",
       "name": "Austria TV",
-      "countryCode": "at",
       "channelCount": 1
     },
     {
       "slug": "bangladesh-tv",
       "name": "Bangladesh TV",
-      "countryCode": "bd",
       "channelCount": 24
     },
     {
       "slug": "besttv-mobile",
       "name": "BestTV (Mobile)",
-      "countryCode": "cn",
       "channelCount": 10
     },
     {
       "slug": "cambodia-tv",
       "name": "Cambodia TV",
-      "countryCode": "kh",
       "channelCount": 8
     },
     {
       "slug": "cape-verde-tv",
       "name": "Cape Verde TV",
-      "countryCode": "cv",
+      "channelCount": 1
+    },
+    {
+      "slug": "cctv",
+      "name": "CCTV",
       "channelCount": 1
     },
     {
       "slug": "chad-tv",
       "name": "Chad TV",
-      "countryCode": "td",
       "channelCount": 1
     },
     {
       "slug": "china-central-and-satellite-tv",
       "name": "China Central & Satellite TV",
-      "countryCode": "cn",
       "channelCount": 58
     },
     {
       "slug": "china-digital-tv",
       "name": "China Digital TV",
-      "countryCode": "cn",
       "channelCount": 16
     },
     {
       "slug": "china-local-tv",
       "name": "China Local TV",
-      "countryCode": "cn",
       "channelCount": 64
     },
     {
       "slug": "cloudflare-live",
       "name": "Cloudflare Live",
-      "countryCode": "",
       "channelCount": 1
     },
     {
       "slug": "douyin-live",
       "name": "Douyin Live",
-      "countryCode": "cn",
       "channelCount": 30
     },
     {
       "slug": "event-replay",
       "name": "Event Replay",
-      "countryCode": "cn",
       "channelCount": 40
     },
     {
       "slug": "finland-tv",
       "name": "Finland TV",
-      "countryCode": "fi",
       "channelCount": 1
     },
     {
       "slug": "france-tv",
       "name": "France TV",
-      "countryCode": "fr",
       "channelCount": 16
     },
     {
       "slug": "germany-tv",
       "name": "Germany TV",
-      "countryCode": "de",
       "channelCount": 9
     },
     {
       "slug": "haiti-tv",
       "name": "Haiti TV",
-      "countryCode": "ht",
       "channelCount": 3
     },
     {
       "slug": "hong-kong-macau-taiwan-tv",
       "name": "Hong Kong / Macau / Taiwan TV",
-      "countryCode": "",
       "channelCount": 24
     },
     {
       "slug": "india-tv",
       "name": "India TV",
-      "countryCode": "in",
       "channelCount": 10
     },
     {
       "slug": "indonesia-tv",
       "name": "Indonesia TV",
-      "countryCode": "id",
       "channelCount": 55
     },
     {
       "slug": "intranet-mobile",
       "name": "Intranet (Mobile)",
-      "countryCode": "cn",
       "channelCount": 64
     },
     {
       "slug": "iqiyi-live",
       "name": "iQIYI Live",
-      "countryCode": "cn",
       "channelCount": 5
     },
     {
       "slug": "itv-mobile",
       "name": "ITV (Mobile)",
-      "countryCode": "cn",
       "channelCount": 77
     },
     {
       "slug": "jamaica-tv",
       "name": "Jamaica TV",
-      "countryCode": "jm",
       "channelCount": 1
     },
     {
       "slug": "japan-tv",
       "name": "Japan TV",
-      "countryCode": "jp",
       "channelCount": 47
     },
     {
       "slug": "kids-tv",
       "name": "Kids TV",
-      "countryCode": "cn",
       "channelCount": 45
     },
     {
       "slug": "korea-tv",
       "name": "Korea TV",
-      "countryCode": "kr",
       "channelCount": 16
     },
     {
       "slug": "laos-tv",
       "name": "Laos TV",
-      "countryCode": "la",
       "channelCount": 7
     },
     {
       "slug": "malaysia-tv",
       "name": "Malaysia TV",
-      "countryCode": "my",
       "channelCount": 7
     },
     {
       "slug": "mexico-tv",
       "name": "Mexico TV",
-      "countryCode": "mx",
       "channelCount": 1
     },
     {
       "slug": "mishi-jie-mobile",
       "name": "Mi Shi Jie (Mobile)",
-      "countryCode": "cn",
       "channelCount": 38
     },
     {
       "slug": "mongolia-tv",
       "name": "Mongolia TV",
-      "countryCode": "mn",
       "channelCount": 2
     },
     {
       "slug": "movies-live",
       "name": "Movies Live",
-      "countryCode": "",
       "channelCount": 4
     },
     {
       "slug": "myanmar-tv",
       "name": "Myanmar TV",
-      "countryCode": "mm",
       "channelCount": 9
     },
     {
       "slug": "nepal-tv",
       "name": "Nepal TV",
-      "countryCode": "np",
       "channelCount": 5
     },
     {
       "slug": "newtv-mobile",
       "name": "NewTV (Mobile)",
-      "countryCode": "cn",
       "channelCount": 52
     },
     {
       "slug": "nigeria-tv",
       "name": "Nigeria TV",
-      "countryCode": "ng",
       "channelCount": 1
     },
     {
       "slug": "north-korea-tv",
       "name": "North Korea TV",
-      "countryCode": "kp",
       "channelCount": 1
     },
     {
       "slug": "philippines-tv",
       "name": "Philippines TV",
-      "countryCode": "ph",
       "channelCount": 7
     },
     {
       "slug": "qatar-tv",
       "name": "Qatar TV",
-      "countryCode": "qa",
       "channelCount": 1
     },
     {
       "slug": "radio-live",
       "name": "Radio Live",
-      "countryCode": "cn",
       "channelCount": 1
     },
     {
       "slug": "russia-tv",
       "name": "Russia TV",
-      "countryCode": "ru",
       "channelCount": 13
     },
     {
       "slug": "seniors-tv",
       "name": "Seniors TV",
-      "countryCode": "cn",
       "channelCount": 5
     },
     {
       "slug": "singapore-tv",
       "name": "Singapore TV",
-      "countryCode": "sg",
       "channelCount": 7
     },
     {
       "slug": "singer-collection-on-demand",
       "name": "Singer Collection On-demand",
-      "countryCode": "cn",
       "channelCount": 3
     },
     {
       "slug": "south-africa-tv",
       "name": "South Africa TV",
-      "countryCode": "za",
       "channelCount": 1
     },
     {
       "slug": "spain-tv",
       "name": "Spain TV",
-      "countryCode": "es",
       "channelCount": 1
     },
     {
       "slug": "sports-live",
       "name": "Sports Live",
-      "countryCode": "",
       "channelCount": 31
     },
     {
       "slug": "sri-lanka-tv",
       "name": "Sri Lanka TV",
-      "countryCode": "lk",
       "channelCount": 4
     },
     {
       "slug": "surveillance-live",
       "name": "Surveillance Live",
-      "countryCode": "cn",
       "channelCount": 20
     },
     {
       "slug": "thailand-tv",
       "name": "Thailand TV",
-      "countryCode": "th",
       "channelCount": 22
     },
     {
       "slug": "turkey-tv",
       "name": "Turkey TV",
-      "countryCode": "tr",
       "channelCount": 14
     },
     {
       "slug": "united-states-tv",
       "name": "United States TV",
-      "countryCode": "us",
       "channelCount": 7
     },
     {
       "slug": "vietnam-tv",
       "name": "Vietnam TV",
-      "countryCode": "vn",
       "channelCount": 11
     },
     {
       "slug": "yemen-tv",
       "name": "Yemen TV",
-      "countryCode": "ye",
       "channelCount": 2
     },
     {
       "slug": "zimbabwe-tv",
       "name": "Zimbabwe TV",
-      "countryCode": "zw",
       "channelCount": 1
     }
-  ]
+  ],
+  "diagnostics": []
 }

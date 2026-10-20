@@ -145,6 +145,16 @@ describe('syncIptvSource', () => {
     expect(china[0].name).toBe('CCTV1');
     const report = JSON.parse(await fs.readFile(reportPath, 'utf8'));
     expect(report.categoryCount).toBe(2);
+    const preserved = { ...china[0], id: 'hand-edited' };
+    await fs.writeFile(tmpDir + '/category/cctv.json', JSON.stringify([preserved]));
+    fetchMock.mockResolvedValueOnce(new Response(m3u, { status: 200 }));
+    const repeated = await syncIptvSource({ outputDir: tmpDir, cachePath, reportPath });
+    const nextChina = JSON.parse(await fs.readFile(tmpDir + '/category/china-central-and-satellite-tv.json', 'utf8'));
+    expect(nextChina[0].id).toBe(china[0].id);
+    expect(repeated.categoryCount).toBe(3);
+    expect(repeated.channelCount).toBe(3);
+    expect(JSON.parse(await fs.readFile(tmpDir + '/category/cctv.json', 'utf8'))[0].id).toBe('hand-edited');
+    expect(JSON.parse(await fs.readFile(tmpDir + '/discovery.json', 'utf8')).channels).toHaveLength(3);
   });
 
   it('远程失败时回落到本地缓存', async () => {
@@ -160,4 +170,13 @@ describe('syncIptvSource', () => {
     expect(result.source).toBe('cache');
     expect(result.channelCount).toBe(1);
   });
+});
+
+it('preserves existing IDs and produces stable new IDs across synchronization', async () => {
+  const entry = { groupTitle: CN + '央卫视直播', name: 'CCTV1', logo: '', url: 'https://a.test/live.m3u8' };
+  const first = buildCategoryCatalog([entry]);
+  const second = buildCategoryCatalog([entry]);
+  expect(first[0].channels[0].id).toBe(second[0].channels[0].id);
+  const existing = new Map([['china-central-and-satellite-tv', [{ id: 'old-favorite', name: 'CCTV1' }]]]);
+  expect(buildCategoryCatalog([entry], existing)[0].channels[0].id).toBe('old-favorite');
 });

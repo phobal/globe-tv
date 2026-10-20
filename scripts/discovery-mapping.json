@@ -1,0 +1,341 @@
+{
+  "groups": {
+    "itv-mobile": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "nepal-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "cloudflare-live": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "india-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "myanmar-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "indonesia-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "mexico-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "kids-tv": {
+      "primaryCategory": "kids",
+      "categoryIds": [
+        "kids"
+      ]
+    },
+    "haiti-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "sports-live": {
+      "primaryCategory": "sports",
+      "categoryIds": [
+        "sports"
+      ]
+    },
+    "movies-live": {
+      "primaryCategory": "entertainment",
+      "categoryIds": [
+        "entertainment"
+      ]
+    },
+    "philippines-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "vietnam-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "thailand-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "china-digital-tv": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "bangladesh-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "qatar-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "cape-verde-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "malaysia-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "mishi-jie-mobile": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "japan-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "nigeria-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "spain-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "surveillance-live": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "singer-collection-on-demand": {
+      "primaryCategory": "entertainment",
+      "categoryIds": [
+        "entertainment"
+      ]
+    },
+    "iqiyi-live": {
+      "primaryCategory": "entertainment",
+      "categoryIds": [
+        "entertainment"
+      ]
+    },
+    "china-local-tv": {
+      "primaryCategory": "local",
+      "categoryIds": [
+        "local"
+      ]
+    },
+    "turkey-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "sri-lanka-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "france-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "laos-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "austria-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "douyin-live": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "germany-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "seniors-tv": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "zimbabwe-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "cambodia-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "russia-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "united-states-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "newtv-mobile": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "jamaica-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "korea-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "singapore-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "china-central-and-satellite-tv": {
+      "primaryCategory": "central",
+      "categoryIds": [
+        "central"
+      ]
+    },
+    "event-replay": {
+      "primaryCategory": "sports",
+      "categoryIds": [
+        "sports"
+      ]
+    },
+    "radio-live": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "intranet-mobile": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "south-africa-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "finland-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "mongolia-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "cctv": {
+      "primaryCategory": "central",
+      "categoryIds": [
+        "central"
+      ]
+    },
+    "chad-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "north-korea-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "besttv-mobile": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    },
+    "yemen-tv": {
+      "primaryCategory": "overseas",
+      "categoryIds": [
+        "overseas"
+      ]
+    },
+    "hong-kong-macau-taiwan-tv": {
+      "primaryCategory": "more",
+      "categoryIds": [
+        "more"
+      ]
+    }
+  },
+  "channels": {}
+}

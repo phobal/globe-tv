@@ -10,7 +10,9 @@
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
-import { nanoid } from 'nanoid';
+import { createHash } from 'node:crypto';
+import { readdir } from 'node:fs/promises';
+import { generateDiscovery } from './build-discovery.mjs';
 
 const UPSTREAM_URL = 'https://iptv.445569.xyz/live.m3u';
 const OUTPUT_DIR = process.argv[2] ?? 'public/data';
@@ -237,7 +239,7 @@ function fallbackSlug(value) {
  * 把 entries 按分组聚合, 返回 [{ slug, channels[], info }, ...]
  * 同一 groupTitle + channel name 的多个 url 会合并到一个 sources 数组, 按出现顺序赋 order。
  */
-export function buildCategoryCatalog(entries) {
+export function buildCategoryCatalog(entries, existingGroups = new Map()) {
   const grouped = new Map();
   for (const entry of entries) {
     const info = resolveGroup(entry.groupTitle);
@@ -257,7 +259,7 @@ export function buildCategoryCatalog(entries) {
     const channels = [];
     for (const { entry, urls } of bucket.items.values()) {
       channels.push({
-        id: nanoid(),
+        id: existingGroups.get(slug)?.find(channel => channel.name === entry.name)?.id ?? `iptv-${createHash('sha256').update(`${slug}\0${entry.name}`).digest('hex').slice(0, 24)}`,
         name: entry.name,
         countryCode: bucket.info.countryCode,
         languages: bucket.info.languages.length ? bucket.info.languages : defaultLanguages(bucket.info),
@@ -340,17 +342,7 @@ export async function writeCategories(categories, outputDir, reportPath) {
   await Promise.all(categories.map(async ({ slug, channels }) => {
     await writeFile(path.join(categoryDir, `${slug}.json`), `${JSON.stringify(channels, null, 2)}\n`);
   }));
-  const report = {
-    generatedAt: new Date().toISOString(),
-    upstreamUrl: UPSTREAM_URL,
-    categoryCount: categories.length,
-    channelCount: categories.reduce((sum, c) => sum + c.channels.length, 0),
-    sourceCount: categories.reduce((sum, c) => sum + c.channels.reduce((s2, c2) => s2 + c2.sources.length, 0), 0),
-    categories: categories.map(({ slug, info, channels }) => ({
-      slug, name: info.name, countryCode: info.countryCode, channelCount: channels.length,
-    })),
-  };
-  await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
+  const report = await generateDiscovery(outputDir, reportPath);
   return report;
 }
 
@@ -362,7 +354,14 @@ export async function syncIptvSource({ outputDir = OUTPUT_DIR, url = UPSTREAM_UR
   await mkdir(outputDir, { recursive: true });
   await writeFile(cachePath, text);
   const entries = parseM3uEntries(text);
-  const categories = buildCategoryCatalog(entries);
+  const existingGroups = new Map();
+  try {
+    for (const file of await readdir(path.join(outputDir, 'category'))) {
+      if (!file.endsWith('.json')) continue;
+      existingGroups.set(file.slice(0, -5), JSON.parse(await readFile(path.join(outputDir, 'category', file), 'utf8')));
+    }
+  } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  const categories = buildCategoryCatalog(entries, existingGroups);
   const report = await writeCategories(categories, outputDir, reportPath);
   return { source, entryCount: entries.length, ...report, categories };
 }

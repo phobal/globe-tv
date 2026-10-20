@@ -5,6 +5,8 @@ export interface StreamSource {
 }
 
 export interface Channel {
+  logo?: string;
+  group?: string;
   id: string;
   name: string;
   countryCode: string;
@@ -38,4 +40,24 @@ export interface CatalogIndex {
   upstreamCommit: string;
   countries: CountrySummary[];
   channels: Pick<Channel, 'id' | 'name' | 'countryCode'>[];
+}
+
+export type DiscoveryCategoryId = 'central' | 'local' | 'sports' | 'entertainment' | 'kids' | 'overseas' | 'more';
+export interface ChannelSummary {
+  id: string;
+  name: string;
+  logo?: string;
+  countryCode: string;
+  languages: string[];
+  groupSlug: string;
+  groupName: string;
+  categoryIds: DiscoveryCategoryId[];
+  primaryCategory: DiscoveryCategoryId;
+  contentType: 'live' | 'replay' | 'on-demand' | 'radio' | 'scenic';
+}
+export interface DiscoveryCatalog {
+  version: string;
+  categories: Array<{ id: DiscoveryCategoryId; name: string; channelCount: number }>;
+  groups: Array<{ slug: string; name: string }>;
+  channels: ChannelSummary[];
 }

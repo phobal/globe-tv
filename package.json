@@ -11,7 +11,9 @@
     "sync": "node scripts/sync-tv.mjs",
     "sync:popular": "node scripts/sync-popular.mjs",
     "geo": "node scripts/make-geo.mjs",
-    "sync:iptv": "node scripts/sync-iptv-source.mjs"
+    "sync:iptv": "node scripts/sync-iptv-source.mjs",
+    "catalog": "node scripts/build-discovery.mjs",
+    "prebuild": "npm run catalog"
   },
   "dependencies": {
     "i18n-iso-countries": "7.14.0",
